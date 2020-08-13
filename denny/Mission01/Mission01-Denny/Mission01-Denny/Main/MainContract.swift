@@ -10,10 +10,20 @@ import Foundation
 
 public protocol MainPresenterProtocol {
     func attachView(view: MainViewProtocol)
+    
+    func appendDebugLog(content: String)
+    
+    func requestCoffeeOrder(coffeeType: CoffeeType)
 }
 
 public protocol MainViewProtocol {
     func setNavigationBarContent(title: String)
     
-    func updateOrderView(orderList: [Order])
+    func updateDebugLog(content: String)
+}
+
+public protocol MainModelProtocol {
+    func appendNewLog(string: String)
+    
+    func requestCoffee(_ type: CoffeeType)
 }

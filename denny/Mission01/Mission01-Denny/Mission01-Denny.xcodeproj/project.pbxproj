@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31A3B40A831A91259C6BCAA6 /* Pods_Mission01_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E4A1150B2481931B304392 /* Pods_Mission01_Denny.framework */; };
+		B00BA08224E5913E006748AE /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA08124E5913E006748AE /* MainModel.swift */; };
 		B03B603024E2B701002E0827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B602F24E2B701002E0827 /* AppDelegate.swift */; };
 		B03B603424E2B701002E0827 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B603324E2B701002E0827 /* MainViewController.swift */; };
 		B03B603924E2B70B002E0827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03B603824E2B70B002E0827 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		77E4A1150B2481931B304392 /* Pods_Mission01_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission01_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00BA08124E5913E006748AE /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		B03B602C24E2B701002E0827 /* Mission01-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission01-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03B602F24E2B701002E0827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03B603324E2B701002E0827 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -85,16 +87,13 @@
 		B03B602E24E2B701002E0827 /* Mission01-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				B0A02FF724E5855100EA0A82 /* UICustom */,
+				B0A02FF624E5854300EA0A82 /* Model */,
 				B06357AA24E426B700ECB2A1 /* Main */,
 				B03B602F24E2B701002E0827 /* AppDelegate.swift */,
 				B03B603824E2B70B002E0827 /* Assets.xcassets */,
 				B03B603D24E2B70B002E0827 /* Info.plist */,
-				B063577724E41A9900ECB2A1 /* UserInfoView.swift */,
 				B063577924E41B3900ECB2A1 /* NotificationConstant.swift */,
-				B063577B24E41C7300ECB2A1 /* DataModel.swift */,
-				B063577D24E422F500ECB2A1 /* DataContainer.swift */,
-				B0A02FEE24E428FA00EA0A82 /* UIColor+Custom.swift */,
-				B0A02FF024E42B4400EA0A82 /* UIFont+Custom.swift */,
 				B0A02FF224E42D1400EA0A82 /* Main.storyboard */,
 				B0A02FF424E42D3900EA0A82 /* LaunchScreen.storyboard */,
 			);
@@ -107,8 +106,28 @@
 				B03B603324E2B701002E0827 /* MainViewController.swift */,
 				B063577F24E4248D00ECB2A1 /* MainPresenter.swift */,
 				B063578124E4249C00ECB2A1 /* MainContract.swift */,
+				B00BA08124E5913E006748AE /* MainModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		B0A02FF624E5854300EA0A82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B063577B24E41C7300ECB2A1 /* DataModel.swift */,
+				B063577D24E422F500ECB2A1 /* DataContainer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B0A02FF724E5855100EA0A82 /* UICustom */ = {
+			isa = PBXGroup;
+			children = (
+				B0A02FEE24E428FA00EA0A82 /* UIColor+Custom.swift */,
+				B0A02FF024E42B4400EA0A82 /* UIFont+Custom.swift */,
+				B063577724E41A9900ECB2A1 /* UserInfoView.swift */,
+			);
+			path = UICustom;
 			sourceTree = "<group>";
 		};
 		B99FF6CEC94188E0A278C0D6 /* Pods */ = {
@@ -241,6 +260,7 @@
 				B0A02FF124E42B4400EA0A82 /* UIFont+Custom.swift in Sources */,
 				B03B603424E2B701002E0827 /* MainViewController.swift in Sources */,
 				B063577C24E41C7300ECB2A1 /* DataModel.swift in Sources */,
+				B00BA08224E5913E006748AE /* MainModel.swift in Sources */,
 				B063577A24E41B3900ECB2A1 /* NotificationConstant.swift in Sources */,
 				B03B603024E2B701002E0827 /* AppDelegate.swift in Sources */,
 				B063578024E4248D00ECB2A1 /* MainPresenter.swift in Sources */,

@@ -10,6 +10,7 @@ import Foundation
 
 public class MainPresenter: MainPresenterProtocol {
     private var view: MainViewProtocol?
+    private var model: MainModel?
     
     public static var sharedInstance: MainPresenter = MainPresenter()
     
@@ -17,5 +18,19 @@ public class MainPresenter: MainPresenterProtocol {
     
     public func attachView(view: MainViewProtocol) {
         self.view = view
+        self.model = MainModel()
+    }
+    
+    public func appendDebugLog(content: String) {
+        view?.updateDebugLog(content: content)
+    }
+    
+    public func requestCoffeeOrder(coffeeType: CoffeeType) {
+        let randomCoffeeType = Int.random(in: 0..<3)
+        let requestCoffeeType = CoffeeType(rawValue: randomCoffeeType) ?? .americano
+        let content = "[손님] 커피를 주문합니다... 커피타입 : \(requestCoffeeType)"
+        
+        appendDebugLog(content: content)
+        model?.requestCoffee(requestCoffeeType)
     }
 }
