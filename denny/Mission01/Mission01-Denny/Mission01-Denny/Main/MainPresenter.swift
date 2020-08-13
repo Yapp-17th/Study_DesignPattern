@@ -30,6 +30,8 @@ public class MainPresenter: MainPresenterProtocol {
         let requestCoffeeType = CoffeeType(rawValue: randomCoffeeType) ?? .americano
         let content = "[손님] 커피를 주문합니다... 커피타입 : \(requestCoffeeType)"
         
+        DebugWorker.shared.appendDebugLog(string: "[커피 주문 로그]")
+        DebugWorker.shared.appendDebugLog(string: content)
         appendDebugLog(content: content)
         model?.requestCoffee(requestCoffeeType)
     }

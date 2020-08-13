@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31A3B40A831A91259C6BCAA6 /* Pods_Mission01_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E4A1150B2481931B304392 /* Pods_Mission01_Denny.framework */; };
 		B00BA08224E5913E006748AE /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA08124E5913E006748AE /* MainModel.swift */; };
+		B00BA08424E596C3006748AE /* DebugWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA08324E596C3006748AE /* DebugWorker.swift */; };
+		B00BA08624E598F5006748AE /* DebugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA08524E598F5006748AE /* DebugCell.swift */; };
 		B03B603024E2B701002E0827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B602F24E2B701002E0827 /* AppDelegate.swift */; };
 		B03B603424E2B701002E0827 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B603324E2B701002E0827 /* MainViewController.swift */; };
 		B03B603924E2B70B002E0827 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03B603824E2B70B002E0827 /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		77E4A1150B2481931B304392 /* Pods_Mission01_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission01_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00BA08124E5913E006748AE /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B00BA08324E596C3006748AE /* DebugWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWorker.swift; sourceTree = "<group>"; };
+		B00BA08524E598F5006748AE /* DebugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugCell.swift; sourceTree = "<group>"; };
 		B03B602C24E2B701002E0827 /* Mission01-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission01-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03B602F24E2B701002E0827 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B03B603324E2B701002E0827 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			children = (
 				B063577B24E41C7300ECB2A1 /* DataModel.swift */,
 				B063577D24E422F500ECB2A1 /* DataContainer.swift */,
+				B00BA08324E596C3006748AE /* DebugWorker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				B0A02FEE24E428FA00EA0A82 /* UIColor+Custom.swift */,
 				B0A02FF024E42B4400EA0A82 /* UIFont+Custom.swift */,
 				B063577724E41A9900ECB2A1 /* UserInfoView.swift */,
+				B00BA08524E598F5006748AE /* DebugCell.swift */,
 			);
 			path = UICustom;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 			files = (
 				B063578224E4249C00ECB2A1 /* MainContract.swift in Sources */,
 				B063577824E41A9900ECB2A1 /* UserInfoView.swift in Sources */,
+				B00BA08624E598F5006748AE /* DebugCell.swift in Sources */,
 				B0A02FEF24E428FA00EA0A82 /* UIColor+Custom.swift in Sources */,
 				B0A02FF124E42B4400EA0A82 /* UIFont+Custom.swift in Sources */,
 				B03B603424E2B701002E0827 /* MainViewController.swift in Sources */,
@@ -263,6 +270,7 @@
 				B00BA08224E5913E006748AE /* MainModel.swift in Sources */,
 				B063577A24E41B3900ECB2A1 /* NotificationConstant.swift in Sources */,
 				B03B603024E2B701002E0827 /* AppDelegate.swift in Sources */,
+				B00BA08424E596C3006748AE /* DebugWorker.swift in Sources */,
 				B063578024E4248D00ECB2A1 /* MainPresenter.swift in Sources */,
 				B063577E24E422F500ECB2A1 /* DataContainer.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import NotificationCenter
 
 public class MainViewController: UIViewController, MainViewProtocol {
     private var presenter: MainPresenter = MainPresenter.sharedInstance
@@ -16,6 +17,8 @@ public class MainViewController: UIViewController, MainViewProtocol {
     
     private var contentView: UIView = UIView()
     private var requestOrderButton: UIButton = UIButton()
+    
+    private var debugLogTableView: UITableView = UITableView()
     
     private var debugLogLabel: UILabel = UILabel()
     
@@ -26,6 +29,7 @@ public class MainViewController: UIViewController, MainViewProtocol {
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = .talkWhite000s
+        NotificationCenter.default.addObserver(self, selector: #selector(addDebugLog), name: NSNotification.Name(rawValue: "addDebugLog"), object: nil)
         
         setNavigationBarContent(title: "커피 전문점")
         setViewLayout()
@@ -60,6 +64,19 @@ public class MainViewController: UIViewController, MainViewProtocol {
         requestOrderButton.setTitleColor(.white, for: .normal)
         requestOrderButton.titleLabel?.font = .font14P
         requestOrderButton.addTarget(self, action: #selector(onClickReqOrderButton(_:)), for: .touchUpInside)
+        
+        view.addSubview(debugLogTableView)
+        debugLogTableView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(12)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalTo(requestOrderButton.snp.top).offset(-12)
+        }
+        
+        debugLogTableView.register(DebugCell.self, forCellReuseIdentifier: DebugCell.identifier)
+        debugLogTableView.delegate = self
+        debugLogTableView.dataSource = self
+        debugLogTableView.tableFooterView = UIView()
     }
     
     @objc
@@ -70,8 +87,28 @@ public class MainViewController: UIViewController, MainViewProtocol {
         
     }
     
+    @objc
+    private func addDebugLog() {
+        debugLogTableView.reloadData()
+    }
+    
     public func updateDebugLog(content: String) {
         // MARK: Update Debug Log
         print(content)
     }
+}
+
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DebugWorker.shared.getLogList().count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DebugCell.identifier, for: indexPath) as? DebugCell {
+            cell.content = DebugWorker.shared.getLogList()[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
+    }
+    
 }

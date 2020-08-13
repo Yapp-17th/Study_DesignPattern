@@ -46,9 +46,10 @@ public class CoffeeMaker: NSObject {
     
     public func makeCoffee(order: Order) {
         var statusString = ""
-        statusString.append("[커피메이커] 커피를 만들고 있습니다.... 커피타입 : \(order.coffeeType ?? .americano)\n")
-        statusString.append("[커피메이커] 커피가 완성되어 내보냅니다.... 커피타입 : \(order.coffeeType ?? .americano)")
+        statusString.append("[커피메이커] 커피를 만들고 있습니다.\n커피타입 : \(order.coffeeType ?? .americano)\n")
+        statusString.append("[커피메이커] 커피가 완성되어 내보냅니다.\n커피타입 : \(order.coffeeType ?? .americano)")
         
+        DebugWorker.shared.appendDebugLog(string: statusString)
         delegate?.getMakeStatus(statusString)
         delegate?.extractCoffee(order)
     }
@@ -72,7 +73,8 @@ public class Casher: NSObject, CoffeeMakerDelegate {
     
     // MARK: CoffeeMaker Delegate
     public func extractCoffee(_ order: Order) {
-        let content = "[Casher] 제조된 커피를 받았습니다.... 커피 종류 : \(order.coffeeType ?? .americano)"
+        let content = "[Casher] 제조된 커피를 받았습니다.\n커피 종류 : \(order.coffeeType ?? .americano)"
+        DebugWorker.shared.appendDebugLog(string: content)
         getMakeStatus(content)
         delegate?.serveCoffee(order)
     }

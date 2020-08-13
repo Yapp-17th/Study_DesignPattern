@@ -21,7 +21,8 @@ public class MainModel: MainModelProtocol, CasherDelegate {
     }
     
     public func serveCoffee(_ order: Order) {
-        let content = "[Casher] 손님에게 커피를 제공합니다.... 커피 타입 : \(order.coffeeType ?? .americano)\n----------"
+        let content = "[Casher] 손님에게 커피를 제공합니다.\n커피 타입 : \(order.coffeeType ?? .americano)"
+        DebugWorker.shared.appendDebugLog(string: content)
         appendNewLog(string: content)
     }
     
@@ -31,6 +32,7 @@ public class MainModel: MainModelProtocol, CasherDelegate {
     
     public func requestCoffee(_ type: CoffeeType) {
         let content = "[Casher] 커피메이커에게 주문을 전달합니다...."
+        DebugWorker.shared.appendDebugLog(string: content)
         appendNewLog(string: content)
         casher.requestOrder(coffeeType: type)
     }
