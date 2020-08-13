@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CafeSystem</string>
+    <string name="menuTitle">메 뉴 판</string>
+    <string name="menuHint">메뉴를 입력해주세요</string>
+    <string name="orderBtn">Order Coffee</string>
+
+    <string name="itemMenuName">메뉴 이름</string>
+    <string name="itemMenuPrice">0 원</string>
+</resources>
