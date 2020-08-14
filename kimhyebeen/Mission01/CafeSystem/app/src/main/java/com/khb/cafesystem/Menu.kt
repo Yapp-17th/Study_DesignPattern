@@ -19,7 +19,8 @@ object Menu {
         items.map { this.items?.put(it.getMenuName(), it) }
     }
 
-    fun choose(menuName: String): MenuItem? {
+    fun choose(menuName: String, addProcessText: (String) -> Unit): MenuItem? {
+        addProcessText("menu : 메뉴판은 손님에게 커피객체(이름과 가격)을 알려줍니다.\n")
         return this.items?.get(menuName.toLowerCase())
     }
 
