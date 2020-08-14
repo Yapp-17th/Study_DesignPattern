@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		56C55A65B41210DA5C0E6DC6 /* Pods_Mission02_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */; };
 		B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */; };
-		B09BC4DD24E6DDC6001D7C00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */; };
 		B09BC4DF24E6DDC6001D7C00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */; };
 		B09BC4E224E6DDC6001D7C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E024E6DDC6001D7C00 /* Main.storyboard */; };
 		B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */; };
@@ -17,17 +16,27 @@
 		B09BC4EA24E6DDC7001D7C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B09BC53624E6E449001D7C00 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B09BC53224E6E449001D7C00 /* CoffeeCommon.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B09BC4FE24E6E324001D7C00;
+			remoteInfo = CoffeeCommon;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2DAB1F16F0C309217EFC1879 /* Pods-Mission02-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.debug.xcconfig"; sourceTree = "<group>"; };
 		B09BC4D724E6DDC6001D7C00 /* Mission02-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission02-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B09BC4E124E6DDC6001D7C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B09BC4E424E6DDC6001D7C00 /* Mission02_Denny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mission02_Denny.xcdatamodel; sourceTree = "<group>"; };
 		B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09BC4E924E6DDC7001D7C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B09BC4EB24E6DDC7001D7C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09BC53224E6E449001D7C00 /* CoffeeCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoffeeCommon.xcodeproj; path = CoffeeCommon/CoffeeCommon.xcodeproj; sourceTree = "<group>"; };
 		BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.release.xcconfig"; sourceTree = "<group>"; };
 		E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission02_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,6 +64,7 @@
 		B09BC4CE24E6DDC6001D7C00 = {
 			isa = PBXGroup;
 			children = (
+				B09BC53224E6E449001D7C00 /* CoffeeCommon.xcodeproj */,
 				B09BC4D924E6DDC6001D7C00 /* Mission02-Denny */,
 				B09BC4D824E6DDC6001D7C00 /* Products */,
 				F3B0C62A60EF72E20613C4B2 /* Pods */,
@@ -73,16 +83,47 @@
 		B09BC4D924E6DDC6001D7C00 /* Mission02-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				B09BC4F324E6E2F5001D7C00 /* Database */,
+				B09BC4F224E6E2EF001D7C00 /* View */,
+				B09BC4F124E6E2DC001D7C00 /* Storyboard */,
 				B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */,
-				B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */,
 				B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */,
-				B09BC4E024E6DDC6001D7C00 /* Main.storyboard */,
 				B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */,
-				B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */,
 				B09BC4EB24E6DDC7001D7C00 /* Info.plist */,
 				B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */,
 			);
 			path = "Mission02-Denny";
+			sourceTree = "<group>";
+		};
+		B09BC4F124E6E2DC001D7C00 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B09BC4E024E6DDC6001D7C00 /* Main.storyboard */,
+				B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B09BC4F224E6E2EF001D7C00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B09BC4F324E6E2F5001D7C00 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B09BC53324E6E449001D7C00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B09BC53724E6E449001D7C00 /* CoffeeCommon.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F3B0C62A60EF72E20613C4B2 /* Pods */ = {
@@ -91,7 +132,6 @@
 				2DAB1F16F0C309217EFC1879 /* Pods-Mission02-Denny.debug.xcconfig */,
 				BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,12 +182,28 @@
 			mainGroup = B09BC4CE24E6DDC6001D7C00;
 			productRefGroup = B09BC4D824E6DDC6001D7C00 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B09BC53324E6E449001D7C00 /* Products */;
+					ProjectRef = B09BC53224E6E449001D7C00 /* CoffeeCommon.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B09BC4D624E6DDC6001D7C00 /* Mission02-Denny */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B09BC53724E6E449001D7C00 /* CoffeeCommon.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoffeeCommon.framework;
+			remoteRef = B09BC53624E6E449001D7C00 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B09BC4D524E6DDC6001D7C00 /* Resources */ = {
@@ -212,7 +268,6 @@
 				B09BC4DF24E6DDC6001D7C00 /* ViewController.swift in Sources */,
 				B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */,
 				B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */,
-				B09BC4DD24E6DDC6001D7C00 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
