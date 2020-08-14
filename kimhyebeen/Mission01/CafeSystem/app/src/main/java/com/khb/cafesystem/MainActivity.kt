@@ -1,18 +1,16 @@
 package com.khb.cafesystem
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.khb.cafesystem.items.Coffee
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var menuAdapter = MenuAdapter()
     private var menu = Menu
-    private lateinit var customer: Customer
-    private lateinit var addProcessText: (String) -> Unit
+    private var customer = Customer("khb")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,16 +27,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        addProcessText = { str ->
-            TextView(this).let {
-                it.text = str
-                it.setTextColor(Color.parseColor("#ffffff"))
-                processLinearLayout.addView(it)
-            }
-        }
-
-        customer = Customer("khb", addProcessText)
-
         orderButton.setOnClickListener {
             getCoffee()
             menuNameEditText.setText("")
@@ -47,8 +35,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun getCoffee() {
         customer.order(menuNameEditText.text.toString())?.let { coffee ->
-            addProcessText("customer : 바리스타로부터 커피를 받았습니다\n")
             customer.giveMoney(coffee.getCost())
+            makeToast("${coffee.getCost()}원을 주고 ${coffee.getName()}을 받았습니다")
         } ?: makeToast("그런 메뉴는 없어요")
     }
 
