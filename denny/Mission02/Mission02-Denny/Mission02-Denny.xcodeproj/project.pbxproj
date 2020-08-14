@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		56C55A65B41210DA5C0E6DC6 /* Pods_Mission02_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */; };
+		B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */; };
+		B09BC4DD24E6DDC6001D7C00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */; };
+		B09BC4DF24E6DDC6001D7C00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */; };
+		B09BC4E224E6DDC6001D7C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E024E6DDC6001D7C00 /* Main.storyboard */; };
+		B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */; };
+		B09BC4E724E6DDC7001D7C00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */; };
+		B09BC4EA24E6DDC7001D7C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2DAB1F16F0C309217EFC1879 /* Pods-Mission02-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.debug.xcconfig"; sourceTree = "<group>"; };
+		B09BC4D724E6DDC6001D7C00 /* Mission02-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission02-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B09BC4E124E6DDC6001D7C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B09BC4E424E6DDC6001D7C00 /* Mission02_Denny.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mission02_Denny.xcdatamodel; sourceTree = "<group>"; };
+		B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B09BC4E924E6DDC7001D7C00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B09BC4EB24E6DDC7001D7C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.release.xcconfig"; sourceTree = "<group>"; };
+		E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission02_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B09BC4D424E6DDC6001D7C00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56C55A65B41210DA5C0E6DC6 /* Pods_Mission02_Denny.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2810491A40C02B84E4D5ED23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B09BC4CE24E6DDC6001D7C00 = {
+			isa = PBXGroup;
+			children = (
+				B09BC4D924E6DDC6001D7C00 /* Mission02-Denny */,
+				B09BC4D824E6DDC6001D7C00 /* Products */,
+				F3B0C62A60EF72E20613C4B2 /* Pods */,
+				2810491A40C02B84E4D5ED23 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B09BC4D824E6DDC6001D7C00 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B09BC4D724E6DDC6001D7C00 /* Mission02-Denny.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B09BC4D924E6DDC6001D7C00 /* Mission02-Denny */ = {
+			isa = PBXGroup;
+			children = (
+				B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */,
+				B09BC4DC24E6DDC6001D7C00 /* SceneDelegate.swift */,
+				B09BC4DE24E6DDC6001D7C00 /* ViewController.swift */,
+				B09BC4E024E6DDC6001D7C00 /* Main.storyboard */,
+				B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */,
+				B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */,
+				B09BC4EB24E6DDC7001D7C00 /* Info.plist */,
+				B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */,
+			);
+			path = "Mission02-Denny";
+			sourceTree = "<group>";
+		};
+		F3B0C62A60EF72E20613C4B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DAB1F16F0C309217EFC1879 /* Pods-Mission02-Denny.debug.xcconfig */,
+				BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B09BC4D624E6DDC6001D7C00 /* Mission02-Denny */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B09BC4EE24E6DDC7001D7C00 /* Build configuration list for PBXNativeTarget "Mission02-Denny" */;
+			buildPhases = (
+				5B2B08A3933E63834F40FB4D /* [CP] Check Pods Manifest.lock */,
+				B09BC4D324E6DDC6001D7C00 /* Sources */,
+				B09BC4D424E6DDC6001D7C00 /* Frameworks */,
+				B09BC4D524E6DDC6001D7C00 /* Resources */,
+				D637BF2C89A58CD34F47538C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mission02-Denny";
+			productName = "Mission02-Denny";
+			productReference = B09BC4D724E6DDC6001D7C00 /* Mission02-Denny.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B09BC4CF24E6DDC6001D7C00 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					B09BC4D624E6DDC6001D7C00 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = B09BC4D224E6DDC6001D7C00 /* Build configuration list for PBXProject "Mission02-Denny" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B09BC4CE24E6DDC6001D7C00;
+			productRefGroup = B09BC4D824E6DDC6001D7C00 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B09BC4D624E6DDC6001D7C00 /* Mission02-Denny */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B09BC4D524E6DDC6001D7C00 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09BC4EA24E6DDC7001D7C00 /* LaunchScreen.storyboard in Resources */,
+				B09BC4E724E6DDC7001D7C00 /* Assets.xcassets in Resources */,
+				B09BC4E224E6DDC6001D7C00 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B2B08A3933E63834F40FB4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mission02-Denny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D637BF2C89A58CD34F47538C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B09BC4D324E6DDC6001D7C00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B09BC4DF24E6DDC6001D7C00 /* ViewController.swift in Sources */,
+				B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */,
+				B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */,
+				B09BC4DD24E6DDC6001D7C00 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B09BC4E024E6DDC6001D7C00 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B09BC4E124E6DDC6001D7C00 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B09BC4E824E6DDC7001D7C00 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B09BC4E924E6DDC7001D7C00 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B09BC4EC24E6DDC7001D7C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B09BC4ED24E6DDC7001D7C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B09BC4EF24E6DDC7001D7C00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DAB1F16F0C309217EFC1879 /* Pods-Mission02-Denny.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M79H9K226Y;
+				INFOPLIST_FILE = "Mission02-Denny/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission02-Denny";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B09BC4F024E6DDC7001D7C00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M79H9K226Y;
+				INFOPLIST_FILE = "Mission02-Denny/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission02-Denny";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B09BC4D224E6DDC6001D7C00 /* Build configuration list for PBXProject "Mission02-Denny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09BC4EC24E6DDC7001D7C00 /* Debug */,
+				B09BC4ED24E6DDC7001D7C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B09BC4EE24E6DDC7001D7C00 /* Build configuration list for PBXNativeTarget "Mission02-Denny" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09BC4EF24E6DDC7001D7C00 /* Debug */,
+				B09BC4F024E6DDC7001D7C00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B09BC4E424E6DDC6001D7C00 /* Mission02_Denny.xcdatamodel */,
+			);
+			currentVersion = B09BC4E424E6DDC6001D7C00 /* Mission02_Denny.xcdatamodel */;
+			path = Mission02_Denny.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B09BC4CF24E6DDC6001D7C00 /* Project object */;
+}
