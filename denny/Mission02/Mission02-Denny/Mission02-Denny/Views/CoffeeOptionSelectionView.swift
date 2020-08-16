@@ -11,7 +11,6 @@ import SnapKit
 import UIKit
 
 public class CoffeeOptionSelectionView: UIView {
-    
     public var item: CoffeeOptionItem? {
         didSet {
             updateViewInfo()
@@ -44,9 +43,24 @@ public class CoffeeOptionSelectionView: UIView {
             make.top.equalTo(titleLabel.snp.bottom).offset(10)
             make.left.right.bottom.equalToSuperview()
         }
+        
+        optionStackView.axis = .vertical
+        optionStackView.distribution = .equalSpacing
+        optionStackView.spacing = 6
     }
     
     private func updateViewInfo() {
+        guard let options = item?.options else { return }
+        
         titleLabel.text = item?.title
+        for subview in optionStackView.subviews {
+            optionStackView.removeArrangedSubview(subview)
+        }
+        
+        for coffee in options {
+            let selectionView = CoffeeSelectionInternalView()
+            selectionView.itemTitle = coffee.coffeeName
+            optionStackView.addArrangedSubview(selectionView)
+        }
     }
 }

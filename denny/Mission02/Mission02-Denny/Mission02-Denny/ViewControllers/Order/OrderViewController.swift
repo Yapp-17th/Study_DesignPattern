@@ -72,7 +72,10 @@ public class OrderViewController: UIViewController {
             make.right.equalToSuperview().offset(-16)
         }
         
-        coffeeOptionView.item = CoffeeOptionItem(title: "메뉴 선택", options: [Coffee(coffeeName: "아메리카노", type: .espresso)])
+        coffeeOptionView.item = CoffeeOptionItem(title: "메뉴 선택",
+                                                 options: [Coffee(coffeeName: "아메리카노", type: .espresso),
+                                                           Coffee(coffeeName: "에스프레소", type: .espresso),
+                                                           Coffee(coffeeName: "카푸치노", type: .espresso)])
     }
     
     private func setActionButtonLayout() {
