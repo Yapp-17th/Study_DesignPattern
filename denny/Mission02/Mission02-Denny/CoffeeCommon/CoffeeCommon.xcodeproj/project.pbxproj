@@ -10,6 +10,7 @@
 		B09BC50324E6E324001D7C00 /* CoffeeCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = B09BC50124E6E324001D7C00 /* CoffeeCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09BC50A24E6E331001D7C00 /* LogConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC50924E6E331001D7C00 /* LogConfig.swift */; };
 		B09BC53124E6E424001D7C00 /* ColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC53024E6E424001D7C00 /* ColorConfig.swift */; };
+		B0E8E65224E8BA1C00E23C8B /* ColorSet.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,7 @@
 		B09BC50224E6E324001D7C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09BC50924E6E331001D7C00 /* LogConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConfig.swift; sourceTree = "<group>"; };
 		B09BC53024E6E424001D7C00 /* ColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConfig.swift; sourceTree = "<group>"; };
+		B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorSet.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 				B09BC50224E6E324001D7C00 /* Info.plist */,
 				B09BC50924E6E331001D7C00 /* LogConfig.swift */,
 				B09BC53024E6E424001D7C00 /* ColorConfig.swift */,
+				B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */,
 			);
 			path = CoffeeCommon;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E8E65224E8BA1C00E23C8B /* ColorSet.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

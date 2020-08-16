@@ -18,6 +18,8 @@ public class MainViewController: UIViewController {
     private var debugLabel: UILabel = UILabel()
     private var requestButton: UIButton = UIButton()
     
+    
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         initViewLayout()
@@ -62,3 +64,14 @@ public class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+}

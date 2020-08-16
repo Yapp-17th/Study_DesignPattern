@@ -10,4 +10,6 @@ import Foundation
 public class MainModel {
     static let valueDidChange = Notification.Name("valueDidChange")
     static let isValueDidChange = Notification.Name("isValueDidChange")
+    
+    
 }

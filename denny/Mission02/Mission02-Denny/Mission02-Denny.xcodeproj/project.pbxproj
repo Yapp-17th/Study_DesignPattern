@@ -17,6 +17,8 @@
 		B0E8E60C24E787BB00E23C8B /* CoffeeCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09BC53724E6E449001D7C00 /* CoffeeCommon.framework */; };
 		B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61024E788A400E23C8B /* MainViewModel.swift */; };
 		B0E8E61324E7890800E23C8B /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61224E7890800E23C8B /* MainModel.swift */; };
+		B0E8E64F24E8B9EF00E23C8B /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E64E24E8B9EF00E23C8B /* UIColor+Custom.swift */; };
+		B0E8E67A24E8BACF00E23C8B /* Bundle+Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E67924E8BACF00E23C8B /* Bundle+Coffee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B09BC53224E6E449001D7C00 /* CoffeeCommon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoffeeCommon.xcodeproj; path = CoffeeCommon/CoffeeCommon.xcodeproj; sourceTree = "<group>"; };
 		B0E8E61024E788A400E23C8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B0E8E61224E7890800E23C8B /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B0E8E64E24E8B9EF00E23C8B /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		B0E8E67924E8BACF00E23C8B /* Bundle+Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Coffee.swift"; sourceTree = "<group>"; };
 		BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.release.xcconfig"; sourceTree = "<group>"; };
 		E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission02_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +113,8 @@
 				B09BC4E624E6DDC7001D7C00 /* Assets.xcassets */,
 				B09BC4EB24E6DDC7001D7C00 /* Info.plist */,
 				B09BC4E324E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld */,
+				B0E8E64E24E8B9EF00E23C8B /* UIColor+Custom.swift */,
+				B0E8E67924E8BACF00E23C8B /* Bundle+Coffee.swift */,
 			);
 			path = "Mission02-Denny";
 			sourceTree = "<group>";
@@ -297,6 +303,8 @@
 			files = (
 				B09BC4DF24E6DDC6001D7C00 /* MainViewController.swift in Sources */,
 				B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */,
+				B0E8E64F24E8B9EF00E23C8B /* UIColor+Custom.swift in Sources */,
+				B0E8E67A24E8BACF00E23C8B /* Bundle+Coffee.swift in Sources */,
 				B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */,
 				B0E8E61324E7890800E23C8B /* MainModel.swift in Sources */,
 				B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */,
