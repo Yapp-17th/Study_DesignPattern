@@ -18,6 +18,8 @@ public class MainViewController: UIViewController {
     private var debugLabel: UILabel = UILabel()
     private var requestButton: UIButton = UIButton()
     
+    private var orderButton: UIButton = UIButton()
+    private var debugLogTableView: UITableView = UITableView()
     
     
     public override func viewDidLoad() {
@@ -27,13 +29,18 @@ public class MainViewController: UIViewController {
     }
     
     private func initViewLayout() {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.barTintColor = .talkWhite000s
+        self.navigationItem.title = "커피 전문점"
+        
+        // MARK: Test Section
         view.addSubview(debugLabel)
         view.addSubview(requestButton)
         
         debugLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-            make.top.equalToSuperview().offset(64)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
         }
         
         debugLabel.numberOfLines = 0
@@ -50,6 +57,41 @@ public class MainViewController: UIViewController {
         requestButton.setTitleColor(.systemBlue, for: .normal)
         requestButton.backgroundColor = .white
         requestButton.addTarget(self, action: #selector(requestValue(sender:)), for: .touchUpInside)
+        
+        
+        // MARK: Main Section
+        view.addSubview(orderButton)
+        view.addSubview(debugLogTableView)
+        
+        orderButton.setTitle("주문하기", for: .normal)
+        orderButton.titleLabel?.font = .font14P
+        orderButton.addTarget(self, action: #selector(onClickReqOrderButton(_:)), for: .touchUpInside)
+        
+        orderButton.setTitleColor(.talkGray900s, for: .normal)
+        orderButton.backgroundColor = .talkYellow550s
+        orderButton.layer.cornerRadius = 4
+        orderButton.layer.masksToBounds = true
+        
+        orderButton.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+            make.height.equalTo(44)
+        }
+        
+        debugLogTableView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
+            make.left.equalTo(view.safeAreaLayoutGuide.snp.left).offset(16)
+            make.right.equalTo(view.safeAreaLayoutGuide.snp.right).offset(-16)
+            make.bottom.equalTo(orderButton.snp.top).offset(-12)
+        }
+    }
+    
+    @objc
+    private func onClickReqOrderButton(_ sender: UIButton) {
+        let viewController = OrderViewController()
+        viewController.modalPresentationStyle = .overCurrentContext
+        self.present(viewController, animated: true, completion: nil)
     }
     
     @objc

@@ -1,6 +1,6 @@
 //
 //  UIColor+Custom.swift
-//  Mission02-Denny
+//  CoffeeCommon
 //
 //  Created by Denny on 2020/08/16.
 //
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     func deletingPrefix(_ prefix: String) -> String {
         guard self.hasPrefix(prefix) else { return self }
         return String(self.dropFirst(prefix.count))
@@ -56,6 +56,10 @@ public extension UIColor {
     static var talkWhite001s: UIColor { fetchTalkColor(#function) }
     static var talkWhite000s: UIColor { fetchTalkColor(#function) }
     
+    static var talkYellow500s: UIColor { fetchTalkColor(#function) }
+    static var talkYellow550s: UIColor { fetchTalkColor(#function) }
+    static var talkYellow600s: UIColor { fetchTalkColor(#function) }
+    
     static var talkRed500s: UIColor { fetchTalkColor(#function) }
     
     static var talkBlue300s: UIColor { fetchTalkColor(#function) }
@@ -73,4 +77,33 @@ public extension UIColor {
         return color
     }
         
+}
+
+public extension UIColor {
+    convenience init(rgb: UInt32) {
+        self.init(
+            red: CGFloat(((rgb >> 16) & 0xFF)) / 255.0,
+            green: CGFloat(((rgb >> 8) & 0xFF)) / 255.0,
+            blue: CGFloat((rgb & 0xFF)) / 255.0,
+            alpha: 1.0
+        )
+    }
+
+    convenience init(rgb: UInt32, alpha: Float) {
+        self.init(
+            red: CGFloat(((rgb >> 16) & 0xFF)) / 255.0,
+            green: CGFloat(((rgb >> 8) & 0xFF)) / 255.0,
+            blue: CGFloat((rgb & 0xFF)) / 255.0,
+            alpha: CGFloat(alpha)
+        )
+    }
+
+    convenience init(rgba: UInt32) {
+        self.init(
+            red: CGFloat(((rgba >> 24) & 0xFF)) / 255.0,
+            green: CGFloat(((rgba >> 16) & 0xFF)) / 255.0,
+            blue: CGFloat(((rgba >> 8) & 0xFF)) / 255.0,
+            alpha: CGFloat((rgba & 0xFF)) / 255.0
+        )
+    }
 }

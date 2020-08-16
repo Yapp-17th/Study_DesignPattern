@@ -1,6 +1,6 @@
 //
 //  Bundle+Coffee.swift
-//  Mission02-Denny
+//  CoffeeCommon
 //
 //  Created by Denny on 2020/08/16.
 //
