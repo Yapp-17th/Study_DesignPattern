@@ -7,12 +7,15 @@
 
 import CoffeeCommon
 import Foundation
+import Combine
 import SnapKit
 import UIKit
 
 public class OrderViewController: UIViewController {
-    private var contentView: UIView = UIView()
+    private var viewModel: OrderViewModel? = OrderViewModel()
+    private var cancellables: Set<AnyCancellable> = []
     
+    private var contentView: UIView = UIView()
     private var buttonStackView: UIStackView = UIStackView()
     private var orderButton: UIButton = UIButton()
     private var cancelButton: UIButton = UIButton()
@@ -42,6 +45,8 @@ public class OrderViewController: UIViewController {
         
         setContentViewLayout()
         setActionButtonLayout()
+        bindViewModel()
+        viewModel?.generateCoffeeMenu()
     }
     
     private func setContentViewLayout() {
@@ -66,16 +71,12 @@ public class OrderViewController: UIViewController {
         descLabel.textColor = UIColor(rgb: 0x7c7c7c)
         
         contentView.addSubview(coffeeOptionView)
+        coffeeOptionView.delegate = self
         coffeeOptionView.snp.makeConstraints { make in
             make.top.equalTo(descLabel.snp.bottom).offset(24)
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
         }
-        
-        coffeeOptionView.item = CoffeeOptionItem(title: "메뉴 선택",
-                                                 options: [Coffee(coffeeName: "아메리카노", type: .espresso),
-                                                           Coffee(coffeeName: "에스프레소", type: .espresso),
-                                                           Coffee(coffeeName: "카푸치노", type: .espresso)])
     }
     
     private func setActionButtonLayout() {
@@ -120,5 +121,17 @@ public class OrderViewController: UIViewController {
     @objc
     private func onClickCancelButton(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    private func bindViewModel() {
+        viewModel?.$coffeeItem.sink { [weak self] item in
+            self?.coffeeOptionView.item = item
+        }.store(in: &cancellables)
+    }
+}
+
+extension OrderViewController: CoffeeSelectionInternalDelegate {
+    public func selectionInternalView(view: CoffeeSelectionInternalView, at index: Int, selected: Bool) {
+        DebugLog("[Selected] 커피이름 : \(viewModel?.coffeeItem.options[index].coffeeName ?? "nil") / 선택여부 : \(selected)")
     }
 }

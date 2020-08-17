@@ -21,6 +21,7 @@
 		B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61024E788A400E23C8B /* MainViewModel.swift */; };
 		B0E8E61324E7890800E23C8B /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61224E7890800E23C8B /* MainModel.swift */; };
 		B0E8E6A824E8BF2C00E23C8B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */; };
+		B0F2054824EA12D4000F0B73 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F2054724EA12D4000F0B73 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		B0E8E61024E788A400E23C8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B0E8E61224E7890800E23C8B /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		B0F2054724EA12D4000F0B73 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.release.xcconfig"; sourceTree = "<group>"; };
 		E59E4CF54DC73451F92D7BE2 /* Pods_Mission02_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission02_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */,
+				B0F2054724EA12D4000F0B73 /* OrderViewModel.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */,
 				B00E4FEA24E8D54B00F39B2F /* DataModel.swift in Sources */,
 				B00E4FEC24E96A4400F39B2F /* CoffeeSelectionInternalView.swift in Sources */,
+				B0F2054824EA12D4000F0B73 /* OrderViewModel.swift in Sources */,
 				B00E4FE124E8D26200F39B2F /* CoffeeOptionSelectionView.swift in Sources */,
 				B0E8E6A824E8BF2C00E23C8B /* OrderViewController.swift in Sources */,
 			);

@@ -17,6 +17,7 @@ public class CoffeeOptionSelectionView: UIView {
         }
     }
     
+    public var delegate: CoffeeSelectionInternalDelegate?
     private var titleLabel: UILabel = UILabel()
     private var optionStackView: UIStackView = UIStackView()
     
@@ -57,9 +58,11 @@ public class CoffeeOptionSelectionView: UIView {
             optionStackView.removeArrangedSubview(subview)
         }
         
-        for coffee in options {
+        for (index, coffee) in options.enumerated() {
             let selectionView = CoffeeSelectionInternalView()
             selectionView.itemTitle = coffee.coffeeName
+            selectionView.index = index
+            selectionView.delegate = delegate
             optionStackView.addArrangedSubview(selectionView)
         }
     }

@@ -9,6 +9,10 @@ import Foundation
 import SnapKit
 import UIKit
 
+public protocol CoffeeSelectionInternalDelegate {
+    func selectionInternalView(view: CoffeeSelectionInternalView, at index: Int, selected: Bool)
+}
+
 public class CoffeeSelectionInternalView: UIView {
     private var checkButton: UIButton = UIButton()
     private var nameLabel: UILabel = UILabel()
@@ -25,6 +29,8 @@ public class CoffeeSelectionInternalView: UIView {
         }
     }
     
+    public var index: Int = 0
+    public var delegate: CoffeeSelectionInternalDelegate?
     public var itemTitle: String? {
         didSet {
             nameLabel.text = itemTitle
@@ -69,6 +75,7 @@ public class CoffeeSelectionInternalView: UIView {
     @objc
     private func onClickCheckButton(_ sender: UIButton) {
         isSelected = !isSelected
+        delegate?.selectionInternalView(view: self, at: index, selected: isSelected)
     }
     
 }
