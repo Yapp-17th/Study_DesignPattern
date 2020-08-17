@@ -7,11 +7,6 @@
 
 import Foundation
 
-public enum CoffeeType: Int {
-    case espresso = 0
-    case blending
-}
-
 public struct Coffee {
     public var coffeeName: String
     public var type: CoffeeType

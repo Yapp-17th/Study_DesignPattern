@@ -11,6 +11,7 @@
 		B00E4FE124E8D26200F39B2F /* CoffeeOptionSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FE024E8D26200F39B2F /* CoffeeOptionSelectionView.swift */; };
 		B00E4FEA24E8D54B00F39B2F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FE924E8D54B00F39B2F /* DataModel.swift */; };
 		B00E4FEC24E96A4400F39B2F /* CoffeeSelectionInternalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FEB24E96A4400F39B2F /* CoffeeSelectionInternalView.swift */; };
+		B03081BB24EABFA30046956E /* CoffeeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B03081BA24EABFA30046956E /* CoffeeModel.m */; };
 		B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */; };
 		B09BC4DF24E6DDC6001D7C00 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC4DE24E6DDC6001D7C00 /* MainViewController.swift */; };
 		B09BC4E224E6DDC6001D7C00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09BC4E024E6DDC6001D7C00 /* Main.storyboard */; };
@@ -52,6 +53,9 @@
 		B00E4FE024E8D26200F39B2F /* CoffeeOptionSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOptionSelectionView.swift; sourceTree = "<group>"; };
 		B00E4FE924E8D54B00F39B2F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B00E4FEB24E96A4400F39B2F /* CoffeeSelectionInternalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeSelectionInternalView.swift; sourceTree = "<group>"; };
+		B03081B924EABFA30046956E /* Mission02-Denny-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mission02-Denny-Bridging-Header.h"; sourceTree = "<group>"; };
+		B03081BA24EABFA30046956E /* CoffeeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoffeeModel.m; sourceTree = "<group>"; };
+		B03081BD24EABFBF0046956E /* CoffeeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeModel.h; sourceTree = "<group>"; };
 		B09BC4D724E6DDC6001D7C00 /* Mission02-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission02-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09BC4DA24E6DDC6001D7C00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B09BC4DE24E6DDC6001D7C00 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,9 @@
 			isa = PBXGroup;
 			children = (
 				B00E4FE924E8D54B00F39B2F /* DataModel.swift */,
+				B03081BD24EABFBF0046956E /* CoffeeModel.h */,
+				B03081BA24EABFA30046956E /* CoffeeModel.m */,
+				B03081B924EABFA30046956E /* Mission02-Denny-Bridging-Header.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 				TargetAttributes = {
 					B09BC4D624E6DDC6001D7C00 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -360,6 +368,7 @@
 				B0F2054824EA12D4000F0B73 /* OrderViewModel.swift in Sources */,
 				B00E4FE124E8D26200F39B2F /* CoffeeOptionSelectionView.swift in Sources */,
 				B0E8E6A824E8BF2C00E23C8B /* OrderViewController.swift in Sources */,
+				B03081BB24EABFA30046956E /* CoffeeModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = "Mission02-Denny/Global/Info.plist";
@@ -517,6 +527,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission02-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mission02-Denny/Models/Mission02-Denny-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = "Mission02-Denny/Global/Info.plist";
@@ -538,6 +551,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission02-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mission02-Denny/Models/Mission02-Denny-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
