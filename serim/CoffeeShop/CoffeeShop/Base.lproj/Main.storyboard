@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CoffeeShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="guH-ru-hk3">
+                                <rect key="frame" x="0.0" y="164" width="414" height="548"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="menuCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="70" id="12m-K0-F1q" customClass="MenuCell" customModule="CoffeeShop" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="12m-K0-F1q" id="dQB-IW-hil">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfC-id-3bd">
+                                                    <rect key="frame" x="60" y="25" width="59.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n03-IV-qzn">
+                                                    <rect key="frame" x="292.5" y="25" width="61.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="n03-IV-qzn" secondAttribute="bottom" constant="13" id="AcD-r8-96W"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="OfC-id-3bd" secondAttribute="bottom" constant="13" id="Kfp-ar-CBK"/>
+                                                <constraint firstItem="OfC-id-3bd" firstAttribute="top" secondItem="dQB-IW-hil" secondAttribute="topMargin" constant="14" id="RsH-Zg-h5c"/>
+                                                <constraint firstItem="n03-IV-qzn" firstAttribute="top" secondItem="dQB-IW-hil" secondAttribute="topMargin" constant="14" id="dwy-us-b5X"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="n03-IV-qzn" secondAttribute="trailing" constant="40" id="uWz-5o-CC0"/>
+                                                <constraint firstItem="OfC-id-3bd" firstAttribute="leading" secondItem="dQB-IW-hil" secondAttribute="leadingMargin" constant="40" id="yh5-Kc-LgT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuLabel" destination="OfC-id-3bd" id="4lv-Wn-7Fo"/>
+                                            <outlet property="priceLabel" destination="n03-IV-qzn" id="DIU-ym-pG8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="M E N U" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcK-AK-5i6">
+                                <rect key="frame" x="145" y="89" width="125" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="guH-ru-hk3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lwi-8Y-ZGX"/>
+                            <constraint firstItem="guH-ru-hk3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZDB-Dg-a2C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="guH-ru-hk3" secondAttribute="bottom" constant="150" id="rb4-tY-hqV"/>
+                            <constraint firstItem="guH-ru-hk3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="x7H-4B-aoF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuTableView" destination="guH-ru-hk3" id="NKD-WW-mgC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.81159420289856" y="81.696428571428569"/>
+        </scene>
+        <!--Coffee View Controller-->
+        <scene sceneID="vZR-V7-ySP">
+            <objects>
+                <viewController storyboardIdentifier="CoffeeViewController" id="F2f-dL-2EH" customClass="CoffeeViewController" customModule="CoffeeShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gcf-Oe-IzN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baristaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FJA-vU-krr">
+                                <rect key="frame" x="87" y="436" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Wa1-ny-szY"/>
+                                    <constraint firstAttribute="height" constant="240" id="XQJ-ie-Wnl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOc-XC-o4G">
+                                <rect key="frame" x="177" y="273" width="60" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FJA-vU-krr" firstAttribute="leading" secondItem="JzS-bO-fJz" secondAttribute="leading" constant="87" id="CMh-Lx-q0z"/>
+                            <constraint firstItem="JzS-bO-fJz" firstAttribute="trailing" secondItem="FJA-vU-krr" secondAttribute="trailing" constant="87" id="Nfn-3A-WqI"/>
+                            <constraint firstItem="JzS-bO-fJz" firstAttribute="bottom" secondItem="FJA-vU-krr" secondAttribute="bottom" constant="186" id="XT8-CV-cjS"/>
+                            <constraint firstItem="SOc-XC-o4G" firstAttribute="centerX" secondItem="Gcf-Oe-IzN" secondAttribute="centerX" id="puv-zn-cEA"/>
+                            <constraint firstItem="FJA-vU-krr" firstAttribute="top" secondItem="SOc-XC-o4G" secondAttribute="bottom" constant="133" id="qCa-6c-wvL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JzS-bO-fJz"/>
+                    </view>
+                    <connections>
+                        <outlet property="coffeeLabel" destination="SOc-XC-o4G" id="9RP-vU-7v2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybV-M0-eK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="baristaIcon" width="512" height="512"/>
+    </resources>
+</document>
