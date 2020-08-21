@@ -24,6 +24,9 @@ public class OrderViewController: UIViewController {
     private var descLabel: UILabel = UILabel()
     private var coffeeOptionView: CoffeeOptionSelectionView = CoffeeOptionSelectionView()
     
+    private var orderConfirmTitleLabel: UILabel = UILabel()
+    private var orderListLabel: UILabel = UILabel()
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,6 +80,29 @@ public class OrderViewController: UIViewController {
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
         }
+        
+        contentView.addSubview(orderConfirmTitleLabel)
+        contentView.addSubview(orderListLabel)
+        
+        orderConfirmTitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(coffeeOptionView.snp.bottom).offset(24)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
+        orderListLabel.snp.makeConstraints { make in
+            make.top.equalTo(orderConfirmTitleLabel.snp.bottom).offset(24)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
+        
+        orderConfirmTitleLabel.text = "메뉴 확인"
+        orderConfirmTitleLabel.font = .font15PBold
+        orderConfirmTitleLabel.textColor = .talkGray900s
+        
+        orderListLabel.text = ""
+        orderListLabel.font = .font15PBold
+        orderListLabel.textColor = .talkGray900s
     }
     
     private func setActionButtonLayout() {
@@ -84,9 +110,9 @@ public class OrderViewController: UIViewController {
         buttonStackView.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
             make.right.equalToSuperview().offset(-16)
-            make.bottom.equalToSuperview().offset(-16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
         }
-        
+
         buttonStackView.axis = .horizontal
         buttonStackView.spacing = 12
         buttonStackView.distribution = .fillEqually

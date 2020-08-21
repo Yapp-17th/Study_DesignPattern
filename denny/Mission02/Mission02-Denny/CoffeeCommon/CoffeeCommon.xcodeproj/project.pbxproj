@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B00E4FE324E8D2EB00F39B2F /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FE224E8D2EB00F39B2F /* UIColor+Custom.swift */; };
-		B00E4FE524E8D2F600F39B2F /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FE424E8D2F600F39B2F /* UIFont+Custom.swift */; };
 		B00E4FE724E8D52300F39B2F /* Bundle+Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00E4FE624E8D52300F39B2F /* Bundle+Coffee.swift */; };
+		B03C371124F0230400C4F92E /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C370F24F0230400C4F92E /* UIColor+Custom.swift */; };
+		B03C371224F0230400C4F92E /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03C371024F0230400C4F92E /* UIFont+Custom.swift */; };
 		B09BC50324E6E324001D7C00 /* CoffeeCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = B09BC50124E6E324001D7C00 /* CoffeeCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09BC50A24E6E331001D7C00 /* LogConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC50924E6E331001D7C00 /* LogConfig.swift */; };
 		B09BC53124E6E424001D7C00 /* ColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC53024E6E424001D7C00 /* ColorConfig.swift */; };
@@ -17,9 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B00E4FE224E8D2EB00F39B2F /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIColor+Custom.swift"; path = "../../../Mission02-Denny/Views/UIColor+Custom.swift"; sourceTree = "<group>"; };
-		B00E4FE424E8D2F600F39B2F /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIFont+Custom.swift"; path = "../../../Mission02-Denny/Views/UIFont+Custom.swift"; sourceTree = "<group>"; };
 		B00E4FE624E8D52300F39B2F /* Bundle+Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Coffee.swift"; sourceTree = "<group>"; };
+		B03C370F24F0230400C4F92E /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		B03C371024F0230400C4F92E /* UIFont+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		B09BC4FE24E6E324001D7C00 /* CoffeeCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoffeeCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B09BC50124E6E324001D7C00 /* CoffeeCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoffeeCommon.h; sourceTree = "<group>"; };
 		B09BC50224E6E324001D7C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,11 +39,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B00E4FDE24E8D22700F39B2F /* UICustom */ = {
+		B03C370E24F022A100C4F92E /* UICustom */ = {
 			isa = PBXGroup;
 			children = (
-				B00E4FE224E8D2EB00F39B2F /* UIColor+Custom.swift */,
-				B00E4FE424E8D2F600F39B2F /* UIFont+Custom.swift */,
+				B03C370F24F0230400C4F92E /* UIColor+Custom.swift */,
+				B03C371024F0230400C4F92E /* UIFont+Custom.swift */,
 			);
 			path = UICustom;
 			sourceTree = "<group>";
@@ -67,11 +67,11 @@
 		B09BC50024E6E324001D7C00 /* CoffeeCommon */ = {
 			isa = PBXGroup;
 			children = (
+				B03C370E24F022A100C4F92E /* UICustom */,
 				B09BC50124E6E324001D7C00 /* CoffeeCommon.h */,
 				B09BC50224E6E324001D7C00 /* Info.plist */,
 				B09BC50924E6E331001D7C00 /* LogConfig.swift */,
 				B09BC53024E6E424001D7C00 /* ColorConfig.swift */,
-				B00E4FDE24E8D22700F39B2F /* UICustom */,
 				B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */,
 				B00E4FE624E8D52300F39B2F /* Bundle+Coffee.swift */,
 			);
@@ -159,10 +159,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09BC50A24E6E331001D7C00 /* LogConfig.swift in Sources */,
-				B00E4FE524E8D2F600F39B2F /* UIFont+Custom.swift in Sources */,
 				B00E4FE724E8D52300F39B2F /* Bundle+Coffee.swift in Sources */,
+				B03C371124F0230400C4F92E /* UIColor+Custom.swift in Sources */,
+				B03C371224F0230400C4F92E /* UIFont+Custom.swift in Sources */,
 				B09BC53124E6E424001D7C00 /* ColorConfig.swift in Sources */,
-				B00E4FE324E8D2EB00F39B2F /* UIColor+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
