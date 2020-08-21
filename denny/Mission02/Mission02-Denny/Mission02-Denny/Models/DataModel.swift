@@ -10,6 +10,7 @@ import Foundation
 public struct Coffee {
     public var coffeeName: String
     public var type: CoffeeType
+    public var selected: Bool = false
 }
 
 public struct CoffeeOptionItem {

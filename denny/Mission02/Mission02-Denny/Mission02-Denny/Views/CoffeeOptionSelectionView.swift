@@ -54,14 +54,13 @@ public class CoffeeOptionSelectionView: UIView {
         guard let options = item?.options else { return }
         
         titleLabel.text = item?.title
-        for subview in optionStackView.subviews {
-            optionStackView.removeArrangedSubview(subview)
-        }
+        optionStackView.subviews.forEach({ $0.removeFromSuperview() })
         
         for (index, coffee) in options.enumerated() {
             let selectionView = CoffeeSelectionInternalView()
             selectionView.itemTitle = coffee.coffeeName
             selectionView.index = index
+            selectionView.isSelected = coffee.selected
             selectionView.delegate = delegate
             optionStackView.addArrangedSubview(selectionView)
         }

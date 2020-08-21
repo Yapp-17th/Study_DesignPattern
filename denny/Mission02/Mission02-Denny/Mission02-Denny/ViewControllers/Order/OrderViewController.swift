@@ -152,12 +152,26 @@ public class OrderViewController: UIViewController {
     private func bindViewModel() {
         viewModel?.$coffeeItem.sink { [weak self] item in
             self?.coffeeOptionView.item = item
+            self?.applyToListLabel(coffeeItem: item)
         }.store(in: &cancellables)
+    }
+    
+    private func applyToListLabel(coffeeItem: CoffeeOptionItem) {
+        var listText = ""
+        let selectedOptions = coffeeItem.options.filter({ $0.selected == true })
+        for (index, selectedOption) in selectedOptions.enumerated() {
+            listText += selectedOption.coffeeName
+            if index < selectedOptions.count - 1 {
+                listText += ", "
+            }
+        }
+        orderListLabel.text = listText
     }
 }
 
 extension OrderViewController: CoffeeSelectionInternalDelegate {
     public func selectionInternalView(view: CoffeeSelectionInternalView, at index: Int, selected: Bool) {
+        viewModel?.coffeeItem.options[index].selected = selected
         DebugLog("[Selected] 커피이름 : \(viewModel?.coffeeItem.options[index].coffeeName ?? "nil") / 선택여부 : \(selected)")
     }
 }

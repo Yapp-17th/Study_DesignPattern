@@ -24,7 +24,7 @@ public class CoffeeSelectionInternalView: UIView {
     public var viewHeight: CGFloat = 44
     public var isSelected: Bool = false {
         didSet {
-            checkButton.backgroundColor = isSelected ? .green : .orange
+//            checkButton.backgroundColor = isSelected ? .green : .orange
             checkButton.setImage(isSelected ? checkOnImage : checkOffImage, for: .normal)
             nameLabel.font = isSelected ? .font15PBold : .font15P
         }
@@ -65,7 +65,7 @@ public class CoffeeSelectionInternalView: UIView {
         
         checkButton.addTarget(self, action: #selector(onClickCheckButton(_:)), for: .touchUpInside)
         
-        checkButton.backgroundColor = isSelected ? .green : .orange
+//        checkButton.backgroundColor = isSelected ? .green : .orange
         checkButton.setImage(isSelected ? checkOnImage : checkOffImage, for: .normal)
         
         nameLabel.font = isSelected ? .font15PBold : .font15P
