@@ -7,6 +7,11 @@
 
 import Foundation
 
+public struct Order {
+    public var customerId: Int64
+    public var coffees: [Coffee]
+}
+
 public struct Coffee {
     public var coffeeName: String
     public var type: CoffeeType
