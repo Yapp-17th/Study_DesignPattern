@@ -25,6 +25,8 @@
 		B0ADEEC224F0EDA4009E154E /* DebugWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC124F0EDA4009E154E /* DebugWorker.swift */; };
 		B0ADEEC424F0F101009E154E /* NotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC324F0F101009E154E /* NotificationConstant.swift */; };
 		B0ADEEC624F0F11B009E154E /* NotificationConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC524F0F11B009E154E /* NotificationConstant.m */; };
+		B0ADEECA24F0FA82009E154E /* DebugLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC824F0FA82009E154E /* DebugLogTableViewCell.swift */; };
+		B0ADEECB24F0FA82009E154E /* DebugLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0ADEEC924F0FA82009E154E /* DebugLogTableViewCell.xib */; };
 		B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61024E788A400E23C8B /* MainViewModel.swift */; };
 		B0E8E61324E7890800E23C8B /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61224E7890800E23C8B /* MainWorker.swift */; };
 		B0E8E6A824E8BF2C00E23C8B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */; };
@@ -78,6 +80,8 @@
 		B0ADEEC324F0F101009E154E /* NotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstant.swift; sourceTree = "<group>"; };
 		B0ADEEC524F0F11B009E154E /* NotificationConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationConstant.m; sourceTree = "<group>"; };
 		B0ADEEC724F0F12B009E154E /* NotificationConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
+		B0ADEEC824F0FA82009E154E /* DebugLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogTableViewCell.swift; sourceTree = "<group>"; };
+		B0ADEEC924F0FA82009E154E /* DebugLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DebugLogTableViewCell.xib; sourceTree = "<group>"; };
 		B0E8E61024E788A400E23C8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B0E8E61224E7890800E23C8B /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 			children = (
 				B00E4FE024E8D26200F39B2F /* CoffeeOptionSelectionView.swift */,
 				B00E4FEB24E96A4400F39B2F /* CoffeeSelectionInternalView.swift */,
+				B0ADEEC824F0FA82009E154E /* DebugLogTableViewCell.swift */,
+				B0ADEEC924F0FA82009E154E /* DebugLogTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				B09BC4EA24E6DDC7001D7C00 /* LaunchScreen.storyboard in Resources */,
 				B09BC4E724E6DDC7001D7C00 /* Assets.xcassets in Resources */,
+				B0ADEECB24F0FA82009E154E /* DebugLogTableViewCell.xib in Resources */,
 				B09BC4E224E6DDC6001D7C00 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +399,7 @@
 				B0E8E61324E7890800E23C8B /* MainWorker.swift in Sources */,
 				B0ADEEC024F0ED6C009E154E /* ServiceModel.swift in Sources */,
 				B0ADEEC424F0F101009E154E /* NotificationConstant.swift in Sources */,
+				B0ADEECA24F0FA82009E154E /* DebugLogTableViewCell.swift in Sources */,
 				B0ADEEBE24F0ECD2009E154E /* ServiceDelegate.swift in Sources */,
 				B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */,
 				B00E4FEA24E8D54B00F39B2F /* DataModel.swift in Sources */,

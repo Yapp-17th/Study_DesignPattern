@@ -22,7 +22,7 @@ public class Customer: NSObject, CasherDelegate {
     public func requestCoffeeOrder(order: Order) {
         var content = "[손님(id:\(customerId))] 커피를 주문합니다... 커피들 : \(order.coffees)"
         DebugLog(content)
-        DebugWorker.shared.appendDebugLog(string: "[커피 주문 로그]")
+        DebugWorker.shared.appendDebugLog(string: "손님(#\(order.customerId)) 주문!\n")
         DebugWorker.shared.appendDebugLog(string: content)
         
         for coffee in order.coffees {

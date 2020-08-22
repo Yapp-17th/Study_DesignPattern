@@ -25,6 +25,10 @@ public class MainViewModel: NSObject, ObservableObject {
         title = "Random number (\(randomNumber))"
     }
     
+    func getRandomNumber() -> Int64 {
+        return Int64.random(in: 0..<50)
+    }
+    
     func processOrder(order: Order) {
         DebugLog("Do Order Process... 주문한 커피 : \(order.coffees)")
         MainWorker.shared.doProcessOrder(order: order)

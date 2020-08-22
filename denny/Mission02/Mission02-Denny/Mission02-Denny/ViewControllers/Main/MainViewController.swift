@@ -25,6 +25,10 @@ public class MainViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        debugLogTableView.delegate = self
+        debugLogTableView.dataSource = self
+        debugLogTableView.register(UINib(nibName: "DebugLogTableViewCell", bundle: nil), forCellReuseIdentifier: DebugLogTableViewCell.identifier)
+        
         initViewLayout()
         bindViewModel()
     }
@@ -33,32 +37,6 @@ public class MainViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = .talkWhite000s
         self.navigationItem.title = "커피 전문점"
-        
-        // MARK: Test Section
-        view.addSubview(debugLabel)
-        view.addSubview(requestButton)
-        
-        debugLabel.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
-        }
-        
-        debugLabel.numberOfLines = 0
-        debugLabel.textColor = .black
-        debugLabel.textAlignment = .center
-        
-        requestButton.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.top.equalTo(debugLabel.snp.bottom).offset(12)
-        }
-        
-        requestButton.setTitle("랜덤값 요청", for: .normal)
-        requestButton.setTitleColor(.systemBlue, for: .normal)
-        requestButton.backgroundColor = .white
-        requestButton.addTarget(self, action: #selector(requestValue(sender:)), for: .touchUpInside)
-        
         
         // MARK: Main Section
         view.addSubview(orderButton)
@@ -72,6 +50,8 @@ public class MainViewController: UIViewController {
         orderButton.backgroundColor = .talkYellow550s
         orderButton.layer.cornerRadius = 4
         orderButton.layer.masksToBounds = true
+        
+        debugLogTableView.tableFooterView = UIView()
         
         orderButton.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(16)
@@ -92,7 +72,7 @@ public class MainViewController: UIViewController {
     private func onClickReqOrderButton(_ sender: UIButton) {
         let viewController = OrderViewController()
         viewController.completion = viewModel.processOrder
-        viewController.customerId = 1
+        viewController.customerId = viewModel.getRandomNumber()
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: true, completion: nil)
     }
@@ -104,6 +84,7 @@ public class MainViewController: UIViewController {
 
     private func updateLogTableView(logList: [String]) {
         DebugLog("[MainVC] Update Log")
+        debugLogTableView.reloadData()
     }
     
     private func bindViewModel() {
@@ -119,12 +100,16 @@ public class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.logList.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: DebugLogTableViewCell.identifier, for: indexPath) as? DebugLogTableViewCell {
+            cell.content = viewModel.logList[indexPath.row]
+            cell.separatorInset = .zero
+            return cell
+        }
         return UITableViewCell()
     }
-    
     
 }
