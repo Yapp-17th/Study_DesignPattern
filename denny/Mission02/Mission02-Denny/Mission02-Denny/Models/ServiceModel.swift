@@ -20,9 +20,8 @@ public class Customer: NSObject, CasherDelegate {
     }
     
     public func requestCoffeeOrder(order: Order) {
-        var content = "[손님(id:\(customerId))] 커피를 주문합니다... 커피들 : \(order.coffees)"
+        var content = "손님(#\(order.customerId)) 주문!\nMENU : \(order.menuString)"
         DebugLog(content)
-        DebugWorker.shared.appendDebugLog(string: "손님(#\(order.customerId)) 주문!\n")
         DebugWorker.shared.appendDebugLog(string: content)
         
         for coffee in order.coffees {
@@ -34,7 +33,9 @@ public class Customer: NSObject, CasherDelegate {
     }
     
     public func serveCoffee(_ customerId: Int64, _ coffee: Coffee) {
-        DebugLog("손님(id:\(customerId))Enjoy Coffee 메뉴 : \(coffee.coffeeName)")
+        let content = "손님(id:\(customerId))Enjoy Coffee 메뉴 : \(coffee.coffeeName)"
+        DebugLog(content)
+        DebugWorker.shared.appendDebugLog(string: content)
     }
 }
 
@@ -77,7 +78,6 @@ public class Casher: NSObject, CoffeeMakerDelegate {
         let content = "[Casher] 제조된 커피를 받았습니다.\n손님(id:\(customerId)) / 메뉴 : \(coffee.coffeeName)"
         DebugLog(content)
         DebugWorker.shared.appendDebugLog(string: content)
-        getMakeStatus(content)
         delegate?.serveCoffee(customerId, coffee)
     }
     

@@ -26,4 +26,9 @@ public class DebugWorker: NSObject {
     public func getLogList() -> [String] {
         return logList
     }
+    
+    public func clearLogList() {
+        logList.removeAll()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addDebugLog"), object: nil)
+    }
 }

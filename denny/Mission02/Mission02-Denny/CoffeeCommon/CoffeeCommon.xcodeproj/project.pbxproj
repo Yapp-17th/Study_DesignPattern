@@ -13,6 +13,8 @@
 		B09BC50324E6E324001D7C00 /* CoffeeCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = B09BC50124E6E324001D7C00 /* CoffeeCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09BC50A24E6E331001D7C00 /* LogConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC50924E6E331001D7C00 /* LogConfig.swift */; };
 		B09BC53124E6E424001D7C00 /* ColorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09BC53024E6E424001D7C00 /* ColorConfig.swift */; };
+		B0ADEEF524F10A5C009E154E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0ADEEF424F10A5C009E154E /* Images.xcassets */; };
+		B0ADEEF724F10A6E009E154E /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEF624F10A6E009E154E /* UIImage+Custom.swift */; };
 		B0E8E65224E8BA1C00E23C8B /* ColorSet.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		B09BC50224E6E324001D7C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B09BC50924E6E331001D7C00 /* LogConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogConfig.swift; sourceTree = "<group>"; };
 		B09BC53024E6E424001D7C00 /* ColorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConfig.swift; sourceTree = "<group>"; };
+		B0ADEEF424F10A5C009E154E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0ADEEF624F10A6E009E154E /* UIImage+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
 		B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorSet.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +48,7 @@
 			children = (
 				B03C370F24F0230400C4F92E /* UIColor+Custom.swift */,
 				B03C371024F0230400C4F92E /* UIFont+Custom.swift */,
+				B0ADEEF624F10A6E009E154E /* UIImage+Custom.swift */,
 			);
 			path = UICustom;
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 				B09BC53024E6E424001D7C00 /* ColorConfig.swift */,
 				B0E8E65124E8BA1C00E23C8B /* ColorSet.xcassets */,
 				B00E4FE624E8D52300F39B2F /* Bundle+Coffee.swift */,
+				B0ADEEF424F10A5C009E154E /* Images.xcassets */,
 			);
 			path = CoffeeCommon;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0E8E65224E8BA1C00E23C8B /* ColorSet.xcassets in Resources */,
+				B0ADEEF524F10A5C009E154E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +169,7 @@
 				B00E4FE724E8D52300F39B2F /* Bundle+Coffee.swift in Sources */,
 				B03C371124F0230400C4F92E /* UIColor+Custom.swift in Sources */,
 				B03C371224F0230400C4F92E /* UIFont+Custom.swift in Sources */,
+				B0ADEEF724F10A6E009E154E /* UIImage+Custom.swift in Sources */,
 				B09BC53124E6E424001D7C00 /* ColorConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
