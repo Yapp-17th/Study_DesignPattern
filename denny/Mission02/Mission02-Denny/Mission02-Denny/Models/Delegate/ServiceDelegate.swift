@@ -8,17 +8,15 @@
 import Foundation
 
 public protocol CasherDelegate {
-    func serveCoffee(_ order: Order)
-    
-    func getMakeStatus(_ content: String)
+    func serveCoffee(_ customerId: Int64, _ coffee: Coffee)
 }
 
 public protocol CustomerDelegate {
-    func requestCoffeeOrder(_ order: Order)
+    func receiveCoffeeOrder(_ customerId: Int64, _ coffee: Coffee)
 }
 
 public protocol CoffeeMakerDelegate {
-    func extractCoffee(_ order: Order)
+    func extractCoffee(_ customerId: Int64, _ coffee: Coffee)
     
     func getMakeStatus(_ content: String)
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoffeeCommon
 import NotificationCenter
 
 public protocol DebugWorkerDelegate {

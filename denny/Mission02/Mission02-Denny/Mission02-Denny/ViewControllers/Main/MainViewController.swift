@@ -7,6 +7,7 @@
 
 import CoffeeCommon
 import Combine
+import NotificationCenter
 import SnapKit
 import UIKit
 
@@ -91,6 +92,7 @@ public class MainViewController: UIViewController {
     private func onClickReqOrderButton(_ sender: UIButton) {
         let viewController = OrderViewController()
         viewController.completion = viewModel.processOrder
+        viewController.customerId = 1
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: true, completion: nil)
     }

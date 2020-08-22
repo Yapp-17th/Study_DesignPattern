@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoffeeCommon
 
 public struct Order {
     public var customerId: Int64

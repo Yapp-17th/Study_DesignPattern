@@ -13,6 +13,7 @@ public class MainViewModel: NSObject, ObservableObject {
     @Published var title: String = "Test"
     @Published var logList: [String] = [String]()
     
+    
     override init() {
         super.init()
         
@@ -25,7 +26,7 @@ public class MainViewModel: NSObject, ObservableObject {
     }
     
     func processOrder(order: Order) {
-        DebugLog("[ViewMode] Do Order Process")
+        DebugLog("Do Order Process... 주문한 커피 : \(order.coffees)")
         MainWorker.shared.doProcessOrder(order: order)
     }
     
