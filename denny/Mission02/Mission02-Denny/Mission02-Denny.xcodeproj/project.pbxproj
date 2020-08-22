@@ -23,8 +23,10 @@
 		B0ADEEBE24F0ECD2009E154E /* ServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEBD24F0ECD2009E154E /* ServiceDelegate.swift */; };
 		B0ADEEC024F0ED6C009E154E /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEBF24F0ED6C009E154E /* ServiceModel.swift */; };
 		B0ADEEC224F0EDA4009E154E /* DebugWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC124F0EDA4009E154E /* DebugWorker.swift */; };
+		B0ADEEC424F0F101009E154E /* NotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC324F0F101009E154E /* NotificationConstant.swift */; };
+		B0ADEEC624F0F11B009E154E /* NotificationConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADEEC524F0F11B009E154E /* NotificationConstant.m */; };
 		B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61024E788A400E23C8B /* MainViewModel.swift */; };
-		B0E8E61324E7890800E23C8B /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61224E7890800E23C8B /* MainModel.swift */; };
+		B0E8E61324E7890800E23C8B /* MainWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E61224E7890800E23C8B /* MainWorker.swift */; };
 		B0E8E6A824E8BF2C00E23C8B /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */; };
 		B0F2054824EA12D4000F0B73 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F2054724EA12D4000F0B73 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -73,8 +75,11 @@
 		B0ADEEBD24F0ECD2009E154E /* ServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDelegate.swift; sourceTree = "<group>"; };
 		B0ADEEBF24F0ED6C009E154E /* ServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		B0ADEEC124F0EDA4009E154E /* DebugWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWorker.swift; sourceTree = "<group>"; };
+		B0ADEEC324F0F101009E154E /* NotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstant.swift; sourceTree = "<group>"; };
+		B0ADEEC524F0F11B009E154E /* NotificationConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationConstant.m; sourceTree = "<group>"; };
+		B0ADEEC724F0F12B009E154E /* NotificationConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationConstant.h; sourceTree = "<group>"; };
 		B0E8E61024E788A400E23C8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		B0E8E61224E7890800E23C8B /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		B0E8E61224E7890800E23C8B /* MainWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWorker.swift; sourceTree = "<group>"; };
 		B0E8E6A724E8BF2C00E23C8B /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		B0F2054724EA12D4000F0B73 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		BC43F5F4A5CE188BCA6034EC /* Pods-Mission02-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission02-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission02-Denny/Pods-Mission02-Denny.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,9 +123,12 @@
 				B00E4FE924E8D54B00F39B2F /* DataModel.swift */,
 				B0ADEEBF24F0ED6C009E154E /* ServiceModel.swift */,
 				B0ADEEC124F0EDA4009E154E /* DebugWorker.swift */,
+				B0ADEEC324F0F101009E154E /* NotificationConstant.swift */,
 				B03081BD24EABFBF0046956E /* CoffeeModel.h */,
 				B03081BA24EABFA30046956E /* CoffeeModel.m */,
 				B03081B924EABFA30046956E /* Mission02-Denny-Bridging-Header.h */,
+				B0ADEEC524F0F11B009E154E /* NotificationConstant.m */,
+				B0ADEEC724F0F12B009E154E /* NotificationConstant.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,7 +211,7 @@
 			children = (
 				B09BC4DE24E6DDC6001D7C00 /* MainViewController.swift */,
 				B0E8E61024E788A400E23C8B /* MainViewModel.swift */,
-				B0E8E61224E7890800E23C8B /* MainModel.swift */,
+				B0E8E61224E7890800E23C8B /* MainWorker.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -379,9 +387,11 @@
 			files = (
 				B09BC4DF24E6DDC6001D7C00 /* MainViewController.swift in Sources */,
 				B09BC4E524E6DDC6001D7C00 /* Mission02_Denny.xcdatamodeld in Sources */,
+				B0ADEEC624F0F11B009E154E /* NotificationConstant.m in Sources */,
 				B09BC4DB24E6DDC6001D7C00 /* AppDelegate.swift in Sources */,
-				B0E8E61324E7890800E23C8B /* MainModel.swift in Sources */,
+				B0E8E61324E7890800E23C8B /* MainWorker.swift in Sources */,
 				B0ADEEC024F0ED6C009E154E /* ServiceModel.swift in Sources */,
+				B0ADEEC424F0F101009E154E /* NotificationConstant.swift in Sources */,
 				B0ADEEBE24F0ECD2009E154E /* ServiceDelegate.swift in Sources */,
 				B0E8E61124E788A400E23C8B /* MainViewModel.swift in Sources */,
 				B00E4FEA24E8D54B00F39B2F /* DataModel.swift in Sources */,

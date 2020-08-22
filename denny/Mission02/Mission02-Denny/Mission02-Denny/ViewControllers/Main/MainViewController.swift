@@ -90,6 +90,7 @@ public class MainViewController: UIViewController {
     @objc
     private func onClickReqOrderButton(_ sender: UIButton) {
         let viewController = OrderViewController()
+        viewController.completion = viewModel.processOrder
         viewController.modalPresentationStyle = .overCurrentContext
         self.present(viewController, animated: true, completion: nil)
     }
@@ -99,9 +100,17 @@ public class MainViewController: UIViewController {
         viewModel.fetch()
     }
 
+    private func updateLogTableView(logList: [String]) {
+        DebugLog("[MainVC] Update Log")
+    }
+    
     private func bindViewModel() {
         viewModel.$title.sink { [weak self] title in
             self?.debugLabel.text = "bind title : \(title)"
+        }.store(in: &cancellables)
+        
+        viewModel.$logList.sink { [weak self] logList in
+            self?.updateLogTableView(logList: logList)
         }.store(in: &cancellables)
     }
 }

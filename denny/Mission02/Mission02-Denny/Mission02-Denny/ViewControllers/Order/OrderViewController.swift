@@ -27,6 +27,9 @@ public class OrderViewController: UIViewController {
     private var orderConfirmTitleLabel: UILabel = UILabel()
     private var orderListLabel: UILabel = UILabel()
     
+    public var customerId: Int64 = 0
+    public var completion: ((Order) -> Void)?
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -125,6 +128,7 @@ public class OrderViewController: UIViewController {
         orderButton.setTitleColor(.talkGray900s, for: .normal)
         orderButton.layer.cornerRadius = 6
         orderButton.layer.masksToBounds = true
+        orderButton.addTarget(self, action: #selector(onClickOrderButton(sender:)), for: .touchUpInside)
         
         cancelButton.backgroundColor = .talkWhite000s
         cancelButton.setTitle("취소", for: .normal)
@@ -141,6 +145,17 @@ public class OrderViewController: UIViewController {
         
         cancelButton.snp.makeConstraints { make in
             make.height.equalTo(44)
+        }
+    }
+    
+    @objc
+    private func onClickOrderButton(sender: UIButton) {
+        if let coffees = viewModel?.coffeeItem.options.filter({ $0.selected == true }), coffees.count > 0 {
+            let order = Order(customerId: customerId, coffees: coffees)
+            self.completion?(order)
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            ErrorLog("[OrderVC] ERROR : Coffee를 선택해주세요.")
         }
     }
     
