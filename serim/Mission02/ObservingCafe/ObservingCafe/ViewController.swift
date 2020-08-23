@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+struct Order {
+    let customer: Customer
+    let coffee: Coffee
+    
+    init(coffee: Coffee, by customer: Customer) {
+        self.coffee = coffee
+        self.customer = customer
+    }
+}
 
+class ViewController: UIViewController {
+    var orders: [Order] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
 
 }
 

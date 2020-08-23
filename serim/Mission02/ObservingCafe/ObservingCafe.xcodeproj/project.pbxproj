@@ -14,6 +14,11 @@
 		12B3ECED24F2EE9F00E04D16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B3ECEC24F2EE9F00E04D16 /* Assets.xcassets */; };
 		12B3ECF024F2EE9F00E04D16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12B3ECEE24F2EE9F00E04D16 /* LaunchScreen.storyboard */; };
 		12B3ECFB24F2EEA000E04D16 /* ObservingCafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ECFA24F2EEA000E04D16 /* ObservingCafeTests.swift */; };
+		12B3ED0624F2F09000E04D16 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ED0524F2F09000E04D16 /* Customer.swift */; };
+		12B3ED0824F2F0A700E04D16 /* Cashier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ED0724F2F0A700E04D16 /* Cashier.swift */; };
+		12B3ED0A24F2F0BF00E04D16 /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ED0924F2F0BF00E04D16 /* Barista.swift */; };
+		12B3ED0C24F2F10100E04D16 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ED0B24F2F10100E04D16 /* Menu.swift */; };
+		12B3ED0E24F2F12200E04D16 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3ED0D24F2F12200E04D16 /* Coffee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		12B3ECF624F2EEA000E04D16 /* ObservingCafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObservingCafeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B3ECFA24F2EEA000E04D16 /* ObservingCafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservingCafeTests.swift; sourceTree = "<group>"; };
 		12B3ECFC24F2EEA000E04D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B3ED0524F2F09000E04D16 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		12B3ED0724F2F0A700E04D16 /* Cashier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cashier.swift; sourceTree = "<group>"; };
+		12B3ED0924F2F0BF00E04D16 /* Barista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
+		12B3ED0B24F2F10100E04D16 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		12B3ED0D24F2F12200E04D16 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,11 @@
 				12B3ECEC24F2EE9F00E04D16 /* Assets.xcassets */,
 				12B3ECEE24F2EE9F00E04D16 /* LaunchScreen.storyboard */,
 				12B3ECF124F2EE9F00E04D16 /* Info.plist */,
+				12B3ED0524F2F09000E04D16 /* Customer.swift */,
+				12B3ED0724F2F0A700E04D16 /* Cashier.swift */,
+				12B3ED0924F2F0BF00E04D16 /* Barista.swift */,
+				12B3ED0B24F2F10100E04D16 /* Menu.swift */,
+				12B3ED0D24F2F12200E04D16 /* Coffee.swift */,
 			);
 			path = ObservingCafe;
 			sourceTree = "<group>";
@@ -203,6 +218,11 @@
 				12B3ECE824F2EE9700E04D16 /* ViewController.swift in Sources */,
 				12B3ECE424F2EE9700E04D16 /* AppDelegate.swift in Sources */,
 				12B3ECE624F2EE9700E04D16 /* SceneDelegate.swift in Sources */,
+				12B3ED0824F2F0A700E04D16 /* Cashier.swift in Sources */,
+				12B3ED0A24F2F0BF00E04D16 /* Barista.swift in Sources */,
+				12B3ED0624F2F09000E04D16 /* Customer.swift in Sources */,
+				12B3ED0C24F2F10100E04D16 /* Menu.swift in Sources */,
+				12B3ED0E24F2F12200E04D16 /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
