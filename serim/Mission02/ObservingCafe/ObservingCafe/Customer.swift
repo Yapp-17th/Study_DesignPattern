@@ -16,6 +16,6 @@ class Customer {
     }
     
     func order(coffee: Coffee) {
-        Cashier.shared.getOrder(self, coffee)
+        Cashier.shared.appendOrder(self, coffee)
     }
 }

@@ -30,6 +30,7 @@ class Cashier {
         let order = Order(orderCount, coffee: coffee, by: customer)
         orders.append(order)
         orderCount += 1
+        print("🗣 \(customer.id) 님의 \(coffee.type) 주문 받았습니다~")
     }
 
     func removeOrder(_ order: Order) {
@@ -38,6 +39,6 @@ class Cashier {
     }
     
     private func serve(coffee: Coffee, to customer: Customer) {
-        print("🗣 \(customer.id) 님이 주문하신 \(coffee) 나왔습니다 ~")
+        print("🗣 \(customer.id) 님이 주문하신 \(coffee.type) 나왔습니다 ~")
     }
 }
