@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.khb.coffeesystem.model.CustomerViewItem
+import com.khb.coffeesystem.datamodel.CustomerViewItem
+import com.khb.coffeesystem.model.Customer
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay

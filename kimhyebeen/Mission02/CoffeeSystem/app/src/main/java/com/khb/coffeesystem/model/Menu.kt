@@ -1,6 +1,6 @@
-package com.khb.coffeesystem
+package com.khb.coffeesystem.model
 
-import com.khb.coffeesystem.model.MenuItem
+import com.khb.coffeesystem.datamodel.MenuItem
 
 object Menu {
     var menuList = hashMapOf(

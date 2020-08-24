@@ -1,4 +1,4 @@
-package com.khb.coffeesystem.model
+package com.khb.coffeesystem.datamodel
 
 data class Coffee(
     val name: String,

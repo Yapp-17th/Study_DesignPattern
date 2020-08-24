@@ -1,8 +1,9 @@
-package com.khb.coffeesystem
+package com.khb.coffeesystem.model
 
-import com.khb.coffeesystem.model.Coffee
-import com.khb.coffeesystem.model.MenuItem
-import com.khb.coffeesystem.model.OrderSheet
+import com.khb.coffeesystem.ShowManager
+import com.khb.coffeesystem.datamodel.Coffee
+import com.khb.coffeesystem.datamodel.MenuItem
+import com.khb.coffeesystem.datamodel.OrderSheet
 import kotlinx.coroutines.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -19,13 +20,12 @@ object Cashier {
     }
 
     fun orderCoffee() {
-        GlobalScope.launch {
-            while(Barista.possibleBarista<=0) { delay(200) }
+        // BaristaManager에게 커피만들게 하기
 
-            orderQueue.poll().let { sheet ->
-                Barista.makeCoffee(sheet.menu).let { coffee -> notifyToCustomer(sheet.customer, coffee) }
-            }
-        }
+    }
+
+    fun update() {
+        orderCoffee()
     }
 
     fun notifyToCustomer(customer: Customer, coffee: Coffee) {

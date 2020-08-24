@@ -1,7 +1,9 @@
-package com.khb.coffeesystem
+package com.khb.coffeesystem.model
 
-import com.khb.coffeesystem.model.Coffee
-import com.khb.coffeesystem.model.CustomerViewItem
+import com.khb.coffeesystem.R
+import com.khb.coffeesystem.ShowManager
+import com.khb.coffeesystem.datamodel.Coffee
+import com.khb.coffeesystem.datamodel.CustomerViewItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -10,7 +12,14 @@ class Customer(
     name: String
 ) {
     val name = name
-    val imageList = arrayOf(R.drawable.customer1, R.drawable.customer2, R.drawable.customer3, R.drawable.customer4, R.drawable.customer5, R.drawable.customer6)
+    val imageList = arrayOf(
+        R.drawable.customer1,
+        R.drawable.customer2,
+        R.drawable.customer3,
+        R.drawable.customer4,
+        R.drawable.customer5,
+        R.drawable.customer6
+    )
     lateinit var customerItem: CustomerViewItem
 
     fun order(
@@ -33,7 +42,12 @@ class Customer(
         }
         else {
             println("customer(${this.name}): 내꺼다!!")
-            GlobalScope.launch(Dispatchers.Main) { ShowManager.customerView(customerItem, "remove") }
+            GlobalScope.launch(Dispatchers.Main) {
+                ShowManager.customerView(
+                    customerItem,
+                    "remove"
+                )
+            }
         }
     }
 }

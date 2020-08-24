@@ -1,15 +1,13 @@
 package com.khb.coffeesystem
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.khb.coffeesystem.model.CustomerViewItem
+import com.khb.coffeesystem.datamodel.CustomerViewItem
 import kotlinx.android.synthetic.main.item_customer.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class CustomerAdapter: RecyclerView.Adapter<CustomerAdapter.ItemViewHolder>() {
