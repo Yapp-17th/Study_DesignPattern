@@ -13,8 +13,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var orderButton: UIButton!
+    
     var customerID = 0
     let menu = Menu()
+    let barista1 = Barista(id: "dodo")
+    let barista2 = Barista(id: "mimi")
+    let barista3 = Barista(id: "solsol")
     
     override func viewDidLoad() {
         super.viewDidLoad()
