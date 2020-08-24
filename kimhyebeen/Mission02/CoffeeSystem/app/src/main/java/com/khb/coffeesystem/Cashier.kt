@@ -3,32 +3,26 @@ package com.khb.coffeesystem
 import com.khb.coffeesystem.model.Coffee
 import com.khb.coffeesystem.model.MenuItem
 import com.khb.coffeesystem.model.OrderSheet
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import java.util.*
 import kotlin.collections.ArrayList
 
 object Cashier {
     private var customerList = ArrayList<Customer>()
-    private var orderList: Queue<OrderSheet> = LinkedList<OrderSheet>()
+    private var orderQueue: Queue<OrderSheet> = LinkedList<OrderSheet>()
 
     fun receiveOrder(customer: Customer, menuItem: MenuItem) {
-        GlobalScope.launch {
-            delay(1000)
-
-            customerList.add(customer)
-            orderList.add(OrderSheet(customer, menuItem))
-            orderCoffee()
-        }
+        customerList.add(customer)
+        GlobalScope.launch(Dispatchers.Main) { ShowManager.counterText("${menuItem.coffeeName}을 주문 받았습니다.") }
+        orderQueue.add(OrderSheet(customer, menuItem))
+        orderCoffee()
     }
 
     fun orderCoffee() {
         GlobalScope.launch {
             while(Barista.possibleBarista<=0) { delay(200) }
 
-            orderList.poll().let { sheet ->
+            orderQueue.poll().let { sheet ->
                 Barista.makeCoffee(sheet.menu).let { coffee -> notifyToCustomer(sheet.customer, coffee) }
             }
         }
@@ -36,9 +30,9 @@ object Cashier {
 
     fun notifyToCustomer(customer: Customer, coffee: Coffee) {
         runBlocking {
-            delay(500)
             println("cashier: ${customer.name} 손님 주문하신 ${coffee.name} 나왔습니다~!!")
-            delay(500)
+            launch(Dispatchers.Main) { ShowManager.counterText("<알림> ${customer.name} 손님 주문하신 ${coffee.name} 나왔습니다!!") }
+            delay(300)
 
             customerList.map { eachCustomer -> eachCustomer.receiveAlarm(customer.name, coffee) }
             customerList.remove(customer)

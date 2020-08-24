@@ -2,5 +2,5 @@
     <string name="app_name">CoffeeSystem</string>
     <string name="text1">대기 손님</string>
     <string name="text2">카운터</string>
-    <string name="text3">바리스타</string>
+    <string name="text3">바리스타 ( 놀고있는 바리스타 2 명 )</string>
 </resources>
