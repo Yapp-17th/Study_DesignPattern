@@ -1,6 +1,6 @@
 package com.khb.coffeesystem
 
-import com.khb.coffeesystem.datamodel.CustomerViewItem
+import com.khb.coffeesystem.items.CustomerViewItem
 
 object ShowManager {
     lateinit var customerView: (CustomerViewItem, String) -> Unit

@@ -1,13 +1,15 @@
 package com.khb.coffeesystem
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.khb.coffeesystem.datamodel.CustomerViewItem
+import com.khb.coffeesystem.items.CustomerViewItem
 import kotlinx.android.synthetic.main.item_customer.view.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class CustomerAdapter: RecyclerView.Adapter<CustomerAdapter.ItemViewHolder>() {
@@ -35,11 +37,9 @@ class CustomerAdapter: RecyclerView.Adapter<CustomerAdapter.ItemViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun setMsg(item: CustomerViewItem, msg: String) {
-        var index = itemList.indexOf(item)
-        GlobalScope.launch(Dispatchers.Main) {
-
-        }
+    fun changeColor(item: CustomerViewItem) {
+        itemList[itemList.indexOf(item)].isReceive = true
+        notifyDataSetChanged()
     }
 
     fun removeItem(item: CustomerViewItem) {
@@ -57,6 +57,7 @@ class CustomerAdapter: RecyclerView.Adapter<CustomerAdapter.ItemViewHolder>() {
             name.text = itemList[i].name
             image.setImageResource(itemList[i].image)
             coffee.text = itemList[i].coffee
+            if (itemList[i].isReceive) itemView.setBackgroundColor(Color.parseColor("#FFE2F1D0"))
         }
     }
 

@@ -1,4 +1,4 @@
-package com.khb.coffeesystem.datamodel
+package com.khb.coffeesystem.items
 
 import com.khb.coffeesystem.model.Customer
 

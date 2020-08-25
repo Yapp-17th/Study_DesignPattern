@@ -1,19 +1,18 @@
 package com.khb.coffeesystem
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.khb.coffeesystem.datamodel.CustomerViewItem
+import com.khb.coffeesystem.items.CustomerViewItem
 import com.khb.coffeesystem.model.Customer
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity() {
-    var customerAdapter = CustomerAdapter()
+    private var customerAdapter = CustomerAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,48 +26,39 @@ class MainActivity : AppCompatActivity() {
         }
 
         // UI에 구현되는 함수 설정
-        setViewFunctions()
-
-        // customer를 만들 때 위 함수를 같이 건네줘요.
-        val customer1 = Customer("Liam")
-        val customer2 = Customer("Amelia")
-        val customer3 = Customer("Harry")
-        val customer4 = Customer("Oliver")
-        val customer5 = Customer("Adela")
-        val customer6 = Customer("James")
+        setShowManager()
 
         // order
         GlobalScope.launch {
-            launch { customer1.order("mocha") }
             launch {
-                delay(1200)
-                customer2.order("americano")
+                Customer("Liam").order("mocha")
             }
             launch {
-                delay(1700)
-                customer3.order("latte")
+                delay(200)
+                Customer("Amelia").order("americano")
             }
             launch {
-                delay(3000)
-                customer4.order("latte")
+                delay(1000)
+                Customer("Harry").order("latte")
             }
             launch {
-                delay(3500)
-                customer5.order("americano")
+                delay(1500)
+                Customer("Oliver").order("latte")
             }
             launch {
-                delay(4000)
-                customer6.order("latte")
+                delay(2000)
+                Customer("Adela").order("americano")
             }
         }
     }
 
-    fun setViewFunctions() {
+    @SuppressLint("SetTextI18n")
+    private fun setShowManager() {
         ShowManager.settingCustomerView { item: CustomerViewItem, status: String ->
             if (status == "add") {
                 customerAdapter.addItem(item)
-            } else if (status == "remove") {
-                customerAdapter.removeItem(item)
+            } else if (status == "complete") {
+                customerAdapter.changeColor(item)
             }
         }
 
@@ -80,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         ShowManager.settingBaristaNum { num: Int ->
-            baristaTitleText.text = "바리스타 ( 놀고있는 바리스타 $num 명 )"
+            baristaTitleText.text = "바리스타 (놀고있는 바리스타 $num 명)"
         }
 
         ShowManager.settingBaristaText { str: String ->

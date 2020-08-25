@@ -1,20 +1,39 @@
 package com.khb.coffeesystem.model
 
 import com.khb.coffeesystem.ShowManager
-import com.khb.coffeesystem.datamodel.Coffee
-import com.khb.coffeesystem.datamodel.MenuItem
+import com.khb.coffeesystem.items.Coffee
+import com.khb.coffeesystem.items.MenuItem
+import com.khb.coffeesystem.items.OrderSheet
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-
+import java.util.*
+// subject
 object BaristaManager {
-    private var barista1 = Barista(1)
-    private var barista2 = Barista(2)
+    private var baristaQueue: Queue<Barista> = LinkedList<Barista>()
 
-    fun giveWorkToBarista(menuItem: MenuItem): Coffee? {
-        // 바리스타에게 일을 줘요
+    init {
+        baristaQueue.add(Barista(1))
+        baristaQueue.add(Barista(2))
+    }
 
-        return null
+    fun giveWorkToBarista(menuItem: MenuItem): Coffee {
+        var coffee: Coffee? = null
+        baristaQueue.poll()?.let { barista ->
+            GlobalScope.launch(Dispatchers.Main) { ShowManager.baristaNum(baristaQueue.size) }
+            coffee = barista.makeCoffee(menuItem)
+        }
+        return coffee!!
+    }
+
+    fun isAvailable(): Boolean {
+        return baristaQueue.size > 0
+    }
+
+    fun addBarista(barista: Barista) {
+        this.baristaQueue.add(barista)
+        GlobalScope.launch(Dispatchers.Main) { ShowManager.baristaNum(baristaQueue.size) }
+
+        Cashier.update()
     }
 }
