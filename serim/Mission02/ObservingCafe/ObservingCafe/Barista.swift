@@ -31,12 +31,12 @@ class Barista: Subject {
     init(id: String) {
         self.id = id
         NotificationCenter.default.addObserver(self, selector: #selector(checkOrder), name: .checkOrders, object: nil)
+        self.addObserver(Cashier.shared)
     }
 
     @objc func checkOrder() {
         DispatchQueue.global().sync {
             if(self.isWorking) { return }
-            print(Cashier.shared.orders.count)
             if(Cashier.shared.orders.isEmpty) { return }
             let order = Cashier.shared.orders.removeFirst()
             self.make(coffee: order.coffee, for: order.customer)
@@ -46,9 +46,9 @@ class Barista: Subject {
     private func make(coffee: Coffee, for customer: Customer) {
         DispatchQueue.global().async {
             self.isWorking = true
-            print("Barista #\(self.id) -> \(coffee.type) 제조 시작!")
+            print("🥤 #\(self.id) -> \(coffee.type) 제조 시작!")
             sleep(coffee.makingTime)
-            print("Barista #\(self.id) -> \(coffee.type) 제조 완료!")
+            print("🥤 #\(self.id) -> \(coffee.type) 제조 완료!")
             self.isWorking = false
             self.notifyFinished(coffee, for: customer)
         }

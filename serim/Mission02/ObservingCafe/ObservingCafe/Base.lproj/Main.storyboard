@@ -16,8 +16,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Tp-D5-dqo">
-                                <rect key="frame" x="0.0" y="287" width="414" height="322"/>
+                                <rect key="frame" x="0.0" y="215" width="414" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="P3E-qi-DoT"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="menuCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="Lqc-bY-95h" customClass="MenuCell" customModule="ObservingCafe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -54,29 +57,48 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" M E N U " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5KY-We-2iJ">
-                                <rect key="frame" x="141" y="211" width="133" height="41"/>
+                                <rect key="frame" x="141" y="144" width="133" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWM-lf-mp3">
-                                <rect key="frame" x="165" y="634" width="84" height="41"/>
+                                <rect key="frame" x="165" y="485" width="84" height="56.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="주문하기">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="baristaIcon" translatesAutoresizingMaskIntoConstraints="NO" id="EEP-cO-IGv">
+                                <rect key="frame" x="157" y="732" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7HM-qN-86l"/>
+                                    <constraint firstAttribute="width" constant="100" id="B7B-YJ-c8M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문해주세요 ~ !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gH-Af-yi4">
+                                <rect key="frame" x="10" y="631.5" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Tp-D5-dqo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Pv-Bs-H8r"/>
+                            <constraint firstItem="EWM-lf-mp3" firstAttribute="top" secondItem="2Tp-D5-dqo" secondAttribute="bottom" constant="20" id="3wa-dL-fwt"/>
                             <constraint firstItem="2Tp-D5-dqo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="93d-PM-jw7"/>
+                            <constraint firstItem="1gH-Af-yi4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Bas-uI-dnE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5KY-We-2iJ" secondAttribute="trailing" constant="140" id="Bf3-rV-Xq9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EWM-lf-mp3" secondAttribute="trailing" constant="165" id="CBR-pu-a9W"/>
-                            <constraint firstItem="EWM-lf-mp3" firstAttribute="top" secondItem="2Tp-D5-dqo" secondAttribute="bottom" constant="25" id="Og7-vX-gzP"/>
-                            <constraint firstItem="5KY-We-2iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="167" id="Xk1-86-of2"/>
-                            <constraint firstItem="2Tp-D5-dqo" firstAttribute="top" secondItem="5KY-We-2iJ" secondAttribute="bottom" constant="35" id="bVc-Bv-5Or"/>
-                            <constraint firstItem="2Tp-D5-dqo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iUi-mI-xpi"/>
+                            <constraint firstItem="EEP-cO-IGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DQY-t0-gQW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EEP-cO-IGv" secondAttribute="bottom" constant="30" id="KYr-hj-m4K"/>
+                            <constraint firstItem="1gH-Af-yi4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NNS-6A-SaP"/>
+                            <constraint firstAttribute="trailing" secondItem="1gH-Af-yi4" secondAttribute="trailing" constant="10" id="R4h-Xh-3qp"/>
+                            <constraint firstItem="5KY-We-2iJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Xk1-86-of2"/>
+                            <constraint firstItem="1gH-Af-yi4" firstAttribute="top" secondItem="EWM-lf-mp3" secondAttribute="bottom" constant="90" id="bH5-dR-Myf"/>
+                            <constraint firstItem="EEP-cO-IGv" firstAttribute="top" secondItem="1gH-Af-yi4" secondAttribute="bottom" constant="80" id="bMk-sm-wR1"/>
+                            <constraint firstItem="2Tp-D5-dqo" firstAttribute="top" secondItem="5KY-We-2iJ" secondAttribute="bottom" constant="30" id="bVc-Bv-5Or"/>
                             <constraint firstItem="EWM-lf-mp3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="nq8-gi-Q8Y"/>
                             <constraint firstItem="5KY-We-2iJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="w9S-9A-JD8"/>
                         </constraints>
@@ -85,6 +107,7 @@
                     <connections>
                         <outlet property="menuTableView" destination="2Tp-D5-dqo" id="iFi-Qc-HHC"/>
                         <outlet property="orderButton" destination="EWM-lf-mp3" id="c0C-3u-AJw"/>
+                        <outlet property="serveLabel" destination="1gH-Af-yi4" id="zq4-x6-apk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,4 +115,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="baristaIcon" width="512" height="512"/>
+    </resources>
 </document>

@@ -12,6 +12,10 @@ protocol Observer {
     func getCoffee(_ coffee: Coffee, for customer: Customer)
 }
 
+protocol ServeDelegate {
+    func updateServeLabel(_ string: String)
+}
+
 struct Order {
     let id: Int
     let customer: Customer
@@ -27,8 +31,14 @@ struct Order {
 class Cashier: Observer {
     static let shared = Cashier()
     
+    var serveDelegate: ServeDelegate?
     var orders: [Order] = []
     var orderCount = 0
+    var serveText: String = "주문해주세요." {
+        didSet {
+            serveDelegate?.updateServeLabel(serveText)
+        }
+    }
 
     func getCoffee(_ coffee: Coffee, for customer: Customer) {
         serve(coffee: coffee, to: customer)
@@ -38,12 +48,12 @@ class Cashier: Observer {
         let order = Order(orderCount, coffee: coffee, by: customer)
         orders.append(order)
         orderCount += 1
-        print("🗣 \(customer.id) 님의 \(coffee.type) 주문 받았습니다~")
+        serveText = "🎤 \(customer.id)번째 손님의 \(coffee.type) 주문 받았습니다~"
         NotificationCenter.default.post(name: .checkOrders, object: nil)
     }
     
     private func serve(coffee: Coffee, to customer: Customer) {
-        print("🗣 \(customer.id) 님이 주문하신 \(coffee.type) 나왔습니다~")
+        serveText = "🥤 \(customer.id)번째 손님이 주문하신 \(coffee.type) 나왔습니다~"
     }
 }
 

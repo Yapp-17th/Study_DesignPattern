@@ -8,23 +8,25 @@
 
 import UIKit
 
-
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ServeDelegate {
     
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var orderButton: UIButton!
+    @IBOutlet weak var serveLabel: UILabel!
     
     var customerID = 0
     let menu = Menu()
     let barista1 = Barista(id: "dodo")
     let barista2 = Barista(id: "mimi")
     let barista3 = Barista(id: "solsol")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        Cashier.shared.serveDelegate = self
         menuTableView.delegate = self
         menuTableView.dataSource = self
         orderButton.addTarget(self, action: #selector(order), for: .touchUpInside)
+        serveLabel.text = Cashier.shared.serveText
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,12 +42,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func order() {
         guard let selectedRow = menuTableView.indexPathForSelectedRow else {
-            print("메뉴를 선택해주세요 제발!!!")
+            Cashier.shared.serveText = "메뉴를 선택해주세요 제발!!! 😅"
             return
         }
         customerID += 1
         let customer = Customer(id: customerID)
         customer.order(coffee: menu.menuList[selectedRow.row])
+    }
+    
+    func updateServeLabel(_ string: String) {
+        DispatchQueue.main.async {
+            self.serveLabel.text = string
+        }
     }
 }
 
