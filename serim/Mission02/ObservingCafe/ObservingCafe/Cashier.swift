@@ -29,7 +29,7 @@ class Cashier: Observer {
     
     var orders: [Order] = []
     var orderCount = 0
-    
+
     func getCoffee(_ coffee: Coffee, for customer: Customer) {
         serve(coffee: coffee, to: customer)
     }

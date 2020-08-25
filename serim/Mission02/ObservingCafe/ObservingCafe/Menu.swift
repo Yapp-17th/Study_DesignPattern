@@ -12,10 +12,10 @@ class Menu {
     var menuList: [Coffee] = []
     
     init() {
-        let americano = Coffee(.americano, 3500, 1)
-        let latte = Coffee(.latte, 4000, 2)
-        let coldBrew = Coffee(.coldBrew, 4200, 4)
-        let milkTea = Coffee(.milkTea, 4300, 3)
+        let americano = Coffee(.americano, 3500, 2)
+        let latte = Coffee(.latte, 4000, 4)
+        let coldBrew = Coffee(.coldBrew, 4200, 5)
+        let milkTea = Coffee(.milkTea, 4300, 6)
         
         self.menuList.append(americano)
         self.menuList.append(latte)

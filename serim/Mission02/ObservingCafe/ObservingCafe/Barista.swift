@@ -25,27 +25,32 @@ class Barista: Subject {
     
     func notifyFinished(_ coffee: Coffee, for customer: Customer) {
         self.observers.forEach { $0.getCoffee(coffee, for: customer) }
+        checkOrder()
     }
     
     init(id: String) {
         self.id = id
-        NotificationCenter.default.addObserver(self, selector: #selector(popOrder), name: .checkOrders, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(checkOrder), name: .checkOrders, object: nil)
+    }
+
+    @objc func checkOrder() {
+        DispatchQueue.global().sync {
+            if(self.isWorking) { return }
+            print(Cashier.shared.orders.count)
+            if(Cashier.shared.orders.isEmpty) { return }
+            let order = Cashier.shared.orders.removeFirst()
+            self.make(coffee: order.coffee, for: order.customer)
+        }
     }
     
-    // 바리스타가 order 리스트 건드리는 게 맘에 안 듦.. 
-    @objc func popOrder() {
-        if(isWorking) { return }
-        if(Cashier.shared.orders.isEmpty) { return }
-        let order = Cashier.shared.orders.removeFirst()
-        make(coffee: order.coffee, for: order.customer)
-    }
-    
-    func make(coffee: Coffee, for customer: Customer) {
-        isWorking = true
-        print("Barista #\(self.id) -> \(coffee.type) 제조 시작!")
-        sleep(coffee.makingTime)
-        print("Barista #\(self.id) -> \(coffee.type) 제조 완료!")
-        isWorking = false
-        notifyFinished(coffee, for: customer)
+    private func make(coffee: Coffee, for customer: Customer) {
+        DispatchQueue.global().async {
+            self.isWorking = true
+            print("Barista #\(self.id) -> \(coffee.type) 제조 시작!")
+            sleep(coffee.makingTime)
+            print("Barista #\(self.id) -> \(coffee.type) 제조 완료!")
+            self.isWorking = false
+            self.notifyFinished(coffee, for: customer)
+        }
     }
 }
