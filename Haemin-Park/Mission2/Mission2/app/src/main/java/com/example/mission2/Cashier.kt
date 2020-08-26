@@ -4,9 +4,11 @@ import com.example.mission2.base.BaseObserver
 import com.example.mission2.base.BaseSubject
 
 class Cashier(
-    var observers: ArrayList<BaseObserver> = arrayListOf(),
-    var menuName: String = "default"
+    var observers: ArrayList<BaseObserver> = arrayListOf()
     ): BaseSubject {
+
+    lateinit var menuItem: MenuItem
+    var index = 0;
 
     override fun registerObserver(o: BaseObserver) {
         observers.add(o)
@@ -16,21 +18,22 @@ class Cashier(
         observers.remove(o)
     }
 
-    override fun notifyObservers() {
+    override fun notifyObservers(orderData: OrderData) {
         observers.forEach {
-            it.update(menuName)
+            it.update(orderData)
         }
     }
 
-    override fun pickMenu(menuItem: MenuItem){
-        this.menuName = menuItem.getName()
-        notifyObservers()
+    override fun pickMenu(cnum: Int, menuItem: MenuItem){
+        index++
+        this.menuItem = menuItem
+        notifyObservers(OrderData(index, cnum, 0, menuItem))
     }
 
-    override fun successMenu(){
+    override fun successMenu(orderData: OrderData){
         observers.forEach {
             if(it is OrderList){
-                it.orderList()
+                it.orderList(orderData)
             }
         }
     }

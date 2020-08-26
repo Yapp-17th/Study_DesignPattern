@@ -7,7 +7,7 @@ class Customer(val num: Int, val cashier: Cashier) {
         var menuItem: MenuItem? = menu.choose(menuName)
 
         if(menuItem != null) {
-           cashier.pickMenu(menuItem)
+           cashier.pickMenu(num, menuItem)
         }
 
     }
