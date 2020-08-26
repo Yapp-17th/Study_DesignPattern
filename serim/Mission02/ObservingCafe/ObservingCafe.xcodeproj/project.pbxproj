@@ -89,6 +89,7 @@
 		12B3ECE224F2EE9700E04D16 /* ObservingCafe */ = {
 			isa = PBXGroup;
 			children = (
+				12B3ED0F24F4F13C00E04D16 /* Cafe */,
 				12B3ECE324F2EE9700E04D16 /* AppDelegate.swift */,
 				12B3ECE524F2EE9700E04D16 /* SceneDelegate.swift */,
 				12B3ECE724F2EE9700E04D16 /* MainViewController.swift */,
@@ -96,11 +97,6 @@
 				12B3ECEC24F2EE9F00E04D16 /* Assets.xcassets */,
 				12B3ECEE24F2EE9F00E04D16 /* LaunchScreen.storyboard */,
 				12B3ECF124F2EE9F00E04D16 /* Info.plist */,
-				12B3ED0524F2F09000E04D16 /* Customer.swift */,
-				12B3ED0724F2F0A700E04D16 /* Cashier.swift */,
-				12B3ED0924F2F0BF00E04D16 /* Barista.swift */,
-				12B3ED0B24F2F10100E04D16 /* Menu.swift */,
-				12B3ED0D24F2F12200E04D16 /* Coffee.swift */,
 			);
 			path = ObservingCafe;
 			sourceTree = "<group>";
@@ -112,6 +108,18 @@
 				12B3ECFC24F2EEA000E04D16 /* Info.plist */,
 			);
 			path = ObservingCafeTests;
+			sourceTree = "<group>";
+		};
+		12B3ED0F24F4F13C00E04D16 /* Cafe */ = {
+			isa = PBXGroup;
+			children = (
+				12B3ED0524F2F09000E04D16 /* Customer.swift */,
+				12B3ED0724F2F0A700E04D16 /* Cashier.swift */,
+				12B3ED0924F2F0BF00E04D16 /* Barista.swift */,
+				12B3ED0B24F2F10100E04D16 /* Menu.swift */,
+				12B3ED0D24F2F12200E04D16 /* Coffee.swift */,
+			);
+			path = Cafe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

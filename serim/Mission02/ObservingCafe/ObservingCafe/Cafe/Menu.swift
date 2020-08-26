@@ -10,7 +10,7 @@ import Foundation
 
 class Menu {
     var menuList: [Coffee] = []
-    
+
     init() {
         let americano = Coffee(.americano, 3500, 2)
         let latte = Coffee(.latte, 4000, 4)

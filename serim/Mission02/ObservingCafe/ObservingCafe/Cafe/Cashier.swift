@@ -34,7 +34,7 @@ class Cashier: Observer {
     var serveDelegate: ServeDelegate?
     var orders: [Order] = []
     var orderCount = 0
-    var serveText: String = "주문해주세요." {
+    var serveText: String = "메뉴 선택 후 주문해주세요 ~" {
         didSet {
             serveDelegate?.updateServeLabel(serveText)
         }
