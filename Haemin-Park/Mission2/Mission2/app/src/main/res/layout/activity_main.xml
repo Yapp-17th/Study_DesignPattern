@@ -35,6 +35,12 @@
                 android:text="주문" />
 
             <TextView
+                android:id="@+id/wtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
                 android:id="@+id/c"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

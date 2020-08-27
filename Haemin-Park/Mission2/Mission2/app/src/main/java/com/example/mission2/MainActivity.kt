@@ -59,10 +59,11 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
     }
 
     override fun updateOrderList(re: Boolean, orderData: OrderData) {
-        if(re)
-            orderDatas[orderData.index-1] = orderData // 0부터 시작하므로 -1
-        else
-            orderDatas.add(orderData)
+
+        when(re){
+            true -> orderDatas[orderData.index-1] = orderData // 0부터 시작하므로 -1
+            else -> orderDatas.add(orderData)
+        }
 
         mAdapter.notifyDataSetChanged()
     }

@@ -23,14 +23,20 @@ class OrderAdapter(val context: Context, val orderDatas: ArrayList<OrderData>)
 
         fun bind(orderData: OrderData, context: Context){
 
-            index.setText("주문 "+orderData.index.toString())
-            onum.setText("손님 "+orderData.num.toString())
-            onm.setText(orderData.menuItem.getName())
+            index.text = "주문 ${orderData.index.toString()}"
+            onum.text = "손님 ${orderData.num.toString()}"
+            onm.text = orderData.menuItem.getName()
 
-            if(orderData.state == 0)
-                state.setText("[제조중]")
-            else if(orderData.state == 1)
-                state.setText("[제조완료]")
+            when(orderData.state){
+                0 -> {
+                    state.setText("[제조중]")
+                    itemView.setBackgroundResource(R.color.blue)
+                }
+                1 -> {
+                    state.setText("[제조완료]")
+                    itemView.setBackgroundResource(R.color.red)
+                }
+            }
 
         }
     }
@@ -44,7 +50,6 @@ class OrderAdapter(val context: Context, val orderDatas: ArrayList<OrderData>)
         return orderDatas.size
     }
 
-    @SuppressLint("ResourceAsColor")
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.bind(orderDatas[position], context)
     }
