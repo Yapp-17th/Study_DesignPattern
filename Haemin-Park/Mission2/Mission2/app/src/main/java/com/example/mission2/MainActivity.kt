@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
             mtext.visibility = View.VISIBLE
             obtn.visibility = View.VISIBLE
             num++
-            customer = Customer(num, cashier)
+            customer = Customer(this, num, cashier)
 
         }
 
@@ -56,6 +56,10 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
             mtext.setText("")
         }
 
+    }
+
+    override fun updateCustomer(str: String) {
+        c.text = c.text.toString() + "\n" + str
     }
 
     override fun updateOrderList(re: Boolean, orderData: OrderData) {
@@ -69,6 +73,10 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
     }
 
     override fun updateBarista(str: String) {
-        b.setText(b.text.toString() +"\n"+ str)
+        b.text=b.text.toString() +"\n"+ str
+    }
+
+    override fun updateWaitTime(time: Long) {
+        wtime.text = "총 대기시간: ${time.toString()}"
     }
 }

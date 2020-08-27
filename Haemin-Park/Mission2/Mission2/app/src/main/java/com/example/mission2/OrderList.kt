@@ -25,5 +25,5 @@ class OrderList(vCallBack: ViewCallBack, pickMenu: BaseSubject): BaseObserver {
     fun orderList(orderData: OrderData){
         Log.d("OrderLst", "주문완료")
         vCallBack.updateOrderList(true, orderData)
-    }
+   }
 }
