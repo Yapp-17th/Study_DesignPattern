@@ -1,12 +1,15 @@
 package com.khb.coffeesystem
 
 import com.khb.coffeesystem.items.CustomerViewItem
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 object ShowManager {
-    lateinit var customerView: (CustomerViewItem, String) -> Unit
-    lateinit var counterText: (String) -> Unit
-    lateinit var baristaNum: (Int) -> Unit
-    lateinit var baristaText: (String) -> Unit
+    private lateinit var customerView: (CustomerViewItem, String) -> Unit
+    private lateinit var counterText: (String) -> Unit
+    private lateinit var baristaNum: (Int) -> Unit
+    private lateinit var baristaText: (String) -> Unit
 
     fun settingCustomerView( func: (CustomerViewItem, String) -> Unit) {
         customerView = func
@@ -22,6 +25,26 @@ object ShowManager {
 
     fun settingBaristaText( func: (String) -> Unit) {
         baristaText = func
+    }
+
+    fun addCustomerView(item: CustomerViewItem) {
+        GlobalScope.launch(Dispatchers.Main) { customerView(item, "add") }
+    }
+
+    fun finishCustomerView(item: CustomerViewItem) {
+        GlobalScope.launch(Dispatchers.Main) { customerView(item, "complete") }
+    }
+
+    fun addCashierTextView(text: String) {
+        GlobalScope.launch(Dispatchers.Main) { counterText(text) }
+    }
+
+    fun changeBaristaCount(cnt: Int) {
+        GlobalScope.launch(Dispatchers.Main) { baristaNum(cnt) }
+    }
+
+    fun addBaristaTextView(text: String) {
+        GlobalScope.launch(Dispatchers.Main) { baristaText(text) }
     }
 
 }

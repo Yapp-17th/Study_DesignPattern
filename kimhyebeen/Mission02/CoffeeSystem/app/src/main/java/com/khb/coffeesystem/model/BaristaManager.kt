@@ -20,7 +20,7 @@ object BaristaManager {
     fun giveWorkToBarista(menuItem: MenuItem): Coffee {
         var coffee: Coffee? = null
         baristaQueue.poll()?.let { barista ->
-            GlobalScope.launch(Dispatchers.Main) { ShowManager.baristaNum(baristaQueue.size) }
+            ShowManager.changeBaristaCount(baristaQueue.size)
             coffee = barista.makeCoffee(menuItem)
         }
         return coffee!!
@@ -32,8 +32,7 @@ object BaristaManager {
 
     fun addBarista(barista: Barista) {
         this.baristaQueue.add(barista)
-        GlobalScope.launch(Dispatchers.Main) { ShowManager.baristaNum(baristaQueue.size) }
-
+        ShowManager.changeBaristaCount(baristaQueue.size)
         Cashier.update()
     }
 }
