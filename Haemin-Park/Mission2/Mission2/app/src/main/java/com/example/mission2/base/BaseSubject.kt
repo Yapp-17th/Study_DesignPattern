@@ -1,7 +1,7 @@
 package com.example.mission2.base
 
-import com.example.mission2.MenuItem
-import com.example.mission2.OrderData
+import com.example.mission2.model.MenuItem
+import com.example.mission2.model.OrderData
 
 interface BaseSubject {
 

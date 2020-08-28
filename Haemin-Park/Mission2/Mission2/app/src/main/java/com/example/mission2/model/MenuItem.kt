@@ -1,4 +1,4 @@
-package com.example.mission2
+package com.example.mission2.model
 
 class MenuItem(name: String, price: Int) {
 

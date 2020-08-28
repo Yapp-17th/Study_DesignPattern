@@ -1,4 +1,4 @@
-package com.example.mission2
+package com.example.mission2.model
 
 import com.example.mission2.base.BaseObserver
 import com.example.mission2.base.BaseSubject
@@ -27,7 +27,14 @@ class Cashier(
     override fun pickMenu(cnum: Int, menuItem: MenuItem){
         index++
         this.menuItem = menuItem
-        notifyObservers(OrderData(index, cnum, 0, menuItem))
+        notifyObservers(
+            OrderData(
+                index,
+                cnum,
+                0,
+                menuItem
+            )
+        )
     }
 
     override fun successMenu(orderData: OrderData){

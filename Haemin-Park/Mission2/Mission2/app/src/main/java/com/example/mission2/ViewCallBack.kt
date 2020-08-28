@@ -1,6 +1,6 @@
 package com.example.mission2
 
-import android.widget.TextView
+import com.example.mission2.model.OrderData
 
 interface ViewCallBack{
     fun updateCustomer(str: String)

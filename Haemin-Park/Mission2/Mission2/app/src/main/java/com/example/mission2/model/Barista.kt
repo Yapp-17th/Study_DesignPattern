@@ -1,15 +1,13 @@
-package com.example.mission2
+package com.example.mission2.model
 
 import android.os.CountDownTimer
 import android.util.Log
+import com.example.mission2.ViewCallBack
 import com.example.mission2.base.BaseObserver
 import com.example.mission2.base.BaseSubject
-import java.lang.String
-import java.util.*
-import kotlin.concurrent.timer
 
 
-class Barista(vCallBack: ViewCallBack, pickMenu: BaseSubject, private val handler: android.os.Handler): BaseObserver {
+class Barista(vCallBack: ViewCallBack, pickMenu: BaseSubject): BaseObserver {
 
     private var pickMenu: BaseSubject
     private val vCallBack: ViewCallBack
@@ -54,7 +52,14 @@ class Barista(vCallBack: ViewCallBack, pickMenu: BaseSubject, private val handle
                 val coffee: Coffee = Coffee(orderData.menuItem)
                 Log.d("Barista",orderData.menuItem.getName()+" 제조 완료")
                 vCallBack.updateBarista(orderData.menuItem.getName()+" 제조 완료")
-                pickMenu.successMenu(OrderData(orderData.index, orderData.num,1, orderData.menuItem))
+                pickMenu.successMenu(
+                    OrderData(
+                        orderData.index,
+                        orderData.num,
+                        1,
+                        orderData.menuItem
+                    )
+                )
                 vCallBack.updateCustomer("손님 ${orderData.num}: ${orderData.menuItem.getName()} 받음")
             }
 

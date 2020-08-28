@@ -2,16 +2,14 @@ package com.example.mission2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.mission2.adapter.OrderAdapter
+import com.example.mission2.model.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), ViewCallBack {
 
-    lateinit var handler: Handler
     lateinit var orderDatas: ArrayList<OrderData>
     lateinit var mAdapter : OrderAdapter
 
@@ -19,7 +17,6 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        handler = Handler()
     }
 
     override fun onStart() {
@@ -37,7 +34,7 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
         val menu: Menu = Menu // 오브젝트
         val cashier: Cashier = Cashier() // 캐셔와 바리스타도 한명씩
         val orderList: OrderList = OrderList(this, cashier)
-        val barista: Barista = Barista(this, cashier, handler)
+        val barista: Barista = Barista(this, cashier)
 
         lateinit var customer: Customer
 
@@ -46,7 +43,9 @@ class MainActivity : AppCompatActivity(), ViewCallBack {
         cbtn.setOnClickListener {
             mtext.visibility = View.VISIBLE
             obtn.visibility = View.VISIBLE
+            mtext.text = null
             num++
+            cnum.text = num.toString()
             customer = Customer(this, num, cashier)
 
         }

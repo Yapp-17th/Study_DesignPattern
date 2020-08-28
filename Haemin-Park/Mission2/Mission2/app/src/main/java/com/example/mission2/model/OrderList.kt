@@ -1,8 +1,7 @@
-package com.example.mission2
+package com.example.mission2.model
 
-import android.content.Context
 import android.util.Log
-import com.example.mission2.adapter.OrderAdapter
+import com.example.mission2.ViewCallBack
 import com.example.mission2.base.BaseObserver
 import com.example.mission2.base.BaseSubject
 

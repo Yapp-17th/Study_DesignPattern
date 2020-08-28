@@ -1,4 +1,6 @@
-package com.example.mission2
+package com.example.mission2.model
+
+import com.example.mission2.ViewCallBack
 
 class Customer(vCallBack: ViewCallBack, val num: Int, val cashier: Cashier) {
 
@@ -6,7 +8,8 @@ class Customer(vCallBack: ViewCallBack, val num: Int, val cashier: Cashier) {
 
     fun order(menu: Menu, menuName: String, barista: Barista){
 
-        var menuItem: MenuItem? = menu.choose(menuName)
+        var menuItem: MenuItem? =
+            Menu.choose(menuName)
 
         if(menuItem != null) {
            cashier.pickMenu(num, menuItem)

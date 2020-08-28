@@ -1,14 +1,12 @@
 package com.example.mission2.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mission2.OrderData
+import com.example.mission2.model.OrderData
 import com.example.mission2.R
 
 class OrderAdapter(val context: Context, val orderDatas: ArrayList<OrderData>)
@@ -30,11 +28,11 @@ class OrderAdapter(val context: Context, val orderDatas: ArrayList<OrderData>)
             when(orderData.state){
                 0 -> {
                     state.setText("[제조중]")
-                    itemView.setBackgroundResource(R.color.blue)
+                    itemView.setBackgroundResource(R.color.colorAccent)
                 }
                 1 -> {
                     state.setText("[제조완료]")
-                    itemView.setBackgroundResource(R.color.red)
+                    itemView.setBackgroundResource(R.color.colorPrimaryDark)
                 }
             }
 
