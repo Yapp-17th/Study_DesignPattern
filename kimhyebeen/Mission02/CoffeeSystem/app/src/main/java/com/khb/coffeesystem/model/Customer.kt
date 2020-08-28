@@ -22,19 +22,21 @@ class Customer( val name: String ) {
 
     fun order(coffeeName: String) {
         // RecyclerView에 CustomerViewItem 객체 추가
-        customerItem =  CustomerViewItem(name, imageList[(Math.random() * 6).toInt()], coffeeName, false)
-        GlobalScope.launch(Dispatchers.Main) { ShowManager.customerView(customerItem, "add") }
+        customerItem =  CustomerViewItem(
+            name,
+            imageList[(Math.random() * 6).toInt()],
+            coffeeName,
+            false
+        )
 
+        ShowManager.addCustomerView(customerItem)
         Menu.choose(coffeeName)?.let { menu -> Cashier.receiveOrder(this, menu) }
     }
 
     fun update(name: String, coffee: Coffee) {
-        if (this.name != name) println("customer(${this.name}): 내 껀 언제나와ㅠ")
-        else {
-            println("customer(${this.name}): 내꺼다!!")
+        if (this.name != name) return
 
-            this.coffee = coffee
-            GlobalScope.launch(Dispatchers.Main) { ShowManager.customerView( customerItem, "complete" ) }
-        }
+        this.coffee = coffee
+        ShowManager.finishCustomerView(customerItem)
     }
 }

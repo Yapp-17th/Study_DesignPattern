@@ -18,38 +18,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // RecyclerView에 customer들을 추가/삭제하는 함수 생성
+        setRecyclerView()
+
+        setShowManager()
+
+        GlobalScope.launch {
+            customerOrder(300, "Liam", "mocha")
+            customerOrder(500, "Amelia", "americano")
+            customerOrder(1500, "Harry", "latte")
+            customerOrder(2500, "Oliver", "latte")
+            customerOrder(2700, "Adela", "americano")
+        }
+    }
+
+    private fun setRecyclerView() {
         customerRecyclerView.apply {
             adapter = customerAdapter
             layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
             addItemDecoration(DividerItemDecoration(applicationContext, 1))
         }
+    }
 
-        // UI에 구현되는 함수 설정
-        setShowManager()
-
-        // order
-        GlobalScope.launch {
-            launch {
-                Customer("Liam").order("mocha")
-            }
-            launch {
-                delay(200)
-                Customer("Amelia").order("americano")
-            }
-            launch {
-                delay(1000)
-                Customer("Harry").order("latte")
-            }
-            launch {
-                delay(1500)
-                Customer("Oliver").order("latte")
-            }
-            launch {
-                delay(2000)
-                Customer("Adela").order("americano")
-            }
-        }
+    private suspend fun customerOrder(time: Long, name: String, coffee: String) {
+        delay(time)
+        Customer(name).order(coffee)
     }
 
     @SuppressLint("SetTextI18n")

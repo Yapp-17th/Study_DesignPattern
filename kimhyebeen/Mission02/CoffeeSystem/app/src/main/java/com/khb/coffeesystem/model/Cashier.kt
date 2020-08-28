@@ -14,9 +14,9 @@ object Cashier {
 
     fun receiveOrder(customer: Customer, menuItem: MenuItem) {
         customerList.add(customer)
-        GlobalScope.launch(Dispatchers.Main) { ShowManager.counterText("${menuItem.coffeeName}을 주문 받았습니다.") }
-
         orderQueue.add(OrderSheet(customer, menuItem))
+
+        ShowManager.addCashierTextView("${menuItem.coffeeName}을 주문 받았습니다.")
         orderCoffee()
     }
 
@@ -27,7 +27,9 @@ object Cashier {
         if (BaristaManager.isAvailable()) {
             GlobalScope.launch {
                 orderQueue.poll()?.let { sheet ->
-                    notifyToCustomer(sheet.customer, BaristaManager.giveWorkToBarista(sheet.menu))
+                    BaristaManager.giveWorkToBarista(sheet.menu).let { coffee ->
+                        notifyToCustomer(sheet.customer, coffee)
+                    }
                 }
             }
         }
@@ -37,11 +39,9 @@ object Cashier {
         orderCoffee()
     }
 
-    fun notifyToCustomer(customer: Customer, coffee: Coffee) {
-        GlobalScope.launch(Dispatchers.Main) { ShowManager.counterText("<알림> ${customer.name} 손님 주문하신 ${coffee.name} 나왔습니다!!") }
-
+    private fun notifyToCustomer(customer: Customer, coffee: Coffee) {
+        ShowManager.addCashierTextView("<알림> ${customer.name} 손님 주문하신 ${coffee.name} 나왔습니다!!")
         customerList.map { eachCustomer ->
-            println("캐셔가 ${eachCustomer.name}에게 알려줘요!!")
             eachCustomer.update(customer.name, coffee)
         }
         customerList.remove(customer)
