@@ -1,10 +1,17 @@
 export default function Barrister({ isCoffeeReady, setCoffeeReady }) {
-  this.isCoffeeReady = isCoffeeReady;
-  this.setCoffeeReady = setCoffeeReady;
-  this.state = {
-    isCoffeeReady,
-    stateText: "",
-    prevText: "",
+  this.init = () => {
+    this.isCoffeeReady = isCoffeeReady;
+    this.setCoffeeReady = setCoffeeReady;
+    this.state = {
+      isCoffeeReady,
+      stateText: "",
+      prevText: "",
+    };
+
+    this.$section = document.createElement("section");
+    this.$title = document.createElement("h1");
+    this.$title.textContent = "Barrister";
+    this.$section.appendChild(this.$title);
   };
 
   this.setState = ({ isCoffeeReady = false }) => {
@@ -16,4 +23,6 @@ export default function Barrister({ isCoffeeReady, setCoffeeReady }) {
       this.state.stateText = "";
     }
   };
+
+  this.init();
 }

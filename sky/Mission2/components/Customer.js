@@ -4,13 +4,20 @@ export default function Customer({
   setCoffeeChoose,
   setCoffeeOnHand,
 }) {
-  this.setCoffeeOnHand = setCoffeeOnHand;
-  this.setCoffeeChoose = setCoffeeChoose;
-  this.state = {
-    isCoffeeChoose,
-    isCoffeeOnHand,
-    stateText: "",
-    prevText: "",
+  this.init = () => {
+    this.setCoffeeOnHand = setCoffeeOnHand;
+    this.setCoffeeChoose = setCoffeeChoose;
+    this.state = {
+      isCoffeeChoose,
+      isCoffeeOnHand,
+      stateText: "",
+      prevText: "",
+    };
+
+    this.$section = document.createElement("section");
+    this.$title = document.createElement("h1");
+    this.$title.textContent = "Customer";
+    this.$section.appendChild(this.$title);
   };
 
   this.setState = ({ isCoffeeOnHand = false, isCoffeeChoose = false }) => {
@@ -27,4 +34,6 @@ export default function Customer({
       this.state.stateText = `커피를 받았습니다`;
     }
   };
+
+  this.init();
 }

@@ -32,6 +32,8 @@ export default function App(elementId) {
       }),
     ];
 
+    this.render();
+
     this.setCoffeeChoose(true, ++this.state.countNum);
   };
 
@@ -39,7 +41,7 @@ export default function App(elementId) {
     observer.setState(this.state);
     const pTag = document.createElement("p");
     pTag.textContent = observer.state.stateText;
-    this.$app.appendChild(pTag);
+    observer.$section.appendChild(pTag);
   };
 
   this.setCoffeeChoose = (isCoffeeChoose, number) => {
@@ -78,6 +80,12 @@ export default function App(elementId) {
     this.state.observersTable.forEach((observer, idx) =>
       this.displayState(observer)
     );
+  };
+
+  this.render = () => {
+    this.state.observersTable.forEach((observer) => {
+      this.$app.appendChild(observer.$section);
+    });
   };
 
   this.init();

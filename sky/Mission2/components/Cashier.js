@@ -1,10 +1,17 @@
 export default function Cashier({ isCoffeeOrderIn, setCoffeeOrderIn }) {
-  this.isCoffeeOrderIn = isCoffeeOrderIn;
-  this.setCoffeeOrderIn = setCoffeeOrderIn;
-  this.state = {
-    isCoffeeOrderIn,
-    stateText: "",
-    prevText: "",
+  this.init = () => {
+    this.isCoffeeOrderIn = isCoffeeOrderIn;
+    this.setCoffeeOrderIn = setCoffeeOrderIn;
+    this.state = {
+      isCoffeeOrderIn,
+      stateText: "",
+      prevText: "",
+    };
+
+    this.$section = document.createElement("section");
+    this.$title = document.createElement("h1");
+    this.$title.textContent = "Cashier";
+    this.$section.appendChild(this.$title);
   };
 
   this.setState = ({ isCoffeeOrderIn = false }) => {
@@ -16,4 +23,6 @@ export default function Cashier({ isCoffeeOrderIn, setCoffeeOrderIn }) {
       this.state.stateText = "";
     }
   };
+
+  this.init();
 }
