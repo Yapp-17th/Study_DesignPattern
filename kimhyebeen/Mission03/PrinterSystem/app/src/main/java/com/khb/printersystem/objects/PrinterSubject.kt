@@ -1,4 +1,4 @@
-package com.khb.printersystem
+package com.khb.printersystem.objects
 
 interface PrinterSubject {
     fun setPrinterName(name: String)

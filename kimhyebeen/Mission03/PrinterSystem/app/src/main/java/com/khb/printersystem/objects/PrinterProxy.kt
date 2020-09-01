@@ -1,4 +1,4 @@
-package com.khb.printersystem
+package com.khb.printersystem.objects
 
 import java.util.*
 
