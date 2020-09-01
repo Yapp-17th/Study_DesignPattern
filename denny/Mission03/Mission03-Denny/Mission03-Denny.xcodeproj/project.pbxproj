@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BEB449D06FBBFBBDB11F635 /* Pods_Mission03_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */; };
 		B02EAFDB24FDD54B00C04CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */; };
 		B02EAFDD24FDD54B00C04CC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDC24FDD54B00C04CC8 /* SceneDelegate.swift */; };
 		B02EAFDF24FDD54B00C04CC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDE24FDD54B00C04CC8 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		397C631273632CD402A00D2D /* Pods-Mission03-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission03-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny.release.xcconfig"; sourceTree = "<group>"; };
+		5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission03-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny.debug.xcconfig"; sourceTree = "<group>"; };
 		B02EAFD724FDD54B00C04CC8 /* Mission03-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission03-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B02EAFDC24FDD54B00C04CC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02EAFE624FDD54C00C04CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02EAFE824FDD54C00C04CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission03_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEB449D06FBBFBBDB11F635 /* Pods_Mission03_Denny.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B05D4C46B861DFE20B79D6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */,
+				397C631273632CD402A00D2D /* Pods-Mission03-Denny.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B02EAFCE24FDD54B00C04CC8 = {
 			isa = PBXGroup;
 			children = (
 				B02EAFD924FDD54B00C04CC8 /* Mission03-Denny */,
 				B02EAFD824FDD54B00C04CC8 /* Products */,
+				6B05D4C46B861DFE20B79D6B /* Pods */,
+				D08A706ACEA3651B853602B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "Mission03-Denny";
 			sourceTree = "<group>";
 		};
+		D08A706ACEA3651B853602B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B02EAFEB24FDD54C00C04CC8 /* Build configuration list for PBXNativeTarget "Mission03-Denny" */;
 			buildPhases = (
+				BA7A11EA44244E16B2395602 /* [CP] Check Pods Manifest.lock */,
 				B02EAFD324FDD54B00C04CC8 /* Sources */,
 				B02EAFD424FDD54B00C04CC8 /* Frameworks */,
 				B02EAFD524FDD54B00C04CC8 /* Resources */,
+				F3DADD9E9A6E2123225264E1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BA7A11EA44244E16B2395602 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mission03-Denny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3DADD9E9A6E2123225264E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B02EAFD324FDD54B00C04CC8 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		B02EAFEC24FDD54C00C04CC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		B02EAFED24FDD54C00C04CC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 397C631273632CD402A00D2D /* Pods-Mission03-Denny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
