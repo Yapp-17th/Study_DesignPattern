@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1214C3F124FB9CE900583C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C3F024FB9CE900583C04 /* AppDelegate.swift */; };
 		1214C3F324FB9CE900583C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C3F224FB9CE900583C04 /* SceneDelegate.swift */; };
-		1214C3F524FB9CE900583C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C3F424FB9CE900583C04 /* ViewController.swift */; };
+		1214C3F524FB9CE900583C04 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C3F424FB9CE900583C04 /* DocumentViewController.swift */; };
 		1214C3F824FB9CE900583C04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1214C3F624FB9CE900583C04 /* Main.storyboard */; };
 		1214C3FA24FB9CF100583C04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1214C3F924FB9CF100583C04 /* Assets.xcassets */; };
 		1214C3FD24FB9CF100583C04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1214C3FB24FB9CF100583C04 /* LaunchScreen.storyboard */; };
+		1214C42B24FEAAB700583C04 /* PrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C42A24FEAAB700583C04 /* PrintViewController.swift */; };
+		1214C42F24FEAAF300583C04 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C42E24FEAAF300583C04 /* Document.swift */; };
+		1214C43124FEAB0100583C04 /* PrinterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C43024FEAB0100583C04 /* PrinterProxy.swift */; };
+		1214C43324FEAB0900583C04 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C43224FEAB0900583C04 /* Printer.swift */; };
+		1214C43524FEAB9300583C04 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1214C43424FEAB9300583C04 /* Protocol.swift */; };
 		15DA98935302F292592AD97E /* Pods_SpoolingSimulator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE3ED19F4C9002FD47A81AA /* Pods_SpoolingSimulator.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +26,16 @@
 		1214C3ED24FB9CE900583C04 /* SpoolingSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpoolingSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1214C3F024FB9CE900583C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1214C3F224FB9CE900583C04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1214C3F424FB9CE900583C04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1214C3F424FB9CE900583C04 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
 		1214C3F724FB9CE900583C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1214C3F924FB9CF100583C04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1214C3FC24FB9CF100583C04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1214C3FE24FB9CF100583C04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1214C42A24FEAAB700583C04 /* PrintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintViewController.swift; sourceTree = "<group>"; };
+		1214C42E24FEAAF300583C04 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		1214C43024FEAB0100583C04 /* PrinterProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterProxy.swift; sourceTree = "<group>"; };
+		1214C43224FEAB0900583C04 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		1214C43424FEAB9300583C04 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		2484A51C73D66AA26F35E809 /* Pods-SpoolingSimulator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpoolingSimulator.release.xcconfig"; path = "Target Support Files/Pods-SpoolingSimulator/Pods-SpoolingSimulator.release.xcconfig"; sourceTree = "<group>"; };
 		4CE3ED19F4C9002FD47A81AA /* Pods_SpoolingSimulator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpoolingSimulator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -63,9 +73,10 @@
 		1214C3EF24FB9CE900583C04 /* SpoolingSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				1214C42D24FEAAD100583C04 /* Model */,
+				1214C42C24FEAABF00583C04 /* VC */,
 				1214C3F024FB9CE900583C04 /* AppDelegate.swift */,
 				1214C3F224FB9CE900583C04 /* SceneDelegate.swift */,
-				1214C3F424FB9CE900583C04 /* ViewController.swift */,
 				1214C3F624FB9CE900583C04 /* Main.storyboard */,
 				1214C3F924FB9CF100583C04 /* Assets.xcassets */,
 				1214C3FB24FB9CF100583C04 /* LaunchScreen.storyboard */,
@@ -74,13 +85,32 @@
 			path = SpoolingSimulator;
 			sourceTree = "<group>";
 		};
+		1214C42C24FEAABF00583C04 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1214C3F424FB9CE900583C04 /* DocumentViewController.swift */,
+				1214C42A24FEAAB700583C04 /* PrintViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		1214C42D24FEAAD100583C04 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1214C42E24FEAAF300583C04 /* Document.swift */,
+				1214C43024FEAB0100583C04 /* PrinterProxy.swift */,
+				1214C43224FEAB0900583C04 /* Printer.swift */,
+				1214C43424FEAB9300583C04 /* Protocol.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84A7A23B9311C979572BF3C2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0AFAE113DE42179B287F593A /* Pods-SpoolingSimulator.debug.xcconfig */,
 				2484A51C73D66AA26F35E809 /* Pods-SpoolingSimulator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1214C3F524FB9CE900583C04 /* ViewController.swift in Sources */,
+				1214C42B24FEAAB700583C04 /* PrintViewController.swift in Sources */,
+				1214C43124FEAB0100583C04 /* PrinterProxy.swift in Sources */,
+				1214C3F524FB9CE900583C04 /* DocumentViewController.swift in Sources */,
+				1214C43524FEAB9300583C04 /* Protocol.swift in Sources */,
 				1214C3F124FB9CE900583C04 /* AppDelegate.swift in Sources */,
 				1214C3F324FB9CE900583C04 /* SceneDelegate.swift in Sources */,
+				1214C42F24FEAAF300583C04 /* Document.swift in Sources */,
+				1214C43324FEAB0900583C04 /* Printer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
