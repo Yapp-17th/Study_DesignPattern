@@ -1,11 +1,14 @@
 package com.khb.printersystem.objects
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+
 class RealPrinter(
     var name: String,
     var proxy: PrinterSubject
 ) : PrinterSubject {
-    var curPrint: String? = null
-    var proxyForInterrupt: PrinterSubject? = null
+    private var isAvailable: Boolean = true
+    private var curPrint: String? = null
 
     override fun setPrinterName(name: String) {
         this.name = name
@@ -16,15 +19,21 @@ class RealPrinter(
     }
 
     override fun addPrintObject(str: String) {
-        TODO("현재 프린트 해야할 출력물을 받아요")
-        TODO("몇 초 뒤에 print()실행")
-
-        print()
+        curPrint = str
+        runBlocking {
+            delay(3000)
+            print()
+        }
     }
 
     override fun print() {
         println(curPrint)
+        curPrint = null
+        proxy.print()
+        TODO("view에는 출력 완료 상태로 설정")
+    }
 
-        TODO("proxy에게 출력 완료를 알려줘요.")
+    fun getIsAvailable(): Boolean {
+        return this.isAvailable
     }
 }

@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         printButton.setOnClickListener {
-            TODO("text 내용을 proxy에 출력 요청")
+            TODO("text 내용을 proxy에 출력 요청 -> StatusItem 넘기기")
             editText.text = null
         }
 
