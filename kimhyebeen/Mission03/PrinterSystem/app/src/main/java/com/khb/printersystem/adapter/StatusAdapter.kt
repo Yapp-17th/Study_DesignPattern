@@ -6,14 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.khb.printersystem.R
-import com.khb.printersystem.item.StatusItem
+import com.khb.printersystem.item.PrintItem
 import kotlinx.android.synthetic.main.item_status.view.*
 
 class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
-    var itemList = ArrayList<StatusItem>()
+    var itemList = ArrayList<PrintItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        var view = LayoutInflater.from(parent.context).inflate(R.layout.item_status, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_status, parent, false)
 
         return ItemViewHolder(view)
     }
@@ -26,17 +26,17 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
         return itemList.size
     }
 
-    fun addItem(item: StatusItem) {
+    fun addItem(item: PrintItem) {
         itemList.add(item)
         notifyDataSetChanged()
     }
 
-    fun changeStatus(item: StatusItem, status: String) {
+    fun changeStatus(item: PrintItem, status: String) {
         itemList[itemList.indexOf(item)].status = status
         notifyDataSetChanged()
     }
 
-    fun changeTouchable(item: StatusItem, check: Boolean) {
+    fun changeTouchable(item: PrintItem, check: Boolean) {
         itemList[itemList.indexOf(item)].touchable = check
         notifyDataSetChanged()
     }

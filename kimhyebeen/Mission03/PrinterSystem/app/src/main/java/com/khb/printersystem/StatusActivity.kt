@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.khb.printersystem.adapter.StatusAdapter
-import com.khb.printersystem.item.StatusItem
 import kotlinx.android.synthetic.main.activity_status.*
 
 class StatusActivity : AppCompatActivity() {

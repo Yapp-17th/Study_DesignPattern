@@ -1,12 +1,14 @@
 package com.khb.printersystem.objects
 
+import com.khb.printersystem.item.PrintItem
 import java.util.*
 
 class PrinterProxy(
     var name: String
 ) : PrinterSubject {
-    private var printQueue: Queue<String> = LinkedList()
+    private var printQueue: Queue<PrintItem> = LinkedList()
     private var printer: PrinterSubject = RealPrinter(name, this)
+    override var isAvailable: Boolean = true
 
     override fun setPrinterName(name: String) {
         this.name = name
@@ -17,8 +19,14 @@ class PrinterProxy(
         return printer.getPrinterName()
     }
 
-    override fun addPrintObject(str: String) {
-        this.printQueue.add(str)
+    override fun getAvailable(): Boolean {
+        return this.isAvailable
+    }
+
+    override fun addPrintObject(item: PrintItem) {
+        this.printQueue.add(item)
+
+        if (!printer.getAvailable()) return
         print()
         TODO("view에는 대기중 상태로 설정")
     }
