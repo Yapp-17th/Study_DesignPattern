@@ -27,19 +27,23 @@ class RealPrinter(
         runBlocking {
             isAvailable = false
             curPrint = item
+//        TODO("view에는 출력 중 상태로 설정")
+            println("출력 중")
 
-            delay(3000)
+            delay(5000L)
 
             curPrint?.let { print() }
         }
     }
 
     override fun print() {
-        println(curPrint?.contents)
+//        TODO("view에는 출력 완료 상태로 설정")
+        println("출력 완료 : \"${curPrint?.contents}\"")
+
         curPrint = null
         isAvailable = true
 
         proxy.print()
-        TODO("view에는 출력 완료 상태로 설정")
+
     }
 }

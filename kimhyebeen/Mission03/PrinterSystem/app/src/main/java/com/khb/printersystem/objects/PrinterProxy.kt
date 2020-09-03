@@ -27,14 +27,12 @@ class PrinterProxy(
         this.printQueue.add(item)
 
         if (!printer.getAvailable()) return
+//        TODO("view에는 대기중 상태로 설정")
         print()
-        TODO("view에는 대기중 상태로 설정")
+
     }
 
     override fun print() {
-        printQueue.poll()?.let {
-            printer.addPrintObject(it)
-            TODO("view에는 출력중 상태로 설정")
-        }
+        printQueue.poll()?.let { printer.addPrintObject(it) }
     }
 }
