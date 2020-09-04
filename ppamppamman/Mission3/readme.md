@@ -24,22 +24,22 @@ Computer (only can access PrinterProxy by PrinterInterface)
 
 ## 프린터 스풀러 JS class 정의
 
-## Computer
+### Computer
 - requestPrint(document:string) : void
 
-## PrinterInterface
+### PrinterInterface
 - static printerProxy :Object(PrinterProxy)
 - static request(document:string) :void
 - static getReadyList() :void
 
-## PrinterProxy
+### PrinterProxy
 - queue :Object(Array)
 - printer :Object(Printer)
 - request(document:string) :void
 - checkPrintQueue() :boolean
 - selectDocument() :string|null
 
-## Printer
+### Printer
 - public name :string
 - document :string
 - isPrinting :boolean
