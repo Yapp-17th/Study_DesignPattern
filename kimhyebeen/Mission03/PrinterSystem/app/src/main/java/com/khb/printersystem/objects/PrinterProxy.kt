@@ -1,5 +1,6 @@
 package com.khb.printersystem.objects
 
+import com.khb.printersystem.ShowManager
 import com.khb.printersystem.item.PrintItem
 import java.util.*
 
@@ -25,9 +26,9 @@ class PrinterProxy(
 
     override fun addPrintObject(item: PrintItem) {
         this.printQueue.add(item)
+        ShowManager.changeItemStatus(item, "대기 중")
 
         if (!printer.getAvailable()) return
-//        TODO("view에는 대기중 상태로 설정")
         print()
 
     }

@@ -36,11 +36,6 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
         notifyDataSetChanged()
     }
 
-    fun changeTouchable(item: PrintItem, check: Boolean) {
-        itemList[itemList.indexOf(item)].touchable = check
-        notifyDataSetChanged()
-    }
-
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val timeText = itemView.timeTextView
         val statusText = itemView.statusTextView
@@ -48,15 +43,15 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
         fun onBind(i: Int) {
             timeText.text = itemList[i].time
             statusText.text = itemList[i].status
-            itemView.isClickable = itemList[i].touchable
 
             if (statusText.text == "출력 중") {
                 itemView.setBackgroundColor(Color.parseColor("#FFF6EFC9"))
-            } else if (statusText.text == "출력 완료")
+            } else if (statusText.text == "출력 완료") {
                 itemView.setBackgroundColor(Color.parseColor("#FFDCF6BD"))
-
-            itemView.setOnClickListener {
-                TODO("dialog 띄우기")
+                itemView.setOnClickListener {
+                    println("dialog : ${itemList[i].contents}")
+//                TODO("dialog 띄우기")
+                }
             }
         }
     }

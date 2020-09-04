@@ -2,6 +2,9 @@ package com.khb.printersystem
 
 import com.khb.printersystem.adapter.StatusAdapter
 import com.khb.printersystem.item.PrintItem
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 object ShowManager {
     private var statusAdapter = StatusAdapter()
@@ -14,11 +17,7 @@ object ShowManager {
         this.statusAdapter.addItem(item)
     }
 
-    fun changeItemTouchable (item: PrintItem, check: Boolean) {
-        this.statusAdapter.changeTouchable(item, check)
-    }
-
     fun changeItemStatus(item: PrintItem, status: String) {
-        this.statusAdapter.changeStatus(item, status)
+        GlobalScope.launch(Dispatchers.Main) { statusAdapter.changeStatus(item, status) }
     }
 }

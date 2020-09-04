@@ -36,13 +36,14 @@ class MainActivity : AppCompatActivity() {
     }
     private fun requestPrint(str: String) {
         val curTime = sdf.format(System.currentTimeMillis())
-        printerProxy.addPrintObject(
-            PrintItem(
-                curTime,
-                str,
-                "대기 중",
-                true
-            )
-        )
+        PrintItem(
+            curTime,
+            str,
+            "대기 중",
+            true
+        ).let {
+            ShowManager.addStatusItem(it)
+            printerProxy.addPrintObject(it)
+        }
     }
 }

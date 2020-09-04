@@ -1,5 +1,6 @@
 package com.khb.printersystem.objects
 
+import com.khb.printersystem.ShowManager
 import com.khb.printersystem.item.PrintItem
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
@@ -9,7 +10,7 @@ class RealPrinter(
     var proxy: PrinterSubject
 ) : PrinterSubject {
     override var isAvailable: Boolean = true
-    private var curPrint: PrintItem? = null
+    private lateinit var curPrint: PrintItem
 
     override fun setPrinterName(name: String) {
         this.name = name
@@ -27,20 +28,18 @@ class RealPrinter(
         runBlocking {
             isAvailable = false
             curPrint = item
-//        TODO("view에는 출력 중 상태로 설정")
-            println("출력 중")
+            ShowManager.changeItemStatus(curPrint, "출력 중")
 
             delay(5000L)
 
-            curPrint?.let { print() }
+            print()
         }
     }
 
     override fun print() {
 //        TODO("view에는 출력 완료 상태로 설정")
-        println("출력 완료 : \"${curPrint?.contents}\"")
+        ShowManager.changeItemStatus(curPrint, "출력 완료")
 
-        curPrint = null
         isAvailable = true
 
         proxy.print()
