@@ -1,9 +1,11 @@
 package com.khb.printersystem.adapter
 
+import android.content.Context
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.khb.printersystem.R
 import com.khb.printersystem.item.PrintItem
@@ -11,9 +13,11 @@ import kotlinx.android.synthetic.main.item_status.view.*
 
 class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
     var itemList = ArrayList<PrintItem>()
+    private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_status, parent, false)
+        this.context = parent.context
 
         return ItemViewHolder(view)
     }
@@ -37,8 +41,8 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
     }
 
     inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val timeText = itemView.timeTextView
-        val statusText = itemView.statusTextView
+        private val timeText = itemView.timeTextView
+        private val statusText = itemView.statusTextView
 
         fun onBind(i: Int) {
             timeText.text = itemList[i].time
@@ -48,10 +52,16 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
                 itemView.setBackgroundColor(Color.parseColor("#FFF6EFC9"))
             } else if (statusText.text == "출력 완료") {
                 itemView.setBackgroundColor(Color.parseColor("#FFDCF6BD"))
-                itemView.setOnClickListener {
-                    println("dialog : ${itemList[i].contents}")
-//                TODO("dialog 띄우기")
-                }
+                itemView.setOnClickListener { setDialog(i) }
+            }
+        }
+
+        private fun setDialog(i: Int) {
+            AlertDialog.Builder(context).apply {
+                setTitle("itemList[i].printerName")
+                setMessage("출력 내용 :\n${itemList[i].contents}")
+                create()
+                show()
             }
         }
     }

@@ -14,12 +14,11 @@ import java.text.SimpleDateFormat
 class MainActivity : AppCompatActivity() {
     @SuppressLint("SimpleDateFormat")
     private val sdf = SimpleDateFormat("HH:mm:ss")
-    private var printerProxy = PrinterProxy("프린터1")
+    private val printerProxy = PrinterProxy("My Printer")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         printButton.setOnClickListener {
             if (editText.text.toString() != "") {
@@ -34,16 +33,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, StatusActivity::class.java))
         }
     }
+
     private fun requestPrint(str: String) {
-        val curTime = sdf.format(System.currentTimeMillis())
         PrintItem(
-            curTime,
+            printerProxy.getPrinterName(),
+            sdf.format(System.currentTimeMillis()),
             str,
             "대기 중",
             true
-        ).let {
-            ShowManager.addStatusItem(it)
-            printerProxy.addPrintObject(it)
+        ).let { item ->
+            ShowManager.addStatusItem(item)
+            printerProxy.addPrintObject(item)
         }
     }
 }

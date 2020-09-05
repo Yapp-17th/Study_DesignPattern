@@ -5,7 +5,7 @@ import com.khb.printersystem.item.PrintItem
 import java.util.*
 
 class PrinterProxy(
-    var name: String
+    private var name: String
 ) : PrinterSubject {
     private var printQueue: Queue<PrintItem> = LinkedList()
     private var printer: PrinterSubject = RealPrinter(name, this)
