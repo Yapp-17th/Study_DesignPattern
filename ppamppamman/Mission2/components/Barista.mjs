@@ -1,19 +1,18 @@
-import { default as Rx } from 'rxjs';
+import { default as Rx } from "rxjs";
 
 // import Coffee from "./Coffee";
 // import Cashier from "./Cashier";
-import OrderSystem from "./OrderSystem.mjs"
-
+import OrderSystem from "./OrderSystem.mjs";
 
 export default class Barista {
   #takedOrder;
   #readyToServe;
   #busy;
-  
+
   #coffee;
   #cashier;
-  
-  constructor(){    
+
+  constructor() {
     this.#takedOrder = false;
     this.#readyToServe = false;
     this.#busy = false;
@@ -23,46 +22,51 @@ export default class Barista {
   }
 
   init() {
-    // 어댑터 by Rxjs 
-    
+    // 어댑터 by Rxjs
   }
 
-  getOrder(e){
-   
-  }
-  
-  takeAnOrder(coffee){
+  getOrder(e) {}
+
+  takeAnOrder(coffee) {
     if (this.isBusy()) {
       return;
     }
-    console.log("take", coffee)
+    console.log("take", coffee);
     this.#coffee = coffee;
     this.#takedOrder = true;
     this.#busy = true;
 
     return true;
   }
-  
-  isBusy(){
+
+  isBusy() {
     return this.#busy;
   }
 
-  completeAnOrder(){
+  completeAnOrder() {
     this.#readyToServe = true;
     // this.#coffee = Coffee.getInstance();
   }
 
-  tossToHall(coffee = this.#coffee){
+  tossToHall(coffee = this.#coffee) {
     this.#readyToServe = false;
     this.#takedOrder = false;
     this.#busy = false;
-    
+
     this.#cashier.receivedFromKitchen(coffee);
     this.#coffee = null;
-    
+
     return true;
   }
 }
 
 let myBarista = new Barista();
-myBarista.getOrder("coffee1")
+const order = Rx.Observable.fromEvent(
+  OrderSystem,
+  OrderSystem.isOrderedByCustomer
+);
+// myBarista.getOrder("coffee1")
+const observer = (event) => {
+  console.log(event);
+};
+order.subscribe(observer);
