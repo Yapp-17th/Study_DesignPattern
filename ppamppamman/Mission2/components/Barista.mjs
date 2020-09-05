@@ -22,10 +22,11 @@ export default class Barista {
   }
 
   init() {
-    // 어댑터 by Rxjs
+    this.on().subscribe((data) => {
+      console.log("옵저버");
+      console.log(data);
+    });
   }
-
-  getOrder(e) {}
 
   takeAnOrder(coffee) {
     if (this.isBusy()) {

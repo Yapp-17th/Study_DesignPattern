@@ -1,32 +1,35 @@
 import { CoffeeType } from "../util/config.js";
 import { default as Rx } from "rxjs";
 
-// console.log(CoffeeType.AMERICANO)
-
 class OrderSystem {
-  #num = 0;
-  static #load;
-  static #customer;
-  static #cashier;
-  static #barista;
+  #load;
+  #orders = [];
+  #cashier;
+  #barista;
+  #isInited = false;
 
-  static init() {
+  constructor() {
     if (this.#load === undefined) {
       this.#load = new Rx.Subject();
-      this.#customer = "asdf";
     }
-
-    OrderSystem.on().subscribe((data) => {
-      console.log("옵저버");
-      console.log(data);
-    });
   }
 
-  static on() {
+  get isInited() {
+    return this.#isInited;
+  } // getter
+
+  initBy(cashier) {
+    if (!this.isInited) {
+    }
+    this.#cashier = cashier;
+    console.log(`오더시스템이 ${this.#cashier.name}에 의해 시작됨`);
+  }
+
+  get on() {
     return this.#load;
   }
 
-  static isOrderedByCustomer(coffee) {
+  isOrderedByCustomer(coffee) {
     // console.log(OrderSystem.prototype.isValidOrder);
     if (this.isValidOrder(coffee)) {
       console.log("주문이 접수되었습니다..");
@@ -37,18 +40,17 @@ class OrderSystem {
     }
   }
 
-  static isValidOrder(coffee) {
+  isValidOrder(coffee) {
     if (CoffeeType.hasOwnProperty(coffee)) return true;
     return false;
   }
 
-  static tossToBarista(coffee) {
+  tossToBarista(coffee) {
     console.log(`${coffee} 주문이 접수 되었습니다.`);
     this.#load.next(coffee);
     // return ?
   }
 }
-console.log(OrderSystem);
 // const order = Rx.fromEvent(OrderSystem, "isOrderedByCustomer");
 // myBarista.getOrder("coffee1")
 // const observer = (event) => {
@@ -56,9 +58,5 @@ console.log(OrderSystem);
 //   console.log(event);
 // };
 // order.subscribe(observer);
-OrderSystem.init();
-OrderSystem.isOrderedByCustomer("AMERICANO");
-OrderSystem.isOrderedByCustomer("LATTE");
-OrderSystem.isOrderedByCustomer("AMERICANO");
 
 export default OrderSystem;
