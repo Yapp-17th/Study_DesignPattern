@@ -50,7 +50,7 @@ class PrinterProxy: PrinterProtocol {
             } else {
                 newLine = line % 10
             }
-            let newDocument = Document(id: document.id, document.title, line: newLine)
+            let newDocument = Document(id: document.id, title: document.title, line: newLine)
             Printer.shared.printDocument(document: newDocument)
         }
     }

@@ -13,7 +13,7 @@ class Document {
     let title: String
     let line: Int
     
-    init(id: String, _ title: String, line: Int) {
+    init(id: String, title: String, line: Int) {
         self.id = id
         self.title = title
         self.line = line
