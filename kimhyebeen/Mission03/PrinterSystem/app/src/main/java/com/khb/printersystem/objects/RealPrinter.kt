@@ -9,8 +9,12 @@ class RealPrinter(
     private var name: String,
     private var proxy: PrinterSubject
 ) : PrinterSubject {
-    override var isAvailable: Boolean = true
+    private var isAvailable: Boolean = true
     private lateinit var curPrint: PrintItem
+
+    fun getAvailable(): Boolean {
+        return this.isAvailable
+    }
 
     override fun setPrinterName(name: String) {
         this.name = name
@@ -18,10 +22,6 @@ class RealPrinter(
 
     override fun getPrinterName(): String {
         return this.name
-    }
-
-    override fun getAvailable(): Boolean {
-        return this.isAvailable
     }
 
     override fun addPrintObject(item: PrintItem) {

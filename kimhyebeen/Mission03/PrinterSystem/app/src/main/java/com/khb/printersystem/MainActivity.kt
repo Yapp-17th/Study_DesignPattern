@@ -20,18 +20,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        printButton.setOnClickListener {
-            if (editText.text.toString() != "") {
-                val str = editText.text.toString()
-                editText.setText("")
-
-                GlobalScope.launch { requestPrint(str) }
+        printLayout.setOnClickListener {
+            getEditText()?.let {
+                GlobalScope.launch { requestPrint(it) }
             }
         }
 
-        statusButton.setOnClickListener {
+        statusLayout.setOnClickListener {
             startActivity(Intent(this, StatusActivity::class.java))
         }
+    }
+    private fun getEditText(): String? {
+        if (editText.text.toString() != "") return null
+        val str = editText.text.toString()
+        editText.setText("")
+        return str
     }
 
     private fun requestPrint(str: String) {

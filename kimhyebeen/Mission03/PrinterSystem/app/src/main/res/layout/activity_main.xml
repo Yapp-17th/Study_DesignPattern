@@ -35,29 +35,58 @@
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/printButton"
-        android:layout_width="150dp"
-        android:layout_height="36dp"
-        android:background="@drawable/bg_button"
-        android:text="@string/btn1"
-        android:textColor="#7182E1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-    <Button
-        android:id="@+id/statusButton"
+    <LinearLayout
+        android:id="@+id/printLayout"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_printer" />
+
+        <Button
+            android:id="@+id/printButton"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button2"
+            android:text="@string/btn1"
+            android:textColor="#80A8BF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/bg_button2"
-        android:text="@string/btn2"
-        android:textColor="#808CD1"
-        android:textSize="12sp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/printButton" />
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/ic_doc" />
+
+        <Button
+            android:id="@+id/statusButton"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button2"
+            android:text="@string/btn2"
+            android:textColor="#80A8BF"
+            android:textSize="14sp" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

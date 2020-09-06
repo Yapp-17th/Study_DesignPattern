@@ -8,8 +8,7 @@ class PrinterProxy(
     private var name: String
 ) : PrinterSubject {
     private var printQueue: Queue<PrintItem> = LinkedList()
-    private var printer: PrinterSubject = RealPrinter(name, this)
-    override var isAvailable: Boolean = true
+    private var printer: RealPrinter = RealPrinter(name, this)
 
     override fun setPrinterName(name: String) {
         this.name = name
@@ -18,10 +17,6 @@ class PrinterProxy(
 
     override fun getPrinterName(): String {
         return printer.getPrinterName()
-    }
-
-    override fun getAvailable(): Boolean {
-        return this.isAvailable
     }
 
     override fun addPrintObject(item: PrintItem) {
