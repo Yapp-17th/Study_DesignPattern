@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		B02EAFE224FDD54B00C04CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE024FDD54B00C04CC8 /* Main.storyboard */; };
 		B02EAFE424FDD54C00C04CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */; };
 		B02EAFE724FDD54C00C04CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE524FDD54C00C04CC8 /* LaunchScreen.storyboard */; };
+		B0B3789125051010006C7543 /* PrinterProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3789025051010006C7543 /* PrinterProxyManager.swift */; };
+		B0B378932505101F006C7543 /* PrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B378922505101F006C7543 /* PrinterManager.swift */; };
+		B0B378952505102E006C7543 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B378942505102E006C7543 /* Printer.swift */; };
+		B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3789D2505320F006C7543 /* NotificationConstant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02EAFE624FDD54C00C04CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02EAFE824FDD54C00C04CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0B3789025051010006C7543 /* PrinterProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterProxyManager.swift; sourceTree = "<group>"; };
+		B0B378922505101F006C7543 /* PrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterManager.swift; sourceTree = "<group>"; };
+		B0B378942505102E006C7543 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
+		B0B3789D2505320F006C7543 /* NotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstant.swift; sourceTree = "<group>"; };
 		C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission03_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -48,7 +56,6 @@
 				5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */,
 				397C631273632CD402A00D2D /* Pods-Mission03-Denny.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,7 @@
 		B02EAFD924FDD54B00C04CC8 /* Mission03-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				B0B3788F25051006006C7543 /* Models */,
 				B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */,
 				B02EAFDC24FDD54B00C04CC8 /* SceneDelegate.swift */,
 				B02EAFDE24FDD54B00C04CC8 /* ViewController.swift */,
@@ -82,6 +90,17 @@
 				B02EAFE824FDD54C00C04CC8 /* Info.plist */,
 			);
 			path = "Mission03-Denny";
+			sourceTree = "<group>";
+		};
+		B0B3788F25051006006C7543 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0B3789025051010006C7543 /* PrinterProxyManager.swift */,
+				B0B378922505101F006C7543 /* PrinterManager.swift */,
+				B0B378942505102E006C7543 /* Printer.swift */,
+				B0B3789D2505320F006C7543 /* NotificationConstant.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D08A706ACEA3651B853602B6 /* Frameworks */ = {
@@ -126,6 +145,7 @@
 				TargetAttributes = {
 					B02EAFD624FDD54B00C04CC8 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -207,8 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B378952505102E006C7543 /* Printer.swift in Sources */,
+				B0B378932505101F006C7543 /* PrinterManager.swift in Sources */,
 				B02EAFDF24FDD54B00C04CC8 /* ViewController.swift in Sources */,
 				B02EAFDB24FDD54B00C04CC8 /* AppDelegate.swift in Sources */,
+				B0B3789125051010006C7543 /* PrinterProxyManager.swift in Sources */,
+				B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */,
 				B02EAFDD24FDD54B00C04CC8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +378,7 @@
 			baseConfigurationReference = 5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = "Mission03-Denny/Info.plist";
@@ -363,6 +388,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission03-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mission03-Denny/Models/Mission03-Denny-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -373,6 +400,7 @@
 			baseConfigurationReference = 397C631273632CD402A00D2D /* Pods-Mission03-Denny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
 				INFOPLIST_FILE = "Mission03-Denny/Info.plist";
@@ -382,6 +410,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission03-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Mission03-Denny/Models/Mission03-Denny-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
