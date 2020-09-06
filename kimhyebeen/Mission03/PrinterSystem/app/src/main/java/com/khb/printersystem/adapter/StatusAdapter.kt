@@ -58,7 +58,7 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ItemViewHolder>() {
 
         private fun setDialog(i: Int) {
             AlertDialog.Builder(context).apply {
-                setTitle("itemList[i].printerName")
+                setTitle(itemList[i].printerName)
                 setMessage("출력 내용 :\n${itemList[i].contents}")
                 create()
                 show()

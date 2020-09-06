@@ -15,6 +15,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/bg_edittext"
         android:ems="10"
+        android:focusable="true"
         android:gravity="top"
         android:hint="@string/hint"
         android:inputType="textMultiLine|text"
@@ -39,17 +40,20 @@
         android:id="@+id/printLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="64dp"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/printImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/btn1"
             app:srcCompat="@drawable/ic_printer" />
 
         <Button
@@ -67,16 +71,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:focusable="true"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText">
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:id="@+id/statusImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/btn2"
             app:srcCompat="@drawable/ic_doc" />
 
         <Button
@@ -86,7 +93,8 @@
             android:background="@drawable/bg_button2"
             android:text="@string/btn2"
             android:textColor="#80A8BF"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

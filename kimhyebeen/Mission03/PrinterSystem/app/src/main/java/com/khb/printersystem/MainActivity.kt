@@ -20,18 +20,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        printLayout.setOnClickListener {
+        printImage.setOnClickListener {
             getEditText()?.let {
                 GlobalScope.launch { requestPrint(it) }
             }
         }
 
-        statusLayout.setOnClickListener {
+        statusImage.setOnClickListener {
             startActivity(Intent(this, StatusActivity::class.java))
         }
     }
     private fun getEditText(): String? {
-        if (editText.text.toString() != "") return null
+        if (editText.text.toString() == "") return null
         val str = editText.text.toString()
         editText.setText("")
         return str
