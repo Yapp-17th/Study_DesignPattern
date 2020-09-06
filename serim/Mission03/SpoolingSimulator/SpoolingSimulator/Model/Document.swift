@@ -13,10 +13,7 @@ class Document {
     let title: String
     let line: Int
     
-    init(id: String?, _ title: String, line: Int) {
-        guard let id = id else {
-            self.id = makeId()
-        }
+    init(id: String, _ title: String, line: Int) {
         self.id = id
         self.title = title
         self.line = line

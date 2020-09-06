@@ -14,12 +14,12 @@ class Printer: PrinterProtocol {
     
     private init() { }
     
-    func print(document: Document) {
+    func printDocument(document: Document) {
         sleep(1)
-        showProgress()
+        showProgress(document: document)
     }
 
-    func showProgress() {
-        PrinterProxy.shared.showProgress()
+    func showProgress(document: Document) {
+        PrinterProxy.shared.showProgress(document: document)
     }
 }

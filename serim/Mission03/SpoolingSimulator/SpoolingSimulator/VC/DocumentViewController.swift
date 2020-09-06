@@ -12,9 +12,9 @@ class DocumentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let doc1 = Document(id: "1", "Hi", line: 40)
+        PrinterProxy.shared.printDocument(document: doc1)
     }
-
-
+    
 }
 

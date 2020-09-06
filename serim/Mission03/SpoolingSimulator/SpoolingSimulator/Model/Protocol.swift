@@ -9,6 +9,6 @@
 import Foundation
 
 protocol PrinterProtocol {
-    func print(document: Document)
-    func showProgress()
+    func printDocument(document: Document)
+    func showProgress(document: Document)
 }
