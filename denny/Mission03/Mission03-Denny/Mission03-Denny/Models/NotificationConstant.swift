@@ -2,8 +2,7 @@
 //  NotificationConstant.swift
 //  Mission03-Denny
 //
-//  Created by Denny on 2020/09/07.
-//  Copyright © 2020 KakaoTalk. All rights reserved.
+//  Copyright © 2020 Denny. All rights reserved.
 //
 
 import Foundation

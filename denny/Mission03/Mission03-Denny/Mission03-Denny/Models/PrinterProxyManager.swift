@@ -2,8 +2,7 @@
 //  AuthProxy.swift
 //  Mission03-Denny
 //
-//  Created by Denny on 2020/09/06.
-//  Copyright © 2020 KakaoTalk. All rights reserved.
+//  Copyright © 2020 Denny. All rights reserved.
 //
 
 import Foundation
@@ -20,7 +19,7 @@ public class PrinterProxyManager: PrinterManagerService {
         service.createNewPrinter()
     }
     
-    func insertNewTask() {
+    func insertNewTask(task: PrintTask) {
         service.insertNewTask()
     }
     
