@@ -62,8 +62,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! PrinterTableCell
         
+        cell.title.text = file.getTitle(row: PrinterProxy.fileQueue[indexPath.row].index)
+        cell.status.text = PrinterProxy.fileQueue[indexPath.row].status
         return cell
     }
     

@@ -29,10 +29,10 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktI-7C-RAa">
-                                <rect key="frame" x="0.0" y="275" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="275" width="414" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="xwV-Pn-tF8"/>
+                                    <constraint firstAttribute="height" constant="150" id="xwV-Pn-tF8"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="mkW-zB-BwM" customClass="PrinterTableCell" customModule="Mission03" customModuleProvider="target">
@@ -66,8 +66,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="tableStatus" destination="BSG-kH-Sp9" id="Ymn-Rf-6XY"/>
-                                            <outlet property="tableTitle" destination="XWo-Iq-N4x" id="ndT-tF-mQL"/>
+                                            <outlet property="status" destination="BSG-kH-Sp9" id="oc6-vq-ici"/>
+                                            <outlet property="title" destination="XWo-Iq-N4x" id="PoU-UJ-EXG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -79,7 +79,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XeS-jo-HFc">
-                                <rect key="frame" x="0.0" y="520.5" width="414" height="341.5"/>
+                                <rect key="frame" x="0.0" y="470.5" width="414" height="391.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Hl6-7v-gme" style="IBUITableViewCellStyleDefault" id="M9O-gN-uLN">
@@ -102,7 +102,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rw-eF-5jb">
-                                <rect key="frame" x="150" y="495" width="114" height="20.5"/>
+                                <rect key="frame" x="150" y="445" width="114" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

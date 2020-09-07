@@ -11,4 +11,5 @@ import Foundation
 protocol PrinterProtocol {
     func addPrintFile(file: Int)
     func printLog(file: Int)
+//    func changeStatus(file: Int)
 }

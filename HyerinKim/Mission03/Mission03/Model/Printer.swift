@@ -10,16 +10,21 @@ import Foundation
 
 class Printer: PrinterProtocol{
     static let shared = Printer()
+    var isPrinting = false
     
     private init() {}
     
     func addPrintFile(file: Int) {
+        PrinterProxy.isPrinting = true
         PrinterProxy.fileQueue[0].status = "출력중"
         print(" >> \(Files.shared.getTitle(row: file)) 출력중 ...")
         let time = Files.shared.getTime(row: PrinterProxy.fileQueue[0].index)
         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
             self.printLog(file: file)
+            PrinterProxy.fileQueue.removeFirst()
+            PrinterProxy.isPrinting = false
         }
+        
     }
     
     func printLog(file: Int) {
