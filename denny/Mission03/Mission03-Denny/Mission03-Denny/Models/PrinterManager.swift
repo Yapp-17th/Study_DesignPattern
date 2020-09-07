@@ -12,7 +12,7 @@ public protocol PrinterManagerService {
     
     func insertNewTask(task: PrintTask)
     
-    func getPrinterList() -> [Printer]
+    func getPrinterList() -> [Printer]?
 }
 
 public class PrinterManager: PrinterManagerService {
@@ -27,11 +27,11 @@ public class PrinterManager: PrinterManagerService {
     @objc
     private func isCompleteTask(_ notification: Notification) {
         let receivedData = notification.userInfo
-        print("[PrinterManager] printerId : \(receivedData["printerId"])")
-        print("[PrinterManager] completedTask : \(receivedData["task"])")
+        print("[PrinterManager] printerId : \(receivedData?["printerId"] ?? "nil")")
+        print("[PrinterManager] completedTask : \(receivedData?["task"] ?? "nil")")
     }
     
-    func createNewPrinter() {
+    public func createNewPrinter() {
         incrementIndex += 1
         self.printers.append(Printer(id: incrementIndex, bufferSize: Int.random(in: 1..<5)))
     }
@@ -48,13 +48,13 @@ public class PrinterManager: PrinterManagerService {
         return bestFreePrinter
     }
     
-    func insertNewTask(task: PrintTask) {
+    public func insertNewTask(task: PrintTask) {
         if let printer = getFreePrinter() {
             printer.insertTask(task: task)
         }
     }
     
-    func getPrinterList() -> [Printer]? {
+    public func getPrinterList() -> [Printer]? {
         return nil
     }
 }

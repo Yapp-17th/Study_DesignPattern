@@ -12,18 +12,18 @@ public class PrinterProxyManager: PrinterManagerService {
     private var service: PrinterManagerService
     
     private init() {
-        service = PrinterManager()
+        service = PrinterManager.shared
     }
     
-    func createNewPrinter() {
+    public func createNewPrinter() {
         service.createNewPrinter()
     }
     
-    func insertNewTask(task: PrintTask) {
-        service.insertNewTask()
+    public func insertNewTask(task: PrintTask) {
+        service.insertNewTask(task: task)
     }
     
-    func getPrinterList() -> [Printer]? {
+    public func getPrinterList() -> [Printer]? {
         return service.getPrinterList()
     }
 }

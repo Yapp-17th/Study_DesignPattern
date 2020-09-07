@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		7BEB449D06FBBFBBDB11F635 /* Pods_Mission03_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */; };
 		B02EAFDB24FDD54B00C04CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */; };
-		B02EAFDF24FDD54B00C04CC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDE24FDD54B00C04CC8 /* ViewController.swift */; };
+		B02EAFDF24FDD54B00C04CC8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02EAFDE24FDD54B00C04CC8 /* MainViewController.swift */; };
 		B02EAFE224FDD54B00C04CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE024FDD54B00C04CC8 /* Main.storyboard */; };
 		B02EAFE424FDD54C00C04CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */; };
 		B02EAFE724FDD54C00C04CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02EAFE524FDD54C00C04CC8 /* LaunchScreen.storyboard */; };
+		B04B8D722506FDF5009029A6 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04B8D712506FDF5009029A6 /* UIColor+Custom.swift */; };
 		B0B3789125051010006C7543 /* PrinterProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3789025051010006C7543 /* PrinterProxyManager.swift */; };
 		B0B378932505101F006C7543 /* PrinterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B378922505101F006C7543 /* PrinterManager.swift */; };
 		B0B378952505102E006C7543 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B378942505102E006C7543 /* Printer.swift */; };
 		B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3789D2505320F006C7543 /* NotificationConstant.swift */; };
+		B0C0AD002507044700566156 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0ACFF2507044700566156 /* UIFont+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,15 +26,17 @@
 		5AB414A6DC1AAF0DD8034ED6 /* Pods-Mission03-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission03-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission03-Denny/Pods-Mission03-Denny.debug.xcconfig"; sourceTree = "<group>"; };
 		B02EAFD724FDD54B00C04CC8 /* Mission03-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission03-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B02EAFDE24FDD54B00C04CC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B02EAFDE24FDD54B00C04CC8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B02EAFE124FDD54B00C04CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02EAFE624FDD54C00C04CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02EAFE824FDD54C00C04CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B04B8D712506FDF5009029A6 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		B0B3789025051010006C7543 /* PrinterProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterProxyManager.swift; sourceTree = "<group>"; };
 		B0B378922505101F006C7543 /* PrinterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterManager.swift; sourceTree = "<group>"; };
 		B0B378942505102E006C7543 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		B0B3789D2505320F006C7543 /* NotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstant.swift; sourceTree = "<group>"; };
+		B0C0ACFF2507044700566156 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission03_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,11 +84,13 @@
 			children = (
 				B0B3788F25051006006C7543 /* Models */,
 				B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */,
-				B02EAFDE24FDD54B00C04CC8 /* ViewController.swift */,
+				B02EAFDE24FDD54B00C04CC8 /* MainViewController.swift */,
 				B02EAFE024FDD54B00C04CC8 /* Main.storyboard */,
 				B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */,
 				B02EAFE524FDD54C00C04CC8 /* LaunchScreen.storyboard */,
 				B02EAFE824FDD54C00C04CC8 /* Info.plist */,
+				B04B8D712506FDF5009029A6 /* UIColor+Custom.swift */,
+				B0C0ACFF2507044700566156 /* UIFont+Custom.swift */,
 			);
 			path = "Mission03-Denny";
 			sourceTree = "<group>";
@@ -224,9 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04B8D722506FDF5009029A6 /* UIColor+Custom.swift in Sources */,
+				B0C0AD002507044700566156 /* UIFont+Custom.swift in Sources */,
 				B0B378952505102E006C7543 /* Printer.swift in Sources */,
 				B0B378932505101F006C7543 /* PrinterManager.swift in Sources */,
-				B02EAFDF24FDD54B00C04CC8 /* ViewController.swift in Sources */,
+				B02EAFDF24FDD54B00C04CC8 /* MainViewController.swift in Sources */,
 				B02EAFDB24FDD54B00C04CC8 /* AppDelegate.swift in Sources */,
 				B0B3789125051010006C7543 /* PrinterProxyManager.swift in Sources */,
 				B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */,
@@ -384,7 +392,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission03-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Mission03-Denny/Models/Mission03-Denny-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -406,7 +413,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission03-Denny";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Mission03-Denny/Models/Mission03-Denny-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
