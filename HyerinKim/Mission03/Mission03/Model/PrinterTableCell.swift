@@ -10,6 +10,8 @@ import UIKit
 
 class PrinterTableCell: UITableViewCell {
 
+    @IBOutlet weak var tableTitle: UILabel!
+    @IBOutlet weak var tableStatus: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
