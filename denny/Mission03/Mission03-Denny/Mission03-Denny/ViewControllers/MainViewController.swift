@@ -145,7 +145,9 @@ class MainViewController: UIViewController {
     
     @objc
     private func manageAction(_ sender: UIButton) {
-        
+        let vc = ManageViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

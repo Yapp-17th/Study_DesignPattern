@@ -19,6 +19,7 @@
 		B0B378952505102E006C7543 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B378942505102E006C7543 /* Printer.swift */; };
 		B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B3789D2505320F006C7543 /* NotificationConstant.swift */; };
 		B0C0AD002507044700566156 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0ACFF2507044700566156 /* UIFont+Custom.swift */; };
+		B0C0AD032507078900566156 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C0AD022507078900566156 /* ManageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B0B378942505102E006C7543 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		B0B3789D2505320F006C7543 /* NotificationConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstant.swift; sourceTree = "<group>"; };
 		B0C0ACFF2507044700566156 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		B0C0AD022507078900566156 /* ManageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
 		C0B1124807E2353E14FEAA3D /* Pods_Mission03_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission03_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,9 +84,9 @@
 		B02EAFD924FDD54B00C04CC8 /* Mission03-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				B0C0AD012507077D00566156 /* ViewControllers */,
 				B0B3788F25051006006C7543 /* Models */,
 				B02EAFDA24FDD54B00C04CC8 /* AppDelegate.swift */,
-				B02EAFDE24FDD54B00C04CC8 /* MainViewController.swift */,
 				B02EAFE024FDD54B00C04CC8 /* Main.storyboard */,
 				B02EAFE324FDD54C00C04CC8 /* Assets.xcassets */,
 				B02EAFE524FDD54C00C04CC8 /* LaunchScreen.storyboard */,
@@ -104,6 +106,15 @@
 				B0B3789D2505320F006C7543 /* NotificationConstant.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B0C0AD012507077D00566156 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B02EAFDE24FDD54B00C04CC8 /* MainViewController.swift */,
+				B0C0AD022507078900566156 /* ManageViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		D08A706ACEA3651B853602B6 /* Frameworks */ = {
@@ -235,6 +246,7 @@
 				B0B378952505102E006C7543 /* Printer.swift in Sources */,
 				B0B378932505101F006C7543 /* PrinterManager.swift in Sources */,
 				B02EAFDF24FDD54B00C04CC8 /* MainViewController.swift in Sources */,
+				B0C0AD032507078900566156 /* ManageViewController.swift in Sources */,
 				B02EAFDB24FDD54B00C04CC8 /* AppDelegate.swift in Sources */,
 				B0B3789125051010006C7543 /* PrinterProxyManager.swift in Sources */,
 				B0B3789E2505320F006C7543 /* NotificationConstant.swift in Sources */,
