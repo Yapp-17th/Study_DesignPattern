@@ -14,7 +14,7 @@ public struct PrintTask {
 
 public class Printer {
     private var timer: Timer?
-    private var id: Int64
+    public var id: Int64
     public var isInsertAvailable: Bool {
         return tasks.count < bufferSize
     }
@@ -23,7 +23,7 @@ public class Printer {
         return bufferSize - tasks.count
     }
     
-    private var bufferSize: Int
+    public var bufferSize: Int
     private var tasks: [PrintTask] = [PrintTask]()
     
     public init(id: Int64, bufferSize: Int) {

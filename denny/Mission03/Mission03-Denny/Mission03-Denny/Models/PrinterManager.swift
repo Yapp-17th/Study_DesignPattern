@@ -55,6 +55,6 @@ public class PrinterManager: PrinterManagerService {
     }
     
     public func getPrinterList() -> [Printer]? {
-        return nil
+        return printers
     }
 }

@@ -22,9 +22,14 @@ public class ManageViewController: UIViewController {
     
     private var printerListView: UITableView = UITableView()
     
+    private var printerList: [Printer] = [Printer]()
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         setViewLayout()
+        
+        printerList = PrinterProxyManager.shared.getPrinterList() ?? [Printer]()
+        printerListView.reloadData()
     }
     
     private func setViewLayout() {
@@ -72,6 +77,8 @@ public class ManageViewController: UIViewController {
         }
         
         printerListView.separatorInset = .zero
+        printerListView.delegate = self
+        printerListView.dataSource = self
         
         // MARK: Button Section
         buttonStackView.snp.makeConstraints { make in
@@ -116,5 +123,22 @@ public class ManageViewController: UIViewController {
     @objc
     private func onClickCreateButton(sender: UIButton) {
         PrinterProxyManager.shared.createNewPrinter()
+        printerList = PrinterProxyManager.shared.getPrinterList() ?? [Printer]()
+        printerListView.reloadData()
     }
+}
+
+extension ManageViewController: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return printerList.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.selectionStyle = .none
+        cell.textLabel?.text = "Printer (\(indexPath.row)) id ==> \(printerList[indexPath.row].id), Buffer : \(printerList[indexPath.row].remainSize)/\(printerList[indexPath.row].bufferSize)"
+        return cell
+    }
+    
+    
 }
