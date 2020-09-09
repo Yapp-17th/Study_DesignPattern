@@ -13,7 +13,11 @@ class PrinterProxy: PrinterProtocol {
     static let shared = PrinterProxy()
 
     var documentQueue: [Document] = []
-    var currentDocument: Document?
+    var currentDocument: Document? {
+        didSet {
+            popDocument()
+        }
+    }
     var extraLine: Int = 0
     
     private init() { }
@@ -24,11 +28,17 @@ class PrinterProxy: PrinterProtocol {
     
     func printDocument(document: Document) {
         appendDocument(document)
-        if(currentDocument == nil) {
-            extraLine = 0
-            currentDocument = documentQueue.first!
-            split(document: documentQueue.first!)
+        popDocument()
+    }
+    
+    func popDocument() {
+        if(currentDocument != nil) { return }
+        extraLine = 0
+        guard let currentDocument = documentQueue.first else {
+            return
         }
+        self.currentDocument = currentDocument
+        split(document: currentDocument)
     }
     
     func showProgress(document: Document) {
@@ -37,6 +47,10 @@ class PrinterProxy: PrinterProtocol {
         }
         extraLine += document.line
         print("\(document.id)의 진행 상황 : \(extraLine)/\(currentDocument.line)")
+        if(extraLine == currentDocument.line) {
+            documentQueue.removeFirst()
+            self.currentDocument = nil
+        }
     }
     
     private func split(document: Document) {

@@ -18,8 +18,6 @@ class DocumentViewController: UIViewController {
     let lineTextField = UITextField()
     let saveButton = UIButton()
     
-    var savedDocuments = [Document]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         titleTextField.delegate = self
@@ -36,7 +34,9 @@ class DocumentViewController: UIViewController {
             return
         }
         let document = Document(id: getId(), title: title, line: line)
-        savedDocuments.append(document)
+        SavedDocument.shared.savedDocument.append(document)
+        titleTextField.text = ""
+        lineTextField.text = ""
     }
 
     private func getId() -> String {
@@ -45,6 +45,7 @@ class DocumentViewController: UIViewController {
     }
     
     private func configureViews() {
+        self.view.backgroundColor = .white
         backgroundView.backgroundColor = UIColor(red: 243/256, green: 242/256, blue: 255/256, alpha: 1)
         titleLabel.text = "Title"
         titleTextField.placeholder = "제목을 입력해주세요."
@@ -106,5 +107,5 @@ class DocumentViewController: UIViewController {
 }
 
 extension DocumentViewController: UITextFieldDelegate {
-    
+
 }
