@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RxSwift
+
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource , UITableViewDelegate,UITableViewDataSource {
     
@@ -15,26 +15,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var printTableview: UITableView!
     @IBOutlet weak var logTableView: UITableView!
+    
     let file = Files.shared
     let proxy = PrinterProxy.shared
     var selected = 0
-    let disposebag = DisposeBag()
+ 
     
-    @IBAction func printBtn(_ sender: Any) {
-        proxy.addPrintFile(file: selected)
-        printTableview.reloadData()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.dataSource = self
         picker.delegate = self
         printTableview.delegate = self
         printTableview.dataSource = self
+        logTableView.delegate = self
+        logTableView.dataSource = self
         
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
         
-        
-        
+    }
+    
+    @IBAction func printBtn(_ sender: Any) {
+        proxy.addPrintFile(file: selected)
+        printTableview.reloadData()
     }
     
     //picker
@@ -58,15 +60,35 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PrinterProxy.fileQueue.count
+        var count = 0
+        if(tableView == printTableview){
+            count = PrinterProxy.fileQueue.count
+        }
+        if(tableView == logTableView){
+            count = PrinterProxy.logArray.count
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! PrinterTableCell
+        if(tableView == printTableview){
+            let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! PrinterTableCell
+            
+            cell.title.text = file.getTitle(row: PrinterProxy.fileQueue[indexPath.row].index)
+            cell.status.text = PrinterProxy.fileQueue[indexPath.row].status
+            
+            return cell
+            
+        }
+        if(tableView == logTableView){
+            let cell = logTableView.dequeueReusableCell(withIdentifier: "logCell", for: indexPath) as! LogTableCell
+            cell.log.text = PrinterProxy.logArray[indexPath.row]
+            
+            return cell
+            
+        }
         
-        cell.title.text = file.getTitle(row: PrinterProxy.fileQueue[indexPath.row].index)
-        cell.status.text = PrinterProxy.fileQueue[indexPath.row].status
-        return cell
+        return UITableViewCell()
     }
     
     @objc

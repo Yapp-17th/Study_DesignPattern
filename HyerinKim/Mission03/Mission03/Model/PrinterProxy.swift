@@ -7,39 +7,38 @@
 //
 
 import Foundation
-import RxSwift
 
 
 class PrinterProxy: PrinterProtocol{
     
     static var fileQueue:[QueueStruct] = []
+    static var logArray:[String] = []
     static var isPrinting = false
     static let shared = PrinterProxy()
     private init(){}
-
+    
     var list = Files.shared.getFileList()
     let printer = Printer.shared
-    
-    
-    
-    
-    func updateQueue(){
-    
-        
-    }
-    
+    var count = 0
+   
     func addPrintFile(file: Int) {
         //오브젝트 만들어서 큐에 넣음
         let printObject = QueueStruct(index: file, status: "대기중")
         PrinterProxy.fileQueue.append(printObject)
+        count += 1
         //요청 로그 찍음
         printLog(file: file)
+        if(PrinterProxy.isPrinting == false){
+            self.printer.addPrintFile(file: file)
+        }
         
-        while(PrinterProxy.isPrinting == false){ self.printer.addPrintFile(file: PrinterProxy.fileQueue[0].index) }
+        
     }
     
     func printLog(file:Int) {
-        print(" >> \(list[file].title) 프린트 요청")
+        PrinterProxy.logArray.append("\(count) >> \(list[file].title) 출력 요청")
+        
+        print(" \(count) >> \(list[file].title) 출력 요청")
     }
     
     

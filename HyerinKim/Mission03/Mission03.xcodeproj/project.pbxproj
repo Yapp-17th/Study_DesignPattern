@@ -19,6 +19,7 @@
 		0E81457525032850007716D5 /* PrinterProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145742503284F007716D5 /* PrinterProxy.swift */; };
 		0E8145772503286C007716D5 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145762503286C007716D5 /* Printer.swift */; };
 		0E8145792505579D007716D5 /* item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145782505579D007716D5 /* item.swift */; };
+		0E81457D2508C405007716D5 /* LogTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81457C2508C405007716D5 /* LogTableCell.swift */; };
 		EC273C6266410821FF4357D8 /* Pods_Mission03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8557905DA5B417D90EEF75F8 /* Pods_Mission03.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		0E8145742503284F007716D5 /* PrinterProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterProxy.swift; sourceTree = "<group>"; };
 		0E8145762503286C007716D5 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		0E8145782505579D007716D5 /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
+		0E81457C2508C405007716D5 /* LogTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableCell.swift; sourceTree = "<group>"; };
 		59DCE03FB7DD2BD318C3FF44 /* Pods-Mission03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission03.release.xcconfig"; path = "Target Support Files/Pods-Mission03/Pods-Mission03.release.xcconfig"; sourceTree = "<group>"; };
 		8557905DA5B417D90EEF75F8 /* Pods_Mission03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E19BDFFAC035BA0635FFC5 /* Pods-Mission03.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission03.debug.xcconfig"; path = "Target Support Files/Pods-Mission03/Pods-Mission03.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,10 +93,11 @@
 		0E8145702503280B007716D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E81456E250326DD007716D5 /* PrinterTableCell.swift */,
 				0E81457225032837007716D5 /* PrinterProtocol.swift */,
-				0E8145762503286C007716D5 /* Printer.swift */,
 				0E8145742503284F007716D5 /* PrinterProxy.swift */,
+				0E8145762503286C007716D5 /* Printer.swift */,
+				0E81456E250326DD007716D5 /* PrinterTableCell.swift */,
+				0E81457C2508C405007716D5 /* LogTableCell.swift */,
 				0E8145782505579D007716D5 /* item.swift */,
 			);
 			path = Model;
@@ -249,6 +252,7 @@
 				0E81455A250321F4007716D5 /* SceneDelegate.swift in Sources */,
 				0E81457325032837007716D5 /* PrinterProtocol.swift in Sources */,
 				0E814562250321F4007716D5 /* Mission03.xcdatamodeld in Sources */,
+				0E81457D2508C405007716D5 /* LogTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
