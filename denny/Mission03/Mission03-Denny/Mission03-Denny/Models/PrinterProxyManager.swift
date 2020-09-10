@@ -20,6 +20,7 @@ public class PrinterProxyManager: PrinterManagerService {
     }
     
     public func insertNewTask(task: PrintTask) {
+        print("[PrinterProxyManager] insertNewTask")
         service.insertNewTask(task: task)
     }
     

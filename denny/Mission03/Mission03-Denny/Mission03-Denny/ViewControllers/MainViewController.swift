@@ -27,6 +27,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewLayout()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(LogCell.self, forCellReuseIdentifier: LogCell.identifier)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateLogView), name: NotificationConstant.addLog.notification(), object: nil)
+    }
+    
+    @objc
+    private func updateLogView() {
+        tableView.reloadData()
     }
 
     private func initViewLayout() {
@@ -135,11 +144,13 @@ class MainViewController: UIViewController {
 
     @objc
     private func printAction(_ sender: UIButton) {
-        if fileNameField.text?.isEmpty ?? true || pagesField.text?.isEmpty ?? true {
+        if let fileName = fileNameField.text, let page = pagesField.text {
+            errorView.isHidden = true
+            print("문서를 프린터에게 요청합니다...")
+            PrinterProxyManager.shared.insertNewTask(task: PrintTask(documentName: fileName, pages: Int(page) ?? 0))
+        } else {
             errorView.isHidden = false
             errorView.text = "파일명과 페이지 수를 올바르게 입력해주세요."
-        } else {
-            errorView.isHidden = true
         }
     }
     
@@ -152,3 +163,36 @@ class MainViewController: UIViewController {
     
 }
 
+extension MainViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DebugWorker.shared.getLogCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: LogCell.identifier) as? LogCell {
+            print(DebugWorker.shared.getLog()[indexPath.row])
+            cell.contentLabel.text = DebugWorker.shared.getLog()[indexPath.row]
+            return cell
+        }
+        return UITableViewCell()
+    }
+}
+
+public class LogCell: UITableViewCell {
+    public static let identifier: String = "LogCell"
+    public var contentLabel: UILabel = UILabel()
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        contentView.addSubview(contentLabel)
+        contentLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
