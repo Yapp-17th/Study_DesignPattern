@@ -2,18 +2,15 @@ package com.example.mission3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.DragEvent
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.Button
-import android.widget.GridLayout
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.mission3.adapter.PrintAdapter
+import com.example.mission3.model.CPU
+import com.example.mission3.model.CPU.cpu_work
+import com.example.mission3.model.Client
+import com.example.mission3.model.Print
+import com.example.mission3.model.PrinterSpooler
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.*
 
 class MainActivity : AppCompatActivity()
 {
@@ -22,12 +19,15 @@ class MainActivity : AppCompatActivity()
     val printDatas = ArrayList<Print>()
     val pAdapter = PrintAdapter(this, printDatas)
 
+    val cpu = CPU
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val cpu = CPU
+
         val printerSpooler = PrinterSpooler
+        val newContext = newSingleThreadContext("newContext")
 
         print.adapter = pAdapter
         print.layoutManager = GridLayoutManager(this, 4)
@@ -37,21 +37,39 @@ class MainActivity : AppCompatActivity()
         var print: Print
 
         file1.setOnClickListener {
-            print = Print(file1.text.toString(), 25.4F)
-            client.printRequest(print)
+            print = Print(file1.text.toString(), 2000L)
             addItem(print)
+            GlobalScope.launch(Dispatchers.Main) {
+                withContext(newContext) {
+                    client.printRequest(print)
+                }
+                 printDatas.removeAt(0)
+                 pAdapter.notifyDataSetChanged()
+            }
         }
 
         file2.setOnClickListener {
-            print = Print(file2.text.toString(), 30.2F)
-            client.printRequest(print)
+            print = Print(file2.text.toString(), 3000L)
             addItem(print)
+            GlobalScope.launch(Dispatchers.Main) {
+                withContext(newContext) {
+                    client.printRequest(print)
+                }
+                printDatas.removeAt(0)
+                pAdapter.notifyDataSetChanged()
+            }
         }
 
         file3.setOnClickListener {
-            print = Print(file3.text.toString(), 40.2F)
-            client.printRequest(print)
+            print = Print(file3.text.toString(), 4000L)
             addItem(print)
+            GlobalScope.launch(Dispatchers.Main) {
+                withContext(newContext) {
+                    client.printRequest(print)
+                }
+                printDatas.removeAt(0)
+                pAdapter.notifyDataSetChanged()
+            }
         }
    }
 

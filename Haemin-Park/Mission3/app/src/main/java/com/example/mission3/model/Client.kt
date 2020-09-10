@@ -1,10 +1,10 @@
-package com.example.mission3
+package com.example.mission3.model
 
 class Client(num: Int) {
 
     private val printerSpooler = PrinterSpooler
 
     fun printRequest(printData: Print){
-        printerSpooler.printing(printData.fileNm)
+        PrinterSpooler.printing(printData)
     }
 }

@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mission3.Print
+import com.example.mission3.model.Print
 import com.example.mission3.R
-import kotlinx.android.synthetic.main.item.view.*
 
 class PrintAdapter(val context: Context, val printDatas: ArrayList<Print>)
     : RecyclerView.Adapter<PrintAdapter.Holder>()
