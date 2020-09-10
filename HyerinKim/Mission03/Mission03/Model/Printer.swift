@@ -36,6 +36,7 @@ class Printer: PrinterProtocol{
                 
             }
             
+            
         }
     }
     

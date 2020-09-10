@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
 
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var printButton: UIButton!
     @IBOutlet weak var printTableview: UITableView!
     @IBOutlet weak var logTableView: UITableView!
     
@@ -29,6 +30,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         printTableview.dataSource = self
         logTableView.delegate = self
         logTableView.dataSource = self
+        setLayout()
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
         
@@ -73,19 +75,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == printTableview){
             let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! PrinterTableCell
-            
             cell.title.text = file.getTitle(row: PrinterProxy.fileQueue[indexPath.row].index)
             cell.status.text = PrinterProxy.fileQueue[indexPath.row].status
             
             return cell
-            
         }
         if(tableView == logTableView){
             let cell = logTableView.dequeueReusableCell(withIdentifier: "logCell", for: indexPath) as! LogTableCell
             cell.log.text = PrinterProxy.logArray[indexPath.row]
             
             return cell
-            
         }
         
         return UITableViewCell()
@@ -95,9 +94,15 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func refresh(){
         printTableview.reloadData()
         logTableView.reloadData()
-        
     }
     
-
+    func setLayout(){
+        printButton.layer.cornerRadius = printButton.bounds.size.height*0.2
+        printButton.layer.backgroundColor = UIColor.black.cgColor
+        printButton.bounds.size.height = 20
+        printButton.tintColor = UIColor.white
+        logTableView.separatorStyle = .none
+    }
+   
 }
 
