@@ -44,7 +44,9 @@ public class Printer {
     
     @objc
     private func timerCallback() {
-        print("프린트 완료 : \(String(describing: self.tasks.first))")
+//        DebugWorker.shared.appendLog(text: "프린트 완료 : \(String(describing: self.tasks.first))")
+//        NotificationCenter.default.post(name: NotificationConstant.addLog.notification(), object: nil)
+        
         NotificationCenter.default.post(name: NotificationConstant.printerComplete.notification(), object: nil, userInfo: ["printerId": self.id, "task": self.tasks.first])
         removeTask()
         if tasks.count < 1 {

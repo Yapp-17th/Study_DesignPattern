@@ -27,6 +27,8 @@ public class PrinterManager: PrinterManagerService {
     @objc
     private func isCompleteTask(_ notification: Notification) {
         let receivedData = notification.userInfo
+        DebugWorker.shared.appendLog(text: "프린트 완료 >> id : \(receivedData?["printerId"] ?? "nil")")
+        NotificationCenter.default.post(name: NotificationConstant.addLog.notification(), object: nil)
         print("[PrinterManager] printerId : \(receivedData?["printerId"] ?? "nil")")
         print("[PrinterManager] completedTask : \(receivedData?["task"] ?? "nil")")
     }
@@ -49,7 +51,9 @@ public class PrinterManager: PrinterManagerService {
     }
     
     public func insertNewTask(task: PrintTask) {
+        print("[PrinterManager] insertNewTask")
         if let printer = getFreePrinter() {
+            print("[PrinterManager] insertTask to printer(\(printer.id))")
             printer.insertTask(task: task)
         }
     }
