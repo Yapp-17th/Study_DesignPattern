@@ -30,51 +30,57 @@ class MainActivity : AppCompatActivity()
         val newContext = newSingleThreadContext("newContext")
 
         print.adapter = pAdapter
-        print.layoutManager = GridLayoutManager(this, 4)
+        print.layoutManager = GridLayoutManager(this, 3)
         print.setHasFixedSize(true)
 
+        var index: Int = 0
         client = Client(0)
         var print: Print
 
         file1.setOnClickListener {
-            print = Print(file1.text.toString(), 2000L)
+            print = Print(index++, false, file1.text.toString(), 2000L)
             addItem(print)
             GlobalScope.launch(Dispatchers.Main) {
+                val i = print.index
                 withContext(newContext) {
                     client.printRequest(print)
                 }
-                 printDatas.removeAt(0)
-                 pAdapter.notifyDataSetChanged()
+                 updateItem(i)
             }
         }
 
         file2.setOnClickListener {
-            print = Print(file2.text.toString(), 3000L)
+            print = Print(index++, false, file2.text.toString(), 3000L)
             addItem(print)
             GlobalScope.launch(Dispatchers.Main) {
+                val i = print.index
                 withContext(newContext) {
                     client.printRequest(print)
                 }
-                printDatas.removeAt(0)
-                pAdapter.notifyDataSetChanged()
+                updateItem(i)
             }
         }
 
         file3.setOnClickListener {
-            print = Print(file3.text.toString(), 4000L)
+            print = Print(index++, false, file3.text.toString(), 4000L)
             addItem(print)
             GlobalScope.launch(Dispatchers.Main) {
+                val i = print.index
                 withContext(newContext) {
                     client.printRequest(print)
                 }
-                printDatas.removeAt(0)
-                pAdapter.notifyDataSetChanged()
+                updateItem(i)
             }
         }
    }
 
     fun addItem(print: Print){
         printDatas.add(print)
+        pAdapter.notifyDataSetChanged()
+    }
+
+    fun updateItem(i: Int){
+        printDatas[i].status = true
         pAdapter.notifyDataSetChanged()
     }
 }
