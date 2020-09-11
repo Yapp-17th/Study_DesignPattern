@@ -3,11 +3,15 @@ import LogCollector from "./LogCollector.js"
 
 class PrinterProxy {
   #printer = new Printer("빰빰맨의 프린터");
+  #name;
   #queue = [];
 
-  constructor() {}
+  constructor() {
+    this.#name = this.#printer.name;
+    // 이제 getName() 등의 요청을 프록시가 대신할 수 있음.
+  }
 
-  request(document = null) {
+  request(document = null) { // 프록시 패턴의 request
     if (document != null) {
       this.#queue.push(document);
     }
@@ -18,7 +22,7 @@ class PrinterProxy {
       LogCollector.save(this.constructor.name, `========프린트 의뢰========`)
       LogCollector.save(this.constructor.name, `의뢰 문서 ${selectedDocument}`)
 
-      this.#printer.print(selectedDocument).then(async (res) => {
+      this.#printer.request(selectedDocument).then(async (res) => {
         await console.log("프린트 완료", res);
         LogCollector.save(this.constructor.name, `프린트 완료`)
         
@@ -50,7 +54,6 @@ class PrinterProxy {
     this.#queue.length === 0
       ? LogCollector.save(this.constructor.name, "비어있습니다.")
       : LogCollector.save(this.constructor.name, this.#queue)
-    
   }
 
   checkPrintQueue() {

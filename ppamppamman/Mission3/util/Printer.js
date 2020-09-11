@@ -2,12 +2,12 @@ import PrinterProxy from "./PrinterProxy.js";
 import LogCollector from "./LogCollector.js";
 
 class Printer {
-  name;
+  #name;
   #document;
   #isPrinting = false;
 
   constructor(name) {
-    this.name = name;
+    this.#name = name;
   }
 
   isAbleToPrint() {
@@ -16,6 +16,10 @@ class Printer {
 
   setIsPrinting(flag) {
     this.#isPrinting = flag;
+  }
+
+  request(document){
+    return this.print(document)
   }
 
   async print(document) {

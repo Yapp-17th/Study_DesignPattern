@@ -12,16 +12,17 @@ const MainView = ({ computer }) => {
   const onRequest = (docs = null) => {
     console.log(docs)
     if (docs == null) {
-      computer.requestPrint("docs1");
-      computer.requestPrint("docs2");
-      computer.requestPrint("docs3");
-      computer.requestPrint("docs4");
+      computer.request("docs1").print();
+      // computer.requestPrint("docs1");
+      // computer.requestPrint("docs2");
+      // computer.requestPrint("docs3");
+      // computer.requestPrint("docs4");
     } else {
       computer.requestPrint(docs);
     } 
   }
   const onRequestReadyList = () => {
-    computer.requestReadyList();
+    computer.request().readyList();
   }
 
   return (

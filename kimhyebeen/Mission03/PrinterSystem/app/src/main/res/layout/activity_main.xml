@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/bg_edittext"
+        android:ems="10"
+        android:focusable="true"
+        android:gravity="top"
+        android:hint="@string/hint"
+        android:inputType="textMultiLine|text"
+        android:isScrollContainer="true"
+        android:padding="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/text1"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/printLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <ImageView
+            android:id="@+id/printImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/btn1"
+            app:srcCompat="@drawable/ic_printer" />
+
+        <Button
+            android:id="@+id/printButton"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button2"
+            android:text="@string/btn1"
+            android:textColor="#80A8BF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="50dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText">
+
+        <ImageView
+            android:id="@+id/statusImage"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/btn2"
+            app:srcCompat="@drawable/ic_doc" />
+
+        <Button
+            android:id="@+id/statusButton"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_button2"
+            android:text="@string/btn2"
+            android:textColor="#80A8BF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
