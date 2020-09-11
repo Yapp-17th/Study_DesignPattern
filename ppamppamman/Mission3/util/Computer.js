@@ -5,35 +5,39 @@ import LogCollector from "./LogCollector.js"
 class Computer {
   constructor(){}
 
-  request(document){
-    const requestDocument = document
-    console.log("document request", requestDocument)
-    
-    function print() {
-      console.log("document request", requestDocument)
-      console.log(Printer);
-      LogCollector.save(this.constructor.name, `request ${requestDocument}`)
-      Printer.request(requestDocument);
+  request(document = null){
+    if(document === null){
+      this.request.getReadyList = () => {
+        console.log(this.constructor.name, `request ReadyList`)
+        LogCollector.save(this.constructor.name, `request ReadyList`)
+        Printer.request().getReadyList();
+      }
     }
 
-    function readyList() {
-
-    }
-    console.log(this.request)
-    return this.request.bind(this);
-  }
-  requestPrint(document) {
+    if (document !== null) {
+      const requestDocument = document
     
-    console.log(Printer);
-    LogCollector.save(this.constructor.name, `request ${document}`)
-
-    Printer.request(document);
+      this.request.print = () => {
+        console.log("document request", requestDocument)
+        LogCollector.save(this.constructor.name, `request ${requestDocument}`)
+        Printer.request(requestDocument).print();
+      }
+    }
+    
+    return this.request;
   }
+  // requestPrint(document) {
+    
+  //   console.log(Printer);
+  //   LogCollector.save(this.constructor.name, `request ${document}`)
 
-  requestReadyList(){
-    LogCollector.save(this.constructor.name, `request ReadyList`)
-    Printer.requestReadyList();
-  }
+  //   Printer.request(document);
+  // }
+
+  // requestReadyList(){
+  //   LogCollector.save(this.constructor.name, `request ReadyList`)
+  //   Printer.requestReadyList();
+  // }
 }
 
 export default Computer
