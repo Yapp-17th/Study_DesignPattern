@@ -9,9 +9,10 @@ class PrinterInterface {
     this.#printerProxy.request(document);
   }
 
-  static getReadyList() {
-    console.log("========대기중인 자료========");
+  static requestReadyList(){
+    this.#printerProxy.requestReadyList();
   }
+
 }
 
 export default PrinterInterface;

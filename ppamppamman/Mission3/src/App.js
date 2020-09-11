@@ -1,12 +1,17 @@
 import React from 'react';
 
-import Printer from "./components/Printer.js";
-import Computer from "./components/Computer.js";
-import PrinterProxy from "./components/PrinterProxy.js";
+import Printer from "../util/Printer.js";
+import Computer from "../util/Computer.js";
+import PrinterProxy from "../util/PrinterProxy.js";
+
+import MainView from "./views/MainView.js";
 
 const App = () => {
+  
+  const computer = new Computer();
+
   return (
-    <div> hello! </div>
+    <MainView computer={computer}/>
   )
 }
 
