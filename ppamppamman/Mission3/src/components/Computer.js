@@ -1,5 +1,5 @@
 // import PrinterProxy from "./PrinterProxy.mjs";
-import { default as Printer } from "./PrinterInterface.mjs";
+import { default as Printer } from "./PrinterInterface.js";
 
 class Computer {
   requestPrint(document) {

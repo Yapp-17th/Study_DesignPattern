@@ -1,4 +1,4 @@
-import Printer from "./Printer.mjs";
+import Printer from "./Printer.js";
 
 class PrinterProxy {
   #printer = new Printer("빰빰맨의 프린터");

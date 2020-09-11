@@ -48,3 +48,23 @@ Computer (only can access PrinterProxy by PrinterInterface)
 - isAbleToPrint() :boolean
 - print(document:string): Object(Promise)
 - response() :string
+
+## 사용 패키지
+### 리액트 계열
+- react
+- react-dom
+### 바벨 계열
+- @babel/core 
+- @babel/preset-env 
+- @babel/preset-react
+### 로더 계열
+- babel-loader 
+- css-loader 
+- style-loader 
+### 웹팩 계열
+- webpack 
+- webpack-cli 
+- webpack-dev-server
+### 플러그인 계열
+- html-webpack-plugin 
+- clean-webpack-plugin

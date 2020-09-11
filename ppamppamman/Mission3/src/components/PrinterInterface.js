@@ -1,4 +1,4 @@
-import PrinterProxy from "./PrinterProxy.mjs";
+import PrinterProxy from "./PrinterProxy.js";
 
 class PrinterInterface {
   static #printerProxy = new PrinterProxy();
