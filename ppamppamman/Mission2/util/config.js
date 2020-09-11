@@ -1,0 +1,1 @@
+export const CoffeeType = Object.freeze({"AMERICANO":0, "LATTE":1, "CARAMEL":2})
