@@ -15,7 +15,7 @@ class Printer: PrinterProtocol {
     private init() { }
     
     func printDocument(document: Document) {
-        sleep(1)
+        sleep(2)
         showProgress(document: document)
     }
 

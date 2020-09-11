@@ -11,6 +11,11 @@ import SnapKit
 
 class DocumentViewController: UIViewController {
     
+    let directoryImageView: UIImageView = {
+        let image = UIImage(named: "directory")
+        let imageView = UIImageView(image: image)
+        return imageView
+    }()
     let backgroundView = UIView()
     let titleLabel = UILabel()
     let titleTextField = UITextField()
@@ -58,11 +63,18 @@ class DocumentViewController: UIViewController {
         saveButton.backgroundColor = UIColor(red: 202/256, green: 198/256, blue: 255/256, alpha: 1)
         
         self.view.addSubview(backgroundView)
+        backgroundView.addSubview(directoryImageView)
         backgroundView.addSubview(titleLabel)
         backgroundView.addSubview(titleTextField)
         backgroundView.addSubview(lineLabel)
         backgroundView.addSubview(lineTextField)
         backgroundView.addSubview(saveButton)
+        
+        directoryImageView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.width.height.equalTo(60)
+            $0.top.equalToSuperview().offset(30)
+        }
         
         backgroundView.snp.makeConstraints {
             $0.center.equalToSuperview()
@@ -107,5 +119,5 @@ class DocumentViewController: UIViewController {
 }
 
 extension DocumentViewController: UITextFieldDelegate {
-
+    // 언젠ㄱㅏ 리팩토링하게된다면..
 }

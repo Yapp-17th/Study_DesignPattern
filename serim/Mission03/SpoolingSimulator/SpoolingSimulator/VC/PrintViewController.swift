@@ -8,12 +8,48 @@
 
 import UIKit
 
-class PrintViewController: UIViewController {
+protocol progressDelegate {
+    func updateProgessLabel(_ progress: String)
+}
+
+class PrintViewController: UIViewController, progressDelegate {
     
     var savedDocument: [Document] {
         SavedDocument.shared.savedDocument
     }
     
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "문서 목록"
+        label.textColor = #colorLiteral(red: 0.1294187009, green: 0.1176761761, blue: 0.1053736731, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 26)
+        label.textAlignment = .center
+        return label
+    }()
+    let backgroundView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(red: 243/256, green: 242/256, blue: 255/256, alpha: 1)
+        return view
+    }()
+    let progressTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "출력 진행 상황"
+        label.textColor = #colorLiteral(red: 0.1294187009, green: 0.1176761761, blue: 0.1053736731, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 24)
+        label.textAlignment = .center
+        return label
+    }()
+    let progressLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = #colorLiteral(red: 0.1294187009, green: 0.1176761761, blue: 0.1053736731, alpha: 1)
+        label.textAlignment = .center
+        return label
+    }()
+    let printerImageView: UIImageView = {
+        let image = UIImage(named: "print")
+        let imageView = UIImageView(image: image)
+        return imageView
+    }()
     let documentTableView = UITableView()
     let cellIdentifier = "documentCell"
 
@@ -23,13 +59,20 @@ class PrintViewController: UIViewController {
         documentTableView.dataSource = self
         documentTableView.register(DocumentCell.self, forCellReuseIdentifier: cellIdentifier)
         configureViews()
+        PrinterProxy.shared.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         documentTableView.reloadData()
     }
-
+    
+    func updateProgessLabel(_ progress: String) {
+        DispatchQueue.main.async {
+            self.progressLabel.text = progress
+        }
+    }
+    
 }
 
 // MARK: TableView
@@ -54,7 +97,6 @@ extension PrintViewController: UITableViewDelegate, UITableViewDataSource {
             SavedDocument.shared.savedDocument.remove(at: indexPath.row)
             tableView.reloadData()
             DispatchQueue.global().async {
-                print("printing... \(document.title) \(document.id)")
                 PrinterProxy.shared.printDocument(document: document)
             }
         }
@@ -82,12 +124,46 @@ extension PrintViewController: UITableViewDelegate, UITableViewDataSource {
 extension PrintViewController {
     private func configureViews() {
         self.view.backgroundColor = .white
+        self.view.addSubview(titleLabel)
         self.view.addSubview(documentTableView)
+        self.view.addSubview(backgroundView)
+        backgroundView.addSubview(printerImageView)
+        backgroundView.addSubview(progressTitleLabel)
+        backgroundView.addSubview(progressLabel)
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(60)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(140)
+            $0.height.equalTo(40)
+        }
         documentTableView.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(20)
+            $0.top.equalTo(titleLabel.snp.bottom)
             $0.leading.trailing.equalTo(0)
             $0.height.equalTo(300)
+        }
+        backgroundView.snp.makeConstraints {
+            $0.top.equalTo(documentTableView.snp.bottom).offset(10)
+            $0.bottom.equalTo(-50)
+            $0.leading.equalTo(20)
+            $0.trailing.equalTo(-20)
+        }
+        printerImageView.snp.makeConstraints {
+            $0.centerY.equalTo(progressTitleLabel)
+            $0.width.height.equalTo(40)
+            $0.leading.equalTo(30)
+        }
+        progressTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(20)
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(180)
+            $0.height.equalTo(40)
+        }
+        progressLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.centerX.equalToSuperview()
+            $0.width.equalTo(320)
+            $0.height.equalTo(40)
         }
     }
 }

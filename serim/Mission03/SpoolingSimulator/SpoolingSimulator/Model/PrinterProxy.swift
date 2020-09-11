@@ -19,8 +19,12 @@ class PrinterProxy: PrinterProtocol {
         }
     }
     var extraLine: Int = 0
+    var progress = ""
+    var delegate: progressDelegate?
     
-    private init() { }
+    private init() {
+
+    }
     
     private func appendDocument(_ document: Document) {
         documentQueue.append(document)
@@ -46,11 +50,12 @@ class PrinterProxy: PrinterProtocol {
             return
         }
         extraLine += document.line
-        print("\(document.id)의 진행 상황 : \(extraLine)/\(currentDocument.line)")
+        progress = "🖨 \(document.title)(\(document.id)) -> \(extraLine)/\(currentDocument.line)"
         if(extraLine == currentDocument.line) {
             documentQueue.removeFirst()
             self.currentDocument = nil
         }
+        delegate?.updateProgessLabel(progress)
     }
     
     private func split(document: Document) {
