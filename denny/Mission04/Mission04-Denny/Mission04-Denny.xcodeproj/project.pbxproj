@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		087094998338F44C0B4290DF /* Pods_Mission04_DennyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */; };
+		5D368B293DD9001EB263AFE2 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */; };
 		B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C045250CF9F6006E8A69 /* AppDelegate.swift */; };
 		B083C04A250CF9F6006E8A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* ViewController.swift */; };
 		B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C04B250CF9F6006E8A69 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */; };
 		B083C05D250CF9F8006E8A69 /* Mission04_DennyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C05C250CF9F8006E8A69 /* Mission04_DennyTests.swift */; };
 		B083C068250CF9F8006E8A69 /* Mission04_DennyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */; };
+		EBF505DD8D93D12899CD2D0D /* Pods_Mission04_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039ABA091DFB7341B45E195B /* Pods_Mission04_Denny.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039ABA091DFB7341B45E195B /* Pods_Mission04_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_DennyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3AEEDB19D38296702D8EF90B /* Pods-Mission04-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny.release.xcconfig"; sourceTree = "<group>"; };
+		5F5724097DE2531E4611EFCA /* Pods-Mission04-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny.debug.xcconfig"; sourceTree = "<group>"; };
+		8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B083C042250CF9F6006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B083C045250CF9F6006E8A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B083C049250CF9F6006E8A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,9 @@
 		B083C063250CF9F8006E8A69 /* Mission04-DennyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mission04-DennyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyUITests.swift; sourceTree = "<group>"; };
 		B083C069250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_Denny_Mission04_DennyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBF505DD8D93D12899CD2D0D /* Pods_Mission04_Denny.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087094998338F44C0B4290DF /* Pods_Mission04_DennyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D368B293DD9001EB263AFE2 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BB16890F41BCFA3738816A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				039ABA091DFB7341B45E195B /* Pods_Mission04_Denny.framework */,
+				C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */,
+				28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73BAD220131924A38CA740DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5724097DE2531E4611EFCA /* Pods-Mission04-Denny.debug.xcconfig */,
+				3AEEDB19D38296702D8EF90B /* Pods-Mission04-Denny.release.xcconfig */,
+				B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */,
+				2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */,
+				8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */,
+				EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B083C039250CF9F6006E8A69 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +120,8 @@
 				B083C05B250CF9F8006E8A69 /* Mission04-DennyTests */,
 				B083C066250CF9F8006E8A69 /* Mission04-DennyUITests */,
 				B083C043250CF9F6006E8A69 /* Products */,
+				73BAD220131924A38CA740DE /* Pods */,
+				4BB16890F41BCFA3738816A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B083C06C250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny" */;
 			buildPhases = (
+				EBEB361794571341FC09A577 /* [CP] Check Pods Manifest.lock */,
 				B083C03E250CF9F6006E8A69 /* Sources */,
 				B083C03F250CF9F6006E8A69 /* Frameworks */,
 				B083C040250CF9F6006E8A69 /* Resources */,
+				6F6B7643E0447A5A1338075F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B083C06F250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyTests" */;
 			buildPhases = (
+				A1254CED811352478DFBF605 /* [CP] Check Pods Manifest.lock */,
 				B083C054250CF9F8006E8A69 /* Sources */,
 				B083C055250CF9F8006E8A69 /* Frameworks */,
 				B083C056250CF9F8006E8A69 /* Resources */,
@@ -167,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B083C072250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyUITests" */;
 			buildPhases = (
+				85AC40F975882439E5200E67 /* [CP] Check Pods Manifest.lock */,
 				B083C05F250CF9F8006E8A69 /* Sources */,
 				B083C060250CF9F8006E8A69 /* Frameworks */,
 				B083C061250CF9F8006E8A69 /* Resources */,
+				4AFF58880F87EAB71D6103E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +295,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AFF58880F87EAB71D6103E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F6B7643E0447A5A1338075F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85AC40F975882439E5200E67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mission04-Denny-Mission04-DennyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1254CED811352478DFBF605 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mission04-DennyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEB361794571341FC09A577 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mission04-Denny-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B083C03E250CF9F6006E8A69 /* Sources */ = {
@@ -429,6 +578,7 @@
 		};
 		B083C06D250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F5724097DE2531E4611EFCA /* Pods-Mission04-Denny.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +598,7 @@
 		};
 		B083C06E250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AEEDB19D38296702D8EF90B /* Pods-Mission04-Denny.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -467,6 +618,7 @@
 		};
 		B083C070250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +641,7 @@
 		};
 		B083C071250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +664,7 @@
 		};
 		B083C073250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -531,6 +685,7 @@
 		};
 		B083C074250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
