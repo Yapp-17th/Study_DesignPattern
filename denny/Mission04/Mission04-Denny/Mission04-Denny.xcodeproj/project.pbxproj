@@ -7,73 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B083C018250CF94C006E8A69 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C017250CF94C006E8A69 /* Tests_iOS.swift */; };
-		B083C023250CF94C006E8A69 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C022250CF94C006E8A69 /* Tests_macOS.swift */; };
-		B083C025250CF94C006E8A69 /* Mission04_DennyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083BFFC250CF94A006E8A69 /* Mission04_DennyApp.swift */; };
-		B083C026250CF94C006E8A69 /* Mission04_DennyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083BFFC250CF94A006E8A69 /* Mission04_DennyApp.swift */; };
-		B083C027250CF94C006E8A69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083BFFD250CF94A006E8A69 /* ContentView.swift */; };
-		B083C028250CF94C006E8A69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083BFFD250CF94A006E8A69 /* ContentView.swift */; };
-		B083C029250CF94C006E8A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B083BFFE250CF94C006E8A69 /* Assets.xcassets */; };
-		B083C02A250CF94C006E8A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B083BFFE250CF94C006E8A69 /* Assets.xcassets */; };
+		B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C045250CF9F6006E8A69 /* AppDelegate.swift */; };
+		B083C04A250CF9F6006E8A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* ViewController.swift */; };
+		B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C04B250CF9F6006E8A69 /* Main.storyboard */; };
+		B083C04F250CF9F8006E8A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B083C04E250CF9F8006E8A69 /* Assets.xcassets */; };
+		B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */; };
+		B083C05D250CF9F8006E8A69 /* Mission04_DennyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C05C250CF9F8006E8A69 /* Mission04_DennyTests.swift */; };
+		B083C068250CF9F8006E8A69 /* Mission04_DennyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B083C014250CF94C006E8A69 /* PBXContainerItemProxy */ = {
+		B083C059250CF9F8006E8A69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B083BFF7250CF94A006E8A69 /* Project object */;
+			containerPortal = B083C03A250CF9F6006E8A69 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B083C002250CF94C006E8A69;
-			remoteInfo = "Mission04-Denny (iOS)";
+			remoteGlobalIDString = B083C041250CF9F6006E8A69;
+			remoteInfo = "Mission04-Denny";
 		};
-		B083C01F250CF94C006E8A69 /* PBXContainerItemProxy */ = {
+		B083C064250CF9F8006E8A69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B083BFF7250CF94A006E8A69 /* Project object */;
+			containerPortal = B083C03A250CF9F6006E8A69 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B083C00A250CF94C006E8A69;
-			remoteInfo = "Mission04-Denny (macOS)";
+			remoteGlobalIDString = B083C041250CF9F6006E8A69;
+			remoteInfo = "Mission04-Denny";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B083BFFC250CF94A006E8A69 /* Mission04_DennyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyApp.swift; sourceTree = "<group>"; };
-		B083BFFD250CF94A006E8A69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B083BFFE250CF94C006E8A69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B083C003250CF94C006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B083C006250CF94C006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B083C00B250CF94C006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B083C00D250CF94C006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B083C00E250CF94C006E8A69 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		B083C013250CF94C006E8A69 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B083C017250CF94C006E8A69 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		B083C019250CF94C006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B083C01E250CF94C006E8A69 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B083C022250CF94C006E8A69 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		B083C024250CF94C006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B083C042250CF9F6006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B083C045250CF9F6006E8A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B083C049250CF9F6006E8A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B083C04C250CF9F6006E8A69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B083C04E250CF9F8006E8A69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B083C051250CF9F8006E8A69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B083C053250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B083C058250CF9F8006E8A69 /* Mission04-DennyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mission04-DennyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B083C05C250CF9F8006E8A69 /* Mission04_DennyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyTests.swift; sourceTree = "<group>"; };
+		B083C05E250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B083C063250CF9F8006E8A69 /* Mission04-DennyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mission04-DennyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyUITests.swift; sourceTree = "<group>"; };
+		B083C069250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B083C000250CF94C006E8A69 /* Frameworks */ = {
+		B083C03F250CF9F6006E8A69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C008250CF94C006E8A69 /* Frameworks */ = {
+		B083C055250CF9F8006E8A69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C010250CF94C006E8A69 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B083C01B250CF94C006E8A69 /* Frameworks */ = {
+		B083C060250CF9F8006E8A69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,173 +74,136 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B083BFF6250CF94A006E8A69 = {
+		B083C039250CF9F6006E8A69 = {
 			isa = PBXGroup;
 			children = (
-				B083BFFB250CF94A006E8A69 /* Shared */,
-				B083C005250CF94C006E8A69 /* iOS */,
-				B083C00C250CF94C006E8A69 /* macOS */,
-				B083C016250CF94C006E8A69 /* Tests iOS */,
-				B083C021250CF94C006E8A69 /* Tests macOS */,
-				B083C004250CF94C006E8A69 /* Products */,
+				B083C044250CF9F6006E8A69 /* Mission04-Denny */,
+				B083C05B250CF9F8006E8A69 /* Mission04-DennyTests */,
+				B083C066250CF9F8006E8A69 /* Mission04-DennyUITests */,
+				B083C043250CF9F6006E8A69 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B083BFFB250CF94A006E8A69 /* Shared */ = {
+		B083C043250CF9F6006E8A69 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B083BFFC250CF94A006E8A69 /* Mission04_DennyApp.swift */,
-				B083BFFD250CF94A006E8A69 /* ContentView.swift */,
-				B083BFFE250CF94C006E8A69 /* Assets.xcassets */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		B083C004250CF94C006E8A69 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B083C003250CF94C006E8A69 /* Mission04-Denny.app */,
-				B083C00B250CF94C006E8A69 /* Mission04-Denny.app */,
-				B083C013250CF94C006E8A69 /* Tests iOS.xctest */,
-				B083C01E250CF94C006E8A69 /* Tests macOS.xctest */,
+				B083C042250CF9F6006E8A69 /* Mission04-Denny.app */,
+				B083C058250CF9F8006E8A69 /* Mission04-DennyTests.xctest */,
+				B083C063250CF9F8006E8A69 /* Mission04-DennyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B083C005250CF94C006E8A69 /* iOS */ = {
+		B083C044250CF9F6006E8A69 /* Mission04-Denny */ = {
 			isa = PBXGroup;
 			children = (
-				B083C006250CF94C006E8A69 /* Info.plist */,
+				B083C045250CF9F6006E8A69 /* AppDelegate.swift */,
+				B083C049250CF9F6006E8A69 /* ViewController.swift */,
+				B083C04B250CF9F6006E8A69 /* Main.storyboard */,
+				B083C04E250CF9F8006E8A69 /* Assets.xcassets */,
+				B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */,
+				B083C053250CF9F8006E8A69 /* Info.plist */,
 			);
-			path = iOS;
+			path = "Mission04-Denny";
 			sourceTree = "<group>";
 		};
-		B083C00C250CF94C006E8A69 /* macOS */ = {
+		B083C05B250CF9F8006E8A69 /* Mission04-DennyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B083C00D250CF94C006E8A69 /* Info.plist */,
-				B083C00E250CF94C006E8A69 /* macOS.entitlements */,
+				B083C05C250CF9F8006E8A69 /* Mission04_DennyTests.swift */,
+				B083C05E250CF9F8006E8A69 /* Info.plist */,
 			);
-			path = macOS;
+			path = "Mission04-DennyTests";
 			sourceTree = "<group>";
 		};
-		B083C016250CF94C006E8A69 /* Tests iOS */ = {
+		B083C066250CF9F8006E8A69 /* Mission04-DennyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				B083C017250CF94C006E8A69 /* Tests_iOS.swift */,
-				B083C019250CF94C006E8A69 /* Info.plist */,
+				B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */,
+				B083C069250CF9F8006E8A69 /* Info.plist */,
 			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		B083C021250CF94C006E8A69 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				B083C022250CF94C006E8A69 /* Tests_macOS.swift */,
-				B083C024250CF94C006E8A69 /* Info.plist */,
-			);
-			path = "Tests macOS";
+			path = "Mission04-DennyUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B083C002250CF94C006E8A69 /* Mission04-Denny (iOS) */ = {
+		B083C041250CF9F6006E8A69 /* Mission04-Denny */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B083C02D250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny (iOS)" */;
+			buildConfigurationList = B083C06C250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny" */;
 			buildPhases = (
-				B083BFFF250CF94C006E8A69 /* Sources */,
-				B083C000250CF94C006E8A69 /* Frameworks */,
-				B083C001250CF94C006E8A69 /* Resources */,
+				B083C03E250CF9F6006E8A69 /* Sources */,
+				B083C03F250CF9F6006E8A69 /* Frameworks */,
+				B083C040250CF9F6006E8A69 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Mission04-Denny (iOS)";
-			productName = "Mission04-Denny (iOS)";
-			productReference = B083C003250CF94C006E8A69 /* Mission04-Denny.app */;
+			name = "Mission04-Denny";
+			productName = "Mission04-Denny";
+			productReference = B083C042250CF9F6006E8A69 /* Mission04-Denny.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B083C00A250CF94C006E8A69 /* Mission04-Denny (macOS) */ = {
+		B083C057250CF9F8006E8A69 /* Mission04-DennyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B083C030250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny (macOS)" */;
+			buildConfigurationList = B083C06F250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyTests" */;
 			buildPhases = (
-				B083C007250CF94C006E8A69 /* Sources */,
-				B083C008250CF94C006E8A69 /* Frameworks */,
-				B083C009250CF94C006E8A69 /* Resources */,
+				B083C054250CF9F8006E8A69 /* Sources */,
+				B083C055250CF9F8006E8A69 /* Frameworks */,
+				B083C056250CF9F8006E8A69 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B083C05A250CF9F8006E8A69 /* PBXTargetDependency */,
 			);
-			name = "Mission04-Denny (macOS)";
-			productName = "Mission04-Denny (macOS)";
-			productReference = B083C00B250CF94C006E8A69 /* Mission04-Denny.app */;
-			productType = "com.apple.product-type.application";
+			name = "Mission04-DennyTests";
+			productName = "Mission04-DennyTests";
+			productReference = B083C058250CF9F8006E8A69 /* Mission04-DennyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B083C012250CF94C006E8A69 /* Tests iOS */ = {
+		B083C062250CF9F8006E8A69 /* Mission04-DennyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B083C033250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildConfigurationList = B083C072250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyUITests" */;
 			buildPhases = (
-				B083C00F250CF94C006E8A69 /* Sources */,
-				B083C010250CF94C006E8A69 /* Frameworks */,
-				B083C011250CF94C006E8A69 /* Resources */,
+				B083C05F250CF9F8006E8A69 /* Sources */,
+				B083C060250CF9F8006E8A69 /* Frameworks */,
+				B083C061250CF9F8006E8A69 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B083C015250CF94C006E8A69 /* PBXTargetDependency */,
+				B083C065250CF9F8006E8A69 /* PBXTargetDependency */,
 			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = B083C013250CF94C006E8A69 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		B083C01D250CF94C006E8A69 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B083C036250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				B083C01A250CF94C006E8A69 /* Sources */,
-				B083C01B250CF94C006E8A69 /* Frameworks */,
-				B083C01C250CF94C006E8A69 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B083C020250CF94C006E8A69 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = B083C01E250CF94C006E8A69 /* Tests macOS.xctest */;
+			name = "Mission04-DennyUITests";
+			productName = "Mission04-DennyUITests";
+			productReference = B083C063250CF9F8006E8A69 /* Mission04-DennyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B083BFF7250CF94A006E8A69 /* Project object */ = {
+		B083C03A250CF9F6006E8A69 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					B083C002250CF94C006E8A69 = {
+					B083C041250CF9F6006E8A69 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					B083C00A250CF94C006E8A69 = {
+					B083C057250CF9F8006E8A69 = {
 						CreatedOnToolsVersion = 12.0;
+						TestTargetID = B083C041250CF9F6006E8A69;
 					};
-					B083C012250CF94C006E8A69 = {
+					B083C062250CF9F8006E8A69 = {
 						CreatedOnToolsVersion = 12.0;
-						TestTargetID = B083C002250CF94C006E8A69;
-					};
-					B083C01D250CF94C006E8A69 = {
-						CreatedOnToolsVersion = 12.0;
-						TestTargetID = B083C00A250CF94C006E8A69;
+						TestTargetID = B083C041250CF9F6006E8A69;
 					};
 				};
 			};
-			buildConfigurationList = B083BFFA250CF94A006E8A69 /* Build configuration list for PBXProject "Mission04-Denny" */;
+			buildConfigurationList = B083C03D250CF9F6006E8A69 /* Build configuration list for PBXProject "Mission04-Denny" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,44 +211,37 @@
 				en,
 				Base,
 			);
-			mainGroup = B083BFF6250CF94A006E8A69;
-			productRefGroup = B083C004250CF94C006E8A69 /* Products */;
+			mainGroup = B083C039250CF9F6006E8A69;
+			productRefGroup = B083C043250CF9F6006E8A69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B083C002250CF94C006E8A69 /* Mission04-Denny (iOS) */,
-				B083C00A250CF94C006E8A69 /* Mission04-Denny (macOS) */,
-				B083C012250CF94C006E8A69 /* Tests iOS */,
-				B083C01D250CF94C006E8A69 /* Tests macOS */,
+				B083C041250CF9F6006E8A69 /* Mission04-Denny */,
+				B083C057250CF9F8006E8A69 /* Mission04-DennyTests */,
+				B083C062250CF9F8006E8A69 /* Mission04-DennyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B083C001250CF94C006E8A69 /* Resources */ = {
+		B083C040250CF9F6006E8A69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B083C029250CF94C006E8A69 /* Assets.xcassets in Resources */,
+				B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */,
+				B083C04F250CF9F8006E8A69 /* Assets.xcassets in Resources */,
+				B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C009250CF94C006E8A69 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B083C02A250CF94C006E8A69 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B083C011250CF94C006E8A69 /* Resources */ = {
+		B083C056250CF9F8006E8A69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C01C250CF94C006E8A69 /* Resources */ = {
+		B083C061250CF9F8006E8A69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,57 +251,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B083BFFF250CF94C006E8A69 /* Sources */ = {
+		B083C03E250CF9F6006E8A69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B083C027250CF94C006E8A69 /* ContentView.swift in Sources */,
-				B083C025250CF94C006E8A69 /* Mission04_DennyApp.swift in Sources */,
+				B083C04A250CF9F6006E8A69 /* ViewController.swift in Sources */,
+				B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C007250CF94C006E8A69 /* Sources */ = {
+		B083C054250CF9F8006E8A69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B083C028250CF94C006E8A69 /* ContentView.swift in Sources */,
-				B083C026250CF94C006E8A69 /* Mission04_DennyApp.swift in Sources */,
+				B083C05D250CF9F8006E8A69 /* Mission04_DennyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B083C00F250CF94C006E8A69 /* Sources */ = {
+		B083C05F250CF9F8006E8A69 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B083C018250CF94C006E8A69 /* Tests_iOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B083C01A250CF94C006E8A69 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B083C023250CF94C006E8A69 /* Tests_macOS.swift in Sources */,
+				B083C068250CF9F8006E8A69 /* Mission04_DennyUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B083C015250CF94C006E8A69 /* PBXTargetDependency */ = {
+		B083C05A250CF9F8006E8A69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B083C002250CF94C006E8A69 /* Mission04-Denny (iOS) */;
-			targetProxy = B083C014250CF94C006E8A69 /* PBXContainerItemProxy */;
+			target = B083C041250CF9F6006E8A69 /* Mission04-Denny */;
+			targetProxy = B083C059250CF9F8006E8A69 /* PBXContainerItemProxy */;
 		};
-		B083C020250CF94C006E8A69 /* PBXTargetDependency */ = {
+		B083C065250CF9F8006E8A69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B083C00A250CF94C006E8A69 /* Mission04-Denny (macOS) */;
-			targetProxy = B083C01F250CF94C006E8A69 /* PBXContainerItemProxy */;
+			target = B083C041250CF9F6006E8A69 /* Mission04-Denny */;
+			targetProxy = B083C064250CF9F8006E8A69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		B083C04B250CF9F6006E8A69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B083C04C250CF9F6006E8A69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B083C051250CF9F8006E8A69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		B083C02B250CF94C006E8A69 /* Debug */ = {
+		B083C06A250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -405,15 +362,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		B083C02C250CF94C006E8A69 /* Release */ = {
+		B083C06B250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -458,244 +417,178 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-			};
-			name = Release;
-		};
-		B083C02E250CF94C006E8A69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M79H9K226Y;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-Denny";
-				PRODUCT_NAME = "Mission04-Denny";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		B083C02F250CF94C006E8A69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M79H9K226Y;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-Denny";
-				PRODUCT_NAME = "Mission04-Denny";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B083C031250CF94C006E8A69 /* Debug */ = {
+		B083C06D250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = "Mission04-Denny/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-Denny";
-				PRODUCT_NAME = "Mission04-Denny";
-				SDKROOT = macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B083C032250CF94C006E8A69 /* Release */ = {
+		B083C06E250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = "Mission04-Denny/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-Denny";
-				PRODUCT_NAME = "Mission04-Denny";
-				SDKROOT = macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		B083C034250CF94C006E8A69 /* Debug */ = {
+		B083C070250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				INFOPLIST_FILE = "Mission04-DennyTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-DennyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Mission04-Denny (iOS)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mission04-Denny.app/Mission04-Denny";
 			};
 			name = Debug;
 		};
-		B083C035250CF94C006E8A69 /* Release */ = {
+		B083C071250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				INFOPLIST_FILE = "Tests iOS/Info.plist";
+				INFOPLIST_FILE = "Mission04-DennyTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Tests-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-DennyTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Mission04-Denny (iOS)";
-				VALIDATE_PRODUCT = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mission04-Denny.app/Mission04-Denny";
 			};
 			name = Release;
 		};
-		B083C037250CF94C006E8A69 /* Debug */ = {
+		B083C073250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				INFOPLIST_FILE = "Mission04-DennyUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Tests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-DennyUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Mission04-Denny (macOS)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mission04-Denny";
 			};
 			name = Debug;
 		};
-		B083C038250CF94C006E8A69 /* Release */ = {
+		B083C074250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M79H9K226Y;
-				INFOPLIST_FILE = "Tests macOS/Info.plist";
+				INFOPLIST_FILE = "Mission04-DennyUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Tests-macOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.denny.Mission04-DennyUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Mission04-Denny (macOS)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Mission04-Denny";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B083BFFA250CF94A006E8A69 /* Build configuration list for PBXProject "Mission04-Denny" */ = {
+		B083C03D250CF9F6006E8A69 /* Build configuration list for PBXProject "Mission04-Denny" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B083C02B250CF94C006E8A69 /* Debug */,
-				B083C02C250CF94C006E8A69 /* Release */,
+				B083C06A250CF9F8006E8A69 /* Debug */,
+				B083C06B250CF9F8006E8A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B083C02D250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny (iOS)" */ = {
+		B083C06C250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B083C02E250CF94C006E8A69 /* Debug */,
-				B083C02F250CF94C006E8A69 /* Release */,
+				B083C06D250CF9F8006E8A69 /* Debug */,
+				B083C06E250CF9F8006E8A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B083C030250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-Denny (macOS)" */ = {
+		B083C06F250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B083C031250CF94C006E8A69 /* Debug */,
-				B083C032250CF94C006E8A69 /* Release */,
+				B083C070250CF9F8006E8A69 /* Debug */,
+				B083C071250CF9F8006E8A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B083C033250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+		B083C072250CF9F8006E8A69 /* Build configuration list for PBXNativeTarget "Mission04-DennyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B083C034250CF94C006E8A69 /* Debug */,
-				B083C035250CF94C006E8A69 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B083C036250CF94C006E8A69 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B083C037250CF94C006E8A69 /* Debug */,
-				B083C038250CF94C006E8A69 /* Release */,
+				B083C073250CF9F8006E8A69 /* Debug */,
+				B083C074250CF9F8006E8A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B083BFF7250CF94A006E8A69 /* Project object */;
+	rootObject = B083C03A250CF9F6006E8A69 /* Project object */;
 }

@@ -1,13 +1,13 @@
 //
-//  Tests_macOS.swift
-//  Tests macOS
+//  Mission04_DennyUITests.swift
+//  Mission04-DennyUITests
 //
 //  Created by denny on 2020/09/12.
 //
 
 import XCTest
 
-class Tests_macOS: XCTestCase {
+class Mission04_DennyUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
