@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		12098FE5250DFB850042E20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12098FE4250DFB850042E20C /* Assets.xcassets */; };
 		12098FE8250DFB850042E20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12098FE6250DFB850042E20C /* LaunchScreen.storyboard */; };
 		12098FF3250DFB860042E20C /* PizzaShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12098FF2250DFB860042E20C /* PizzaShopTests.swift */; };
+		12099001250E0DD30042E20C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099000250E0DD30042E20C /* User.swift */; };
+		12099003250E0E290042E20C /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099002250E0E290042E20C /* Manager.swift */; };
+		12099005250E0E560042E20C /* Cook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099004250E0E560042E20C /* Cook.swift */; };
+		12099007250E0E7F0042E20C /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099006250E0E7F0042E20C /* Pizza.swift */; };
 		1FA38AA4C1A8C331D0B2B330 /* Pods_PizzaShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3A461833AD47063AA1C59F /* Pods_PizzaShopTests.framework */; };
 		7B160847B6BC70D991766C9E /* Pods_PizzaShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AA1291EA86824EBC49886 /* Pods_PizzaShop.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +44,10 @@
 		12098FEE250DFB860042E20C /* PizzaShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		12098FF2250DFB860042E20C /* PizzaShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopTests.swift; sourceTree = "<group>"; };
 		12098FF4250DFB860042E20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12099000250E0DD30042E20C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12099002250E0E290042E20C /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		12099004250E0E560042E20C /* Cook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cook.swift; sourceTree = "<group>"; };
+		12099006250E0E7F0042E20C /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		1C70DE84ADA81EB2FA28D199 /* Pods-PizzaShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShop.debug.xcconfig"; path = "Target Support Files/Pods-PizzaShop/Pods-PizzaShop.debug.xcconfig"; sourceTree = "<group>"; };
 		5490485EC48CA553B438E36A /* Pods-PizzaShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShopTests.debug.xcconfig"; path = "Target Support Files/Pods-PizzaShopTests/Pods-PizzaShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C521635FE38175895FAC727 /* Pods-PizzaShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShopTests.release.xcconfig"; path = "Target Support Files/Pods-PizzaShopTests/Pods-PizzaShopTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 		12098FDA250DFB820042E20C /* PizzaShop */ = {
 			isa = PBXGroup;
 			children = (
+				12098FFF250E0D7C0042E20C /* Model */,
 				12098FDB250DFB820042E20C /* AppDelegate.swift */,
 				12098FDD250DFB820042E20C /* SceneDelegate.swift */,
 				12098FDF250DFB820042E20C /* ViewController.swift */,
@@ -111,6 +120,17 @@
 			path = PizzaShopTests;
 			sourceTree = "<group>";
 		};
+		12098FFF250E0D7C0042E20C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12099000250E0DD30042E20C /* User.swift */,
+				12099002250E0E290042E20C /* Manager.swift */,
+				12099004250E0E560042E20C /* Cook.swift */,
+				12099006250E0E7F0042E20C /* Pizza.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		71D7E665BF626176AC64E064 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +148,6 @@
 				5490485EC48CA553B438E36A /* Pods-PizzaShopTests.debug.xcconfig */,
 				8C521635FE38175895FAC727 /* Pods-PizzaShopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -300,9 +319,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12099007250E0E7F0042E20C /* Pizza.swift in Sources */,
+				12099001250E0DD30042E20C /* User.swift in Sources */,
 				12098FE0250DFB820042E20C /* ViewController.swift in Sources */,
 				12098FDC250DFB820042E20C /* AppDelegate.swift in Sources */,
+				12099005250E0E560042E20C /* Cook.swift in Sources */,
 				12098FDE250DFB820042E20C /* SceneDelegate.swift in Sources */,
+				12099003250E0E290042E20C /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
