@@ -10,12 +10,10 @@ target 'Mission04-Denny' do
 
   target 'Mission04-DennyTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
   target 'Mission04-DennyUITests' do
-    # Pods for testing
-    pod 'SnapKit'
+    inherit! :search_paths
   end
 
 end

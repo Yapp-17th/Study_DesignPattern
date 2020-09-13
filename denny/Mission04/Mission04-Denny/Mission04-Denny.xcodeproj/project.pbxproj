@@ -3,14 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		087094998338F44C0B4290DF /* Pods_Mission04_DennyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */; };
-		5D368B293DD9001EB263AFE2 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */; };
+		6430CC508262E0B42F30DF59 /* Pods_Mission04_DennyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03E60A504BAADB0A6C4695F /* Pods_Mission04_DennyUITests.framework */; };
+		B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678557250EF7CD0046B1D2 /* PizzaStore.swift */; };
+		B067855A250EF7DF0046B1D2 /* PizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */; };
+		B067855D250EFE6F0046B1D2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067855C250EFE6F0046B1D2 /* MainViewModel.swift */; };
+		B067855F250EFE950046B1D2 /* DebugWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067855E250EFE950046B1D2 /* DebugWorker.swift */; };
+		B0678562250EFF040046B1D2 /* DebugLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */; };
+		B0678563250EFF040046B1D2 /* DebugLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */; };
+		B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */; };
+		B0678567250EFF330046B1D2 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678566250EFF330046B1D2 /* UIFont+Custom.swift */; };
 		B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C045250CF9F6006E8A69 /* AppDelegate.swift */; };
-		B083C04A250CF9F6006E8A69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* ViewController.swift */; };
+		B083C04A250CF9F6006E8A69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* MainViewController.swift */; };
 		B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C04B250CF9F6006E8A69 /* Main.storyboard */; };
 		B083C04F250CF9F8006E8A69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B083C04E250CF9F8006E8A69 /* Assets.xcassets */; };
 		B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */; };
@@ -41,11 +49,20 @@
 		28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_DennyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3AEEDB19D38296702D8EF90B /* Pods-Mission04-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny.release.xcconfig"; sourceTree = "<group>"; };
+		4941452AC709F4C64986616B /* Pods-Mission04-DennyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyUITests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyUITests/Pods-Mission04-DennyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5F5724097DE2531E4611EFCA /* Pods-Mission04-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny.debug.xcconfig"; sourceTree = "<group>"; };
 		8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0678557250EF7CD0046B1D2 /* PizzaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaStore.swift; sourceTree = "<group>"; };
+		B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaFactory.swift; sourceTree = "<group>"; };
+		B067855C250EFE6F0046B1D2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B067855E250EFE950046B1D2 /* DebugWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWorker.swift; sourceTree = "<group>"; };
+		B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogTableViewCell.swift; sourceTree = "<group>"; };
+		B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugLogTableViewCell.xib; sourceTree = "<group>"; };
+		B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		B0678566250EFF330046B1D2 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		B083C042250CF9F6006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B083C045250CF9F6006E8A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B083C049250CF9F6006E8A69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B083C049250CF9F6006E8A69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B083C04C250CF9F6006E8A69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B083C04E250CF9F8006E8A69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B083C051250CF9F8006E8A69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +74,8 @@
 		B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyUITests.swift; sourceTree = "<group>"; };
 		B083C069250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_Denny_Mission04_DennyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C588AD70E6B107502162C1 /* Pods-Mission04-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyUITests/Pods-Mission04-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E03E60A504BAADB0A6C4695F /* Pods_Mission04_DennyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_DennyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D368B293DD9001EB263AFE2 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework in Frameworks */,
+				6430CC508262E0B42F30DF59 /* Pods_Mission04_DennyUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				039ABA091DFB7341B45E195B /* Pods_Mission04_Denny.framework */,
-				C52FB157C541C1537669C597 /* Pods_Mission04_Denny_Mission04_DennyUITests.framework */,
 				28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */,
+				E03E60A504BAADB0A6C4695F /* Pods_Mission04_DennyUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,8 +126,9 @@
 				2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */,
 				8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */,
 				EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */,
+				D9C588AD70E6B107502162C1 /* Pods-Mission04-DennyUITests.debug.xcconfig */,
+				4941452AC709F4C64986616B /* Pods-Mission04-DennyUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,11 +158,19 @@
 			isa = PBXGroup;
 			children = (
 				B083C045250CF9F6006E8A69 /* AppDelegate.swift */,
-				B083C049250CF9F6006E8A69 /* ViewController.swift */,
+				B083C049250CF9F6006E8A69 /* MainViewController.swift */,
 				B083C04B250CF9F6006E8A69 /* Main.storyboard */,
 				B083C04E250CF9F8006E8A69 /* Assets.xcassets */,
 				B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */,
 				B083C053250CF9F8006E8A69 /* Info.plist */,
+				B0678557250EF7CD0046B1D2 /* PizzaStore.swift */,
+				B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */,
+				B067855C250EFE6F0046B1D2 /* MainViewModel.swift */,
+				B067855E250EFE950046B1D2 /* DebugWorker.swift */,
+				B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */,
+				B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */,
+				B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */,
+				B0678566250EFF330046B1D2 /* UIFont+Custom.swift */,
 			);
 			path = "Mission04-Denny";
 			sourceTree = "<group>";
@@ -215,7 +242,6 @@
 				B083C05F250CF9F8006E8A69 /* Sources */,
 				B083C060250CF9F8006E8A69 /* Frameworks */,
 				B083C061250CF9F8006E8A69 /* Resources */,
-				4AFF58880F87EAB71D6103E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +302,7 @@
 			files = (
 				B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */,
 				B083C04F250CF9F8006E8A69 /* Assets.xcassets in Resources */,
+				B0678563250EFF040046B1D2 /* DebugLogTableViewCell.xib in Resources */,
 				B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,23 +324,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4AFF58880F87EAB71D6103E7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6F6B7643E0447A5A1338075F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,7 +356,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Mission04-Denny-Mission04-DennyUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Mission04-DennyUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -404,8 +414,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B083C04A250CF9F6006E8A69 /* ViewController.swift in Sources */,
+				B067855D250EFE6F0046B1D2 /* MainViewModel.swift in Sources */,
+				B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */,
+				B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */,
+				B0678562250EFF040046B1D2 /* DebugLogTableViewCell.swift in Sources */,
+				B0678567250EFF330046B1D2 /* UIFont+Custom.swift in Sources */,
+				B083C04A250CF9F6006E8A69 /* MainViewController.swift in Sources */,
+				B067855F250EFE950046B1D2 /* DebugWorker.swift in Sources */,
 				B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */,
+				B067855A250EF7DF0046B1D2 /* PizzaFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +681,7 @@
 		};
 		B083C073250CF9F8006E8A69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */;
+			baseConfigurationReference = D9C588AD70E6B107502162C1 /* Pods-Mission04-DennyUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -685,7 +702,7 @@
 		};
 		B083C074250CF9F8006E8A69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A35E89EFA36831EA419FB68 /* Pods-Mission04-Denny-Mission04-DennyUITests.release.xcconfig */;
+			baseConfigurationReference = 4941452AC709F4C64986616B /* Pods-Mission04-DennyUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
