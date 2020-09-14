@@ -1,4 +1,4 @@
-package com.khb.pizzastore
+package com.khb.pizza
 
 import org.junit.Test
 

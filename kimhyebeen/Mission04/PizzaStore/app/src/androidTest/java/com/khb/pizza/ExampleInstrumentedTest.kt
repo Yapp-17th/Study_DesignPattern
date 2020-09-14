@@ -1,4 +1,4 @@
-package com.khb.pizzastore
+package com.khb.pizza
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

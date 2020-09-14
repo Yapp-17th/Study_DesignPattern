@@ -1,4 +1,4 @@
-package com.khb.pizzastore
+package com.khb.pizza
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
