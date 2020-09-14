@@ -35,42 +35,42 @@ public extension UIColor {
         self.init(red: CGFloat(red) / 0xff, green: CGFloat(green) / 0xff, blue: CGFloat(blue) / 0xff, alpha: alpha)
     }
 
-    static var talkGray900s: UIColor { fetchTalkColor(#function) }
-    static var talkGray800s: UIColor { fetchTalkColor(#function) }
-    static var talkGray700s: UIColor { fetchTalkColor(#function) }
-    static var talkGray600s: UIColor { fetchTalkColor(#function) }
-    static var talkGray500s: UIColor { fetchTalkColor(#function) }
-    static var talkGray400s: UIColor { fetchTalkColor(#function) }
-    static var talkGray300s: UIColor { fetchTalkColor(#function) }
-    static var talkGray050s: UIColor { fetchTalkColor(#function) }
-    static var talkGray001s: UIColor { fetchTalkColor(#function) }
-    static var talkGray000s: UIColor { fetchTalkColor(#function) }
+    static var missionGray900s: UIColor { fetchTalkColor(#function) }
+    static var missionGray800s: UIColor { fetchTalkColor(#function) }
+    static var missionGray700s: UIColor { fetchTalkColor(#function) }
+    static var missionGray600s: UIColor { fetchTalkColor(#function) }
+    static var missionGray500s: UIColor { fetchTalkColor(#function) }
+    static var missionGray400s: UIColor { fetchTalkColor(#function) }
+    static var missionGray300s: UIColor { fetchTalkColor(#function) }
+    static var missionGray050s: UIColor { fetchTalkColor(#function) }
+    static var missionGray001s: UIColor { fetchTalkColor(#function) }
+    static var missionGray000s: UIColor { fetchTalkColor(#function) }
     
-    static var talkGray200a: UIColor { fetchTalkColor(#function) }
-    static var talkGray150a: UIColor { fetchTalkColor(#function) }
-    static var talkGray100a: UIColor { fetchTalkColor(#function) }
-    static var talkGray050a: UIColor { fetchTalkColor(#function) }
-    static var talkGray000a: UIColor { fetchTalkColor(#function) }
+    static var missionGray200a: UIColor { fetchTalkColor(#function) }
+    static var missionGray150a: UIColor { fetchTalkColor(#function) }
+    static var missionGray100a: UIColor { fetchTalkColor(#function) }
+    static var missionGray050a: UIColor { fetchTalkColor(#function) }
+    static var missionGray000a: UIColor { fetchTalkColor(#function) }
     
-    static var talkWhite002s: UIColor { fetchTalkColor(#function) }
-    static var talkWhite001s: UIColor { fetchTalkColor(#function) }
-    static var talkWhite000s: UIColor { fetchTalkColor(#function) }
+    static var missionWhite002s: UIColor { fetchTalkColor(#function) }
+    static var missionWhite001s: UIColor { fetchTalkColor(#function) }
+    static var missionWhite000s: UIColor { fetchTalkColor(#function) }
     
-    static var talkYellow500s: UIColor { fetchTalkColor(#function) }
-    static var talkYellow550s: UIColor { fetchTalkColor(#function) }
-    static var talkYellow600s: UIColor { fetchTalkColor(#function) }
+    static var missionYellow500s: UIColor { fetchTalkColor(#function) }
+    static var missionYellow550s: UIColor { fetchTalkColor(#function) }
+    static var missionYellow600s: UIColor { fetchTalkColor(#function) }
     
-    static var talkRed500s: UIColor { fetchTalkColor(#function) }
+    static var missionRed500s: UIColor { fetchTalkColor(#function) }
     
-    static var talkBlue300s: UIColor { fetchTalkColor(#function) }
-    static var talkBlue500s: UIColor { fetchTalkColor(#function) }
+    static var missionBlue300s: UIColor { fetchTalkColor(#function) }
+    static var missionBlue500s: UIColor { fetchTalkColor(#function) }
     
-    static var talkGreen500s: UIColor { fetchTalkColor(#function) }
+    static var missionGreen500s: UIColor { fetchTalkColor(#function) }
 
     private static func fetchTalkColor(_ name: String) -> UIColor {
-        let name = name.replacingOccurrences(of: "talk", with: "").lowercased()
-        let assetName = "talk_\(name)"
-        guard let color = UIColor(named: assetName, in: Bundle.coffeeCommon, compatibleWith: nil) else {
+        let name = name.replacingOccurrences(of: "mission", with: "").lowercased()
+        let assetName = "mission_\(name)"
+        guard let color = UIColor(named: assetName, in: Bundle.main, compatibleWith: nil) else {
             assertionFailure()
             return .darkGray
         }
