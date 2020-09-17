@@ -7,34 +7,32 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
 
 class Printer: PrinterProtocol{
     
     
     static let shared = Printer()
-   
+    
     
     private init() {}
     
     func addPrintFile(file: Int) {
-        PrinterProxy.isPrinting = true
-        let idx = PrinterProxy.fileQueue[0].index
-        PrinterProxy.fileQueue[0].status = "출력중"
-        //실제 출력
-        startPrint(title: Files.shared.getTitle(row: idx))
         
-        let time = Files.shared.getTime(row: idx)
+        
+        startPrint(title: Files.shared.getTitle(row: file))
+        
+        
+        let time = Files.shared.getTime(row: file)
         DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + .milliseconds(time)) {
-            self.printLog(file: idx)
-            PrinterProxy.fileQueue.removeFirst()
+            self.printLog(file: file)
             
             //fileQueue의 길이가 0이 될 때까지 재귀적 호출
-            if(PrinterProxy.fileQueue.count != 0){
-                self.addPrintFile(file: 0)
-            }else{
-                PrinterProxy.isPrinting = false
-                
-            }
+            
+            PrinterProxy.isPrinting = false
+            
             
             
         }
@@ -43,7 +41,7 @@ class Printer: PrinterProtocol{
     //실제 출력
     func startPrint(title: String){
         print("\t\(title) 출력중 ...")
-         PrinterProxy.logArray.append("   << \(title) 출력중 ...")
+        PrinterProxy.logArray.append("   << \(title) 출력중 ...")
     }
     
     

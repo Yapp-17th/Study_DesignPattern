@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource , UITableViewDelegate,UITableViewDataSource {
@@ -20,6 +22,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let file = Files.shared
     let proxy = PrinterProxy.shared
     var selected = 0
+    let disposeBag = DisposeBag()
  
     
     override func viewDidLoad() {
@@ -31,6 +34,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         logTableView.delegate = self
         logTableView.dataSource = self
         setLayout()
+        
+        
+//        Observable
+//            .from(proxy.fileQueue$).asObservable().subscribe(onNext: refresh)
+//
         
         Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(refresh), userInfo: nil, repeats: true)
         
@@ -64,7 +72,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var count = 0
         if(tableView == printTableview){
-            count = PrinterProxy.fileQueue.count
+            count = proxy.fileQueue.count
         }
         if(tableView == logTableView){
             count = PrinterProxy.logArray.count
@@ -75,8 +83,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(tableView == printTableview){
             let cell = printTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)as! PrinterTableCell
-            cell.title.text = file.getTitle(row: PrinterProxy.fileQueue[indexPath.row].index)
-            cell.status.text = PrinterProxy.fileQueue[indexPath.row].status
+            cell.title.text = file.getTitle(row: proxy.fileQueue[indexPath.row].index)
+            cell.status.text = proxy.fileQueue[indexPath.row].status
             
             return cell
         }
@@ -91,9 +99,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @objc
-    func refresh(){
+    func refresh(_ a: Any) -> Void {
         printTableview.reloadData()
         logTableView.reloadData()
+//        print("refresh")
     }
     
     func setLayout(){
