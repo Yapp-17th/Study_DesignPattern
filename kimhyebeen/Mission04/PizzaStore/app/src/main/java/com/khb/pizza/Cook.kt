@@ -1,12 +1,18 @@
 package com.khb.pizza
 
 import com.khb.pizza.factory.PizzaFactory
+import com.khb.pizza.items.Pizza
 
 object Cook {
-    var isCooking = false
-    var factory = PizzaFactory()
+    private var isCooking = false
+    private var factory = PizzaFactory()
 
-    fun orderPizza(name: String, dough: String, size: Char, topping: ArrayList<String>, extra: Int) {
-        // TODO(PizzaFactory에 orderPizza)
+    fun getStatus(): Boolean {
+        return this.isCooking
+    }
+
+    fun orderPizza(name: String, dough: String, size: Char, topping: ArrayList<String>, extra: Int): Pizza? {
+//        TODO("PizzaFactory에 orderPizza")
+        return null
     }
 }
