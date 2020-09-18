@@ -1,9 +1,12 @@
 package com.khb.pizza.items
 
 data class SteakPizza(
-    override var cheese: String = "슈레드",
-    override var price: Int = 24000,
-    override var dough: String,
-    override var topping: ArrayList<String>,
-    override var size: Char
-) : Pizza()
+    val extra: Int,
+    val extraTopping: List<String>?
+) : Pizza(extra, extraTopping) {
+    override var cheese: ArrayList<String> = arrayListOf("mozzarella", "cheddar")
+    override var price: Int = 24000
+    override var dough: String = "오리지널"
+    override var topping: ArrayList<String> = arrayListOf("pepperoni", "olive", "paprika", "steak")
+    override var size: Char = 'M'
+}
