@@ -6,5 +6,5 @@ data class OrderSheet(
     var extra: Int,
     var dough: String,
     var size: Char,
-    var extraTopping: ArrayList<String>
+    var extraTopping: ArrayList<String>?
 )
