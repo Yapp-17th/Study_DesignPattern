@@ -1,7 +1,9 @@
 package com.khb.pizza.items
 
+import com.khb.pizza.User
+
 data class OrderSheet(
-    val name: String,
+    val user: User,
     val type: String,
     var extra: Int,
     var dough: String,
