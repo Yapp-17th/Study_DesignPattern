@@ -3,6 +3,7 @@ package com.khb.pizza
 import com.khb.pizza.items.OrderSheet
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
+import org.junit.Ignore
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
@@ -11,8 +12,9 @@ import org.mockito.Mock
 import org.mockito.Mockito
 
 internal class CookTest {
+    val user = User("Jamie", "서울", "010-2020-3030")
     @Mock
-    val orderSheet = OrderSheet("Jamie", "potato", 500, "original", 'M', arrayListOf("pineapple"))
+    val orderSheet = OrderSheet(user, "potato", 500, "original", 'M', arrayListOf("pineapple"))
 
     @Test
     @DisplayName("Cook가 일하고 있는지 제대로 확인되는지")
