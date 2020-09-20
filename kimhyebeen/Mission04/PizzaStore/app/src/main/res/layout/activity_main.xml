@@ -18,14 +18,14 @@
         android:horizontalSpacing="8dp"
         android:numColumns="2"
         android:verticalSpacing="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/nextButton2"
+        app:layout_constraintBottom_toTopOf="@+id/orderButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/preButton"
-        android:layout_width="60dp"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_next"
@@ -33,17 +33,17 @@
         android:textColor="#ffffff"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/nextButton2"
-        app:layout_constraintEnd_toStartOf="@+id/nextButton2" />
+        app:layout_constraintBottom_toBottomOf="@+id/orderButton"
+        app:layout_constraintEnd_toStartOf="@+id/orderButton" />
 
     <Button
-        android:id="@+id/nextButton2"
-        android:layout_width="60dp"
+        android:id="@+id/orderButton"
+        android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/btn_next"
-        android:text="@string/next"
+        android:text="@string/order"
         android:textColor="#ffffff"
         android:textSize="16sp"
         android:textStyle="bold"

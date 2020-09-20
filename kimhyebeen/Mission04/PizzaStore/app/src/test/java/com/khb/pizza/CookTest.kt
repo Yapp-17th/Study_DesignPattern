@@ -1,9 +1,8 @@
 package com.khb.pizza
 
-import com.khb.pizza.items.OrderSheet
+import com.khb.pizza.model.OrderSheet
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
-import org.junit.Ignore
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*

@@ -1,4 +1,4 @@
-package com.khb.pizza.items
+package com.khb.pizza.pizza
 
 abstract class Pizza(
     extra: Int,

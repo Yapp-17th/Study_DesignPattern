@@ -1,8 +1,8 @@
 package com.khb.pizza
 
 import com.khb.pizza.factory.PizzaFactory
-import com.khb.pizza.items.OrderSheet
-import com.khb.pizza.items.Pizza
+import com.khb.pizza.model.OrderSheet
+import com.khb.pizza.pizza.Pizza
 
 object Cook {
     private var status = true

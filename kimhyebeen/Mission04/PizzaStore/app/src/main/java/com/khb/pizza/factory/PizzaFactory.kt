@@ -1,7 +1,7 @@
 package com.khb.pizza.factory
 
-import com.khb.pizza.items.OrderSheet
-import com.khb.pizza.items.Pizza
+import com.khb.pizza.model.OrderSheet
+import com.khb.pizza.pizza.Pizza
 
 class PizzaFactory {
     private lateinit var pizza: Pizza

@@ -4,7 +4,8 @@
     <string name="addr">주소</string>
     <string name="phone">번호</string>
     <string name="next">다음</string>
-    <string name="pre">이전</string>
+    <string name="pre">뒤로가기</string>
+    <string name="order">주문하기</string>
 
     <string name="pizza_name">피자이름</string>
     <string name="price">가격</string>

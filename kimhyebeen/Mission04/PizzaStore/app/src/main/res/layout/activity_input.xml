@@ -17,6 +17,7 @@
         android:ems="10"
         android:hint="@string/phone"
         android:inputType="phone"
+        android:text="01012341234"
         app:layout_constraintBottom_toTopOf="@+id/addressEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,6 +32,7 @@
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
+        android:text="Jamie"
         app:layout_constraintBottom_toTopOf="@+id/numberEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -44,6 +46,7 @@
         android:ems="10"
         android:hint="@string/addr"
         android:inputType="textPersonName"
+        android:text="Seoul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

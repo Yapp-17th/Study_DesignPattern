@@ -1,4 +1,4 @@
-package com.khb.pizza.items
+package com.khb.pizza.pizza
 
 data class SteakPizza(
     val extra: Int,

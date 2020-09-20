@@ -1,4 +1,4 @@
-package com.khb.pizza.items
+package com.khb.pizza.pizza
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
