@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E61F8712517794500DB605E /* Mission4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8702517794500DB605E /* Mission4Tests.swift */; };
+		0E61F87B251798A100DB605E /* PizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F87A251798A100DB605E /* PizzaFactory.swift */; };
+		0E61F87F2517998000DB605E /* PizzaStores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F87E2517998000DB605E /* PizzaStores.swift */; };
 		0E8145D92513AD7B007716D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145D82513AD7B007716D5 /* AppDelegate.swift */; };
 		0E8145DB2513AD7B007716D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */; };
 		0E8145DD2513AD7B007716D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145DC2513AD7B007716D5 /* ViewController.swift */; };
@@ -16,7 +19,22 @@
 		0E8145E82513AD7E007716D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E8145E62513AD7E007716D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E61F8732517794500DB605E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E8145CD2513AD7B007716D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E8145D42513AD7B007716D5;
+			remoteInfo = Mission4;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0E61F86E2517794500DB605E /* Mission4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mission4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E61F8702517794500DB605E /* Mission4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission4Tests.swift; sourceTree = "<group>"; };
+		0E61F8722517794500DB605E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E61F87A251798A100DB605E /* PizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaFactory.swift; sourceTree = "<group>"; };
+		0E61F87E2517998000DB605E /* PizzaStores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaStores.swift; sourceTree = "<group>"; };
 		0E8145D52513AD7B007716D5 /* Mission4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mission4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8145D82513AD7B007716D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E61F86B2517794500DB605E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E8145D22513AD7B007716D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,10 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E61F86F2517794500DB605E /* Mission4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				0E61F8702517794500DB605E /* Mission4Tests.swift */,
+				0E61F8722517794500DB605E /* Info.plist */,
+			);
+			path = Mission4Tests;
+			sourceTree = "<group>";
+		};
 		0E8145CC2513AD7B007716D5 = {
 			isa = PBXGroup;
 			children = (
 				0E8145D72513AD7B007716D5 /* Mission4 */,
+				0E61F86F2517794500DB605E /* Mission4Tests */,
 				0E8145D62513AD7B007716D5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				0E8145D52513AD7B007716D5 /* Mission4.app */,
+				0E61F86E2517794500DB605E /* Mission4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +102,8 @@
 				0E8145E62513AD7E007716D5 /* LaunchScreen.storyboard */,
 				0E8145E92513AD7E007716D5 /* Info.plist */,
 				0E8145E12513AD7B007716D5 /* Mission4.xcdatamodeld */,
+				0E61F87A251798A100DB605E /* PizzaFactory.swift */,
+				0E61F87E2517998000DB605E /* PizzaStores.swift */,
 			);
 			path = Mission4;
 			sourceTree = "<group>";
@@ -73,6 +111,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E61F86D2517794500DB605E /* Mission4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E61F8772517794500DB605E /* Build configuration list for PBXNativeTarget "Mission4Tests" */;
+			buildPhases = (
+				0E61F86A2517794500DB605E /* Sources */,
+				0E61F86B2517794500DB605E /* Frameworks */,
+				0E61F86C2517794500DB605E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E61F8742517794500DB605E /* PBXTargetDependency */,
+			);
+			name = Mission4Tests;
+			productName = Mission4Tests;
+			productReference = 0E61F86E2517794500DB605E /* Mission4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0E8145D42513AD7B007716D5 /* Mission4 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E8145EC2513AD7E007716D5 /* Build configuration list for PBXNativeTarget "Mission4" */;
@@ -96,10 +152,14 @@
 		0E8145CD2513AD7B007716D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1170;
+				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = Dohan;
 				TargetAttributes = {
+					0E61F86D2517794500DB605E = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 0E8145D42513AD7B007716D5;
+					};
 					0E8145D42513AD7B007716D5 = {
 						CreatedOnToolsVersion = 11.7;
 					};
@@ -119,11 +179,19 @@
 			projectRoot = "";
 			targets = (
 				0E8145D42513AD7B007716D5 /* Mission4 */,
+				0E61F86D2517794500DB605E /* Mission4Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E61F86C2517794500DB605E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E8145D32513AD7B007716D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,18 +205,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E61F86A2517794500DB605E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E61F8712517794500DB605E /* Mission4Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0E8145D12513AD7B007716D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E61F87F2517998000DB605E /* PizzaStores.swift in Sources */,
 				0E8145DD2513AD7B007716D5 /* ViewController.swift in Sources */,
 				0E8145D92513AD7B007716D5 /* AppDelegate.swift in Sources */,
+				0E61F87B251798A100DB605E /* PizzaFactory.swift in Sources */,
 				0E8145DB2513AD7B007716D5 /* SceneDelegate.swift in Sources */,
 				0E8145E32513AD7B007716D5 /* Mission4.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E61F8742517794500DB605E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E8145D42513AD7B007716D5 /* Mission4 */;
+			targetProxy = 0E61F8732517794500DB605E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0E8145DE2513AD7B007716D5 /* Main.storyboard */ = {
@@ -170,6 +256,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0E61F8752517794500DB605E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mission4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dohan.Mission4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mission4.app/Mission4";
+			};
+			name = Debug;
+		};
+		0E61F8762517794500DB605E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Mission4Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dohan.Mission4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mission4.app/Mission4";
+			};
+			name = Release;
+		};
 		0E8145EA2513AD7E007716D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +449,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E61F8772517794500DB605E /* Build configuration list for PBXNativeTarget "Mission4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E61F8752517794500DB605E /* Debug */,
+				0E61F8762517794500DB605E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0E8145D02513AD7B007716D5 /* Build configuration list for PBXProject "Mission4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
