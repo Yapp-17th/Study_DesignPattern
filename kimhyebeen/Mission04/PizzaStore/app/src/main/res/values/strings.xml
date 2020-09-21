@@ -20,14 +20,5 @@
     <string name="infoText1">주문자 정보</string>
 
     <string name="infoText2">주문 정보</string>
-    <string name="waiting1">준비중.</string>
-    <string name="waiting2">준비중..</string>
-    <string name="waiting3">준비중...</string>
-    <string name="baking1">오븐에 굽는중.</string>
-    <string name="baking2">오븐에 굽는중..</string>
-    <string name="baking3">오븐에 굽는중...</string>
-    <string name="boxing1">포장중.</string>
-    <string name="boxing2">포장중..</string>
-    <string name="boxing3">포장중...</string>
-    <string name="finish">완성!!</string>
+    <string name="waiting1">준비중</string>
 </resources>

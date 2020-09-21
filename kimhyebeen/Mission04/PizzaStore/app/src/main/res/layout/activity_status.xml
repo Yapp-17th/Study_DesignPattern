@@ -80,13 +80,14 @@
         app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/userLinearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -119,13 +120,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/infoLinearLayout"
+        android:id="@+id/pizzaLinearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
@@ -184,7 +186,8 @@
             android:gravity="right"
             android:text="@string/total"
             android:textColor="#ffffff"
-            android:textSize="17sp"
+            android:textSize="30sp"
+            android:textStyle="bold"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
 
@@ -199,6 +202,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/userLinearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
