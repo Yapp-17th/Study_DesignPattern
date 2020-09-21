@@ -12,4 +12,19 @@
     <string name="selectSize">사이즈 선택</string>
 
     <string name="total">총 00000원</string>
+    <string name="dough">도우 :</string>
+    <string name="cheese">치즈 :</string>
+    <string name="size">사이즈 :</string>
+    <string name="topping">토핑 :</string>
+
+    <string name="waiting1">준비중.</string>
+    <string name="waiting2">준비중..</string>
+    <string name="waiting3">준비중...</string>
+    <string name="baking1">오븐에 굽는중.</string>
+    <string name="baking2">오븐에 굽는중..</string>
+    <string name="baking3">오븐에 굽는중...</string>
+    <string name="boxing1">포장중.</string>
+    <string name="boxing2">포장중..</string>
+    <string name="boxing3">포장중...</string>
+    <string name="finish">완성!!</string>
 </resources>
