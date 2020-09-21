@@ -17,6 +17,9 @@
     <string name="size">사이즈 :</string>
     <string name="topping">토핑 :</string>
 
+    <string name="infoText1">주문자 정보</string>
+
+    <string name="infoText2">주문 정보</string>
     <string name="waiting1">준비중.</string>
     <string name="waiting2">준비중..</string>
     <string name="waiting3">준비중...</string>

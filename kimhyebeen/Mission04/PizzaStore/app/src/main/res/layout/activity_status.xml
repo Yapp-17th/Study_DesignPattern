@@ -66,6 +66,58 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/infoText1"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/userNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/name"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/userPhoneTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/phone"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/userAddressTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addr"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </LinearLayout>
+
     <LinearLayout
         android:id="@+id/infoLinearLayout"
         android:layout_width="0dp"
@@ -76,50 +128,50 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusTextView">
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <TextView
             android:id="@+id/sizeTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="@string/size"
             android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:layout_marginBottom="8dp"/>
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/doughTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="@string/dough"
             android:textColor="#ffffff"
-            android:layout_marginBottom="8dp"
             android:textSize="17sp" />
 
         <TextView
             android:id="@+id/cheeseTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:text="@string/cheese"
             android:textColor="#ffffff"
-            android:layout_marginBottom="8dp"
             android:textSize="17sp" />
 
         <TextView
             android:id="@+id/toppingTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
             android:layout_marginBottom="8dp"
-            android:textSize="17sp"
-            android:text="@string/topping" />
+            android:text="@string/topping"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
 
         <LinearLayout
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#ffffff"
             android:layout_marginBottom="8dp"
+            android:background="#ffffff"
             android:orientation="vertical">
 
         </LinearLayout>
@@ -128,12 +180,25 @@
             android:id="@+id/totalPriceTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="right"
             android:text="@string/total"
             android:textColor="#ffffff"
-            android:gravity="right"
-            android:layout_marginBottom="8dp"
             android:textSize="17sp"
             tools:ignore="RtlHardcoded" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/infoText2"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
