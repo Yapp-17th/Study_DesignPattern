@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#333333"
     tools:context="com.khb.pizza.InputActivity">
 
     <EditText
@@ -14,10 +14,12 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="@string/phone"
         android:inputType="phone"
         android:text="01012341234"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/addressEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -29,10 +31,12 @@
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="8dp"
+        android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="@string/name"
         android:inputType="textPersonName"
         android:text="Jamie"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/numberEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -43,10 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
+        android:backgroundTint="#ffffff"
         android:ems="10"
         android:hint="@string/addr"
         android:inputType="textPersonName"
         android:text="Seoul"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Toast
+import com.khb.pizza.model.User
 import kotlinx.android.synthetic.main.activity_input.*
 
 class InputActivity : AppCompatActivity() {

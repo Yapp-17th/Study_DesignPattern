@@ -9,4 +9,7 @@
 
     <string name="pizza_name">피자이름</string>
     <string name="price">가격</string>
+    <string name="selectSize">사이즈 선택</string>
+
+    <string name="total">총 00000원</string>
 </resources>

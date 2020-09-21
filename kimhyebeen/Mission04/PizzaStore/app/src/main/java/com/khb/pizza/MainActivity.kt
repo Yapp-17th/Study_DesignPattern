@@ -1,39 +1,40 @@
 package com.khb.pizza
 
-import android.graphics.Color
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
 import android.widget.Toast
 import com.khb.pizza.adapter.MenuAdapter
 import com.khb.pizza.model.Menu
+import com.khb.pizza.model.User
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var user: User
     private var menuAdapter: MenuAdapter = MenuAdapter()
-    private var selectedItemView: View? = null
-    private var selectedId: Int = -1
-    private var selectedMenu: Menu? = null
+    private var selectedId: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         user = intent.getSerializableExtra("user") as User
-
         setDataInAdapter()
 
         pizzaGridView.apply {
             adapter = menuAdapter
-            setOnItemClickListener { _, view: View, position: Int, _ -> selectedItemSetting(view, position) }
+            setOnItemClickListener { _, _, position: Int, _ -> selectedItemSetting(position) }
         }
 
-        preButton.setOnClickListener { finish() }
         orderButton.setOnClickListener {
-            selectedMenu?.let { toast("메뉴가 선택되었습니다.") } ?: toast("메뉴를 선택해주세요")
+            selectedId?.let {
+                Intent(this, StatusActivity::class.java).apply {
+                    putExtra("menu", menuAdapter.getItem(it) as Menu)
+                    putExtra("user", user)
+                    startActivity(this)
+                }
+                finish()
+            } ?: Toast.makeText(this, "메뉴를 선택해주세요", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -48,31 +49,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun selectedItemSetting(view: View, position: Int) {
+    private fun selectedItemSetting(position: Int) {
         val item = menuAdapter.getItem(position) as Menu
-        if (item.isSelected) {
-            setColor(view, "#ffffff")
-            selectedMenu = null
-        } else {
-            setColor(view, "#ffc107")
-            selectedMenu?.let { resetOtherSelectedItem() }
-            selectedMenu = item
-            selectedId = position
-            selectedItemView = view
-        }
+        selectedId =
+            if (item.isSelected) {
+                null
+            } else {
+                selectedId?.let { id -> menuAdapter.changeSelected(id) }
+                position
+            }
         menuAdapter.changeSelected(position)
-    }
-
-    private fun resetOtherSelectedItem() {
-        menuAdapter.changeSelected(selectedId)
-        setColor(selectedItemView!!, "#ffffff")
-    }
-
-    private fun setColor(view: View, color: String) {
-        view.cardView.setBackgroundColor(Color.parseColor(color))
-    }
-
-    private fun toast(str: String) {
-        Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
     }
 }

@@ -1,7 +1,5 @@
 package com.khb.pizza.model
 
-import com.khb.pizza.User
-
 data class OrderSheet(
     val user: User,
     val type: String,

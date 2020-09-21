@@ -1,4 +1,4 @@
-package com.khb.pizza
+package com.khb.pizza.model
 
 import java.io.Serializable
 

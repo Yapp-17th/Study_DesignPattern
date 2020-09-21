@@ -2,6 +2,7 @@ package com.khb.pizza.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,6 +35,7 @@ class MenuAdapter: BaseAdapter() {
 
     fun changeSelected(position: Int) {
         items[position].isSelected = !items[position].isSelected
+        notifyDataSetChanged()
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -46,6 +48,10 @@ class MenuAdapter: BaseAdapter() {
             setImage(items[position].image)
             setName(items[position].name)
             setPrice(items[position].price)
+
+            if (items[position].isSelected) cardView.setCardBackgroundColor(Color.parseColor("#DADFFF"))
+            else cardView.setCardBackgroundColor(Color.parseColor("#ffffff"))
+
             return this
         }
     }
