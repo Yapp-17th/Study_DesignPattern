@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bd3-2R-wv2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Item-->
+        <scene sceneID="O5e-vf-0iz">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="LM8-Ri-aQC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gkP-dC-bpc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="e8n-7T-aOC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="cA9-Fs-6Cl"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kg8-Df-yIx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2628" y="321"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="6x6-2k-AKz">
+            <objects>
+                <viewController id="I2o-C6-5dB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4LT-Lz-xdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MR6-K6-WQA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="rPh-cD-CT3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGy-JE-hMc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="929"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="IEt-eV-kXl">
+            <objects>
+                <viewController id="hiU-9t-Blv" customClass="SeoulVC" customModule="Mission4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fwJ-cB-KNb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPc-cU-3TF">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="서울 본점" id="7AP-4G-ajh"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-JQ-M6y">
+                                <rect key="frame" x="150" y="218" width="114" height="30"/>
+                                <state key="normal" title="치즈피자"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5w-5L-uqu">
+                                <rect key="frame" x="150" y="283" width="114" height="30"/>
+                                <state key="normal" title="치킨피자"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t33-8U-3iV">
+                                <rect key="frame" x="150" y="348" width="114" height="30"/>
+                                <state key="normal" title="새우피자"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-7u-ofz">
+                                <rect key="frame" x="150" y="413" width="114" height="30"/>
+                                <state key="normal" title="한강피자"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ9-ML-UgS">
+                                <rect key="frame" x="140" y="533" width="134" height="30"/>
+                                <state key="normal" title="주문하기"/>
+                                <connections>
+                                    <action selector="orderPizza:" destination="hiU-9t-Blv" eventType="touchUpInside" id="MVu-ae-qpc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i7t-to-6HE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GZ9-ML-UgS" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" constant="140" id="1T0-9W-PmP"/>
+                            <constraint firstItem="nPc-cU-3TF" firstAttribute="trailing" secondItem="i7t-to-6HE" secondAttribute="trailing" id="5BF-mN-VqD"/>
+                            <constraint firstItem="i7t-to-6HE" firstAttribute="trailing" secondItem="GZ9-ML-UgS" secondAttribute="trailing" constant="140" id="CWG-v1-G0S"/>
+                            <constraint firstItem="a5w-5L-uqu" firstAttribute="top" secondItem="Dji-JQ-M6y" secondAttribute="bottom" constant="35" id="Cue-Ks-ify"/>
+                            <constraint firstItem="a5w-5L-uqu" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" constant="150" id="Its-ub-Bvk"/>
+                            <constraint firstItem="Dji-JQ-M6y" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" constant="150" id="O33-GF-Pdt"/>
+                            <constraint firstItem="i7t-to-6HE" firstAttribute="trailing" secondItem="a5w-5L-uqu" secondAttribute="trailing" constant="150" id="OXk-1P-YeE"/>
+                            <constraint firstItem="GZ9-ML-UgS" firstAttribute="top" secondItem="Q1s-7u-ofz" secondAttribute="bottom" constant="90" id="PdE-hV-BSM"/>
+                            <constraint firstItem="t33-8U-3iV" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" constant="150" id="UZW-hx-rgb"/>
+                            <constraint firstItem="Q1s-7u-ofz" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" constant="150" id="W2n-4o-9kF"/>
+                            <constraint firstItem="i7t-to-6HE" firstAttribute="trailing" secondItem="Q1s-7u-ofz" secondAttribute="trailing" constant="150" id="Yz8-wE-GPf"/>
+                            <constraint firstItem="t33-8U-3iV" firstAttribute="top" secondItem="a5w-5L-uqu" secondAttribute="bottom" constant="35" id="a5l-sB-WRH"/>
+                            <constraint firstItem="nPc-cU-3TF" firstAttribute="leading" secondItem="i7t-to-6HE" secondAttribute="leading" id="a6w-e5-MYY"/>
+                            <constraint firstItem="nPc-cU-3TF" firstAttribute="top" secondItem="i7t-to-6HE" secondAttribute="top" id="dDM-JT-LqM"/>
+                            <constraint firstItem="i7t-to-6HE" firstAttribute="trailing" secondItem="Dji-JQ-M6y" secondAttribute="trailing" constant="150" id="iMr-jG-pKD"/>
+                            <constraint firstItem="Q1s-7u-ofz" firstAttribute="top" secondItem="t33-8U-3iV" secondAttribute="bottom" constant="35" id="jEG-qI-n2d"/>
+                            <constraint firstItem="Dji-JQ-M6y" firstAttribute="top" secondItem="nPc-cU-3TF" secondAttribute="bottom" constant="130" id="t9E-uR-qBo"/>
+                            <constraint firstItem="i7t-to-6HE" firstAttribute="trailing" secondItem="t33-8U-3iV" secondAttribute="trailing" constant="150" id="zxE-32-7wo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="QZW-An-Fqn"/>
+                    <connections>
+                        <outlet property="cheesePizza" destination="Dji-JQ-M6y" id="8w7-36-GYZ"/>
+                        <outlet property="chickenPizza" destination="a5w-5L-uqu" id="Q56-7X-72G"/>
+                        <outlet property="hanriverPizza" destination="Q1s-7u-ofz" id="HLJ-fw-oAP"/>
+                        <outlet property="orderBtn" destination="GZ9-ML-UgS" id="2Sh-rG-Ygc"/>
+                        <outlet property="shrimpPizza" destination="t33-8U-3iV" id="FF2-eP-WgN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPG-N9-JdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="322"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="poZ-fd-ptJ">
+            <objects>
+                <tabBarController id="Bd3-2R-wv2" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hGa-0b-tzp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hiU-9t-Blv" kind="relationship" relationship="viewControllers" id="yRw-AO-qPu"/>
+                        <segue destination="I2o-C6-5dB" kind="relationship" relationship="viewControllers" id="fnn-p0-tKo"/>
+                        <segue destination="LM8-Ri-aQC" kind="relationship" relationship="viewControllers" id="nyi-EQ-33u"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RLK-dY-BHQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="625"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
