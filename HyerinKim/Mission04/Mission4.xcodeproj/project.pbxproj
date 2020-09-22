@@ -14,6 +14,8 @@
 		0E61F8882517B1C900DB605E /* SeoulPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8872517B1C900DB605E /* SeoulPizza.swift */; };
 		0E61F88C2517B1D000DB605E /* JejuPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F88B2517B1D000DB605E /* JejuPizza.swift */; };
 		0E61F8902517B1DA00DB605E /* BusanPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F88F2517B1DA00DB605E /* BusanPizza.swift */; };
+		0E61F8AA2519BF5A00DB605E /* JejuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8A92519BF5A00DB605E /* JejuVC.swift */; };
+		0E61F8AE2519BF6000DB605E /* BusanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8AD2519BF6000DB605E /* BusanVC.swift */; };
 		0E8145D92513AD7B007716D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145D82513AD7B007716D5 /* AppDelegate.swift */; };
 		0E8145DB2513AD7B007716D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */; };
 		0E8145DD2513AD7B007716D5 /* SeoulVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145DC2513AD7B007716D5 /* SeoulVC.swift */; };
@@ -45,6 +47,8 @@
 		0E61F8872517B1C900DB605E /* SeoulPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulPizza.swift; sourceTree = "<group>"; };
 		0E61F88B2517B1D000DB605E /* JejuPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuPizza.swift; sourceTree = "<group>"; };
 		0E61F88F2517B1DA00DB605E /* BusanPizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusanPizza.swift; sourceTree = "<group>"; };
+		0E61F8A92519BF5A00DB605E /* JejuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuVC.swift; sourceTree = "<group>"; };
+		0E61F8AD2519BF6000DB605E /* BusanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusanVC.swift; sourceTree = "<group>"; };
 		0E8145D52513AD7B007716D5 /* Mission4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mission4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8145D82513AD7B007716D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +117,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0E61F8B12519BF6700DB605E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0E8145DC2513AD7B007716D5 /* SeoulVC.swift */,
+				0E61F8A92519BF5A00DB605E /* JejuVC.swift */,
+				0E61F8AD2519BF6000DB605E /* BusanVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0E8145CC2513AD7B007716D5 = {
 			isa = PBXGroup;
 			children = (
@@ -136,10 +150,10 @@
 		0E8145D72513AD7B007716D5 /* Mission4 */ = {
 			isa = PBXGroup;
 			children = (
+				0E61F8B12519BF6700DB605E /* ViewController */,
 				0E61F8822517AD7900DB605E /* Model */,
 				0E8145D82513AD7B007716D5 /* AppDelegate.swift */,
 				0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */,
-				0E8145DC2513AD7B007716D5 /* SeoulVC.swift */,
 				0E8145DE2513AD7B007716D5 /* Main.storyboard */,
 				0E8145E42513AD7E007716D5 /* Assets.xcassets */,
 				0E8145E62513AD7E007716D5 /* LaunchScreen.storyboard */,
@@ -338,10 +352,12 @@
 			files = (
 				0E61F8842517B1BA00DB605E /* Pizza.swift in Sources */,
 				0E61F8882517B1C900DB605E /* SeoulPizza.swift in Sources */,
+				0E61F8AE2519BF6000DB605E /* BusanVC.swift in Sources */,
 				0E61F87F2517998000DB605E /* PizzaStores.swift in Sources */,
 				0E61F88C2517B1D000DB605E /* JejuPizza.swift in Sources */,
 				0E8145DD2513AD7B007716D5 /* SeoulVC.swift in Sources */,
 				0E8145D92513AD7B007716D5 /* AppDelegate.swift in Sources */,
+				0E61F8AA2519BF5A00DB605E /* JejuVC.swift in Sources */,
 				0E61F8902517B1DA00DB605E /* BusanPizza.swift in Sources */,
 				0E61F87B251798A100DB605E /* PizzaFactory.swift in Sources */,
 				0E8145DB2513AD7B007716D5 /* SceneDelegate.swift in Sources */,

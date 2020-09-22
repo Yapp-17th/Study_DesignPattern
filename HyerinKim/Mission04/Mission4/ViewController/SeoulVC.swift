@@ -18,7 +18,6 @@ class SeoulVC: UIViewController {
     var disposebag = DisposeBag()
     
     @IBOutlet weak var cheesePizza: UIButton!
-    @IBOutlet weak var chickenPizza: UIButton!
     @IBOutlet weak var shrimpPizza: UIButton!
     @IBOutlet weak var hanriverPizza: UIButton!
     @IBOutlet weak var orderBtn: UIButton!
@@ -35,8 +34,6 @@ class SeoulVC: UIViewController {
     func binding(){
         cheesePizza.rx.tap.map{SeoulMenu.cheese}
             .bind(to:selectedMenu).disposed(by: disposebag)
-        chickenPizza.rx.tap.map{SeoulMenu.chicken}
-            .bind(to:selectedMenu).disposed(by: disposebag)
         shrimpPizza.rx.tap.map{SeoulMenu.shrimp}
             .bind(to:selectedMenu).disposed(by: disposebag)
         hanriverPizza.rx.tap.map{SeoulMenu.hanriver}
@@ -44,8 +41,6 @@ class SeoulVC: UIViewController {
         
         selectedMenu.map{$0 == .cheese}
             .bind(to: cheesePizza.rx.isSelected).disposed(by: disposebag)
-        selectedMenu.map{ $0 == .chicken}
-            .bind(to: chickenPizza.rx.isSelected).disposed(by: disposebag)
         selectedMenu.map{$0 == .shrimp}
             .bind(to: shrimpPizza.rx.isSelected).disposed(by: disposebag)
         selectedMenu.map{$0 == .hanriver}
