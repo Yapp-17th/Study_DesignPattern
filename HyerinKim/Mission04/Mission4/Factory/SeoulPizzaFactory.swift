@@ -26,9 +26,6 @@ class SeoulPizzaFactory: PizzaFactory {
         }
     }
     
-    func madePizza(pizza: Pizza) -> String {
-        return ""
-    }
-    
+   
    
 }

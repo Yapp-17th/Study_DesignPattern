@@ -25,19 +25,27 @@
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-JQ-M6y">
                                 <rect key="frame" x="140" y="285" width="134" height="30"/>
-                                <state key="normal" title="치즈피자"/>
+                                <state key="normal" title="치즈피자">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t33-8U-3iV">
                                 <rect key="frame" x="140" y="350" width="134" height="30"/>
-                                <state key="normal" title="새우피자"/>
+                                <state key="normal" title="새우피자">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-7u-ofz">
                                 <rect key="frame" x="140" y="415" width="134" height="30"/>
-                                <state key="normal" title="한강피자"/>
+                                <state key="normal" title="한강피자">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZ9-ML-UgS">
                                 <rect key="frame" x="140" y="535" width="134" height="30"/>
-                                <state key="normal" title="주문하기"/>
+                                <state key="normal" title="주문하기">
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="b52-Cb-bdX" kind="popoverPresentation" identifier="orderSegue" destinationCreationSelector="order:" popoverAnchorView="GZ9-ML-UgS" id="tyK-ol-86f">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>

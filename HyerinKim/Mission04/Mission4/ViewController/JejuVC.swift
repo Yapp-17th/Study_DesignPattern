@@ -55,7 +55,7 @@ class JejuVC: UIViewController {
     func setLayout(){
         orderBtn.backgroundColor = UIColor.black
         orderBtn.tintColor = UIColor.white
-        orderBtn.layer.cornerRadius = 15
+        orderBtn.layer.cornerRadius = 14
         
         
         

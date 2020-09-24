@@ -10,9 +10,6 @@ import Foundation
 
 
 class JejuPizzaFactory: PizzaFactory{
-    func madePizza(pizza: Pizza) -> String {
-        return ""
-    }
     
     func orderPizza(for st: String) -> Pizza {
         print("createJejuPizza")

@@ -10,7 +10,6 @@ import Foundation
 
 protocol PizzaFactory {
     func orderPizza(for st: String) -> Pizza
-    func madePizza(pizza: Pizza) -> String
 }
 
 

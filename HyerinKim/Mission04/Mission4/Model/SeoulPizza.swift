@@ -43,7 +43,7 @@ class SeoulShrimpPizza: Pizza {
 class SeoulHanriverPizza: Pizza {
     var name: String = "서울 한강 피자"
     
-    var dough: String = "리치리치골드 크러스트"
+    var dough: String = "리치리치 골드 크러스트"
     
     var toppings: [String] = ["치킨","모짜렐라","한강라면맛스프"]
     

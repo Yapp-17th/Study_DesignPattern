@@ -14,12 +14,15 @@ class OrderVC: UIViewController {
     @IBOutlet weak var process: UITextView!
     
     
-    
+    var storeName:String?
     var orderedPizza:Pizza?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let name = storeName {
+            store.text = "\(name) 지점"
+        }
         guard let pizza = orderedPizza else { return }
         makingPizza(pizza: pizza)
         
@@ -27,7 +30,7 @@ class OrderVC: UIViewController {
     
     func makingPizza(pizza: Pizza){
         
-        process.text.append(pizza.name + "주문\n\n")
+        process.text.append(pizza.name + " 주문\n\n")
         process.text.append("\(pizza.dough) 도우 준비 완료\n\n")
         process.text.append("토핑 : \n")
         for t in pizza.toppings {

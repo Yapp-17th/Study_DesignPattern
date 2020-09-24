@@ -9,9 +9,6 @@
 import Foundation
 
 class BusanPizzaFactory: PizzaFactory{
-    func madePizza(pizza: Pizza) -> String {
-        return ""
-    }
     
     func orderPizza(for st: String) -> Pizza {
         switch st {

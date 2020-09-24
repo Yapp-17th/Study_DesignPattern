@@ -32,6 +32,7 @@ class SeoulVC: UIViewController {
         let pizza = seoulFactory.orderPizza(for: selectedMenu.value)
         guard let orderView = segue.destination as? OrderVC else {return}
         orderView.orderedPizza = pizza
+        orderView.storeName = "서울"
         
     }
     
@@ -57,7 +58,7 @@ class SeoulVC: UIViewController {
     func setLayout(){
         orderBtn.backgroundColor = UIColor.black
         orderBtn.tintColor = UIColor.white
-        orderBtn.layer.cornerRadius = 15
+        orderBtn.layer.cornerRadius = 14
         
         
         

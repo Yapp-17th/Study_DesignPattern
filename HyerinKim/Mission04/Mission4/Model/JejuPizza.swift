@@ -9,11 +9,11 @@
 import Foundation
 
 class JejuCheesePizza: Pizza {
-    var name = "Seoul Cheese Pizza"
+    var name = "제주 치즈 피자"
     
-    var dough: String = ""
+    var dough: String = "씬 크러스트"
     
-    var toppings: [String] = []
+    var toppings: [String] = ["모짜렐라 치즈","파마산 치즈","블루 치즈","체다 치즈"]
     
     var temp = 190
     
@@ -24,11 +24,11 @@ class JejuCheesePizza: Pizza {
 }
 
 class JejuShrimpPizza: Pizza {
-    var name: String = ""
+    var name: String = "제주 새우 피자"
     
-    var dough: String = ""
+    var dough: String = "씬 크러스트"
     
-    var toppings: [String] = []
+    var toppings: [String] = ["모짜렐라 치즈","제주 딱새우","핫소스"]
     
     var temp = 180
     
@@ -38,11 +38,11 @@ class JejuShrimpPizza: Pizza {
 }
 
 class JejuTangerinePizza: Pizza {
-    var name: String = ""
+    var name: String = "제주 감귤 피자"
     
-    var dough: String = ""
+    var dough: String = "나폴리"
     
-    var toppings: [String] = []
+    var toppings: [String] = ["감귤","모짜렐라 치즈","파슬리"]
     
     var temp = 300
     
