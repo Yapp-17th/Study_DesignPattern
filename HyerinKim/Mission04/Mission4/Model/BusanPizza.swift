@@ -9,23 +9,17 @@
 import Foundation
 
 class BusanCheesePizza: Pizza {
+    
     var name = "Seoul Cheese Pizza"
     
     var dough: String = ""
     
     var toppings: [String] = []
     
-    func prepare() {
-        
-    }
+    var temp = 210
     
-    func bake() {
-        
-    }
+    var time = 15
     
-    func boxing() {
-        
-    }
     
     
 }
@@ -37,17 +31,10 @@ class BusanShrimpPizza: Pizza {
     
     var toppings: [String] = []
     
-    func prepare() {
-        
-    }
+    var temp = 200
     
-    func bake() {
-        
-    }
+    var time = 15
     
-    func boxing() {
-        
-    }
     
     
 }
@@ -59,17 +46,10 @@ class BusanGookbabPizza: Pizza {
     
     var toppings: [String] = []
     
-    func prepare() {
-        <#code#>
-    }
+    var temp = 250
     
-    func bake() {
-        <#code#>
-    }
+    var time = 25
     
-    func boxing() {
-        <#code#>
-    }
     
     
 }

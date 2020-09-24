@@ -9,67 +9,47 @@
 import Foundation
 
 class SeoulCheesePizza: Pizza {
-    var name = "서울 치즈 피자"
+    
+    var name = "서울 치즈 피자 "
     
     var dough: String = "리치 골드 크러스트"
     
     var toppings: [String] = ["모짜렐라 치즈","치즈치즈"]
     
-    func prepare() {
-        
-    }
+    var temp = 180
     
-    func bake() {
-        
-    }
+    var time = 20
     
-    func boxing() {
-        
-    }
+    
     
     
 }
 
 class SeoulShrimpPizza: Pizza {
+    
     var name: String = "서울 새우 피자"
     
     var dough: String = "리치 골드 크러스트"
     
-    var toppings: [String] = []
+    var toppings: [String] = ["모짜렐라", "새우", "올리브"]
     
-    func prepare() {
-        
-    }
+    var temp = 200
     
-    func bake() {
-        
-    }
-    
-    func boxing() {
-        
-    }
+    var time = 20
     
     
 }
 
 class SeoulHanriverPizza: Pizza {
-    var name: String = ""
+    var name: String = "서울 한강 피자"
     
-    var dough: String = ""
+    var dough: String = "리치리치골드 크러스트"
     
-    var toppings: [String] = []
+    var toppings: [String] = ["치킨","모짜렐라","한강라면맛스프"]
     
-    func prepare() {
-        <#code#>
-    }
+    var temp = 185
     
-    func bake() {
-        <#code#>
-    }
-    
-    func boxing() {
-        <#code#>
-    }
+    var time = 20
     
     
 }

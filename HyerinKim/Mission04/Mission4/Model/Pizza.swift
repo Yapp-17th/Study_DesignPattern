@@ -10,11 +10,10 @@ import Foundation
 
 protocol Pizza {
     var name:String { get }
-    var dough:String { get set }
-    var toppings:[String] { get set }
+    var dough:String { get }
+    var toppings:[String] { get }
+    var temp:Int { get }
+    var time:Int { get }
     
-    func prepare()
-    func bake()
-    func boxing()
   
 }

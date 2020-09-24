@@ -15,17 +15,10 @@ class JejuCheesePizza: Pizza {
     
     var toppings: [String] = []
     
-    func prepare() {
-        
-    }
+    var temp = 190
     
-    func bake() {
-        
-    }
+    var time = 15
     
-    func boxing() {
-        
-    }
     
     
 }
@@ -37,17 +30,9 @@ class JejuShrimpPizza: Pizza {
     
     var toppings: [String] = []
     
-    func prepare() {
-        
-    }
+    var temp = 180
     
-    func bake() {
-        
-    }
-    
-    func boxing() {
-        
-    }
+    var time = 25
     
     
 }
@@ -59,17 +44,10 @@ class JejuTangerinePizza: Pizza {
     
     var toppings: [String] = []
     
-    func prepare() {
-        <#code#>
-    }
+    var temp = 300
     
-    func bake() {
-        <#code#>
-    }
+    var time = 10
     
-    func boxing() {
-        <#code#>
-    }
     
     
 }

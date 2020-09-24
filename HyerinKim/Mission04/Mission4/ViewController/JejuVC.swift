@@ -6,13 +6,14 @@
 //  Copyright © 2020 Dohan. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import RxCocoa
+import RxSwift
 
 class JejuVC: UIViewController {
-    enum JejuMenu {
-        case none, cheese, chicken, shrimp, hanriver
-    }
-    let selectedMenu = BehaviorRelay(value: SeoulMenu.none)
+   
+    let jejuFactory = JejuPizzaFactory()
+    let selectedMenu = BehaviorRelay(value: "none")
     var disposebag = DisposeBag()
     
     @IBOutlet weak var cheesePizza: UIButton!
@@ -20,32 +21,34 @@ class JejuVC: UIViewController {
     @IBOutlet weak var tangerinePizza: UIButton!
     @IBOutlet weak var orderBtn: UIButton!
     
-    @IBAction func orderPizza(_ sender: Any) {
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         binding()
         setLayout()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(selectedMenu.value)
+        let pizza = jejuFactory.orderPizza(for: selectedMenu.value)
+        guard let orderView = segue.destination as? OrderVC else {return}
+        orderView.orderedPizza = pizza
+    }
     
     func binding(){
-        cheesePizza.rx.tap.map{SeoulMenu.cheese}
+        cheesePizza.rx.tap.map{"cheese"}
             .bind(to:selectedMenu).disposed(by: disposebag)
-        shrimpPizza.rx.tap.map{SeoulMenu.shrimp}
+        shrimpPizza.rx.tap.map{"shrimp"}
             .bind(to:selectedMenu).disposed(by: disposebag)
-        tangerinePizza.rx.tap.map{SeoulMenu.hanriver}
+        tangerinePizza.rx.tap.map{"tangerine"}
             .bind(to:selectedMenu).disposed(by: disposebag)
         
-        selectedMenu.map{$0 == .cheese}
+        selectedMenu.map{$0 == "cheese"}
             .bind(to: cheesePizza.rx.isSelected).disposed(by: disposebag)
-        selectedMenu.map{$0 == .shrimp}
+        selectedMenu.map{$0 == "shrimp"}
             .bind(to: shrimpPizza.rx.isSelected).disposed(by: disposebag)
-        selectedMenu.map{$0 == .hanriver}
+        selectedMenu.map{$0 == "tangerine"}
             .bind(to: tangerinePizza.rx.isSelected).disposed(by: disposebag)
         
-        selectedMenu.map{$0 != .none}.bind(to: orderBtn.rx.isEnabled)
+        selectedMenu.map{$0 != "none"}.bind(to: orderBtn.rx.isEnabled)
             .disposed(by: disposebag)
     }
     
