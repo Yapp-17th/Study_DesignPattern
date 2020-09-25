@@ -18,7 +18,6 @@
 		0E61F8B9251A98A100DB605E /* SeoulPizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8B8251A98A100DB605E /* SeoulPizzaFactory.swift */; };
 		0E61F8BD251A98AB00DB605E /* JejuPizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8BC251A98AB00DB605E /* JejuPizzaFactory.swift */; };
 		0E61F8C1251A98B500DB605E /* BusanPizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8C0251A98B500DB605E /* BusanPizzaFactory.swift */; };
-		0E61F8DC251B915B00DB605E /* 한강.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E61F8DB251B915B00DB605E /* 한강.jpg */; };
 		0E61F8ED251C01F400DB605E /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F8EC251C01F400DB605E /* OrderVC.swift */; };
 		0E8145D92513AD7B007716D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145D82513AD7B007716D5 /* AppDelegate.swift */; };
 		0E8145DB2513AD7B007716D5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */; };
@@ -55,7 +54,6 @@
 		0E61F8B8251A98A100DB605E /* SeoulPizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulPizzaFactory.swift; sourceTree = "<group>"; };
 		0E61F8BC251A98AB00DB605E /* JejuPizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JejuPizzaFactory.swift; sourceTree = "<group>"; };
 		0E61F8C0251A98B500DB605E /* BusanPizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusanPizzaFactory.swift; sourceTree = "<group>"; };
-		0E61F8DB251B915B00DB605E /* 한강.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "한강.jpg"; sourceTree = "<group>"; };
 		0E61F8EC251C01F400DB605E /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
 		0E8145D52513AD7B007716D5 /* Mission4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mission4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E8145D82513AD7B007716D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				0E8145DA2513AD7B007716D5 /* SceneDelegate.swift */,
 				0E8145DE2513AD7B007716D5 /* Main.storyboard */,
 				0E8145E42513AD7E007716D5 /* Assets.xcassets */,
-				0E61F8DB251B915B00DB605E /* 한강.jpg */,
 				0E8145E62513AD7E007716D5 /* LaunchScreen.storyboard */,
 				0E8145E92513AD7E007716D5 /* Info.plist */,
 				0E8145E12513AD7B007716D5 /* Mission4.xcdatamodeld */,
@@ -285,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E61F8DC251B915B00DB605E /* 한강.jpg in Resources */,
 				0E8145E82513AD7E007716D5 /* LaunchScreen.storyboard in Resources */,
 				0E8145E52513AD7E007716D5 /* Assets.xcassets in Resources */,
 				0E8145E02513AD7B007716D5 /* Main.storyboard in Resources */,
