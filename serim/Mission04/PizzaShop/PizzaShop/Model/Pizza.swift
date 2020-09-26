@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum MainToppingType: String {
+enum MainToppingType: String, CaseIterable {
     case sweetPotato, shrimp, bacon
 }
 
-enum OptionToppingType: String {
+enum OptionToppingType: String, CaseIterable {
     case cheeze, pepperoni, olive, pineapple
 }
 

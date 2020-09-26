@@ -7,6 +7,7 @@ target 'PizzaShop' do
 
   # Pods for PizzaShop
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
   target 'PizzaShopTests' do
     inherit! :search_paths
     # Pods for testing
