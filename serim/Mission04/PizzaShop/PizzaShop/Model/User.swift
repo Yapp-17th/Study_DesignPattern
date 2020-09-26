@@ -15,7 +15,13 @@ class User {
         self.id = id
     }
     
-    func order() {
-        
+    func order(pizzaType: MainToppingType, toppingType: OptionToppingType, amountOfTopping: Int) {
+        let orderedPizza = ["pizzaType":pizzaType, "toppingType":toppingType, "amount":amountOfTopping] as [String : Any]
+        NotificationCenter.default.post(name: .order, object: nil, userInfo: orderedPizza)
     }
+}
+
+extension Notification.Name {
+    static let order = Notification.Name("order")
+    static let checkOrderList = Notification.Name("checkOrderList")
 }

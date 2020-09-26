@@ -8,19 +8,25 @@
 
 import Foundation
 
-enum PizzaType {
+enum MainToppingType: String {
     case sweetPotato, shrimp, bacon
 }
 
-enum ToppingType {
+enum OptionToppingType: String {
     case cheeze, pepperoni, olive, pineapple
 }
 
-class Pizza {
-    let ingredients: String
-    let topping: String
-    init(ingredients: String, topping: String) {
-        self.ingredients = ingredients
-        self.topping = topping
+class Pizza: CustomStringConvertible {
+    private let dough: String
+    private let main: String
+    private let option: String
+    var description: String {
+        return "\(dough) + \(main) + \(option) = 🍕"
+    }
+    
+    init(main: String, option: String) {
+        self.dough = "🥯"
+        self.main = main
+        self.option = option
     }
 }
