@@ -10,14 +10,12 @@
 		087094998338F44C0B4290DF /* Pods_Mission04_DennyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28E55B92B00612D865F0BEBD /* Pods_Mission04_DennyTests.framework */; };
 		6430CC508262E0B42F30DF59 /* Pods_Mission04_DennyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E03E60A504BAADB0A6C4695F /* Pods_Mission04_DennyUITests.framework */; };
 		B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678557250EF7CD0046B1D2 /* PizzaStore.swift */; };
-		B067855A250EF7DF0046B1D2 /* PizzaFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */; };
 		B067855D250EFE6F0046B1D2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067855C250EFE6F0046B1D2 /* MainViewModel.swift */; };
 		B067855F250EFE950046B1D2 /* DebugWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067855E250EFE950046B1D2 /* DebugWorker.swift */; };
 		B0678562250EFF040046B1D2 /* DebugLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */; };
 		B0678563250EFF040046B1D2 /* DebugLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */; };
 		B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */; };
 		B0678567250EFF330046B1D2 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678566250EFF330046B1D2 /* UIFont+Custom.swift */; };
-		B067856F250F009C0046B1D2 /* PizzaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B067856E250F009C0046B1D2 /* PizzaModel.m */; };
 		B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C045250CF9F6006E8A69 /* AppDelegate.swift */; };
 		B083C04A250CF9F6006E8A69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* MainViewController.swift */; };
 		B083C04D250CF9F6006E8A69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C04B250CF9F6006E8A69 /* Main.storyboard */; };
@@ -55,16 +53,12 @@
 		5F5724097DE2531E4611EFCA /* Pods-Mission04-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny/Pods-Mission04-Denny.debug.xcconfig"; sourceTree = "<group>"; };
 		8811C85D72B7CD530728CC1C /* Pods-Mission04-DennyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B0678557250EF7CD0046B1D2 /* PizzaStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaStore.swift; sourceTree = "<group>"; };
-		B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaFactory.swift; sourceTree = "<group>"; };
 		B067855C250EFE6F0046B1D2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B067855E250EFE950046B1D2 /* DebugWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugWorker.swift; sourceTree = "<group>"; };
 		B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugLogTableViewCell.swift; sourceTree = "<group>"; };
 		B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugLogTableViewCell.xib; sourceTree = "<group>"; };
 		B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		B0678566250EFF330046B1D2 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
-		B067856C250F00700046B1D2 /* PizzaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaModel.h; sourceTree = "<group>"; };
-		B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mission04-Denny-Bridging-Header.h"; sourceTree = "<group>"; };
-		B067856E250F009C0046B1D2 /* PizzaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaModel.m; sourceTree = "<group>"; };
 		B083C042250CF9F6006E8A69 /* Mission04-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission04-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B083C045250CF9F6006E8A69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B083C049250CF9F6006E8A69 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -163,22 +157,13 @@
 		B083C044250CF9F6006E8A69 /* Mission04-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				CEE8795B25254E9200D28967 /* UICustom */,
+				CEE8795A25254E8200D28967 /* Storyboard */,
+				CEE8795925254E6E00D28967 /* Views */,
 				B083C045250CF9F6006E8A69 /* AppDelegate.swift */,
-				B083C049250CF9F6006E8A69 /* MainViewController.swift */,
-				B083C04B250CF9F6006E8A69 /* Main.storyboard */,
 				B083C04E250CF9F8006E8A69 /* Assets.xcassets */,
-				B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */,
 				B083C053250CF9F8006E8A69 /* Info.plist */,
-				B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */,
-				B067855C250EFE6F0046B1D2 /* MainViewModel.swift */,
 				B067855E250EFE950046B1D2 /* DebugWorker.swift */,
-				B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */,
-				B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */,
-				B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */,
-				B0678566250EFF330046B1D2 /* UIFont+Custom.swift */,
-				B067856C250F00700046B1D2 /* PizzaModel.h */,
-				B067856E250F009C0046B1D2 /* PizzaModel.m */,
-				B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */,
 				B0678557250EF7CD0046B1D2 /* PizzaStore.swift */,
 				CEE8793A2524962900D28967 /* Pizza.swift */,
 			);
@@ -201,6 +186,35 @@
 				B083C069250CF9F8006E8A69 /* Info.plist */,
 			);
 			path = "Mission04-DennyUITests";
+			sourceTree = "<group>";
+		};
+		CEE8795925254E6E00D28967 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B083C049250CF9F6006E8A69 /* MainViewController.swift */,
+				B067855C250EFE6F0046B1D2 /* MainViewModel.swift */,
+				B0678560250EFF040046B1D2 /* DebugLogTableViewCell.swift */,
+				B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEE8795A25254E8200D28967 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				B083C04B250CF9F6006E8A69 /* Main.storyboard */,
+				B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CEE8795B25254E9200D28967 /* UICustom */ = {
+			isa = PBXGroup;
+			children = (
+				B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */,
+				B0678566250EFF330046B1D2 /* UIFont+Custom.swift */,
+			);
+			path = UICustom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,12 +444,10 @@
 				B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */,
 				B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */,
 				B0678562250EFF040046B1D2 /* DebugLogTableViewCell.swift in Sources */,
-				B067856F250F009C0046B1D2 /* PizzaModel.m in Sources */,
 				B0678567250EFF330046B1D2 /* UIFont+Custom.swift in Sources */,
 				B083C04A250CF9F6006E8A69 /* MainViewController.swift in Sources */,
 				B067855F250EFE950046B1D2 /* DebugWorker.swift in Sources */,
 				B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */,
-				B067855A250EF7DF0046B1D2 /* PizzaFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
