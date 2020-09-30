@@ -21,19 +21,23 @@ public class PizzaModel {
         
         toppings.forEach { topping in
             print("> Topping : \(topping)")
+            DebugWorker.shared.appendDebugLog(string: "> Topping : \(topping)")
         }
     }
     
     func bake() {
         print("Bake for 25 minutes at 350...")
+        DebugWorker.shared.appendDebugLog(string: "Bake for 25 minutes at 350...")
     }
     
     func cut() {
         print("Cutting the pizza into diagonal slices...")
+        DebugWorker.shared.appendDebugLog(string: "Cutting the pizza into diagonal slices...")
     }
     
     func box() {
         print("Place pizza in official PizzaStore box...")
+        DebugWorker.shared.appendDebugLog(string: "Place pizza in official PizzaStore box...")
     }
 }
 
@@ -48,6 +52,7 @@ public class CheezePizza: PizzaModel {
     
     public override func cut() {
         print("Cutting the pizza into square slices...")
+        DebugWorker.shared.appendDebugLog(string: "Cutting the pizza into square slices...")
     }
 }
 
@@ -62,6 +67,7 @@ public class PeperoniPizza: PizzaModel {
     
     public override func cut() {
         print("Cutting the pizza into square slices...")
+        DebugWorker.shared.appendDebugLog(string: "Cutting the pizza into square slices...")
     }
 }
 
