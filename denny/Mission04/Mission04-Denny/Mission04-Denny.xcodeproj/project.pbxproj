@@ -17,8 +17,6 @@
 		B0678563250EFF040046B1D2 /* DebugLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */; };
 		B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */; };
 		B0678567250EFF330046B1D2 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678566250EFF330046B1D2 /* UIFont+Custom.swift */; };
-		B0678569250F000B0046B1D2 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678568250F000B0046B1D2 /* OrderViewController.swift */; };
-		B067856B250F003E0046B1D2 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B067856A250F003E0046B1D2 /* OrderViewModel.swift */; };
 		B067856F250F009C0046B1D2 /* PizzaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B067856E250F009C0046B1D2 /* PizzaModel.m */; };
 		B083C046250CF9F6006E8A69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C045250CF9F6006E8A69 /* AppDelegate.swift */; };
 		B083C04A250CF9F6006E8A69 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C049250CF9F6006E8A69 /* MainViewController.swift */; };
@@ -64,8 +62,6 @@
 		B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugLogTableViewCell.xib; sourceTree = "<group>"; };
 		B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		B0678566250EFF330046B1D2 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
-		B0678568250F000B0046B1D2 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
-		B067856A250F003E0046B1D2 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		B067856C250F00700046B1D2 /* PizzaModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaModel.h; sourceTree = "<group>"; };
 		B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mission04-Denny-Bridging-Header.h"; sourceTree = "<group>"; };
 		B067856E250F009C0046B1D2 /* PizzaModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaModel.m; sourceTree = "<group>"; };
@@ -180,8 +176,6 @@
 				B0678561250EFF040046B1D2 /* DebugLogTableViewCell.xib */,
 				B0678564250EFF1C0046B1D2 /* UIColor+Custom.swift */,
 				B0678566250EFF330046B1D2 /* UIFont+Custom.swift */,
-				B0678568250F000B0046B1D2 /* OrderViewController.swift */,
-				B067856A250F003E0046B1D2 /* OrderViewModel.swift */,
 				B067856C250F00700046B1D2 /* PizzaModel.h */,
 				B067856E250F009C0046B1D2 /* PizzaModel.m */,
 				B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */,
@@ -432,8 +426,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B067855D250EFE6F0046B1D2 /* MainViewModel.swift in Sources */,
-				B067856B250F003E0046B1D2 /* OrderViewModel.swift in Sources */,
-				B0678569250F000B0046B1D2 /* OrderViewController.swift in Sources */,
 				CEE8793B2524962900D28967 /* Pizza.swift in Sources */,
 				B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */,
 				B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */,

@@ -121,7 +121,7 @@ public class MainViewController: UIViewController {
             make.right.equalToSuperview().offset(-16)
         }
         
-        placeholderImageView.image = UIImage(named: "img_empty_block", in: .coffeeCommon, with: .none)
+        placeholderImageView.image = UIImage(named: "img_empty_block", in: .main, with: .none)
         placeholderImageView.contentMode = .scaleAspectFit
         
         placeholderTitleLabel.text = "주문을 해보세요!"
@@ -137,11 +137,7 @@ public class MainViewController: UIViewController {
     
     @objc
     private func onClickReqOrderButton(_ sender: UIButton) {
-        let viewController = OrderViewController()
-        viewController.completion = viewModel.processOrder
-        viewController.customerId = viewModel.getRandomNumber()
-        viewController.modalPresentationStyle = .overCurrentContext
-        self.present(viewController, animated: true, completion: nil)
+        
     }
     
     @objc
@@ -156,8 +152,6 @@ public class MainViewController: UIViewController {
     }
 
     private func updateLogTableView(logList: [String]) {
-        DebugLog("[MainVC] Update Log")
-        
         debugLogTableView.isHidden = (logList.count < 1)
         placeholderView.isHidden = !(logList.count < 1)
         debugLogTableView.reloadData()

@@ -11,11 +11,19 @@ import XCTest
 class Mission04_DennyTests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        print("Before Performing Test")
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        print("Test Ended")
+    }
+    
+    func testPizzaGeneration() {
+        let cheezePizza = PizzaStore.shared.createPizza(menu: "cheese")
+        XCTAssertTrue(cheezePizza is CheezePizza)
+        
+        let peperoniPizza = PizzaStore.shared.createPizza(menu: "peperoni")
+        XCTAssertTrue(peperoniPizza is PeperoniPizza)
     }
 
     func testExample() throws {
