@@ -24,6 +24,20 @@ class Mission04_DennyTests: XCTestCase {
         
         let peperoniPizza = PizzaStore.shared.createPizza(menu: "peperoni")
         XCTAssertTrue(peperoniPizza is PeperoniPizza)
+        
+        let bulgogiPizza = PizzaStore.shared.createPizza(menu: "bulgogi")
+        XCTAssertTrue(bulgogiPizza is BulgogiPizza)
+    }
+    
+    func testPizzaToppings() {
+        let cheezePizza = PizzaStore.shared.createPizza(menu: "cheese")
+        XCTAssertTrue(cheezePizza.toppings.first == "Grated Reggiano Cheese")
+        
+        let peperoniPizza = PizzaStore.shared.createPizza(menu: "peperoni")
+        XCTAssertTrue(peperoniPizza.toppings.first == "Peperoni Saussage")
+        
+        let bulgogiPizza = PizzaStore.shared.createPizza(menu: "bulgogi")
+        XCTAssertTrue(bulgogiPizza.toppings.first == "Bulgogi Meats")
     }
 
     func testExample() throws {
