@@ -173,7 +173,6 @@
 				B083C04E250CF9F8006E8A69 /* Assets.xcassets */,
 				B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */,
 				B083C053250CF9F8006E8A69 /* Info.plist */,
-				B0678557250EF7CD0046B1D2 /* PizzaStore.swift */,
 				B0678559250EF7DF0046B1D2 /* PizzaFactory.swift */,
 				B067855C250EFE6F0046B1D2 /* MainViewModel.swift */,
 				B067855E250EFE950046B1D2 /* DebugWorker.swift */,
@@ -186,6 +185,7 @@
 				B067856C250F00700046B1D2 /* PizzaModel.h */,
 				B067856E250F009C0046B1D2 /* PizzaModel.m */,
 				B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */,
+				B0678557250EF7CD0046B1D2 /* PizzaStore.swift */,
 				CEE8793A2524962900D28967 /* Pizza.swift */,
 			);
 			path = "Mission04-Denny";
