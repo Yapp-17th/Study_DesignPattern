@@ -5,7 +5,6 @@
 //  Created by Denny on 2020/08/22.
 //
 
-import CoffeeCommon
 import SnapKit
 import UIKit
 
@@ -29,7 +28,7 @@ public class DebugLogTableViewCell: UITableViewCell {
     private func initViewLayout() {
         contentLabel.font = .font15P
         contentLabel.numberOfLines = 0
-        contentLabel.textColor = .talkGray900s
+        contentLabel.textColor = .missionGray900s
         contentLabel.text = content
     }
     

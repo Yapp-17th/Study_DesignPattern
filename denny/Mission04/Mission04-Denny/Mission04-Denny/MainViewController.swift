@@ -41,7 +41,7 @@ public class MainViewController: UIViewController {
     
     private func initViewLayout() {
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.barTintColor = .talkWhite000s
+        self.navigationController?.navigationBar.barTintColor = .missionWhite000s
         self.navigationItem.title = "피자 전문점"
         
         // MARK: Main Section
@@ -54,20 +54,20 @@ public class MainViewController: UIViewController {
         resetButton.titleLabel?.font = .font14P
         resetButton.addTarget(self, action: #selector(onClickClearLogButton(_:)), for: .touchUpInside)
         
-        resetButton.setTitleColor(.talkGray900s, for: .normal)
-        resetButton.backgroundColor = .talkWhite000s
+        resetButton.setTitleColor(.missionGray900s, for: .normal)
+        resetButton.backgroundColor = .missionWhite000s
         resetButton.layer.cornerRadius = 6
         resetButton.layer.masksToBounds = true
         resetButton.layer.borderWidth = 0.5
-        resetButton.layer.borderColor = UIColor.talkGray200a.cgColor
+        resetButton.layer.borderColor = UIColor.missionGray200a.cgColor
         
         // MARK: Order Button
         orderButton.setTitle("주문하기", for: .normal)
         orderButton.titleLabel?.font = .font14P
         orderButton.addTarget(self, action: #selector(onClickReqOrderButton(_:)), for: .touchUpInside)
         
-        orderButton.setTitleColor(.talkGray900s, for: .normal)
-        orderButton.backgroundColor = .talkYellow550s
+        orderButton.setTitleColor(.missionGray900s, for: .normal)
+        orderButton.backgroundColor = .missionYellow550s
         orderButton.layer.cornerRadius = 6
         orderButton.layer.masksToBounds = true
         
@@ -126,12 +126,12 @@ public class MainViewController: UIViewController {
         
         placeholderTitleLabel.text = "주문을 해보세요!"
         placeholderTitleLabel.font = .font17PBold
-        placeholderTitleLabel.textColor = .talkGray900s
+        placeholderTitleLabel.textColor = .missionGray900s
         placeholderTitleLabel.textAlignment = .center
         
         placeholderDescLabel.text = "주문을 하면 로그가 보입니다."
         placeholderDescLabel.font = .font14P
-        placeholderDescLabel.textColor = .talkGray500s
+        placeholderDescLabel.textColor = .missionGray500s
         placeholderDescLabel.textAlignment = .center
     }
     

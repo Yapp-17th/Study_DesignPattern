@@ -27,6 +27,7 @@
 		B083C052250CF9F8006E8A69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B083C050250CF9F8006E8A69 /* LaunchScreen.storyboard */; };
 		B083C05D250CF9F8006E8A69 /* Mission04_DennyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C05C250CF9F8006E8A69 /* Mission04_DennyTests.swift */; };
 		B083C068250CF9F8006E8A69 /* Mission04_DennyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */; };
+		CEE8793B2524962900D28967 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8793A2524962900D28967 /* Pizza.swift */; };
 		EBF505DD8D93D12899CD2D0D /* Pods_Mission04_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039ABA091DFB7341B45E195B /* Pods_Mission04_Denny.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		B083C067250CF9F8006E8A69 /* Mission04_DennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission04_DennyUITests.swift; sourceTree = "<group>"; };
 		B083C069250CF9F8006E8A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B471E0538BD341B4EF399B98 /* Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-Denny-Mission04-DennyUITests/Pods-Mission04-Denny-Mission04-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE8793A2524962900D28967 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		D9C588AD70E6B107502162C1 /* Pods-Mission04-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyUITests/Pods-Mission04-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E03E60A504BAADB0A6C4695F /* Pods_Mission04_DennyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission04_DennyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD7006AEF890DDFD044C37D /* Pods-Mission04-DennyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission04-DennyTests.release.xcconfig"; path = "Target Support Files/Pods-Mission04-DennyTests/Pods-Mission04-DennyTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				B067856C250F00700046B1D2 /* PizzaModel.h */,
 				B067856E250F009C0046B1D2 /* PizzaModel.m */,
 				B067856D250F009C0046B1D2 /* Mission04-Denny-Bridging-Header.h */,
+				CEE8793A2524962900D28967 /* Pizza.swift */,
 			);
 			path = "Mission04-Denny";
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				B067855D250EFE6F0046B1D2 /* MainViewModel.swift in Sources */,
 				B067856B250F003E0046B1D2 /* OrderViewModel.swift in Sources */,
 				B0678569250F000B0046B1D2 /* OrderViewController.swift in Sources */,
+				CEE8793B2524962900D28967 /* Pizza.swift in Sources */,
 				B0678558250EF7CD0046B1D2 /* PizzaStore.swift in Sources */,
 				B0678565250EFF1C0046B1D2 /* UIColor+Custom.swift in Sources */,
 				B0678562250EFF040046B1D2 /* DebugLogTableViewCell.swift in Sources */,
