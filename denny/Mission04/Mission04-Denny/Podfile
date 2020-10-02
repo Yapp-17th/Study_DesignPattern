@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Mission04-Denny' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Mission04-Denny
+  pod 'SnapKit'
+
+  target 'Mission04-DennyTests' do
+    inherit! :search_paths
+  end
+
+  target 'Mission04-DennyUITests' do
+    inherit! :search_paths
+  end
+
+end
