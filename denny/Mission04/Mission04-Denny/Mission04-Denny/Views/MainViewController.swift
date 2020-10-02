@@ -28,6 +28,7 @@ public class MainViewController: UIViewController {
     private var placeholderTitleLabel: UILabel = UILabel()
     private var placeholderDescLabel: UILabel = UILabel()
     
+    private var menu: [String] = ["cheese", "bulgogi", "peperoni"]
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,7 +138,8 @@ public class MainViewController: UIViewController {
     
     @objc
     private func onClickReqOrderButton(_ sender: UIButton) {
-        
+        let menuStr = menu[Int.random(in: 0..<menu.count)]
+        let _ = PizzaStore.shared.orderPizza(menu: menuStr)
     }
     
     @objc
