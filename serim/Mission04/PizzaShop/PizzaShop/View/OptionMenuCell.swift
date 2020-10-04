@@ -9,16 +9,37 @@
 import UIKit
 
 class OptionMenuCell: UITableViewCell {
-
+    lazy var menuLabel = UILabel()
+    lazy var priceLabel = UILabel().then {
+        $0.textColor = .gray
+        $0.textAlignment = .right
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: "optionMenuCell")
-        self.layer.cornerRadius = 10
-        self.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
-    
+        configureViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func configureViews() {
+        [menuLabel, priceLabel].forEach {
+            self.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        menuLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().offset(30)
+            $0.width.equalTo(120)
+            $0.height.equalTo(30)
+        }
+        priceLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().offset(-30)
+            $0.width.equalTo(120)
+            $0.height.equalTo(30)
+        }
+    }
 }

@@ -21,12 +21,12 @@ class OrderViewController: UIViewController {
         $0.textAlignment = .left
     }
     lazy var orderTableView = UITableView()
-    lazy var orderButton = UIButton().then {
+    lazy var nextButton = UIButton().then {
         $0.setTitle("N E X T", for: .normal)
         $0.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
-        $0.addTarget(self, action: #selector(touchUpOrderButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(touchUpNextButton), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -37,14 +37,14 @@ class OrderViewController: UIViewController {
         configureViews()
     }
     
-    @objc func touchUpOrderButton() {
+    @objc func touchUpNextButton() {
         guard let selectedRow = orderTableView.indexPathForSelectedRow else { return }
         let optionVC = OptionViewController()
         present(optionVC, animated: true, completion: nil)
     }
 
     private func configureViews() {
-        [titleLabel, descriptionLabel, orderTableView, orderButton].forEach {
+        [titleLabel, descriptionLabel, orderTableView, nextButton].forEach {
             self.view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -64,9 +64,9 @@ class OrderViewController: UIViewController {
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(5)
             $0.leading.equalToSuperview().offset(20)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalTo(orderButton.snp.top).offset(-30)
+            $0.bottom.equalTo(nextButton.snp.top).offset(-30)
         }
-        orderButton.snp.makeConstraints {
+        nextButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().offset(-60)
             $0.width.equalTo(150)

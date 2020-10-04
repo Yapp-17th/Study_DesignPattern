@@ -9,11 +9,9 @@
 import Foundation
 
 class OptionToppingMaker {
-    let topping: OptionToppingType
-    let count: Int
+    let toppings: [OptionToppingType]?
     
-    init(topping: OptionToppingType, count: Int) {
-        self.topping = topping
-        self.count = count
+    init(toppings: [OptionToppingType]?) {
+        self.toppings = toppings
     }
 }

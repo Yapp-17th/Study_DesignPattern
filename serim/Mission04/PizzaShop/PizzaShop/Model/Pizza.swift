@@ -51,8 +51,7 @@ enum OptionToppingType: String, CaseIterable, OptionMenu {
 
 class Pizza: CustomStringConvertible, FoodForSale {
     var main: MainMenu
-    var option: OptionMenu
-    var optionCount: Int
+    var option: [OptionMenu]?
     
     private let dough: String
     
@@ -60,10 +59,9 @@ class Pizza: CustomStringConvertible, FoodForSale {
         return "\(dough) + \(main) + \(option) = 🍕"
     }
     
-    init(main: MainToppingType, option: OptionToppingType, optionCount: Int) {
+    init(main: MainToppingType, option: [OptionToppingType]?) {
         self.dough = "🥯"
         self.main = main
         self.option = option
-        self.optionCount = optionCount
     }
 }

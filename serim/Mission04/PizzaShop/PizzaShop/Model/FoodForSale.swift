@@ -20,6 +20,5 @@ protocol OptionMenu {
 
 protocol FoodForSale {
     var main: MainMenu { get }
-    var option: OptionMenu { get }
-    var optionCount: Int { get }
+    var option: [OptionMenu]? { get }
 }

@@ -16,9 +16,9 @@ class Manager {
     
     @objc func checkOrder(_ notification: Notification) {
         guard let pizzaType = notification.userInfo?["pizzaType"] as? MainToppingType else { return }
-        guard let topping = notification.userInfo?["toppingType"] as? OptionToppingType else { return }
+        guard let toppings = notification.userInfo?["toppingType"] as? [OptionToppingType]? else { return }
         guard let countOfTopping = notification.userInfo?["count"] as? Int else { return }
-        let pizzaMaker = PizzaMaker(id: "1", main: MainToppingMaker(topping: pizzaType), option: OptionToppingMaker(topping: topping, count: countOfTopping))
+        let pizzaMaker = PizzaMaker(id: "1", main: MainToppingMaker(topping: pizzaType), option: OptionToppingMaker(toppings: toppings))
         let pizza = pizzaMaker.make()
     }
 }
