@@ -26,6 +26,7 @@ class OrderViewController: UIViewController {
         $0.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(touchUpOrderButton), for: .touchUpInside)
     }
     
     override func viewDidLoad() {
@@ -33,8 +34,13 @@ class OrderViewController: UIViewController {
         orderTableView.dataSource = self
         orderTableView.delegate = self
         orderTableView.register(MainToppingCell.self, forCellReuseIdentifier: "mainToppingCell")
-        orderTableView.register(OptionToppingCell.self, forCellReuseIdentifier: "optionToppingCell")
         configureViews()
+    }
+    
+    @objc func touchUpOrderButton() {
+        guard let selectedRow = orderTableView.indexPathForSelectedRow else { return }
+        let optionVC = OptionViewController()
+        present(optionVC, animated: true, completion: nil)
     }
 
     private func configureViews() {
@@ -81,6 +87,8 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = orderTableView.dequeueReusableCell(withIdentifier: "mainToppingCell") as? MainToppingCell else { return UITableViewCell() }
+        cell.menuImageView.image = UIImage(named: "\(MainToppingType.allCases[indexPath.row].rawValue)")
+        cell.menuLabel.text = "\(MainToppingType.allCases[indexPath.row].rawValue)"
         return cell
     }
     

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		12098FDC250DFB820042E20C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12098FDB250DFB820042E20C /* AppDelegate.swift */; };
 		12098FDE250DFB820042E20C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12098FDD250DFB820042E20C /* SceneDelegate.swift */; };
-		12098FE0250DFB820042E20C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12098FDF250DFB820042E20C /* ViewController.swift */; };
+		12098FE0250DFB820042E20C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12098FDF250DFB820042E20C /* OrderViewController.swift */; };
 		12098FE3250DFB820042E20C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12098FE1250DFB820042E20C /* Main.storyboard */; };
 		12098FE5250DFB850042E20C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12098FE4250DFB850042E20C /* Assets.xcassets */; };
 		12098FE8250DFB850042E20C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12098FE6250DFB850042E20C /* LaunchScreen.storyboard */; };
@@ -18,6 +18,7 @@
 		12099003250E0E290042E20C /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099002250E0E290042E20C /* Manager.swift */; };
 		12099005250E0E560042E20C /* PizzaMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099004250E0E560042E20C /* PizzaMaker.swift */; };
 		12099007250E0E7F0042E20C /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099006250E0E7F0042E20C /* Pizza.swift */; };
+		1262C47D2529AE810059A5DB /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262C47C2529AE810059A5DB /* OptionViewController.swift */; };
 		1266F43C251F4D9C00D6D607 /* MainTopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43B251F4D9C00D6D607 /* MainTopping.swift */; };
 		1266F440251F4E0600D6D607 /* OptionTopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43F251F4E0600D6D607 /* OptionTopping.swift */; };
 		1266F44B251F842A00D6D607 /* MainToppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F44A251F842A00D6D607 /* MainToppingCell.swift */; };
@@ -40,7 +41,7 @@
 		12098FD8250DFB820042E20C /* PizzaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12098FDB250DFB820042E20C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12098FDD250DFB820042E20C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12098FDF250DFB820042E20C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12098FDF250DFB820042E20C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		12098FE2250DFB820042E20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12098FE4250DFB850042E20C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12098FE7250DFB850042E20C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		12099002250E0E290042E20C /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		12099004250E0E560042E20C /* PizzaMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaMaker.swift; sourceTree = "<group>"; };
 		12099006250E0E7F0042E20C /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		1262C47C2529AE810059A5DB /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
 		1266F43B251F4D9C00D6D607 /* MainTopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopping.swift; sourceTree = "<group>"; };
 		1266F43F251F4E0600D6D607 /* OptionTopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTopping.swift; sourceTree = "<group>"; };
 		1266F44A251F842A00D6D607 /* MainToppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToppingCell.swift; sourceTree = "<group>"; };
@@ -107,11 +109,11 @@
 		12098FDA250DFB820042E20C /* PizzaShop */ = {
 			isa = PBXGroup;
 			children = (
+				1262C47B2529AE6D0059A5DB /* VC */,
 				1266F449251F83FF00D6D607 /* View */,
 				12098FFF250E0D7C0042E20C /* Model */,
 				12098FDB250DFB820042E20C /* AppDelegate.swift */,
 				12098FDD250DFB820042E20C /* SceneDelegate.swift */,
-				12098FDF250DFB820042E20C /* ViewController.swift */,
 				12098FE1250DFB820042E20C /* Main.storyboard */,
 				12098FE4250DFB850042E20C /* Assets.xcassets */,
 				12098FE6250DFB850042E20C /* LaunchScreen.storyboard */,
@@ -140,6 +142,15 @@
 				1266F43F251F4E0600D6D607 /* OptionTopping.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1262C47B2529AE6D0059A5DB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				12098FDF250DFB820042E20C /* OrderViewController.swift */,
+				1262C47C2529AE810059A5DB /* OptionViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		1266F449251F83FF00D6D607 /* View */ = {
@@ -344,8 +355,9 @@
 				1266F43C251F4D9C00D6D607 /* MainTopping.swift in Sources */,
 				1266F440251F4E0600D6D607 /* OptionTopping.swift in Sources */,
 				1266F44F251F843900D6D607 /* OptionToppingCell.swift in Sources */,
+				1262C47D2529AE810059A5DB /* OptionViewController.swift in Sources */,
 				1266F44B251F842A00D6D607 /* MainToppingCell.swift in Sources */,
-				12098FE0250DFB820042E20C /* ViewController.swift in Sources */,
+				12098FE0250DFB820042E20C /* OrderViewController.swift in Sources */,
 				12098FDC250DFB820042E20C /* AppDelegate.swift in Sources */,
 				12099005250E0E560042E20C /* PizzaMaker.swift in Sources */,
 				12098FDE250DFB820042E20C /* SceneDelegate.swift in Sources */,
