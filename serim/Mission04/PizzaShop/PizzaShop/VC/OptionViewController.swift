@@ -51,6 +51,7 @@ class OptionViewController: UIViewController {
         orderTableView.dataSource = self
         orderTableView.delegate = self
         orderTableView.register(OptionMenuCell.self, forCellReuseIdentifier: "optionMenuCell")
+        orderTableView.allowsMultipleSelection = true
         configureViews()
     }
 
@@ -103,5 +104,15 @@ extension OptionViewController: UITableViewDelegate, UITableViewDataSource {
         cell.menuLabel.text = "\(OptionToppingType.allCases[indexPath.row].getName())"
         cell.priceLabel.text = "+\(OptionToppingType.allCases[indexPath.row].getPrice())원"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.totalPrice += OptionToppingType.allCases[indexPath.row].getPrice()
+        self.totalPriceLabel.text = "주문금액 : \(totalPrice)원"
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.totalPrice -= OptionToppingType.allCases[indexPath.row].getPrice()
+        self.totalPriceLabel.text = "주문금액 : \(totalPrice)원"
     }
 }
