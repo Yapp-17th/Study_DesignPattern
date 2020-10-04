@@ -33,7 +33,7 @@ class OrderViewController: UIViewController {
         super.viewDidLoad()
         orderTableView.dataSource = self
         orderTableView.delegate = self
-        orderTableView.register(MainToppingCell.self, forCellReuseIdentifier: "mainToppingCell")
+        orderTableView.register(MainMenuCell.self, forCellReuseIdentifier: "mainMenuCell")
         configureViews()
     }
     
@@ -86,9 +86,10 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = orderTableView.dequeueReusableCell(withIdentifier: "mainToppingCell") as? MainToppingCell else { return UITableViewCell() }
-        cell.menuImageView.image = UIImage(named: "\(MainToppingType.allCases[indexPath.row].rawValue)")
-        cell.menuLabel.text = "\(MainToppingType.allCases[indexPath.row].rawValue)"
+        guard let cell = orderTableView.dequeueReusableCell(withIdentifier: "mainMenuCell") as? MainMenuCell else { return UITableViewCell() }
+        cell.menuImageView.image = UIImage(named: "\(MainToppingType.allCases[indexPath.row].getName())")
+        cell.menuLabel.text = "\(MainToppingType.allCases[indexPath.row].getName())"
+        cell.priceLabel.text = "\(MainToppingType.allCases[indexPath.row].getPrice())원"
         return cell
     }
     

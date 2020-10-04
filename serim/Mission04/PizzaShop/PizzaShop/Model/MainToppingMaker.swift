@@ -1,5 +1,5 @@
 //
-//  OptionTopping.swift
+//  MainTopping.swift
 //  PizzaShop
 //
 //  Created by 바보세림이 on 2020/09/26.
@@ -8,12 +8,10 @@
 
 import Foundation
 
-class OptionTopping {
-    let topping: OptionToppingType
-    let amount: Int
+class MainToppingMaker {
+    let topping: MainToppingType
     
-    init(topping: OptionToppingType, amount: Int) {
+    init(topping: MainToppingType) {
         self.topping = topping
-        self.amount = amount
     }
 }

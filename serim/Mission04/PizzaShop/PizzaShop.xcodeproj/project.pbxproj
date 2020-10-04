@@ -19,10 +19,11 @@
 		12099005250E0E560042E20C /* PizzaMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099004250E0E560042E20C /* PizzaMaker.swift */; };
 		12099007250E0E7F0042E20C /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12099006250E0E7F0042E20C /* Pizza.swift */; };
 		1262C47D2529AE810059A5DB /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262C47C2529AE810059A5DB /* OptionViewController.swift */; };
-		1266F43C251F4D9C00D6D607 /* MainTopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43B251F4D9C00D6D607 /* MainTopping.swift */; };
-		1266F440251F4E0600D6D607 /* OptionTopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43F251F4E0600D6D607 /* OptionTopping.swift */; };
-		1266F44B251F842A00D6D607 /* MainToppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F44A251F842A00D6D607 /* MainToppingCell.swift */; };
-		1266F44F251F843900D6D607 /* OptionToppingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F44E251F843900D6D607 /* OptionToppingCell.swift */; };
+		1262C4872529BAB60059A5DB /* FoodForSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1262C4862529BAB60059A5DB /* FoodForSale.swift */; };
+		1266F43C251F4D9C00D6D607 /* MainToppingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43B251F4D9C00D6D607 /* MainToppingMaker.swift */; };
+		1266F440251F4E0600D6D607 /* OptionToppingMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F43F251F4E0600D6D607 /* OptionToppingMaker.swift */; };
+		1266F44B251F842A00D6D607 /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F44A251F842A00D6D607 /* MainMenuCell.swift */; };
+		1266F44F251F843900D6D607 /* OptionMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1266F44E251F843900D6D607 /* OptionMenuCell.swift */; };
 		1FA38AA4C1A8C331D0B2B330 /* Pods_PizzaShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3A461833AD47063AA1C59F /* Pods_PizzaShopTests.framework */; };
 		7B160847B6BC70D991766C9E /* Pods_PizzaShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AA1291EA86824EBC49886 /* Pods_PizzaShop.framework */; };
 /* End PBXBuildFile section */
@@ -54,10 +55,11 @@
 		12099004250E0E560042E20C /* PizzaMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaMaker.swift; sourceTree = "<group>"; };
 		12099006250E0E7F0042E20C /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		1262C47C2529AE810059A5DB /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
-		1266F43B251F4D9C00D6D607 /* MainTopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTopping.swift; sourceTree = "<group>"; };
-		1266F43F251F4E0600D6D607 /* OptionTopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTopping.swift; sourceTree = "<group>"; };
-		1266F44A251F842A00D6D607 /* MainToppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToppingCell.swift; sourceTree = "<group>"; };
-		1266F44E251F843900D6D607 /* OptionToppingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionToppingCell.swift; sourceTree = "<group>"; };
+		1262C4862529BAB60059A5DB /* FoodForSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodForSale.swift; sourceTree = "<group>"; };
+		1266F43B251F4D9C00D6D607 /* MainToppingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToppingMaker.swift; sourceTree = "<group>"; };
+		1266F43F251F4E0600D6D607 /* OptionToppingMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionToppingMaker.swift; sourceTree = "<group>"; };
+		1266F44A251F842A00D6D607 /* MainMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		1266F44E251F843900D6D607 /* OptionMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuCell.swift; sourceTree = "<group>"; };
 		1C70DE84ADA81EB2FA28D199 /* Pods-PizzaShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShop.debug.xcconfig"; path = "Target Support Files/Pods-PizzaShop/Pods-PizzaShop.debug.xcconfig"; sourceTree = "<group>"; };
 		5490485EC48CA553B438E36A /* Pods-PizzaShopTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShopTests.debug.xcconfig"; path = "Target Support Files/Pods-PizzaShopTests/Pods-PizzaShopTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C521635FE38175895FAC727 /* Pods-PizzaShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaShopTests.release.xcconfig"; path = "Target Support Files/Pods-PizzaShopTests/Pods-PizzaShopTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,10 +138,11 @@
 			children = (
 				12099000250E0DD30042E20C /* User.swift */,
 				12099002250E0E290042E20C /* Manager.swift */,
-				12099004250E0E560042E20C /* PizzaMaker.swift */,
+				1262C4862529BAB60059A5DB /* FoodForSale.swift */,
 				12099006250E0E7F0042E20C /* Pizza.swift */,
-				1266F43B251F4D9C00D6D607 /* MainTopping.swift */,
-				1266F43F251F4E0600D6D607 /* OptionTopping.swift */,
+				12099004250E0E560042E20C /* PizzaMaker.swift */,
+				1266F43B251F4D9C00D6D607 /* MainToppingMaker.swift */,
+				1266F43F251F4E0600D6D607 /* OptionToppingMaker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,8 +159,8 @@
 		1266F449251F83FF00D6D607 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1266F44A251F842A00D6D607 /* MainToppingCell.swift */,
-				1266F44E251F843900D6D607 /* OptionToppingCell.swift */,
+				1266F44A251F842A00D6D607 /* MainMenuCell.swift */,
+				1266F44E251F843900D6D607 /* OptionMenuCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,13 +355,14 @@
 			files = (
 				12099007250E0E7F0042E20C /* Pizza.swift in Sources */,
 				12099001250E0DD30042E20C /* User.swift in Sources */,
-				1266F43C251F4D9C00D6D607 /* MainTopping.swift in Sources */,
-				1266F440251F4E0600D6D607 /* OptionTopping.swift in Sources */,
-				1266F44F251F843900D6D607 /* OptionToppingCell.swift in Sources */,
+				1266F43C251F4D9C00D6D607 /* MainToppingMaker.swift in Sources */,
+				1266F440251F4E0600D6D607 /* OptionToppingMaker.swift in Sources */,
+				1266F44F251F843900D6D607 /* OptionMenuCell.swift in Sources */,
 				1262C47D2529AE810059A5DB /* OptionViewController.swift in Sources */,
-				1266F44B251F842A00D6D607 /* MainToppingCell.swift in Sources */,
+				1266F44B251F842A00D6D607 /* MainMenuCell.swift in Sources */,
 				12098FE0250DFB820042E20C /* OrderViewController.swift in Sources */,
 				12098FDC250DFB820042E20C /* AppDelegate.swift in Sources */,
+				1262C4872529BAB60059A5DB /* FoodForSale.swift in Sources */,
 				12099005250E0E560042E20C /* PizzaMaker.swift in Sources */,
 				12098FDE250DFB820042E20C /* SceneDelegate.swift in Sources */,
 				12099003250E0E290042E20C /* Manager.swift in Sources */,

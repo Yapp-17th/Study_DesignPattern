@@ -10,20 +10,19 @@ import Foundation
 
 class PizzaMaker {
     let id: String
-    let main: String
-    let option: String
-    let amount: Int
+    let main: MainToppingType
+    let option: OptionToppingType
+    let count: Int
     
-    init(id: String, main: MainTopping, option: OptionTopping) {
+    init(id: String, main: MainToppingMaker, option: OptionToppingMaker) {
         self.id = id
-        self.main = main.topping.rawValue
-        self.option = option.topping.rawValue
-        self.amount = option.amount
+        self.main = main.topping
+        self.option = option.topping
+        self.count = option.count
     }
     
     func make() -> Pizza {
-        let myOption = String(repeating: option, count: amount)
-        let pizza = Pizza(main: main, option: myOption)
+        let pizza = Pizza(main: main, option: option, optionCount: count)
         return pizza
     }
 }

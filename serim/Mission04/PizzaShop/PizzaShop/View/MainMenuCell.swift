@@ -8,12 +8,16 @@
 
 import UIKit
 
-class MainToppingCell: UITableViewCell {
+class MainMenuCell: UITableViewCell {
     lazy var menuImageView = UIImageView()
     lazy var menuLabel = UILabel()
+    lazy var priceLabel = UILabel().then {
+        $0.textColor = .gray
+        $0.textAlignment = .right
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: "mainToppingCell")
+        super.init(style: .default, reuseIdentifier: "mainMenuCell")
         configureViews()
     }
 
@@ -23,7 +27,7 @@ class MainToppingCell: UITableViewCell {
     }
     
     private func configureViews() {
-        [menuImageView, menuLabel].forEach {
+        [menuImageView, menuLabel, priceLabel].forEach {
             self.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
@@ -35,6 +39,12 @@ class MainToppingCell: UITableViewCell {
         menuLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalTo(menuImageView.snp.trailing).offset(20)
+            $0.width.equalTo(120)
+            $0.height.equalTo(30)
+        }
+        priceLabel.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalTo(menuLabel.snp.trailing).offset(20)
             $0.trailing.equalToSuperview().offset(-30)
             $0.height.equalTo(30)
         }

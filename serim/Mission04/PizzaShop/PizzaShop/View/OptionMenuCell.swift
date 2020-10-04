@@ -8,10 +8,10 @@
 
 import UIKit
 
-class OptionToppingCell: UITableViewCell {
+class OptionMenuCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: "optionToppingCell")
+        super.init(style: .default, reuseIdentifier: "optionMenuCell")
         self.layer.cornerRadius = 10
         self.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
     
