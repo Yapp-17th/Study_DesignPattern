@@ -38,8 +38,8 @@ class OrderViewController: UIViewController {
     }
     
     @objc func touchUpNextButton() {
-        guard let selectedRow = orderTableView.indexPathForSelectedRow else { return }
-        let optionVC = OptionViewController()
+        guard let selectedIndex = orderTableView.indexPathForSelectedRow else { return }
+        let optionVC = OptionViewController(mainMenu: MainToppingType.allCases[selectedIndex.row])
         present(optionVC, animated: true, completion: nil)
     }
 

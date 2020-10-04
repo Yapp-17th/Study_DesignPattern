@@ -11,6 +11,7 @@ import SnapKit
 import Then
 
 class OptionViewController: UIViewController {
+    var mainMenu: MainMenu
     var totalPrice = 10000
     
     lazy var titleLabel = UILabel().then {
@@ -33,6 +34,16 @@ class OptionViewController: UIViewController {
         $0.textAlignment = .right
         $0.text = "주문금액 : \(totalPrice)원"
         $0.font = .systemFont(ofSize: 20)
+    }
+    
+    init(mainMenu: MainMenu) {
+        self.mainMenu = mainMenu
+        self.totalPrice = mainMenu.getPrice()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
