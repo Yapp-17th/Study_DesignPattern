@@ -1,6 +1,8 @@
 package com.example.mission4.model
 
 class PepperoniPizza(val sizeChoice: String, val toppingChoice: String) : Pizza {
+    override val name: String
+        get() = "페퍼로니 피자"
     override val price: Int
         get() = when(sizeChoice){
             "medium" -> 15900
