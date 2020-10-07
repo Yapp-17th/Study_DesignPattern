@@ -29,8 +29,6 @@ class StatusActivity : AppCompatActivity() {
         statusPizzaImageView.setImageResource(menu.image)
         statusPizzaNameTextView.text = menu.name
 
-
-
         setUser()
         setViewManager()
 
@@ -61,10 +59,7 @@ class StatusActivity : AppCompatActivity() {
             }
         }
 
-        ViewManager.settingStatus = { str ->
-            GlobalScope.launch(Dispatchers.Main) { statusTextView.text = str }
-//            statusTextView.text = str
-        }
+        ViewManager.settingStatus = { GlobalScope.launch(Dispatchers.Main) { statusTextView.text = it } }
     }
 
     companion object {

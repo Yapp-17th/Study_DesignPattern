@@ -39,7 +39,7 @@ class MenuAdapter: BaseAdapter() {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var view: MenuItemView =
+        val view: MenuItemView =
             convertView?.let {
                 convertView as MenuItemView
             } ?: MenuItemView(parent!!.context)
