@@ -17,21 +17,25 @@ class OrderAdapter(val context: Context, val pizzaDatas: ArrayList<Pizza>)
 
         val item_img = itemView.findViewById<ImageView>(R.id.item_img)
         val item_name = itemView.findViewById<TextView>(R.id.item_name)
+        val item_size = itemView.findViewById<TextView>(R.id.size)
+        val item_topping = itemView.findViewById<TextView>(R.id.topping)
         val item_price = itemView.findViewById<TextView>(R.id.item_price)
 
         fun bind(pizzaData: Pizza, context: Context){
 
             item_name.text = pizzaData.name
+            item_size.text = pizzaData.size
             item_price.text = pizzaData.price.toString()
+            item_topping.text = pizzaData.topping.toString()
 
-            val resId = context.resources.getIdentifier("p"+pizzaData.price.toString(), "drawable","com.example.mission4")
+            val resId = context.resources.getIdentifier(pizzaData.pid, "drawable","com.example.mission4")
             item_img.setImageResource(resId)
 
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.pizza_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.order_item, parent, false)
         return Holder(view)
     }
 

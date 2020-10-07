@@ -27,7 +27,7 @@ class PizzaAdapter(val context: Context, val pizzaDatas: ArrayList<PizzaMenuItem
             item_name.text = pizzaData.name
             item_price.text = pizzaData.price.toString()
 
-            val resId = context.resources.getIdentifier("p"+pizzaData.price.toString(), "drawable","com.example.mission4")
+            val resId = context.resources.getIdentifier(pizzaData.pid, "drawable","com.example.mission4")
             item_img.setImageResource(resId)
 
             itemView.setOnClickListener{

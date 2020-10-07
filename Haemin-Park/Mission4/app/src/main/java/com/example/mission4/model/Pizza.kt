@@ -4,5 +4,6 @@ interface Pizza {
     val name: String
     val price: Int
     val size: String
-    val topping: String
+    val topping: ArrayList<String>
+    val pid: String
 }

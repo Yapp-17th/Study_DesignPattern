@@ -18,8 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val pizzaDatas = arrayListOf<PizzaMenuItem>(PizzaMenuItem("페퍼로니 피자", 14900),
-                PizzaMenuItem("포테이토 피자", 15900), PizzaMenuItem("고구마 피자", 16900))
+        val pizzaDatas = arrayListOf<PizzaMenuItem>(PizzaMenuItem("페퍼로니 피자", 14900, "p1"),
+                PizzaMenuItem("포테이토 피자", 15900, "p2"), PizzaMenuItem("고구마 피자", 16900, "p3"))
         val pAdapter = PizzaAdapter(this, pizzaDatas)
 
         pizza.adapter = pAdapter
