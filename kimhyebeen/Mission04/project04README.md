@@ -5,6 +5,9 @@ Unit Test와 Factory Pattern을 적용한 피자가게 주문 애플리케이션
 * Unit Test
 * Factory Pattern
 
+## Screen
+<img src="./example.gif" width=400>
+
 > Reference
 >
 > (Android TDD)[https://wonsohana.wordpress.com/2019/06/03/android-testing-tdd/]
