@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/pizzaImageView"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_main" />
+
+        <TextView
+            android:id="@+id/pizzaNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/pizza_name"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/pizzaImageView"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaImageView" />
+
+        <TextView
+            android:id="@+id/pizzaPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/price"
+            app:layout_constraintStart_toStartOf="@+id/pizzaNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pizzaNameTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

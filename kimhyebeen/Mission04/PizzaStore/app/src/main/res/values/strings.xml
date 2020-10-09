@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PizzaStore</string>
+    <string name="name">이름</string>
+    <string name="addr">주소</string>
+    <string name="phone">번호</string>
+    <string name="next">다음</string>
+    <string name="pre">뒤로가기</string>
+    <string name="order">주문하기</string>
+
+    <string name="pizza_name">피자이름</string>
+    <string name="price">가격</string>
+    <string name="selectSize">사이즈 선택</string>
+
+    <string name="total">총 00000원</string>
+    <string name="dough">도우 :</string>
+    <string name="cheese">치즈 :</string>
+    <string name="size">사이즈 :</string>
+    <string name="topping">토핑 :</string>
+
+    <string name="infoText1">주문자 정보</string>
+
+    <string name="infoText2">주문 정보</string>
+    <string name="waiting1">준비중</string>
+</resources>
