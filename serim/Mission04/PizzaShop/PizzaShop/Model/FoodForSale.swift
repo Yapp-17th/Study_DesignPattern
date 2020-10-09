@@ -18,7 +18,3 @@ protocol OptionMenu {
     func getPrice() -> Int
 }
 
-protocol FoodForSale {
-    var main: MainMenu { get }
-    var option: [OptionMenu]? { get }
-}

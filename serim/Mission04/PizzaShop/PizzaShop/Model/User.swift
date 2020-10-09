@@ -15,8 +15,8 @@ class User {
         self.id = id
     }
     
-    func order(pizzaType: MainToppingType, toppingType: OptionToppingType, amountOfTopping: Int) {
-        let orderedPizza = ["pizzaType":pizzaType, "toppingType":toppingType, "amount":amountOfTopping] as [String : Any]
+    func order(pizzaType: MainToppingType, toppingType: [OptionToppingType]) {
+        let orderedPizza = ["pizzaType":pizzaType, "toppingType":toppingType] as [String : Any]
         NotificationCenter.default.post(name: .order, object: nil, userInfo: orderedPizza)
     }
 }

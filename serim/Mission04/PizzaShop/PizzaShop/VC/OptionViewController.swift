@@ -11,7 +11,9 @@ import SnapKit
 import Then
 
 class OptionViewController: UIViewController {
-    var mainMenu: MainMenu
+    let manager = Manager()
+    
+    var mainMenu: MainToppingType
     var totalPrice = 10000
     
     lazy var titleLabel = UILabel().then {
@@ -29,6 +31,7 @@ class OptionViewController: UIViewController {
         $0.backgroundColor = #colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 1)
         $0.setTitleColor(.white, for: .normal)
         $0.layer.cornerRadius = 10
+        $0.addTarget(self, action: #selector(order), for: .touchUpInside)
     }
     lazy var totalPriceLabel = UILabel().then {
         $0.textAlignment = .right
@@ -36,7 +39,7 @@ class OptionViewController: UIViewController {
         $0.font = .systemFont(ofSize: 20)
     }
     
-    init(mainMenu: MainMenu) {
+    init(mainMenu: MainToppingType) {
         self.mainMenu = mainMenu
         self.totalPrice = mainMenu.getPrice()
         super.init(nibName: nil, bundle: nil)
@@ -44,6 +47,15 @@ class OptionViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func order() {
+        let user = User(id: "1")
+        var options = [OptionToppingType]()
+        orderTableView.indexPathsForSelectedRows?.forEach { indexPath in
+            options.append(OptionToppingType.allCases[indexPath.row])
+        }
+        user.order(pizzaType: mainMenu, toppingType: options)
     }
     
     override func viewDidLoad() {
