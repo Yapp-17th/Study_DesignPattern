@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.MainActivity"
+    android:background="@color/colorPrimary"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -12,13 +13,13 @@
         android:layout_height="100dp"
         android:layout_margin="5dp"
         app:cardCornerRadius="5dp"
-        app:cardElevation="10dp"
         app:cardUseCompatPadding="true" >
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="25dp"
             android:text="피자헛 용산역2호"
             android:layout_gravity="center"/>
 
@@ -46,7 +47,8 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:layout_gravity="bottom|end"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:textSize="18dp"/>
 
     </FrameLayout>
 

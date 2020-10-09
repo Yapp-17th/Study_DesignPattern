@@ -35,6 +35,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
-        basket.text = orderData.orderSize().toString()
+        basket.text = orderData.orderDataSize().toString()
     }
 }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.BasketActivity"></activity>
+        <activity android:name=".view.OrderFinishActivity"></activity>
+        <activity android:name=".view.BasketActivity" />
         <activity android:name=".view.OrderActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>

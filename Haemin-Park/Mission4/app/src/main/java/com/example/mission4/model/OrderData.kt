@@ -1,17 +1,22 @@
 package com.example.mission4.model
 
 object OrderData {
-    private val orderData = ArrayList<Pizza>()
+    private var orderData = ArrayList<Pizza>()
+    private var totalPrice = 0
 
     fun addOrder(order: Pizza){
         orderData.add(order)
+        totalPrice += order.price
     }
 
-    fun orderSize(): Int{
-        return orderData.size
+    fun resetOrder(){
+        orderData.clear()
+        totalPrice = 0
     }
 
-    fun orderDataList(): ArrayList<Pizza>{
-        return orderData
-    }
+    fun orderDataSize() = orderData.size
+
+    fun orderDataList() = orderData
+
+    fun totalOrderPrice() =  totalPrice
 }
