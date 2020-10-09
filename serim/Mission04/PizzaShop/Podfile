@@ -8,6 +8,7 @@ target 'PizzaShop' do
   # Pods for PizzaShop
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
+  pod 'Toaster', :git => 'https://github.com/devxoul/Toaster.git', :branch => 'master'
   target 'PizzaShopTests' do
     inherit! :search_paths
     # Pods for testing

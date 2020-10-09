@@ -1,20 +1,33 @@
 PODS:
   - SnapKit (5.0.1)
   - Then (2.7.0)
+  - Toaster (2.3.0)
 
 DEPENDENCIES:
   - SnapKit (~> 5.0.0)
   - Then
+  - Toaster (from `https://github.com/devxoul/Toaster.git`, branch `master`)
 
 SPEC REPOS:
   trunk:
     - SnapKit
     - Then
 
+EXTERNAL SOURCES:
+  Toaster:
+    :branch: master
+    :git: https://github.com/devxoul/Toaster.git
+
+CHECKOUT OPTIONS:
+  Toaster:
+    :commit: aec54fc48d3d36279424103de0784c23862d19df
+    :git: https://github.com/devxoul/Toaster.git
+
 SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Toaster: 33d27524fb6829cdb6b247c924beab0cfa001b3e
 
-PODFILE CHECKSUM: 73bc66f0700d8477af4ea93f8e727bb60636e968
+PODFILE CHECKSUM: c8b51b5ef156cd0f24379e2da9bdef29e2a58296
 
 COCOAPODS: 1.9.3

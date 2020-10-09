@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import Then
+import Toaster
 
 class OptionViewController: UIViewController {
     let manager = Manager()
@@ -56,6 +57,7 @@ class OptionViewController: UIViewController {
             options.append(OptionToppingType.allCases[indexPath.row])
         }
         user.order(pizzaType: mainMenu, toppingType: options)
+        Toast(text: "주문 완료").show()
     }
     
     override func viewDidLoad() {
