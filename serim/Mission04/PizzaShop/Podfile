@@ -1,0 +1,17 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PizzaShop' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PizzaShop
+  pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
+  pod 'Toaster', :git => 'https://github.com/devxoul/Toaster.git', :branch => 'master'
+  target 'PizzaShopTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
