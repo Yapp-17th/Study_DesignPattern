@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CustomBurger</string>
+
+    <string name="make_button">Make Burger</string>
 </resources>
