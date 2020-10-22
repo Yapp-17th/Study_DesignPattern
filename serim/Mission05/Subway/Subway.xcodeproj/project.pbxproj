@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,9 @@
 		1215DD50254162C700C5D9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1215DD4E254162C700C5D9BE /* LaunchScreen.storyboard */; };
 		1215DD5B254162C800C5D9BE /* SubwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD5A254162C800C5D9BE /* SubwayTests.swift */; };
 		1215DD66254162C800C5D9BE /* SubwayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD65254162C800C5D9BE /* SubwayUITests.swift */; };
+		1215DD822541789F00C5D9BE /* ItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD812541789F00C5D9BE /* ItemDecorator.swift */; };
+		1215DD9825417B2900C5D9BE /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD9725417B2900C5D9BE /* Club.swift */; };
+		1215DD9D25417D2500C5D9BE /* DoubleMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */; };
 		35CA93CAA959DBCBF09739AD /* Pods_Subway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF0FED1DF13ED5C5B79E88 /* Pods_Subway.framework */; };
 		385EE58BBA38AD02C4633701 /* Pods_SubwayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */; };
 		E543E927FDCF8CAF92BE38EA /* Pods_Subway_SubwayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E649FDED31FB78AEFC6EF21 /* Pods_Subway_SubwayUITests.framework */; };
@@ -53,6 +56,9 @@
 		1215DD61254162C800C5D9BE /* SubwayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215DD65254162C800C5D9BE /* SubwayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayUITests.swift; sourceTree = "<group>"; };
 		1215DD67254162C800C5D9BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1215DD812541789F00C5D9BE /* ItemDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecorator.swift; sourceTree = "<group>"; };
+		1215DD9725417B2900C5D9BE /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleMeat.swift; sourceTree = "<group>"; };
 		2376D2B4E23A0D087E11BC1F /* Pods-SubwayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTests.debug.xcconfig"; path = "Target Support Files/Pods-SubwayTests/Pods-SubwayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED68C745A6B4B8A5EE8D159 /* Pods-Subway-SubwayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subway-SubwayUITests.debug.xcconfig"; path = "Target Support Files/Pods-Subway-SubwayUITests/Pods-Subway-SubwayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 		1215DD42254162C200C5D9BE /* Subway */ = {
 			isa = PBXGroup;
 			children = (
+				1215DD802541788600C5D9BE /* Model */,
 				1215DD43254162C200C5D9BE /* AppDelegate.swift */,
 				1215DD45254162C200C5D9BE /* SceneDelegate.swift */,
 				1215DD47254162C200C5D9BE /* ViewController.swift */,
@@ -145,6 +152,32 @@
 			path = SubwayUITests;
 			sourceTree = "<group>";
 		};
+		1215DD802541788600C5D9BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1215DD812541789F00C5D9BE /* ItemDecorator.swift */,
+				1215DD8D25417AFD00C5D9BE /* MainItem */,
+				1215DD8E25417B0200C5D9BE /* Option */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1215DD8D25417AFD00C5D9BE /* MainItem */ = {
+			isa = PBXGroup;
+			children = (
+				1215DD9725417B2900C5D9BE /* Club.swift */,
+			);
+			path = MainItem;
+			sourceTree = "<group>";
+		};
+		1215DD8E25417B0200C5D9BE /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
 		5E966D257E656DA08658F6DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +188,6 @@
 				2376D2B4E23A0D087E11BC1F /* Pods-SubwayTests.debug.xcconfig */,
 				74E7A5DFB40EA5F6098EB3E3 /* Pods-SubwayTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -408,8 +440,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1215DD48254162C200C5D9BE /* ViewController.swift in Sources */,
+				1215DD822541789F00C5D9BE /* ItemDecorator.swift in Sources */,
+				1215DD9825417B2900C5D9BE /* Club.swift in Sources */,
 				1215DD44254162C200C5D9BE /* AppDelegate.swift in Sources */,
 				1215DD46254162C200C5D9BE /* SceneDelegate.swift in Sources */,
+				1215DD9D25417D2500C5D9BE /* DoubleMeat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
