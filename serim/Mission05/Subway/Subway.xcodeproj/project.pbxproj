@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1215DD44254162C200C5D9BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD43254162C200C5D9BE /* AppDelegate.swift */; };
 		1215DD46254162C200C5D9BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD45254162C200C5D9BE /* SceneDelegate.swift */; };
-		1215DD48254162C200C5D9BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD47254162C200C5D9BE /* ViewController.swift */; };
+		1215DD48254162C200C5D9BE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD47254162C200C5D9BE /* MenuViewController.swift */; };
 		1215DD4B254162C200C5D9BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1215DD49254162C200C5D9BE /* Main.storyboard */; };
 		1215DD4D254162C700C5D9BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1215DD4C254162C700C5D9BE /* Assets.xcassets */; };
 		1215DD50254162C700C5D9BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1215DD4E254162C700C5D9BE /* LaunchScreen.storyboard */; };
@@ -24,6 +24,9 @@
 		1215DDB12541846F00C5D9BE /* DoubleCheese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDB02541846F00C5D9BE /* DoubleCheese.swift */; };
 		1215DDB62541855F00C5D9BE /* Bacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDB52541855F00C5D9BE /* Bacon.swift */; };
 		1215DDBB2541857800C5D9BE /* Avocado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDBA2541857800C5D9BE /* Avocado.swift */; };
+		1215DDCF25418E4D00C5D9BE /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDCE25418E4D00C5D9BE /* Items.swift */; };
+		1215DDDB25418F0A00C5D9BE /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDDA25418F0A00C5D9BE /* MenuCell.swift */; };
+		1215DDE32541927800C5D9BE /* MenuViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDE22541927800C5D9BE /* MenuViewController+UI.swift */; };
 		35CA93CAA959DBCBF09739AD /* Pods_Subway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF0FED1DF13ED5C5B79E88 /* Pods_Subway.framework */; };
 		385EE58BBA38AD02C4633701 /* Pods_SubwayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */; };
 		E543E927FDCF8CAF92BE38EA /* Pods_Subway_SubwayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E649FDED31FB78AEFC6EF21 /* Pods_Subway_SubwayUITests.framework */; };
@@ -51,7 +54,7 @@
 		1215DD40254162C200C5D9BE /* Subway.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Subway.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1215DD43254162C200C5D9BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1215DD45254162C200C5D9BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1215DD47254162C200C5D9BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1215DD47254162C200C5D9BE /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		1215DD4A254162C200C5D9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1215DD4C254162C700C5D9BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1215DD4F254162C700C5D9BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +74,9 @@
 		1215DDB02541846F00C5D9BE /* DoubleCheese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCheese.swift; sourceTree = "<group>"; };
 		1215DDB52541855F00C5D9BE /* Bacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bacon.swift; sourceTree = "<group>"; };
 		1215DDBA2541857800C5D9BE /* Avocado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avocado.swift; sourceTree = "<group>"; };
+		1215DDCE25418E4D00C5D9BE /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		1215DDDA25418F0A00C5D9BE /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		1215DDE22541927800C5D9BE /* MenuViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UI.swift"; sourceTree = "<group>"; };
 		2376D2B4E23A0D087E11BC1F /* Pods-SubwayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTests.debug.xcconfig"; path = "Target Support Files/Pods-SubwayTests/Pods-SubwayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED68C745A6B4B8A5EE8D159 /* Pods-Subway-SubwayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subway-SubwayUITests.debug.xcconfig"; path = "Target Support Files/Pods-Subway-SubwayUITests/Pods-Subway-SubwayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				1215DD802541788600C5D9BE /* Model */,
+				1215DDBF25418BE000C5D9BE /* Main */,
 				1215DD43254162C200C5D9BE /* AppDelegate.swift */,
 				1215DD45254162C200C5D9BE /* SceneDelegate.swift */,
-				1215DD47254162C200C5D9BE /* ViewController.swift */,
 				1215DD49254162C200C5D9BE /* Main.storyboard */,
 				1215DD4C254162C700C5D9BE /* Assets.xcassets */,
 				1215DD4E254162C700C5D9BE /* LaunchScreen.storyboard */,
@@ -167,6 +173,7 @@
 		1215DD802541788600C5D9BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1215DDCE25418E4D00C5D9BE /* Items.swift */,
 				1215DD812541789F00C5D9BE /* ItemDecorator.swift */,
 				1215DD8D25417AFD00C5D9BE /* MainItem */,
 				1215DD8E25417B0200C5D9BE /* Option */,
@@ -194,6 +201,24 @@
 				1215DDBA2541857800C5D9BE /* Avocado.swift */,
 			);
 			path = Option;
+			sourceTree = "<group>";
+		};
+		1215DDBF25418BE000C5D9BE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1215DD47254162C200C5D9BE /* MenuViewController.swift */,
+				1215DDE22541927800C5D9BE /* MenuViewController+UI.swift */,
+				1215DDD925418EF400C5D9BE /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1215DDD925418EF400C5D9BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1215DDDA25418F0A00C5D9BE /* MenuCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		5E966D257E656DA08658F6DB /* Pods */ = {
@@ -457,13 +482,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1215DD48254162C200C5D9BE /* ViewController.swift in Sources */,
+				1215DDDB25418F0A00C5D9BE /* MenuCell.swift in Sources */,
+				1215DD48254162C200C5D9BE /* MenuViewController.swift in Sources */,
+				1215DDE32541927800C5D9BE /* MenuViewController+UI.swift in Sources */,
 				1215DDBB2541857800C5D9BE /* Avocado.swift in Sources */,
 				1215DDAC2541844F00C5D9BE /* Turkey.swift in Sources */,
 				1215DDA72541843100C5D9BE /* EggMayo.swift in Sources */,
 				1215DDB62541855F00C5D9BE /* Bacon.swift in Sources */,
 				1215DD822541789F00C5D9BE /* ItemDecorator.swift in Sources */,
 				1215DD9825417B2900C5D9BE /* Club.swift in Sources */,
+				1215DDCF25418E4D00C5D9BE /* Items.swift in Sources */,
 				1215DD44254162C200C5D9BE /* AppDelegate.swift in Sources */,
 				1215DD46254162C200C5D9BE /* SceneDelegate.swift in Sources */,
 				1215DDA22541840E00C5D9BE /* BLT.swift in Sources */,

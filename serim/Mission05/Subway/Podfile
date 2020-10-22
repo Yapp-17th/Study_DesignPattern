@@ -7,6 +7,7 @@ target 'Subway' do
 
   # Pods for Subway
   pod 'SnapKit', '~> 5.0.0'
+  pod 'Then'
   pod 'RxSwift', '6.0.0-rc.1'
   pod 'RxCocoa', '6.0.0-rc.1'
   target 'SubwayTests' do
