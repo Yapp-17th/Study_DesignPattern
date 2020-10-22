@@ -18,6 +18,12 @@
 		1215DD822541789F00C5D9BE /* ItemDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD812541789F00C5D9BE /* ItemDecorator.swift */; };
 		1215DD9825417B2900C5D9BE /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD9725417B2900C5D9BE /* Club.swift */; };
 		1215DD9D25417D2500C5D9BE /* DoubleMeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */; };
+		1215DDA22541840E00C5D9BE /* BLT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDA12541840E00C5D9BE /* BLT.swift */; };
+		1215DDA72541843100C5D9BE /* EggMayo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDA62541843100C5D9BE /* EggMayo.swift */; };
+		1215DDAC2541844F00C5D9BE /* Turkey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDAB2541844F00C5D9BE /* Turkey.swift */; };
+		1215DDB12541846F00C5D9BE /* DoubleCheese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDB02541846F00C5D9BE /* DoubleCheese.swift */; };
+		1215DDB62541855F00C5D9BE /* Bacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDB52541855F00C5D9BE /* Bacon.swift */; };
+		1215DDBB2541857800C5D9BE /* Avocado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215DDBA2541857800C5D9BE /* Avocado.swift */; };
 		35CA93CAA959DBCBF09739AD /* Pods_Subway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABF0FED1DF13ED5C5B79E88 /* Pods_Subway.framework */; };
 		385EE58BBA38AD02C4633701 /* Pods_SubwayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */; };
 		E543E927FDCF8CAF92BE38EA /* Pods_Subway_SubwayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E649FDED31FB78AEFC6EF21 /* Pods_Subway_SubwayUITests.framework */; };
@@ -59,6 +65,12 @@
 		1215DD812541789F00C5D9BE /* ItemDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDecorator.swift; sourceTree = "<group>"; };
 		1215DD9725417B2900C5D9BE /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleMeat.swift; sourceTree = "<group>"; };
+		1215DDA12541840E00C5D9BE /* BLT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLT.swift; sourceTree = "<group>"; };
+		1215DDA62541843100C5D9BE /* EggMayo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggMayo.swift; sourceTree = "<group>"; };
+		1215DDAB2541844F00C5D9BE /* Turkey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turkey.swift; sourceTree = "<group>"; };
+		1215DDB02541846F00C5D9BE /* DoubleCheese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleCheese.swift; sourceTree = "<group>"; };
+		1215DDB52541855F00C5D9BE /* Bacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bacon.swift; sourceTree = "<group>"; };
+		1215DDBA2541857800C5D9BE /* Avocado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avocado.swift; sourceTree = "<group>"; };
 		2376D2B4E23A0D087E11BC1F /* Pods-SubwayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTests.debug.xcconfig"; path = "Target Support Files/Pods-SubwayTests/Pods-SubwayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		238A5AD2C47DD1602E5D857A /* Pods_SubwayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SubwayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ED68C745A6B4B8A5EE8D159 /* Pods-Subway-SubwayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Subway-SubwayUITests.debug.xcconfig"; path = "Target Support Files/Pods-Subway-SubwayUITests/Pods-Subway-SubwayUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				1215DD9725417B2900C5D9BE /* Club.swift */,
+				1215DDA12541840E00C5D9BE /* BLT.swift */,
+				1215DDA62541843100C5D9BE /* EggMayo.swift */,
+				1215DDAB2541844F00C5D9BE /* Turkey.swift */,
 			);
 			path = MainItem;
 			sourceTree = "<group>";
@@ -174,6 +189,9 @@
 			isa = PBXGroup;
 			children = (
 				1215DD9C25417D2500C5D9BE /* DoubleMeat.swift */,
+				1215DDB02541846F00C5D9BE /* DoubleCheese.swift */,
+				1215DDB52541855F00C5D9BE /* Bacon.swift */,
+				1215DDBA2541857800C5D9BE /* Avocado.swift */,
 			);
 			path = Option;
 			sourceTree = "<group>";
@@ -440,11 +458,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1215DD48254162C200C5D9BE /* ViewController.swift in Sources */,
+				1215DDBB2541857800C5D9BE /* Avocado.swift in Sources */,
+				1215DDAC2541844F00C5D9BE /* Turkey.swift in Sources */,
+				1215DDA72541843100C5D9BE /* EggMayo.swift in Sources */,
+				1215DDB62541855F00C5D9BE /* Bacon.swift in Sources */,
 				1215DD822541789F00C5D9BE /* ItemDecorator.swift in Sources */,
 				1215DD9825417B2900C5D9BE /* Club.swift in Sources */,
 				1215DD44254162C200C5D9BE /* AppDelegate.swift in Sources */,
 				1215DD46254162C200C5D9BE /* SceneDelegate.swift in Sources */,
+				1215DDA22541840E00C5D9BE /* BLT.swift in Sources */,
 				1215DD9D25417D2500C5D9BE /* DoubleMeat.swift in Sources */,
+				1215DDB12541846F00C5D9BE /* DoubleCheese.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
