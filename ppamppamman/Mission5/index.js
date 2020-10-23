@@ -52,3 +52,24 @@ FileDataSource.prototype.writeData = function(data) {
   console.log("'" + this.file+ "'에 데이터를 저장한다.")
   this.data = data
 }
+
+// DataSource 인터페이스를 구현하는 FileDataSourceDecorator 클래스 정의
+function DataSourceDecorator(datasource){
+  DataSource().implements(this);
+  this.wrappee = datasource;
+}
+
+DataSourceDecorator.prototype.readData = function() {
+  return this.wrappee.readData();
+}
+
+DataSourceDecorator.prototype.writeData = function(data) {
+  this.wrappee.writeData(data);
+}
+
+// 부모 생성자를 호출하고 부모의 생성자의 prototype을 super변수에 할당
+DataSourceDecorator.prototype.super = function() {
+  var $s = this.__proto__.__proto__.constructor;
+  $s.apply(this, arguments);
+  this.super = $s.prototype;
+}
