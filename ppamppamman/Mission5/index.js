@@ -103,3 +103,30 @@ EncryptionDecorator.prototype.decode = function(data) {
   console.log("--- 데이터를 복호화합니다.");
   return data;
 }
+
+// DataSourceDecorator 클래스를 상속하여 CompressionDecorator 클래스 정의
+function CompressionDecorator(datasource){
+  this.super(datasource);
+}
+
+CompressionDecorator.prototype = Object.create(DataSourceDecorator.prototype);
+CompressionDecorator.prototype.constructor = CompressionDecorator;
+CompressionDecorator.prototype.readData = function() {
+    var data = this.super.readData.call(this);
+    return this.decompress(data);
+}
+
+CompressionDecorator.prototype.writeData = function(data) {
+  this.compress(data);
+  this.super.writeData.call(this, data);
+}
+
+CompressionDecorator.prototype.compress = function(data) {
+  console.log("--- 데이터를 압축합니다.");
+  return data;
+}
+
+CompressionDecorator.prototype.decompress = function(data) {
+  console.log("--- 데이터를 압축복원합니다.");
+  return data;
+}
