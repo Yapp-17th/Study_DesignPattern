@@ -73,3 +73,33 @@ DataSourceDecorator.prototype.super = function() {
   $s.apply(this, arguments);
   this.super = $s.prototype;
 }
+
+// DataSourceDecorator 클래스를 상속하여 
+// EncryptionDecorator 클래스 정의
+function EncryptionDecorator(datasource){
+  this.super(datasource);
+}
+
+EncryptionDecorator.prototype = Object.create(DataSourceDecorator.prototype);
+EncryptionDecorator.prototype.constructor = EncryptionDecorator;
+
+EncryptionDecorator.prototype.readData = function() {
+    var data = this.super.readData.call(this);
+    return this.decode(data);
+}
+
+EncryptionDecorator.prototype.writeData = function(data) {
+  console.log("입력된 data", data);
+  this.encode(data);
+  this.super.writeData.call(this, data);
+}
+
+EncryptionDecorator.prototype.encode = function(data) {
+  console.log("--- 데이터를 암호화합니다.");
+  return data;
+}
+
+EncryptionDecorator.prototype.decode = function(data) {
+  console.log("--- 데이터를 복호화합니다.");
+  return data;
+}
