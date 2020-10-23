@@ -130,3 +130,20 @@ CompressionDecorator.prototype.decompress = function(data) {
   console.log("--- 데이터를 압축복원합니다.");
   return data;
 }
+
+// 클라이언크 클래스 정의
+function Client(){}
+
+Client.prototype.test = function() {
+  var dataSource = new FileDataSource("file.txt");
+  dataSource = new EncryptionDecorator(dataSource);
+  dataSource = new CompressionDecorator(dataSource);  
+  dataSource.writeData("이 내용이 과연 쓰일까?");
+
+  console.log("====== dataSource의 형태 ======= ");
+  console.log(dataSource);
+  console.log("====== dataSource의 형태 ======= ");
+  console.log(dataSource.readData());
+}
+
+new Client().test();
