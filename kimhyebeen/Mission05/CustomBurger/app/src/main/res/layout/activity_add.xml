@@ -5,8 +5,11 @@
 
     <data>
         <variable
+            name="addAct"
+            type="com.khb.customburger.AddActivity" />
+        <variable
             name="burgerVM"
-            type="com.khb.customburger.BurgerViewModel" />
+            type="com.khb.customburger.viewmodel.BurgerViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -120,6 +123,7 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/make_button"
+            android:onClick="@{addAct::startMainActivity}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

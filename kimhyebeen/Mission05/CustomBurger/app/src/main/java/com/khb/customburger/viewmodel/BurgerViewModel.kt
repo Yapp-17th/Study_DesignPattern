@@ -1,9 +1,9 @@
-package com.khb.customburger
+package com.khb.customburger.viewmodel
 
 import android.view.View
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.khb.customburger.Material
 
 class BurgerViewModel: ViewModel() {
     private val _burgerList = ArrayList<Material>()
@@ -26,8 +26,11 @@ class BurgerViewModel: ViewModel() {
     val flagPatty1: LiveData<Boolean> get() = _burgerList[4].selected
     val flagPatty2: LiveData<Boolean> get() = _burgerList[5].selected
 
+    fun getBurgerList(): ArrayList<Material> {
+        return _burgerList
+    }
+
     fun checkCabbage(view: View) {
-        println("눌리니???")
         _burgerList[0].changeSelected()
     }
 
