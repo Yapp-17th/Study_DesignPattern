@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,12 +11,15 @@
 		4F02AB08C5AEC090B7A4B9F8 /* Pods_Mission05_DennyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC47309BD12DCE323E18C42 /* Pods_Mission05_DennyTests.framework */; };
 		92175B38E2AE9F0E33CBDD04 /* Pods_Mission05_Denny_Mission05_DennyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2789A87C63F446BE4F1FF3A4 /* Pods_Mission05_Denny_Mission05_DennyUITests.framework */; };
 		B03B6B06254514BC00DC941D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B6B05254514BC00DC941D /* AppDelegate.swift */; };
-		B03B6B0A254514BC00DC941D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B6B09254514BC00DC941D /* ViewController.swift */; };
+		B03B6B0A254514BC00DC941D /* CarListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B6B09254514BC00DC941D /* CarListViewController.swift */; };
 		B03B6B0D254514BC00DC941D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03B6B0B254514BC00DC941D /* Main.storyboard */; };
 		B03B6B0F254514BD00DC941D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03B6B0E254514BD00DC941D /* Assets.xcassets */; };
 		B03B6B12254514BD00DC941D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03B6B10254514BD00DC941D /* LaunchScreen.storyboard */; };
 		B03B6B1D254514BD00DC941D /* Mission05_DennyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B6B1C254514BD00DC941D /* Mission05_DennyTests.swift */; };
 		B03B6B28254514BD00DC941D /* Mission05_DennyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03B6B27254514BD00DC941D /* Mission05_DennyUITests.swift */; };
+		B0C07E79254515B9001A2C90 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C07E78254515B9001A2C90 /* CarModel.swift */; };
+		B0C07E81254515C0001A2C90 /* DealerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C07E80254515C0001A2C90 /* DealerModel.swift */; };
+		B0C07E8C2545161E001A2C90 /* CarCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C07E8B2545161E001A2C90 /* CarCartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,7 @@
 		AD9256433E2424E26DE243A5 /* Pods-Mission05-Denny-Mission05-DennyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission05-Denny-Mission05-DennyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mission05-Denny-Mission05-DennyUITests/Pods-Mission05-Denny-Mission05-DennyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B03B6B02254514BC00DC941D /* Mission05-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission05-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03B6B05254514BC00DC941D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B03B6B09254514BC00DC941D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B03B6B09254514BC00DC941D /* CarListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewController.swift; sourceTree = "<group>"; };
 		B03B6B0C254514BC00DC941D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B03B6B0E254514BD00DC941D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B03B6B11254514BD00DC941D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +59,9 @@
 		B03B6B23254514BD00DC941D /* Mission05-DennyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mission05-DennyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03B6B27254514BD00DC941D /* Mission05_DennyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission05_DennyUITests.swift; sourceTree = "<group>"; };
 		B03B6B29254514BD00DC941D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0C07E78254515B9001A2C90 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		B0C07E80254515C0001A2C90 /* DealerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealerModel.swift; sourceTree = "<group>"; };
+		B0C07E8B2545161E001A2C90 /* CarCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCartViewController.swift; sourceTree = "<group>"; };
 		C05A52381A85726019276734 /* Pods-Mission05-DennyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission05-DennyTests.debug.xcconfig"; path = "Target Support Files/Pods-Mission05-DennyTests/Pods-Mission05-DennyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C21E4A1C1185463D7CCCB9E1 /* Pods-Mission05-DennyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission05-DennyTests.release.xcconfig"; path = "Target Support Files/Pods-Mission05-DennyTests/Pods-Mission05-DennyTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBC47309BD12DCE323E18C42 /* Pods_Mission05_DennyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission05_DennyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,7 +115,6 @@
 				C05A52381A85726019276734 /* Pods-Mission05-DennyTests.debug.xcconfig */,
 				C21E4A1C1185463D7CCCB9E1 /* Pods-Mission05-DennyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,8 +143,9 @@
 		B03B6B04254514BC00DC941D /* Mission05-Denny */ = {
 			isa = PBXGroup;
 			children = (
+				B0C07E85254515C5001A2C90 /* Views */,
+				B0C07E77254515A6001A2C90 /* Models */,
 				B03B6B05254514BC00DC941D /* AppDelegate.swift */,
-				B03B6B09254514BC00DC941D /* ViewController.swift */,
 				B03B6B0B254514BC00DC941D /* Main.storyboard */,
 				B03B6B0E254514BD00DC941D /* Assets.xcassets */,
 				B03B6B10254514BD00DC941D /* LaunchScreen.storyboard */,
@@ -164,6 +170,24 @@
 				B03B6B29254514BD00DC941D /* Info.plist */,
 			);
 			path = "Mission05-DennyUITests";
+			sourceTree = "<group>";
+		};
+		B0C07E77254515A6001A2C90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0C07E78254515B9001A2C90 /* CarModel.swift */,
+				B0C07E80254515C0001A2C90 /* DealerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0C07E85254515C5001A2C90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B0C07E8B2545161E001A2C90 /* CarCartViewController.swift */,
+				B03B6B09254514BC00DC941D /* CarListViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,8 +428,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03B6B0A254514BC00DC941D /* ViewController.swift in Sources */,
+				B0C07E8C2545161E001A2C90 /* CarCartViewController.swift in Sources */,
+				B03B6B0A254514BC00DC941D /* CarListViewController.swift in Sources */,
 				B03B6B06254514BC00DC941D /* AppDelegate.swift in Sources */,
+				B0C07E81254515C0001A2C90 /* DealerModel.swift in Sources */,
+				B0C07E79254515B9001A2C90 /* CarModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
