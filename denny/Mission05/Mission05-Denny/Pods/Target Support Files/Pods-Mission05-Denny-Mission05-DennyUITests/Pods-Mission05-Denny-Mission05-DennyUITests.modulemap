@@ -1,0 +1,6 @@
+framework module Pods_Mission05_Denny_Mission05_DennyUITests {
+  umbrella header "Pods-Mission05-Denny-Mission05-DennyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
