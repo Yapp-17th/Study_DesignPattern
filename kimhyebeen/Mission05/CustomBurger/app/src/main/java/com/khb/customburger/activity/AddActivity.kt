@@ -1,11 +1,12 @@
-package com.khb.customburger
+package com.khb.customburger.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
+import com.khb.customburger.BR
+import com.khb.customburger.R
 import com.khb.customburger.databinding.ActivityAddBinding
 import com.khb.customburger.viewmodel.BurgerViewModel
 

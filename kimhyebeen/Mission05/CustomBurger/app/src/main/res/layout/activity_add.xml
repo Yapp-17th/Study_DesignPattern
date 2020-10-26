@@ -6,7 +6,7 @@
     <data>
         <variable
             name="addAct"
-            type="com.khb.customburger.AddActivity" />
+            type="com.khb.customburger.activity.AddActivity" />
         <variable
             name="burgerVM"
             type="com.khb.customburger.viewmodel.BurgerViewModel" />
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#232323"
-        tools:context=".AddActivity">
+        tools:context=".activity.AddActivity">
 
         <ScrollView
             android:layout_width="match_parent"
