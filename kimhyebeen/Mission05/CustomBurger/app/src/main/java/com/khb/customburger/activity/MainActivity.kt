@@ -10,8 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val cabbage = intent.getBooleanExtra("cabbage", false)
-        println("cabbage는 $cabbage")
-        // TODO("intent로 boolean값 받아오기")
+        val cabbage = getMaterial("cabbage")
+        val cheese = getMaterial("cheese")
+        val shrimp = getMaterial("shrimp")
+        val tomato = getMaterial("tomato")
+        val patty1 = getMaterial("patty01")
+        val patty2 = getMaterial("patty02")
+    }
+
+    private fun getMaterial(str: String): Boolean {
+        return intent.getBooleanExtra(str, false)
     }
 }
