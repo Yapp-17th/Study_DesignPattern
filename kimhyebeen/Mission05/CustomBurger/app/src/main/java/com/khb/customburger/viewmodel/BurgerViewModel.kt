@@ -1,56 +1,45 @@
 package com.khb.customburger.viewmodel
 
+import android.app.Application
 import android.view.View
-import androidx.lifecycle.LiveData
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.khb.customburger.Material
 
 class BurgerViewModel: ViewModel() {
-    private val _burgerList = ArrayList<Material>()
+    var _burgerList: MutableList<MutableLiveData<Boolean>> = MutableList(6) { MutableLiveData() }
 
     init {
-        _burgerList.apply {
-            add(Material("cabbage", 3))
-            add(Material("cheese", 10))
-            add(Material("shrimp", 12))
-            add(Material("tomato", 5))
-            add(Material("patty01", 24))
-            add(Material("patty02", 22))
-        }
+        // TODO("데이터베이스 사이즈가 0이면 초기값을 insert해주고, 아니면 꺼내서 수정하는 식으로 리팩토링")
+        // TODO("데이터베이스 사이즈가 0이 아니면 selected를 모두 false로 바꿔줘요")
+        _burgerList.map { it.value = false }
     }
 
-    val flagCabbage: LiveData<Boolean> get() = _burgerList[0].selected
-    val flagCheese: LiveData<Boolean> get() = _burgerList[1].selected
-    val flagShrimp: LiveData<Boolean> get() = _burgerList[2].selected
-    val flagTomato: LiveData<Boolean> get() = _burgerList[3].selected
-    val flagPatty1: LiveData<Boolean> get() = _burgerList[4].selected
-    val flagPatty2: LiveData<Boolean> get() = _burgerList[5].selected
-
-    fun getBurgerList(): ArrayList<Material> {
-        return _burgerList
+    private fun changeFlag(id: Int) {
+        _burgerList[id].value = !_burgerList[id].value!!
     }
 
     fun checkCabbage(view: View) {
-        _burgerList[0].changeSelected()
+        changeFlag(0)
     }
 
     fun checkCheese(view: View) {
-        _burgerList[1].changeSelected()
+        changeFlag(1)
     }
 
     fun checkShrimp(view: View) {
-        _burgerList[2].changeSelected()
+        changeFlag(2)
     }
 
     fun checkTomato(view: View) {
-        _burgerList[3].changeSelected()
+        changeFlag(3)
     }
 
     fun checkPatty1(view: View) {
-        _burgerList[4].changeSelected()
+        changeFlag(4)
     }
 
     fun checkPatty2(view: View) {
-        _burgerList[5].changeSelected()
+        changeFlag(5)
     }
 }

@@ -30,7 +30,34 @@ class AddActivity : AppCompatActivity() {
     }
 
     fun startMainActivity(view: View) {
-        // TODO("DataViewModel을 사용해서 데이터베이스에 저장")
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(getMainIntent())
+    }
+
+    private fun getMainIntent(): Intent {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.apply {
+            for (id in 0..5) {
+                viewModel._burgerList[id].value?.let {
+                    when(id) {
+                        0 -> putExtra("cabbage", it)
+                        1 -> putExtra("cheese", it)
+                        2 -> putExtra("shrimp", it)
+                        3 -> putExtra("tomato", it)
+                        4 -> putExtra("patty01", it)
+                        5 -> putExtra("patty02", it)
+                        else -> throw Exception("add activity : id is wrong.")
+                    }
+                } ?: when(id) {
+                    0 -> putExtra("cabbage", false)
+                    1 -> putExtra("cheese", false)
+                    2 -> putExtra("shrimp", false)
+                    3 -> putExtra("tomato", false)
+                    4 -> putExtra("patty01", false)
+                    5 -> putExtra("patty02", false)
+                    else -> throw Exception("add activity : id is wrong.")
+                }
+            }
+        }
+        return intent
     }
 }
