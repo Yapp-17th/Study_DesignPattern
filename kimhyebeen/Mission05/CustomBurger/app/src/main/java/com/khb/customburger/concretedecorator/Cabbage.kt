@@ -1,4 +1,7 @@
-package com.khb.customburger
+package com.khb.customburger.concretedecorator
+
+import com.khb.customburger.Burger
+import com.khb.customburger.Decorator
 
 class Cabbage( // ConcreteDecorator
         private val burger: Burger

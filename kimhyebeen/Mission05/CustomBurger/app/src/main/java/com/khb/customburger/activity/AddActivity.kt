@@ -30,6 +30,7 @@ class AddActivity : AppCompatActivity() {
     }
 
     fun startMainActivity(view: View) {
+        // TODO("DataViewModel을 사용해서 데이터베이스에 저장")
         startActivity(Intent(this, MainActivity::class.java))
     }
 }

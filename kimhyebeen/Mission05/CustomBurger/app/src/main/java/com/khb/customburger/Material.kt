@@ -1,6 +1,5 @@
 package com.khb.customburger
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 
 data class Material(
