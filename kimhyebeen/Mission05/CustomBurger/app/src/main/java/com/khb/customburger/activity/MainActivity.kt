@@ -1,5 +1,6 @@
 package com.khb.customburger.activity
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: BurgerViewModel
     private val strList = listOf("cabbage", "cheese", "shrimp", "tomato", "patty01", "patty02")
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val burger = viewModel.getDecoBurger(list.toList())
+        binding.burgerTextView.text = "버거 완성!! (맛: ${burger.taste()}점)"
+        binding.itemTextView.text = "${burger.decorate()}"
     }
 
     private fun initBinding() {

@@ -8,4 +8,8 @@
     <string name="shrimp">새우</string>
     <string name="patty01">고기패티</string>
     <string name="patty02">치킨패티</string>
+
+    <string name="finish">버거 완성!!</string>
+    <string name="taste">맛 점수 : 0</string>
+    <string name="material">햄버거 재료</string>
 </resources>
