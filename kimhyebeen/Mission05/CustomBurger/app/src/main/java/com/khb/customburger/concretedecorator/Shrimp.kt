@@ -6,14 +6,15 @@ import com.khb.customburger.Decorator
 class Shrimp( // ConcreteDecorator
         private val burger: Burger
 ): Decorator(burger) {
-    override var list: ArrayList<String> = burger.list
 
     override fun taste(): Int {
         return 12 + burger.taste()
     }
 
     override fun decorate(): ArrayList<String> {
-        list.add("새우")
-        return list
+        return burger.decorate().let {
+            it.add("새우")
+            it
+        }
     }
 }
