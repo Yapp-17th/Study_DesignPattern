@@ -5,9 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import com.khb.customburger.BR
 import com.khb.customburger.R
 import com.khb.customburger.databinding.ActivityAddBinding
+import com.khb.customburger.viewmodel.BurgerVMFactory
 import com.khb.customburger.viewmodel.BurgerViewModel
 
 class AddActivity : AppCompatActivity() {
@@ -18,7 +20,8 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
 
-        viewModel = BurgerViewModel()
+        viewModel = ViewModelProvider(this, BurgerVMFactory())
+                .get(BurgerViewModel::class.java)
         initBinding()
     }
 
