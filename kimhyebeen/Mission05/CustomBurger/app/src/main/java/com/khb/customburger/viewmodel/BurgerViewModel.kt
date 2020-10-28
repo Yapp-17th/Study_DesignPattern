@@ -7,39 +7,40 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class BurgerViewModel: ViewModel() {
-    var _burgerList: MutableList<MutableLiveData<Boolean>> = MutableList(6) { MutableLiveData() }
+    private val repository = BurgerRepository()
 
-    init {
-        // TODO("데이터베이스 사이즈가 0이면 초기값을 insert해주고, 아니면 꺼내서 수정하는 식으로 리팩토링")
-        // TODO("데이터베이스 사이즈가 0이 아니면 selected를 모두 false로 바꿔줘요")
-        _burgerList.map { it.value = false }
-    }
+    val cabbage: MutableLiveData<Boolean> get() = repository.cabbage
+    val cheese: MutableLiveData<Boolean> get() = repository.cheese
+    val shrimp: MutableLiveData<Boolean> get() = repository.shrimp
+    val tomato: MutableLiveData<Boolean> get() = repository.tomato
+    val porkPatty: MutableLiveData<Boolean> get() = repository.porkPatty
+    val chickenPatty: MutableLiveData<Boolean> get() = repository.chickenPatty
 
-    private fun changeFlag(id: Int) {
-        _burgerList[id].value = !_burgerList[id].value!!
+    fun getBurgerList(): MutableList<MutableLiveData<Boolean>> {
+        return repository.getBurgerList()
     }
 
     fun checkCabbage(view: View) {
-        changeFlag(0)
+        repository.changeFlag(0)
     }
 
     fun checkCheese(view: View) {
-        changeFlag(1)
+        repository.changeFlag(1)
     }
 
     fun checkShrimp(view: View) {
-        changeFlag(2)
+        repository.changeFlag(2)
     }
 
     fun checkTomato(view: View) {
-        changeFlag(3)
+        repository.changeFlag(3)
     }
 
     fun checkPatty1(view: View) {
-        changeFlag(4)
+        repository.changeFlag(4)
     }
 
     fun checkPatty2(view: View) {
-        changeFlag(5)
+        repository.changeFlag(5)
     }
 }

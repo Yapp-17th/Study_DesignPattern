@@ -35,29 +35,23 @@ class AddActivity : AppCompatActivity() {
 
     private fun getMainIntent(): Intent {
         val intent = Intent(this, MainActivity::class.java)
-        intent.apply {
-            for (id in 0..5) {
-                viewModel._burgerList[id].value?.let {
-                    when(id) {
-                        0 -> putExtra("cabbage", it)
-                        1 -> putExtra("cheese", it)
-                        2 -> putExtra("shrimp", it)
-                        3 -> putExtra("tomato", it)
-                        4 -> putExtra("patty01", it)
-                        5 -> putExtra("patty02", it)
-                        else -> throw Exception("add activity : id is wrong.")
-                    }
-                } ?: when(id) {
-                    0 -> putExtra("cabbage", false)
-                    1 -> putExtra("cheese", false)
-                    2 -> putExtra("shrimp", false)
-                    3 -> putExtra("tomato", false)
-                    4 -> putExtra("patty01", false)
-                    5 -> putExtra("patty02", false)
-                    else -> throw Exception("add activity : id is wrong.")
-                }
-            }
+        for (id in 0..5) {
+            viewModel.getBurgerList()[id].value?.let { bool ->
+                putExtraIntoIntent(intent, id, bool)
+            } ?: putExtraIntoIntent(intent, id, false)
         }
         return intent
+    }
+
+    private fun putExtraIntoIntent(it: Intent, id: Int, value: Boolean) {
+        when (id) {
+            0 -> it.putExtra("cabbage", value)
+            1 -> it.putExtra("cheese", value)
+            2 -> it.putExtra("shrimp", value)
+            3 -> it.putExtra("tomato", value)
+            4 -> it.putExtra("patty01", value)
+            5 -> it.putExtra("patty02", value)
+            else -> throw Exception("add activity : id is wrong.")
+        }
     }
 }
