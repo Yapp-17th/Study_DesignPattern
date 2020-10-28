@@ -37,7 +37,7 @@ class AddActivity : AppCompatActivity() {
     }
 
     private fun getMainIntent(): Intent {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, InfoActivity::class.java)
         for (id in 0..5) {
             viewModel.getBurgerList()[id].value?.let { bool ->
                 putExtraIntoIntent(intent, id, bool)

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="main"
-            type="com.khb.customburger.activity.MainActivity" />
+            type="com.khb.customburger.activity.InfoActivity" />
         <variable
             name="burgerVM"
             type="com.khb.customburger.viewmodel.BurgerViewModel" />
@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.MainActivity">
+        tools:context=".activity.InfoActivity">
 
         <ImageView
             android:id="@+id/imageView"
