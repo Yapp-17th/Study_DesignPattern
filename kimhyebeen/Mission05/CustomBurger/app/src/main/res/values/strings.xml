@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CustomBurger</string>
+
+    <string name="make_button">Make Burger</string>
+    <string name="cabbage">양배추</string>
+    <string name="cheese">치즈</string>
+    <string name="tomato">토마토</string>
+    <string name="shrimp">새우</string>
+    <string name="patty01">고기패티</string>
+    <string name="patty02">치킨패티</string>
+
+    <string name="finish">버거 완성!!</string>
+    <string name="taste">맛 점수 : 0</string>
+    <string name="material">햄버거 재료</string>
+</resources>
