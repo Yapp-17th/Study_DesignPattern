@@ -1,30 +1,27 @@
 package com.example.mission5
 
-import com.example.mission5.model.PepperoniPizza
-import com.example.mission5.model.PepperoniPizzaWithTopping
-import com.example.mission5.model.PotatoPizza
-import com.example.mission5.model.SweetPotatoPizza
+import com.example.mission5.model.*
 
 class PizzaOrderFactory {
 
     fun createPizzaOrder(name: String, size: String, price: Int, toppingName: String, toppingPrice: Int) = when(name){
         "pepperonipizza" -> {
             if (toppingPrice != 0)
-                PepperoniPizzaWithTopping(PepperoniPizza(size, price), toppingName, toppingPrice)
+                PizzaWithTopping(PepperoniPizza(size, price), toppingName, toppingPrice)
             else
                 PepperoniPizza(size, price)
         }
         "potatopizza" -> {
             if (toppingPrice != 0)
-                PepperoniPizzaWithTopping(PepperoniPizza(size, price), toppingName, toppingPrice)
+                PizzaWithTopping(PotatoPizza(size, price), toppingName, toppingPrice)
             else
-                PepperoniPizza(size, price)
+                PotatoPizza(size, price)
         }
         "sweetpotatopizza" -> {
             if (toppingPrice != 0)
-                PepperoniPizzaWithTopping(PepperoniPizza(size, price), toppingName, toppingPrice)
+                PizzaWithTopping(SweetPotatoPizza(size, price), toppingName, toppingPrice)
             else
-                PepperoniPizza(size, price)
+                SweetPotatoPizza(size, price)
         }
         else -> throw IllegalArgumentException("생성할 수 없습니다.")
     }
