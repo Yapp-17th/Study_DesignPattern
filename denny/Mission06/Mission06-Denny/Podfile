@@ -11,3 +11,12 @@ target 'Mission06-Denny' do
   pod 'Kingfisher'
   pod 'Kanna'
 end
+
+target 'NoticeWidget Extension' do
+  inherit! :search_paths
+  use_frameworks!
+
+  pod 'Alamofire'
+  pod 'SnapKit'
+  pod 'Kanna'
+end
