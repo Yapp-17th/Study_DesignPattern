@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		63E963492E11007F28CE80CB /* Pods_NoticeWidget_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663850701B9F84658588F933 /* Pods_NoticeWidget_Extension.framework */; };
 		B0233585254CF8790046D779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0233584254CF8790046D779 /* AppDelegate.swift */; };
-		B0233589254CF8790046D779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0233588254CF8790046D779 /* ViewController.swift */; };
+		B0233589254CF8790046D779 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0233588254CF8790046D779 /* SplashViewController.swift */; };
 		B023358C254CF8790046D779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B023358A254CF8790046D779 /* Main.storyboard */; };
 		B023358E254CF87C0046D779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B023358D254CF87C0046D779 /* Assets.xcassets */; };
 		B0233591254CF87C0046D779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B023358F254CF87C0046D779 /* LaunchScreen.storyboard */; };
@@ -20,13 +20,14 @@
 		B02335B3254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B02335AF254CF9B20046D779 /* NoticeWidget_Extension.intentdefinition */; };
 		B02335B4254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = B02335AF254CF9B20046D779 /* NoticeWidget_Extension.intentdefinition */; };
 		B02335B7254CF9B40046D779 /* NoticeWidget Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B02335A7254CF9B20046D779 /* NoticeWidget Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B02335C1254CFA0E0046D779 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NetworkRequest.swift */; };
-		B02335C2254CFA0E0046D779 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NetworkRequest.swift */; };
+		B02335C1254CFA0E0046D779 /* NoticeListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NoticeListFetcher.swift */; };
+		B02335C2254CFA0E0046D779 /* NoticeListFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NoticeListFetcher.swift */; };
 		B02335D0254CFB8D0046D779 /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335CF254CFB8D0046D779 /* NoticeListViewController.swift */; };
 		B02335D6254CFB9C0046D779 /* NoticeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335D5254CFB9C0046D779 /* NoticeListViewModel.swift */; };
 		B02335DB254CFBBC0046D779 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335DA254CFBBC0046D779 /* BaseViewController.swift */; };
 		B02335E0254CFBF10046D779 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */; };
 		B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */; };
+		B07AD27F254E2AA200825479 /* NoticeAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD27E254E2AA200825479 /* NoticeAPIRequest.swift */; };
 		CB6BD190D6F35ADC3C7C057F /* Pods_Mission06_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144AE9BB5461B9BF9D604BED /* Pods_Mission06_Denny.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,7 @@
 		663850701B9F84658588F933 /* Pods_NoticeWidget_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoticeWidget_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0233581254CF8790046D779 /* Mission06-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission06-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0233584254CF8790046D779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B0233588254CF8790046D779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B0233588254CF8790046D779 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		B023358B254CF8790046D779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B023358D254CF87C0046D779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0233590254CF87C0046D779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,12 +74,13 @@
 		B02335AF254CF9B20046D779 /* NoticeWidget_Extension.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NoticeWidget_Extension.intentdefinition; sourceTree = "<group>"; };
 		B02335B0254CF9B40046D779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02335B2254CF9B40046D779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B02335C0254CFA0E0046D779 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		B02335C0254CFA0E0046D779 /* NoticeListFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListFetcher.swift; sourceTree = "<group>"; };
 		B02335CF254CFB8D0046D779 /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
 		B02335D5254CFB9C0046D779 /* NoticeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewModel.swift; sourceTree = "<group>"; };
 		B02335DA254CFBBC0046D779 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewModel.swift; sourceTree = "<group>"; };
+		B07AD27E254E2AA200825479 /* NoticeAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPIRequest.swift; sourceTree = "<group>"; };
 		C1EE435A96D5BFC83B29680E /* Pods-Mission06-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission06-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission06-Denny/Pods-Mission06-Denny.release.xcconfig"; sourceTree = "<group>"; };
 		CD38CB63CCE2FC1ECD7A4B3F /* Pods-NoticeWidget Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoticeWidget Extension.debug.xcconfig"; path = "Target Support Files/Pods-NoticeWidget Extension/Pods-NoticeWidget Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F9CDF997C60804C3CBF0DBCA /* Pods-Mission06-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission06-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission06-Denny/Pods-Mission06-Denny.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +157,6 @@
 				B02335A1254CF97F0046D779 /* Mission06-Denny.entitlements */,
 				B02335A0254CF9380046D779 /* Network */,
 				B0233584254CF8790046D779 /* AppDelegate.swift */,
-				B0233588254CF8790046D779 /* ViewController.swift */,
 				B023358A254CF8790046D779 /* Main.storyboard */,
 				B023358D254CF87C0046D779 /* Assets.xcassets */,
 				B023358F254CF87C0046D779 /* LaunchScreen.storyboard */,
@@ -167,7 +168,8 @@
 		B02335A0254CF9380046D779 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B02335C0254CFA0E0046D779 /* NetworkRequest.swift */,
+				B02335C0254CFA0E0046D779 /* NoticeListFetcher.swift */,
+				B07AD27E254E2AA200825479 /* NoticeAPIRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -186,6 +188,7 @@
 		B02335CD254CFB630046D779 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B02335E9254D1AAF0046D779 /* Splash */,
 				B02335DE254CFBE10046D779 /* NoticeDetail */,
 				B02335D9254CFBB30046D779 /* Base */,
 				B02335CE254CFB7F0046D779 /* NoticeList */,
@@ -217,6 +220,14 @@
 				B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */,
 			);
 			path = NoticeDetail;
+			sourceTree = "<group>";
+		};
+		B02335E9254D1AAF0046D779 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B0233588254CF8790046D779 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,11 +398,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07AD27F254E2AA200825479 /* NoticeAPIRequest.swift in Sources */,
 				B02335B4254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */,
-				B0233589254CF8790046D779 /* ViewController.swift in Sources */,
+				B0233589254CF8790046D779 /* SplashViewController.swift in Sources */,
 				B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */,
 				B02335D6254CFB9C0046D779 /* NoticeListViewModel.swift in Sources */,
-				B02335C1254CFA0E0046D779 /* NetworkRequest.swift in Sources */,
+				B02335C1254CFA0E0046D779 /* NoticeListFetcher.swift in Sources */,
 				B02335D0254CFB8D0046D779 /* NoticeListViewController.swift in Sources */,
 				B02335DB254CFBBC0046D779 /* BaseViewController.swift in Sources */,
 				B02335E0254CFBF10046D779 /* NoticeDetailViewController.swift in Sources */,
@@ -404,7 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02335B3254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */,
-				B02335C2254CFA0E0046D779 /* NetworkRequest.swift in Sources */,
+				B02335C2254CFA0E0046D779 /* NoticeListFetcher.swift in Sources */,
 				B02335AE254CF9B20046D779 /* NoticeWidget_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
