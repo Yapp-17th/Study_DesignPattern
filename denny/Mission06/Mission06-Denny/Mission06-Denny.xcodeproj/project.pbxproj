@@ -22,6 +22,11 @@
 		B02335B7254CF9B40046D779 /* NoticeWidget Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B02335A7254CF9B20046D779 /* NoticeWidget Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B02335C1254CFA0E0046D779 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NetworkRequest.swift */; };
 		B02335C2254CFA0E0046D779 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335C0254CFA0E0046D779 /* NetworkRequest.swift */; };
+		B02335D0254CFB8D0046D779 /* NoticeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335CF254CFB8D0046D779 /* NoticeListViewController.swift */; };
+		B02335D6254CFB9C0046D779 /* NoticeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335D5254CFB9C0046D779 /* NoticeListViewModel.swift */; };
+		B02335DB254CFBBC0046D779 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335DA254CFBBC0046D779 /* BaseViewController.swift */; };
+		B02335E0254CFBF10046D779 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */; };
+		B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */; };
 		CB6BD190D6F35ADC3C7C057F /* Pods_Mission06_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144AE9BB5461B9BF9D604BED /* Pods_Mission06_Denny.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,11 @@
 		B02335B0254CF9B40046D779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02335B2254CF9B40046D779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B02335C0254CFA0E0046D779 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		B02335CF254CFB8D0046D779 /* NoticeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewController.swift; sourceTree = "<group>"; };
+		B02335D5254CFB9C0046D779 /* NoticeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeListViewModel.swift; sourceTree = "<group>"; };
+		B02335DA254CFBBC0046D779 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
+		B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewModel.swift; sourceTree = "<group>"; };
 		C1EE435A96D5BFC83B29680E /* Pods-Mission06-Denny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission06-Denny.release.xcconfig"; path = "Target Support Files/Pods-Mission06-Denny/Pods-Mission06-Denny.release.xcconfig"; sourceTree = "<group>"; };
 		CD38CB63CCE2FC1ECD7A4B3F /* Pods-NoticeWidget Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoticeWidget Extension.debug.xcconfig"; path = "Target Support Files/Pods-NoticeWidget Extension/Pods-NoticeWidget Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F9CDF997C60804C3CBF0DBCA /* Pods-Mission06-Denny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mission06-Denny.debug.xcconfig"; path = "Target Support Files/Pods-Mission06-Denny/Pods-Mission06-Denny.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +151,7 @@
 		B0233583254CF8790046D779 /* Mission06-Denny */ = {
 			isa = PBXGroup;
 			children = (
-				B02335CD254CFB630046D779 /* New Group */,
+				B02335CD254CFB630046D779 /* Views */,
 				B02335A1254CF97F0046D779 /* Mission06-Denny.entitlements */,
 				B02335A0254CF9380046D779 /* Network */,
 				B0233584254CF8790046D779 /* AppDelegate.swift */,
@@ -173,11 +183,40 @@
 			path = "NoticeWidget Extension";
 			sourceTree = "<group>";
 		};
-		B02335CD254CFB630046D779 /* New Group */ = {
+		B02335CD254CFB630046D779 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B02335DE254CFBE10046D779 /* NoticeDetail */,
+				B02335D9254CFBB30046D779 /* Base */,
+				B02335CE254CFB7F0046D779 /* NoticeList */,
 			);
-			path = "New Group";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B02335CE254CFB7F0046D779 /* NoticeList */ = {
+			isa = PBXGroup;
+			children = (
+				B02335CF254CFB8D0046D779 /* NoticeListViewController.swift */,
+				B02335D5254CFB9C0046D779 /* NoticeListViewModel.swift */,
+			);
+			path = NoticeList;
+			sourceTree = "<group>";
+		};
+		B02335D9254CFBB30046D779 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B02335DA254CFBBC0046D779 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B02335DE254CFBE10046D779 /* NoticeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */,
+				B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */,
+			);
+			path = NoticeDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +389,12 @@
 			files = (
 				B02335B4254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */,
 				B0233589254CF8790046D779 /* ViewController.swift in Sources */,
+				B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */,
+				B02335D6254CFB9C0046D779 /* NoticeListViewModel.swift in Sources */,
 				B02335C1254CFA0E0046D779 /* NetworkRequest.swift in Sources */,
+				B02335D0254CFB8D0046D779 /* NoticeListViewController.swift in Sources */,
+				B02335DB254CFBBC0046D779 /* BaseViewController.swift in Sources */,
+				B02335E0254CFBF10046D779 /* NoticeDetailViewController.swift in Sources */,
 				B0233585254CF8790046D779 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
