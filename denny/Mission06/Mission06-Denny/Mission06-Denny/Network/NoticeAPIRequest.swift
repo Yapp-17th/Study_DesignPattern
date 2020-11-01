@@ -19,7 +19,7 @@ public class HTTPBaseRequest: NSObject {
         self.encoding = encoding.parameterEncoding
     }
     
-    public func request(completion: @escaping (AFDataResponse<String>) -> Void) {
+    public func performRequest(completion: @escaping (AFDataResponse<String>) -> Void) {
         AF.request(url).responseString(completionHandler: { result in
             completion(result)
         })

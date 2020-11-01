@@ -18,7 +18,18 @@ public struct NoticeItem {
 public enum Dept: CaseIterable {
     case computer
     case mechanic
-    case medical
+    case school
+    
+    public func getURLString(page: Int) -> String {
+        switch self {
+        case .computer:
+            return "https://cse.snu.ac.kr/department-notices?&keys=&page=\(page - 1)"
+        case .mechanic:
+            return "http://me.snu.ac.kr/board/notice"
+        case .school:
+            return "https://www.snu.ac.kr/snunow/notice/genernal?page=\(page)"
+        }
+    }
 }
 
 public class NoticeListFetcher {
@@ -26,8 +37,12 @@ public class NoticeListFetcher {
     
     private init() { }
     
-    public func getNoticeList(dept: Dept) -> [NoticeItem]? {
+    public func getNoticeList(dept: Dept, page: Int, completion: @escaping ([NoticeItem] -> Void)) {
+        let url = URL(string: dept.getURLString(page: page))!
+        let request = HTTPBaseRequest(url: url, method: .get, encoding: .urlQuery)
         
-        return nil
+        request.performRequest(completion: { result in
+            
+        })
     }
 }
