@@ -28,6 +28,7 @@
 		B02335E0254CFBF10046D779 /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335DF254CFBF10046D779 /* NoticeDetailViewController.swift */; };
 		B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02335E3254CFC1F0046D779 /* NoticeDetailViewModel.swift */; };
 		B07AD27F254E2AA200825479 /* NoticeAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD27E254E2AA200825479 /* NoticeAPIRequest.swift */; };
+		B07AD2C6254E39C300825479 /* NoticeAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07AD27E254E2AA200825479 /* NoticeAPIRequest.swift */; };
 		CB6BD190D6F35ADC3C7C057F /* Pods_Mission06_Denny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144AE9BB5461B9BF9D604BED /* Pods_Mission06_Denny.framework */; };
 /* End PBXBuildFile section */
 
@@ -417,6 +418,7 @@
 			files = (
 				B02335B3254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */,
 				B02335C2254CFA0E0046D779 /* NoticeListFetcher.swift in Sources */,
+				B07AD2C6254E39C300825479 /* NoticeAPIRequest.swift in Sources */,
 				B02335AE254CF9B20046D779 /* NoticeWidget_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

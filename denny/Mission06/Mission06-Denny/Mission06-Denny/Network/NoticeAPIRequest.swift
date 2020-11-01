@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-public class HTTPBaseRequest: NSObject {
+public class NoticeHTTPRequest: NSObject {
     public let url: URL
     public let httpMethod: HTTPMethod
     public var encoding: ParameterEncoding = Alamofire.URLEncoding.default
@@ -64,8 +64,4 @@ public class HTTPBaseRequest: NSObject {
             }
         }
     }
-}
-
-public class NoticeAPIRequest: HTTPBaseRequest {
-    
 }

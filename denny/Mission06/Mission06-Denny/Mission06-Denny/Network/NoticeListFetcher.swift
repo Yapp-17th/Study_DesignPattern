@@ -22,11 +22,11 @@ public enum Dept: CaseIterable {
     
     public func getTitle() -> String {
         switch self {
-        case computer:
+        case .computer:
             return "컴퓨터공학부"
-        case mechanic:
+        case .mechanic:
             return "기계공학부"
-        case school:
+        case .school:
             return "학교 공지"
         }
     }
@@ -50,7 +50,7 @@ public class NoticeListFetcher {
     
     public func getNoticeList(dept: Dept, page: Int, completion: @escaping ([NoticeItem]) -> Void) {
         let url = URL(string: dept.getURLString(page: page))!
-        let request = HTTPBaseRequest(url: url, method: .get, encoding: .urlQuery)
+        let request = NoticeHTTPRequest(url: url, method: .get, encoding: .urlQuery)
         
         request.performRequest(completion: { result in
             

@@ -14,6 +14,9 @@ public class NoticeListViewController: BaseViewController {
     var viewModel: NoticeListViewModel
     private var cancellables = Set<AnyCancellable>()
     
+    private var searchBar: UISearchBar = UISearchBar()
+    private var listTableView: UITableView = UITableView()
+    
     init(viewModel: NoticeListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -25,6 +28,9 @@ public class NoticeListViewController: BaseViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupViewLayout()
+        bindViewModel()
         viewModel.fetchNoticeList()
     }
     
@@ -36,5 +42,26 @@ public class NoticeListViewController: BaseViewController {
         viewModel.$noticeList.sink { [weak self] noticeList in
             print(noticeList.count) // TODO
         }.store(in: &cancellables)
+    }
+    
+    private func setupViewLayout() {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationItem.title = "공지사항"
+        
+        view.addSubview(searchBar)
+        view.addSubview(listTableView)
+        
+        searchBar.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
+        }
+        
+        listTableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(8)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.bottom.equalToSuperview().offset(-16)
+        }
     }
 }
