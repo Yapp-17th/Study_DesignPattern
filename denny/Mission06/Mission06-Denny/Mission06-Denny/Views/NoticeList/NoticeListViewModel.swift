@@ -9,6 +9,12 @@ import Foundation
 import Combine
 
 public class NoticeListViewModel: ObservableObject, Identifiable {
-    @Published var deptName: String = ""
+    @Published var dept: Dept = .school
+    @Published var noticeList: [NoticeItem] = [NoticeItem]()
     
+    public func fetchNoticeList() {
+        NoticeListFetcher.shared.getNoticeList(dept: dept, page: 0, completion: { list in
+            self.noticeList = list
+        })
+    }
 }

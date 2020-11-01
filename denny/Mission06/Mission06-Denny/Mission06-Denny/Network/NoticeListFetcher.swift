@@ -20,6 +20,17 @@ public enum Dept: CaseIterable {
     case mechanic
     case school
     
+    public func getTitle() -> String {
+        switch self {
+        case computer:
+            return "컴퓨터공학부"
+        case mechanic:
+            return "기계공학부"
+        case school:
+            return "학교 공지"
+        }
+    }
+    
     public func getURLString(page: Int) -> String {
         switch self {
         case .computer:
@@ -37,7 +48,7 @@ public class NoticeListFetcher {
     
     private init() { }
     
-    public func getNoticeList(dept: Dept, page: Int, completion: @escaping ([NoticeItem] -> Void)) {
+    public func getNoticeList(dept: Dept, page: Int, completion: @escaping ([NoticeItem]) -> Void) {
         let url = URL(string: dept.getURLString(page: page))!
         let request = HTTPBaseRequest(url: url, method: .get, encoding: .urlQuery)
         

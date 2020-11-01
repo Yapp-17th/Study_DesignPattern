@@ -11,10 +11,10 @@ import SnapKit
 import UIKit
 
 public class NoticeListViewController: BaseViewController {
-    private let viewModel: NoticeListViewModel
-    private var bindings = Set<AnyCancellable>()
+    var viewModel: NoticeListViewModel
+    private var cancellables = Set<AnyCancellable>()
     
-    init(viewModel: NoticeListViewModel = NoticeListViewModel()) {
+    init(viewModel: NoticeListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,5 +25,16 @@ public class NoticeListViewController: BaseViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.fetchNoticeList()
+    }
+    
+    private func bindViewModel() {
+        viewModel.$dept.sink { [weak self] dept in
+            self?.navigationController?.navigationItem.title = dept.getTitle() // TODO
+        }.store(in: &cancellables)
+        
+        viewModel.$noticeList.sink { [weak self] noticeList in
+            print(noticeList.count) // TODO
+        }.store(in: &cancellables)
     }
 }
