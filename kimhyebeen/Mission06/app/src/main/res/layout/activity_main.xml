@@ -20,7 +20,7 @@
 
     <Button
         android:id="@+id/main_search_button"
-        android:layout_width="60dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"

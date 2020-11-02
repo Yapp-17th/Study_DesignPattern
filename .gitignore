@@ -3,3 +3,5 @@ node_modules
 .DS_Store
 
 kimhyebeen/Mission06/.idea/
+
+kimhyebeen/Mission06/app/src/main/java/com/khb/dictionary/SecretKeySet.kt
