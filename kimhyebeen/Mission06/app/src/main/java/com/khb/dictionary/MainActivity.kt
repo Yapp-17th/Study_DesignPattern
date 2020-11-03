@@ -23,17 +23,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        binding.apply {
-            lifecycleOwner = this@MainActivity
-            setVariable(BR.vm, vm)
+        binding.lifecycleOwner = this@MainActivity
+        binding.setVariable(BR.vm, vm)
 
-            activityView.setOnTouchListener { _, _ -> onHideKeypad() }
-            mainRecyclerView.apply {
-                adapter = searchAdapter
-                layoutManager = LinearLayoutManager(applicationContext)
-                setHasFixedSize(true)
-                setOnTouchListener { _, _ -> onHideKeypad() }
-            }
+        binding.activityView.setOnTouchListener { _, _ -> onHideKeypad() }
+        binding.mainRecyclerView.apply {
+            adapter = searchAdapter
+            layoutManager = LinearLayoutManager(applicationContext)
+            setHasFixedSize(true)
+            setOnTouchListener { _, _ -> onHideKeypad() }
         }
 
         vm.searchList.observe(this, {
