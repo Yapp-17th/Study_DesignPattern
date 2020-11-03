@@ -29,7 +29,7 @@ class SearchRepository {
             })
     }
 
-    fun saveResult(items: List<DictionaryItem>) {
+    private fun saveResult(items: List<DictionaryItem>) {
         searchList.value = items
     }
 }
