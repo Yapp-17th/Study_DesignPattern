@@ -16,4 +16,11 @@ class BLT: ItemDecorator {
         return super.putItem() + "B.L.T "
     }
 
+    func getTitle() -> String {
+        return "비엘티"
+    }
+    
+    func getDescription() -> String {
+        return "오리지널 아메리칸 베이컨의 풍미 어쩌구~"
+    }
 }

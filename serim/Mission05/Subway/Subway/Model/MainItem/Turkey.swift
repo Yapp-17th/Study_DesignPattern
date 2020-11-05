@@ -16,4 +16,11 @@ class Turkey: ItemDecorator {
         return super.putItem() + "Turkey "
     }
 
+    func getTitle() -> String {
+        return "터키"
+    }
+    
+    func getDescription() -> String {
+        return "280kcal로 슬림하게 즐기는 이것도 존맛"
+    }
 }

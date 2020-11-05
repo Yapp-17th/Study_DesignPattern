@@ -15,4 +15,12 @@ class Club: ItemDecorator {
     override func putItem() -> String {
         return super.putItem() + "Club "
     }
+    
+    func getTitle() -> String {
+        return "써브웨이 클럽"
+    }
+    
+    func getDescription() -> String {
+        return "세림 최애 메뉴! 너무 맛있어요~"
+    }
 }

@@ -15,4 +15,12 @@ class EggMayo: ItemDecorator {
     override func putItem() -> String {
         return super.putItem() + "EggMayo "
     }
+    
+    func getTitle() -> String {
+        return "에그먀요"
+    }
+    
+    func getDescription() -> String {
+        return "달걀과 고소한 마요네즈가 만나 어쩌구"
+    }
 }
