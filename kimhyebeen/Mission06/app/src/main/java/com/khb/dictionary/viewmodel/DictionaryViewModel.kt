@@ -1,4 +1,4 @@
-package com.khb.dictionary
+package com.khb.dictionary.viewmodel
 
 import android.view.View
 import androidx.lifecycle.LiveData

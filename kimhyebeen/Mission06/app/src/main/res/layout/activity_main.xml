@@ -6,14 +6,14 @@
     <data>
         <variable
             name="vm"
-            type="com.khb.dictionary.DictionaryViewModel" />
+            type="com.khb.dictionary.viewmodel.DictionaryViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/activityView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".activity.MainActivity">
 
         <TextView
             android:id="@+id/main_title_tv"
