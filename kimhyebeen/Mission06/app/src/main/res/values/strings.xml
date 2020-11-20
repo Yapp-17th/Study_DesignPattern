@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dictionary</string>
+
+    <string name="main_title">백과사전</string>
+    <string name="main_hint">검색어를 입력하세요</string>
+    <string name="main_search">검색</string>
+    <string name="main_display">0</string>
+
+    <string name="item_title">검색어</string>
+    <string name="item_description">검색어에 대한 설명입니다. 검색어에 대한 설명입니다. 검색어에 대한 설명입니다. 검색어에 대한 설명입니다. 검색어에 대한 설명입니다. 검색어에 대한 설명입니다.</string>
+</resources>
