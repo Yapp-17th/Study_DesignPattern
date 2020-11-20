@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Mission06-Denny' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Mission06-Denny
+  pod 'Alamofire'
+  pod 'SnapKit'
+  pod 'Kingfisher'
+  pod 'Kanna'
+end
+
+target 'NoticeWidget Extension' do
+  inherit! :search_paths
+  use_frameworks!
+
+  pod 'Alamofire'
+  pod 'SnapKit'
+  pod 'Kanna'
+end
