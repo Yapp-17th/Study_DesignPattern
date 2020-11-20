@@ -89,6 +89,7 @@ public class NoticeListViewController: BaseViewController {
     private func didChangeDept() {
         print("Segment Changed")
         viewModel.dept = Dept(rawValue: segmentControl.selectedSegmentIndex) ?? .computer
+        viewModel.fetchNoticeList()
     }
 }
 

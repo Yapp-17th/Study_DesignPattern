@@ -13,8 +13,12 @@ public class NoticeListViewModel: ObservableObject, Identifiable {
     @Published var noticeList: [NoticeItem] = [NoticeItem]()
     
     public func fetchNoticeList() {
-        NoticeListFetcher.shared.getNoticeList(dept: dept, page: 0, completion: { list in
-            self.noticeList = list
-        })
+        if dept == .computer {
+            NoticeListFetcher.shared.getNoticeList(dept: dept, page: 0, completion: { list in
+                self.noticeList = list
+            })
+        } else {
+            self.noticeList = []
+        }
     }
 }
