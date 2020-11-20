@@ -37,7 +37,7 @@ public enum Dept: Int, CaseIterable {
         case .computer:
             return "https://cse.snu.ac.kr/department-notices?&keys=&page=\(page - 1)"
         case .mechanic:
-            return "http://me.snu.ac.kr/board/notice"
+            return "https://me.snu.ac.kr/ko/board/notice/page/\(page)"
         case .school:
             return "https://www.snu.ac.kr/snunow/notice/genernal?page=\(page)"
         }
@@ -53,47 +53,20 @@ public class NoticeListFetcher {
         let url = URL(string: dept.getURLString(page: page))!
         let request = NoticeHTTPRequest(url: url, method: .get, encoding: .urlQuery)
         
-        var titleList: [String] = []
-        var dateList: [String] = []
-        var countList: [String] = []
-        var noticeList: [NoticeItem] = []
-        
         request.performRequest(completion: { result in
             switch result.result {
             case .success(_):
                 if let data = result.value {
                     do {
                         let doc = try HTML(html: data, encoding: .utf8)
-                        for (index, product) in doc.xpath("//table/tbody/tr/*").enumerated() {
-                            print(product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? "nil")
-                            let content = product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? ""
-                            switch index % 3 {
-                            case 0:
-                                // Title
-                                titleList.append(content)
-                            case 1:
-                                // date
-                                dateList.append(content)
-                            case 2:
-                                // count
-                                countList.append(content)
-                            default:
-                                break
-                            }
+                        switch dept {
+                        case .computer:
+                            completion(self.parseComputer(document: doc))
+                        case .mechanic:
+                            completion(self.parseMechanic(document: doc))
+                        case .school:
+                            completion(self.parseSchool(document: doc))
                         }
-                        
-                        for (index, title) in titleList.enumerated() {
-                            let dateString: String = dateList[index]
-                            let dateFormatter = DateFormatter()
-
-                            dateFormatter.dateFormat = "yyyy/MM/dd"
-                            dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
-
-                            let date: Date = dateFormatter.date(from: dateString)!
-                            noticeList.append(NoticeItem(title: title, url: nil, createdAt: date, author: nil))
-                        }
-                        
-                        completion(noticeList)
                     } catch let error {
                         print("Error : \(error)")
                     }
@@ -103,5 +76,115 @@ public class NoticeListFetcher {
                 break
             }
         })
+    }
+    
+    public func parseMechanic(document: HTMLDocument) -> [NoticeItem] {
+        var titleList: [String] = []
+        var dateList: [String] = []
+        var authorList: [String] = []
+        var noticeList: [NoticeItem] = []
+        for (index, product) in document.xpath("//table[contains(@class, 'lc01')]/tbody/tr/*").enumerated() {
+            let content = product.content?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            switch index % 4 {
+            case 0:
+                // Notice
+                break
+            case 1:
+                // Category
+                break
+            case 2:
+                // Title
+                titleList.append(content)
+            case 3:
+                // Author
+                authorList.append(content)
+            case 4:
+                // Date
+                dateList.append(content)
+            default:
+                break
+            }
+        }
+        
+        for (index, title) in titleList.enumerated() {
+            let dateString: String = dateList[index]
+            let dateFormatter = DateFormatter()
+
+            dateFormatter.dateFormat = "yyyy.MM.dd"
+            dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+
+            let date: Date = dateFormatter.date(from: dateString)!
+            noticeList.append(NoticeItem(title: title, url: nil, createdAt: date, author: authorList[index]))
+        }
+        return noticeList
+    }
+    
+    public func parseSchool(document: HTMLDocument) -> [NoticeItem] {
+        var titleList: [String] = []
+        var dateList: [String] = []
+        var noticeList: [NoticeItem] = []
+        
+        for (index, product) in document.xpath("//div[contains(@class, 'board-list')]/table/tbody/tr/*").enumerated() {
+            let content = product.content?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+            switch index % 2 {
+            case 0:
+                // Title
+                titleList.append(content)
+            case 1:
+                // date
+                dateList.append(content)
+            default:
+                break
+            }
+        }
+        
+        for (index, title) in titleList.enumerated() {
+            let dateString: String = dateList[index]
+            let dateFormatter = DateFormatter()
+
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+
+            let date: Date = dateFormatter.date(from: dateString)!
+            noticeList.append(NoticeItem(title: title, url: nil, createdAt: date, author: nil))
+        }
+        return noticeList
+    }
+    
+    public func parseComputer(document: HTMLDocument) -> [NoticeItem] {
+        var titleList: [String] = []
+        var dateList: [String] = []
+        var countList: [String] = []
+        var noticeList: [NoticeItem] = []
+        
+        for (index, product) in document.xpath("//table/tbody/tr/*").enumerated() {
+            print(product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? "nil")
+            let content = product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? ""
+            switch index % 3 {
+            case 0:
+                // Title
+                titleList.append(content)
+            case 1:
+                // date
+                dateList.append(content)
+            case 2:
+                // count
+                countList.append(content)
+            default:
+                break
+            }
+        }
+        
+        for (index, title) in titleList.enumerated() {
+            let dateString: String = dateList[index]
+            let dateFormatter = DateFormatter()
+
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+
+            let date: Date = dateFormatter.date(from: dateString)!
+            noticeList.append(NoticeItem(title: title, url: nil, createdAt: date, author: nil))
+        }
+        return noticeList
     }
 }
