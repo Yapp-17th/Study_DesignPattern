@@ -15,10 +15,10 @@ public struct NoticeItem {
     public var author: String?
 }
 
-public enum Dept: CaseIterable {
-    case computer
-    case mechanic
-    case school
+public enum Dept: Int, CaseIterable {
+    case computer = 0
+    case mechanic = 1
+    case school = 2
     
     public func getTitle() -> String {
         switch self {

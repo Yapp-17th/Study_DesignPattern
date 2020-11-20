@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public class NoticeListViewModel: ObservableObject, Identifiable {
-    @Published var dept: Dept = .school
+    @Published var dept: Dept = .computer
     @Published var noticeList: [NoticeItem] = [NoticeItem]()
     
     public func fetchNoticeList() {

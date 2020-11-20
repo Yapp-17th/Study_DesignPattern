@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		63E963492E11007F28CE80CB /* Pods_NoticeWidget_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663850701B9F84658588F933 /* Pods_NoticeWidget_Extension.framework */; };
+		B00EE2662567A9D6008F8E37 /* SwitchRootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00EE2652567A9D6008F8E37 /* SwitchRootVC.swift */; };
 		B0233585254CF8790046D779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0233584254CF8790046D779 /* AppDelegate.swift */; };
 		B0233589254CF8790046D779 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0233588254CF8790046D779 /* SplashViewController.swift */; };
 		B023358C254CF8790046D779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B023358A254CF8790046D779 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		144AE9BB5461B9BF9D604BED /* Pods_Mission06_Denny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mission06_Denny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604CBA9E7FBD406DE8FA40EC /* Pods-NoticeWidget Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoticeWidget Extension.release.xcconfig"; path = "Target Support Files/Pods-NoticeWidget Extension/Pods-NoticeWidget Extension.release.xcconfig"; sourceTree = "<group>"; };
 		663850701B9F84658588F933 /* Pods_NoticeWidget_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoticeWidget_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B00EE2652567A9D6008F8E37 /* SwitchRootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchRootVC.swift; sourceTree = "<group>"; };
 		B0233581254CF8790046D779 /* Mission06-Denny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mission06-Denny.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0233584254CF8790046D779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0233588254CF8790046D779 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				B023358D254CF87C0046D779 /* Assets.xcassets */,
 				B023358F254CF87C0046D779 /* LaunchScreen.storyboard */,
 				B0233592254CF87C0046D779 /* Info.plist */,
+				B00EE2652567A9D6008F8E37 /* SwitchRootVC.swift */,
 			);
 			path = "Mission06-Denny";
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 			files = (
 				B07AD27F254E2AA200825479 /* NoticeAPIRequest.swift in Sources */,
 				B02335B4254CF9B40046D779 /* NoticeWidget_Extension.intentdefinition in Sources */,
+				B00EE2662567A9D6008F8E37 /* SwitchRootVC.swift in Sources */,
 				B0233589254CF8790046D779 /* SplashViewController.swift in Sources */,
 				B02335E4254CFC1F0046D779 /* NoticeDetailViewModel.swift in Sources */,
 				B02335D6254CFB9C0046D779 /* NoticeListViewModel.swift in Sources */,

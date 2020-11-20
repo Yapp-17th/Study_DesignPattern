@@ -15,8 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울대학교 공지사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWA-S4-TGU">
+                                <rect key="frame" x="107" y="187" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SNU Notice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-Q2-way">
+                                <rect key="frame" x="156" y="668" width="102.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LWA-S4-TGU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DsQ-uR-IgW"/>
+                            <constraint firstItem="LWA-S4-TGU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="FdJ-h3-cLC"/>
+                            <constraint firstItem="Qhe-Q2-way" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aKH-bI-AzK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qhe-Q2-way" secondAttribute="bottom" constant="170" id="z6M-Bl-LaJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -39,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="2198.5507246376815" y="105.80357142857143"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation View Controller-->
         <scene sceneID="urB-h1-xY8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vcs-1Y-Qre" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="listNavVC" automaticallyAdjustsScrollViewInsets="NO" id="Vcs-1Y-Qre" customClass="NavigationViewController" customModule="Mission06_Denny" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vVe-5b-3a7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -61,6 +81,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

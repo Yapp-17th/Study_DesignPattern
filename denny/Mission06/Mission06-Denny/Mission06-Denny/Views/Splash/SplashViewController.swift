@@ -11,7 +11,13 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+//            let viewModel = NoticeListViewModel()
+//            viewModel.dept = .computer
+//            let vc = NoticeListViewController(viewModel: viewModel)
+//            SwitchRootVC.updateRootVC(vc: vc)
+            SwitchRootVC.updateListVCForRoot()
+        })
     }
 
 }
