@@ -16,6 +16,7 @@ public class NoticeListViewController: BaseViewController {
     
     private var segmentControl: UISegmentedControl = UISegmentedControl()
     private var listTableView: UITableView = UITableView()
+    private var listForShow: [NoticeItem] = []
     
     init(viewModel: NoticeListViewModel) {
         self.viewModel = viewModel
@@ -41,7 +42,9 @@ public class NoticeListViewController: BaseViewController {
         }.store(in: &cancellables)
         
         viewModel.$noticeList.sink { [weak self] noticeList in
-            print(noticeList.count) // TODO
+            print(noticeList.count)
+            self?.listForShow = noticeList
+            print(self?.listForShow.count)
             self?.listTableView.reloadData()
         }.store(in: &cancellables)
     }
@@ -76,6 +79,8 @@ public class NoticeListViewController: BaseViewController {
         
         listTableView.delegate = self
         listTableView.dataSource = self
+        listTableView.tableFooterView = UIView()
+        listTableView.separatorInset = .zero
         
         viewModel.fetchNoticeList()
     }
@@ -89,12 +94,18 @@ public class NoticeListViewController: BaseViewController {
 
 extension NoticeListViewController: UITableViewDelegate, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.noticeList.count
+        print("TableView Row Count : \(viewModel.$noticeList.count())")
+        return listForShow.count
     }
     
     // TOOD
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        print("Cell - [\(indexPath.row)]")
+        let cell = UITableViewCell()
+        cell.textLabel?.text = listForShow[indexPath.row].title
+//        cell.backgroundColor = .systemPink
+        cell.selectionStyle = .none
+        return cell
     }
     
     

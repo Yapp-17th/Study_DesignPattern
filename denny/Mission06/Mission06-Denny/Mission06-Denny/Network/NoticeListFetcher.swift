@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import Kanna
 
 public struct NoticeItem {
     public var title: String?
@@ -52,8 +53,55 @@ public class NoticeListFetcher {
         let url = URL(string: dept.getURLString(page: page))!
         let request = NoticeHTTPRequest(url: url, method: .get, encoding: .urlQuery)
         
+        var titleList: [String] = []
+        var dateList: [String] = []
+        var countList: [String] = []
+        var noticeList: [NoticeItem] = []
+        
         request.performRequest(completion: { result in
-            
+            switch result.result {
+            case .success(_):
+                if let data = result.value {
+                    do {
+                        let doc = try HTML(html: data, encoding: .utf8)
+                        for (index, product) in doc.xpath("//table/tbody/tr/*").enumerated() {
+                            print(product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? "nil")
+                            let content = product.content?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "\n", with: "") ?? ""
+                            switch index % 3 {
+                            case 0:
+                                // Title
+                                titleList.append(content)
+                            case 1:
+                                // date
+                                dateList.append(content)
+                            case 2:
+                                // count
+                                countList.append(content)
+                            default:
+                                break
+                            }
+                        }
+                        
+                        for (index, title) in titleList.enumerated() {
+                            let dateString: String = dateList[index]
+                            let dateFormatter = DateFormatter()
+
+                            dateFormatter.dateFormat = "yyyy/MM/dd"
+                            dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+
+                            let date: Date = dateFormatter.date(from: dateString)!
+                            noticeList.append(NoticeItem(title: title, url: nil, createdAt: date, author: nil))
+                        }
+                        
+                        completion(noticeList)
+                    } catch let error {
+                        print("Error : \(error)")
+                    }
+                }
+            case .failure(_):
+                print("Error message:\(String(describing: result.error))")
+                break
+            }
         })
     }
 }
