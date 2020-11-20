@@ -1,0 +1,6 @@
+framework module Pods_Mission06_Denny {
+  umbrella header "Pods-Mission06-Denny-umbrella.h"
+
+  export *
+  module * { export * }
+}

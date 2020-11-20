@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Mission06-Denny/Pods-Mission06-Denny-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Kanna/Kanna.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
