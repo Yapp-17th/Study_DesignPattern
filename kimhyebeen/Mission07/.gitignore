@@ -145,3 +145,4 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/androidstudio
+/app/src/main/java/com/khb/dictionary/SecretKeySet.kt
