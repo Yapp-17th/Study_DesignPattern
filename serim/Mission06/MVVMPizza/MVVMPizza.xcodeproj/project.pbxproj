@@ -1,0 +1,898 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62A64E8DE4DE8B4DB16D6B48 /* Pods_MVVMPizzaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EC5F04DFA0EDFE36F69425 /* Pods_MVVMPizzaTests.framework */; };
+		831A466925674E8F002800B8 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A466825674E8F002800B8 /* CartTableViewCell.swift */; };
+		831A466E25674E9E002800B8 /* CartCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A466D25674E9E002800B8 /* CartCellViewModel.swift */; };
+		831A467325675E71002800B8 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A467225675E71002800B8 /* CartItem.swift */; };
+		83309F5925639962001A6A0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83309F5825639962001A6A0E /* AppDelegate.swift */; };
+		83309F5B25639962001A6A0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83309F5A25639962001A6A0E /* SceneDelegate.swift */; };
+		83309F6025639962001A6A0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83309F5E25639962001A6A0E /* Main.storyboard */; };
+		83309F6225639963001A6A0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83309F6125639963001A6A0E /* Assets.xcassets */; };
+		83309F6525639963001A6A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83309F6325639963001A6A0E /* LaunchScreen.storyboard */; };
+		83309F7025639963001A6A0E /* MVVMPizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83309F6F25639963001A6A0E /* MVVMPizzaTests.swift */; };
+		83309F7B25639963001A6A0E /* MVVMPizzaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83309F7A25639963001A6A0E /* MVVMPizzaUITests.swift */; };
+		83DE06DF256650EA0085AC72 /* Topping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06DE256650EA0085AC72 /* Topping.swift */; };
+		83DE06E72566517E0085AC72 /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06E62566517E0085AC72 /* Pizza.swift */; };
+		83DE06ED256652AF0085AC72 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06EC256652AF0085AC72 /* MenuViewController.swift */; };
+		83DE06F2256653A60085AC72 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06F1256653A60085AC72 /* MenuTableViewCell.swift */; };
+		83DE06F7256655860085AC72 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE06F6256655860085AC72 /* MenuViewModel.swift */; };
+		83DE0709256656450085AC72 /* MenuCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0708256656450085AC72 /* MenuCellViewModel.swift */; };
+		83DE070E256656850085AC72 /* MenuViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE070D256656850085AC72 /* MenuViewController+UI.swift */; };
+		83DE0717256660570085AC72 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0716256660570085AC72 /* OptionViewController.swift */; };
+		83DE071F256660D90085AC72 /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE071E256660D90085AC72 /* OptionTableViewCell.swift */; };
+		83DE072A256663C00085AC72 /* OptionViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0729256663C00085AC72 /* OptionViewController+UI.swift */; };
+		83DE072F256664E00085AC72 /* OptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE072E256664E00085AC72 /* OptionViewModel.swift */; };
+		83DE0734256667B90085AC72 /* OptionCellViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0733256667B90085AC72 /* OptionCellViewModelType.swift */; };
+		83DE073A256672340085AC72 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0739256672340085AC72 /* CartViewController.swift */; };
+		83DE0742256672440085AC72 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE0741256672440085AC72 /* CartViewModel.swift */; };
+		83DE07472566726C0085AC72 /* CartViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DE07462566726C0085AC72 /* CartViewController+UI.swift */; };
+		A23AF85253062BD39F38C62E /* Pods_MVVMPizza_MVVMPizzaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F24436C0A82E4AE194DA4A /* Pods_MVVMPizza_MVVMPizzaUITests.framework */; };
+		E6E45EF47ABBCE67BCDF4CB1 /* Pods_MVVMPizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C322ECC86D9C629299BE971 /* Pods_MVVMPizza.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83309F6C25639963001A6A0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83309F4D25639962001A6A0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83309F5425639962001A6A0E;
+			remoteInfo = MVVMPizza;
+		};
+		83309F7725639963001A6A0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83309F4D25639962001A6A0E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83309F5425639962001A6A0E;
+			remoteInfo = MVVMPizza;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		152394D39F4AE726C58D4AAD /* Pods-MVVMPizza-MVVMPizzaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizza-MVVMPizzaUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMPizza-MVVMPizzaUITests/Pods-MVVMPizza-MVVMPizzaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		43F24436C0A82E4AE194DA4A /* Pods_MVVMPizza_MVVMPizzaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPizza_MVVMPizzaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		559773A42C13FEC78AA30BF7 /* Pods-MVVMPizza-MVVMPizzaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizza-MVVMPizzaUITests.release.xcconfig"; path = "Target Support Files/Pods-MVVMPizza-MVVMPizzaUITests/Pods-MVVMPizza-MVVMPizzaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7B120BA0BD3A6532A5968C75 /* Pods-MVVMPizza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizza.debug.xcconfig"; path = "Target Support Files/Pods-MVVMPizza/Pods-MVVMPizza.debug.xcconfig"; sourceTree = "<group>"; };
+		831A466825674E8F002800B8 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		831A466D25674E9E002800B8 /* CartCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCellViewModel.swift; sourceTree = "<group>"; };
+		831A467225675E71002800B8 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		83309F5525639962001A6A0E /* MVVMPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83309F5825639962001A6A0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		83309F5A25639962001A6A0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		83309F5F25639962001A6A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83309F6125639963001A6A0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83309F6425639963001A6A0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83309F6625639963001A6A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83309F6B25639963001A6A0E /* MVVMPizzaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMPizzaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83309F6F25639963001A6A0E /* MVVMPizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMPizzaTests.swift; sourceTree = "<group>"; };
+		83309F7125639963001A6A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83309F7625639963001A6A0E /* MVVMPizzaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMPizzaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83309F7A25639963001A6A0E /* MVVMPizzaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMPizzaUITests.swift; sourceTree = "<group>"; };
+		83309F7C25639963001A6A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83DE06DE256650EA0085AC72 /* Topping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topping.swift; sourceTree = "<group>"; };
+		83DE06E62566517E0085AC72 /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		83DE06EC256652AF0085AC72 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		83DE06F1256653A60085AC72 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		83DE06F6256655860085AC72 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		83DE0708256656450085AC72 /* MenuCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellViewModel.swift; sourceTree = "<group>"; };
+		83DE070D256656850085AC72 /* MenuViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuViewController+UI.swift"; sourceTree = "<group>"; };
+		83DE0716256660570085AC72 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		83DE071E256660D90085AC72 /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		83DE0729256663C00085AC72 /* OptionViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OptionViewController+UI.swift"; sourceTree = "<group>"; };
+		83DE072E256664E00085AC72 /* OptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewModel.swift; sourceTree = "<group>"; };
+		83DE0733256667B90085AC72 /* OptionCellViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCellViewModelType.swift; sourceTree = "<group>"; };
+		83DE0739256672340085AC72 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		83DE0741256672440085AC72 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		83DE07462566726C0085AC72 /* CartViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartViewController+UI.swift"; sourceTree = "<group>"; };
+		87741478D9D980017547BB9E /* Pods-MVVMPizzaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizzaTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVMPizzaTests/Pods-MVVMPizzaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C322ECC86D9C629299BE971 /* Pods_MVVMPizza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPizza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C01E8C53C2189F7733CD73E /* Pods-MVVMPizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizza.release.xcconfig"; path = "Target Support Files/Pods-MVVMPizza/Pods-MVVMPizza.release.xcconfig"; sourceTree = "<group>"; };
+		B795874D639234C13D82BEA3 /* Pods-MVVMPizzaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMPizzaTests.release.xcconfig"; path = "Target Support Files/Pods-MVVMPizzaTests/Pods-MVVMPizzaTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0EC5F04DFA0EDFE36F69425 /* Pods_MVVMPizzaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMPizzaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83309F5225639962001A6A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6E45EF47ABBCE67BCDF4CB1 /* Pods_MVVMPizza.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F6825639963001A6A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62A64E8DE4DE8B4DB16D6B48 /* Pods_MVVMPizzaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F7325639963001A6A0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A23AF85253062BD39F38C62E /* Pods_MVVMPizza_MVVMPizzaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62F451990DFCDB0E2D0D44CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B120BA0BD3A6532A5968C75 /* Pods-MVVMPizza.debug.xcconfig */,
+				9C01E8C53C2189F7733CD73E /* Pods-MVVMPizza.release.xcconfig */,
+				152394D39F4AE726C58D4AAD /* Pods-MVVMPizza-MVVMPizzaUITests.debug.xcconfig */,
+				559773A42C13FEC78AA30BF7 /* Pods-MVVMPizza-MVVMPizzaUITests.release.xcconfig */,
+				87741478D9D980017547BB9E /* Pods-MVVMPizzaTests.debug.xcconfig */,
+				B795874D639234C13D82BEA3 /* Pods-MVVMPizzaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		831A466625674E70002800B8 /* CartVC */ = {
+			isa = PBXGroup;
+			children = (
+				83DE0739256672340085AC72 /* CartViewController.swift */,
+				83DE0741256672440085AC72 /* CartViewModel.swift */,
+				83DE07462566726C0085AC72 /* CartViewController+UI.swift */,
+				831A467225675E71002800B8 /* CartItem.swift */,
+			);
+			path = CartVC;
+			sourceTree = "<group>";
+		};
+		831A466725674E7E002800B8 /* CartCell */ = {
+			isa = PBXGroup;
+			children = (
+				831A466825674E8F002800B8 /* CartTableViewCell.swift */,
+				831A466D25674E9E002800B8 /* CartCellViewModel.swift */,
+			);
+			path = CartCell;
+			sourceTree = "<group>";
+		};
+		83309F4C25639962001A6A0E = {
+			isa = PBXGroup;
+			children = (
+				83309F5725639962001A6A0E /* MVVMPizza */,
+				83309F6E25639963001A6A0E /* MVVMPizzaTests */,
+				83309F7925639963001A6A0E /* MVVMPizzaUITests */,
+				83309F5625639962001A6A0E /* Products */,
+				62F451990DFCDB0E2D0D44CB /* Pods */,
+				FE5D574BDB9B444CD5552AB5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		83309F5625639962001A6A0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83309F5525639962001A6A0E /* MVVMPizza.app */,
+				83309F6B25639963001A6A0E /* MVVMPizzaTests.xctest */,
+				83309F7625639963001A6A0E /* MVVMPizzaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83309F5725639962001A6A0E /* MVVMPizza */ = {
+			isa = PBXGroup;
+			children = (
+				83DE06DD2566509F0085AC72 /* Model */,
+				83DE06EB256652140085AC72 /* Menu */,
+				83DE0715256660040085AC72 /* Option */,
+				83DE0738256671610085AC72 /* Cart */,
+				83309F5825639962001A6A0E /* AppDelegate.swift */,
+				83309F5A25639962001A6A0E /* SceneDelegate.swift */,
+				83309F5E25639962001A6A0E /* Main.storyboard */,
+				83309F6125639963001A6A0E /* Assets.xcassets */,
+				83309F6325639963001A6A0E /* LaunchScreen.storyboard */,
+				83309F6625639963001A6A0E /* Info.plist */,
+			);
+			path = MVVMPizza;
+			sourceTree = "<group>";
+		};
+		83309F6E25639963001A6A0E /* MVVMPizzaTests */ = {
+			isa = PBXGroup;
+			children = (
+				83309F6F25639963001A6A0E /* MVVMPizzaTests.swift */,
+				83309F7125639963001A6A0E /* Info.plist */,
+			);
+			path = MVVMPizzaTests;
+			sourceTree = "<group>";
+		};
+		83309F7925639963001A6A0E /* MVVMPizzaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				83309F7A25639963001A6A0E /* MVVMPizzaUITests.swift */,
+				83309F7C25639963001A6A0E /* Info.plist */,
+			);
+			path = MVVMPizzaUITests;
+			sourceTree = "<group>";
+		};
+		83DE06DD2566509F0085AC72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83DE06DE256650EA0085AC72 /* Topping.swift */,
+				83DE06E62566517E0085AC72 /* Pizza.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83DE06EB256652140085AC72 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				83DE06FB2566560B0085AC72 /* MenuVC */,
+				83DE06FC2566561A0085AC72 /* MenuCell */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		83DE06FB2566560B0085AC72 /* MenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				83DE06EC256652AF0085AC72 /* MenuViewController.swift */,
+				83DE06F6256655860085AC72 /* MenuViewModel.swift */,
+				83DE070D256656850085AC72 /* MenuViewController+UI.swift */,
+			);
+			path = MenuVC;
+			sourceTree = "<group>";
+		};
+		83DE06FC2566561A0085AC72 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				83DE06F1256653A60085AC72 /* MenuTableViewCell.swift */,
+				83DE0708256656450085AC72 /* MenuCellViewModel.swift */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		83DE0715256660040085AC72 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				83DE071B256660AA0085AC72 /* OptionVC */,
+				83DE071D256660B60085AC72 /* OptionCell */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		83DE071B256660AA0085AC72 /* OptionVC */ = {
+			isa = PBXGroup;
+			children = (
+				83DE0716256660570085AC72 /* OptionViewController.swift */,
+				83DE0729256663C00085AC72 /* OptionViewController+UI.swift */,
+				83DE072E256664E00085AC72 /* OptionViewModel.swift */,
+			);
+			path = OptionVC;
+			sourceTree = "<group>";
+		};
+		83DE071D256660B60085AC72 /* OptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				83DE071E256660D90085AC72 /* OptionTableViewCell.swift */,
+				83DE0733256667B90085AC72 /* OptionCellViewModelType.swift */,
+			);
+			path = OptionCell;
+			sourceTree = "<group>";
+		};
+		83DE0738256671610085AC72 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				831A466725674E7E002800B8 /* CartCell */,
+				831A466625674E70002800B8 /* CartVC */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		FE5D574BDB9B444CD5552AB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C322ECC86D9C629299BE971 /* Pods_MVVMPizza.framework */,
+				43F24436C0A82E4AE194DA4A /* Pods_MVVMPizza_MVVMPizzaUITests.framework */,
+				C0EC5F04DFA0EDFE36F69425 /* Pods_MVVMPizzaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83309F5425639962001A6A0E /* MVVMPizza */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83309F7F25639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizza" */;
+			buildPhases = (
+				12A501A4EA8DC7C58CBC92DC /* [CP] Check Pods Manifest.lock */,
+				83309F5125639962001A6A0E /* Sources */,
+				83309F5225639962001A6A0E /* Frameworks */,
+				83309F5325639962001A6A0E /* Resources */,
+				06A770540895810CC7A35834 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVVMPizza;
+			productName = MVVMPizza;
+			productReference = 83309F5525639962001A6A0E /* MVVMPizza.app */;
+			productType = "com.apple.product-type.application";
+		};
+		83309F6A25639963001A6A0E /* MVVMPizzaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83309F8225639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizzaTests" */;
+			buildPhases = (
+				EF1CD7AE1C1279588D914268 /* [CP] Check Pods Manifest.lock */,
+				83309F6725639963001A6A0E /* Sources */,
+				83309F6825639963001A6A0E /* Frameworks */,
+				83309F6925639963001A6A0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83309F6D25639963001A6A0E /* PBXTargetDependency */,
+			);
+			name = MVVMPizzaTests;
+			productName = MVVMPizzaTests;
+			productReference = 83309F6B25639963001A6A0E /* MVVMPizzaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83309F7525639963001A6A0E /* MVVMPizzaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83309F8525639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizzaUITests" */;
+			buildPhases = (
+				3BE92CDC3D0AA5E1500003F5 /* [CP] Check Pods Manifest.lock */,
+				83309F7225639963001A6A0E /* Sources */,
+				83309F7325639963001A6A0E /* Frameworks */,
+				83309F7425639963001A6A0E /* Resources */,
+				702024638EC66CEB3C177F93 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83309F7825639963001A6A0E /* PBXTargetDependency */,
+			);
+			name = MVVMPizzaUITests;
+			productName = MVVMPizzaUITests;
+			productReference = 83309F7625639963001A6A0E /* MVVMPizzaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83309F4D25639962001A6A0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					83309F5425639962001A6A0E = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					83309F6A25639963001A6A0E = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 83309F5425639962001A6A0E;
+					};
+					83309F7525639963001A6A0E = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 83309F5425639962001A6A0E;
+					};
+				};
+			};
+			buildConfigurationList = 83309F5025639962001A6A0E /* Build configuration list for PBXProject "MVVMPizza" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83309F4C25639962001A6A0E;
+			productRefGroup = 83309F5625639962001A6A0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83309F5425639962001A6A0E /* MVVMPizza */,
+				83309F6A25639963001A6A0E /* MVVMPizzaTests */,
+				83309F7525639963001A6A0E /* MVVMPizzaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83309F5325639962001A6A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83309F6525639963001A6A0E /* LaunchScreen.storyboard in Resources */,
+				83309F6225639963001A6A0E /* Assets.xcassets in Resources */,
+				83309F6025639962001A6A0E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F6925639963001A6A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F7425639963001A6A0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06A770540895810CC7A35834 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza/Pods-MVVMPizza-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza/Pods-MVVMPizza-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza/Pods-MVVMPizza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		12A501A4EA8DC7C58CBC92DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMPizza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BE92CDC3D0AA5E1500003F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMPizza-MVVMPizzaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		702024638EC66CEB3C177F93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza-MVVMPizzaUITests/Pods-MVVMPizza-MVVMPizzaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza-MVVMPizzaUITests/Pods-MVVMPizza-MVVMPizzaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMPizza-MVVMPizzaUITests/Pods-MVVMPizza-MVVMPizzaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1CD7AE1C1279588D914268 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMPizzaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83309F5125639962001A6A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83DE0709256656450085AC72 /* MenuCellViewModel.swift in Sources */,
+				831A466E25674E9E002800B8 /* CartCellViewModel.swift in Sources */,
+				83DE06DF256650EA0085AC72 /* Topping.swift in Sources */,
+				83DE06ED256652AF0085AC72 /* MenuViewController.swift in Sources */,
+				831A466925674E8F002800B8 /* CartTableViewCell.swift in Sources */,
+				83DE06F2256653A60085AC72 /* MenuTableViewCell.swift in Sources */,
+				83DE0742256672440085AC72 /* CartViewModel.swift in Sources */,
+				83309F5925639962001A6A0E /* AppDelegate.swift in Sources */,
+				83DE072A256663C00085AC72 /* OptionViewController+UI.swift in Sources */,
+				83DE06E72566517E0085AC72 /* Pizza.swift in Sources */,
+				83DE073A256672340085AC72 /* CartViewController.swift in Sources */,
+				83DE0734256667B90085AC72 /* OptionCellViewModelType.swift in Sources */,
+				83DE070E256656850085AC72 /* MenuViewController+UI.swift in Sources */,
+				83DE071F256660D90085AC72 /* OptionTableViewCell.swift in Sources */,
+				83DE07472566726C0085AC72 /* CartViewController+UI.swift in Sources */,
+				83309F5B25639962001A6A0E /* SceneDelegate.swift in Sources */,
+				83DE072F256664E00085AC72 /* OptionViewModel.swift in Sources */,
+				83DE06F7256655860085AC72 /* MenuViewModel.swift in Sources */,
+				831A467325675E71002800B8 /* CartItem.swift in Sources */,
+				83DE0717256660570085AC72 /* OptionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F6725639963001A6A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83309F7025639963001A6A0E /* MVVMPizzaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83309F7225639963001A6A0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83309F7B25639963001A6A0E /* MVVMPizzaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83309F6D25639963001A6A0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83309F5425639962001A6A0E /* MVVMPizza */;
+			targetProxy = 83309F6C25639963001A6A0E /* PBXContainerItemProxy */;
+		};
+		83309F7825639963001A6A0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83309F5425639962001A6A0E /* MVVMPizza */;
+			targetProxy = 83309F7725639963001A6A0E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		83309F5E25639962001A6A0E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83309F5F25639962001A6A0E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		83309F6325639963001A6A0E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83309F6425639963001A6A0E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83309F7D25639963001A6A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		83309F7E25639963001A6A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83309F8025639963001A6A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B120BA0BD3A6532A5968C75 /* Pods-MVVMPizza.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 924MV26XJJ;
+				INFOPLIST_FILE = MVVMPizza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83309F8125639963001A6A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C01E8C53C2189F7733CD73E /* Pods-MVVMPizza.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 924MV26XJJ;
+				INFOPLIST_FILE = MVVMPizza/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizza;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		83309F8325639963001A6A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87741478D9D980017547BB9E /* Pods-MVVMPizzaTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMPizzaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizzaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMPizza.app/Contents/MacOS/MVVMPizza";
+			};
+			name = Debug;
+		};
+		83309F8425639963001A6A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B795874D639234C13D82BEA3 /* Pods-MVVMPizzaTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMPizzaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizzaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVMPizza.app/Contents/MacOS/MVVMPizza";
+			};
+			name = Release;
+		};
+		83309F8625639963001A6A0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 152394D39F4AE726C58D4AAD /* Pods-MVVMPizza-MVVMPizzaUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMPizzaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizzaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMPizza;
+			};
+			name = Debug;
+		};
+		83309F8725639963001A6A0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 559773A42C13FEC78AA30BF7 /* Pods-MVVMPizza-MVVMPizzaUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MVVMPizzaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = example.MVVMPizzaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MVVMPizza;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83309F5025639962001A6A0E /* Build configuration list for PBXProject "MVVMPizza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83309F7D25639963001A6A0E /* Debug */,
+				83309F7E25639963001A6A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83309F7F25639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizza" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83309F8025639963001A6A0E /* Debug */,
+				83309F8125639963001A6A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83309F8225639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizzaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83309F8325639963001A6A0E /* Debug */,
+				83309F8425639963001A6A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83309F8525639963001A6A0E /* Build configuration list for PBXNativeTarget "MVVMPizzaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83309F8625639963001A6A0E /* Debug */,
+				83309F8725639963001A6A0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83309F4D25639962001A6A0E /* Project object */;
+}
