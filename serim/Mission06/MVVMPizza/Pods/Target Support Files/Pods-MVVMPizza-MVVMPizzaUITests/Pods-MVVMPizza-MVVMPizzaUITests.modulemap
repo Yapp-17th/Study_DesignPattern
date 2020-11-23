@@ -1,0 +1,6 @@
+framework module Pods_MVVMPizza_MVVMPizzaUITests {
+  umbrella header "Pods-MVVMPizza-MVVMPizzaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

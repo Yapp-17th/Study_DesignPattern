@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MVVMPizza
 //
-//  Created by 바보세림이 on 2020/11/06.
+//  Created by 고세림 on 2020/11/17.
 //
 
 import UIKit
