@@ -12,11 +12,12 @@ import com.khb.dictionary.base.BaseActivity
 import com.khb.dictionary.base.MainContract
 import com.khb.dictionary.model.DictionaryItem
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.ext.android.inject
 
 class MainActivity
     : BaseActivity(R.layout.activity_main), MainContract.View {
-    private lateinit var presenter: MainPresenter
-    private val mainAdapter = MainAdapter()
+    private val presenter: MainPresenter by inject()
+    private val mainAdapter: MainAdapter by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +27,6 @@ class MainActivity
     }
 
     override fun initPresenter() { // BaseActivity
-        presenter = MainPresenter()
         presenter.takeView(this)
     }
 

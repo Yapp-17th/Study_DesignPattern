@@ -2,17 +2,19 @@ package com.khb.dictionary.main
 
 import android.util.Log
 import com.khb.dictionary.base.MainContract
-import com.khb.dictionary.model.NetworkModule
+import com.khb.dictionary.model.SearchApi
 import com.khb.dictionary.model.SearchItem
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainPresenter: MainContract.Presenter {
+class MainPresenter(
+    private val searchApi: SearchApi
+): MainContract.Presenter {
     private var view: MainContract.View? = null
 
     override fun getDictionaryData(keyword: String) {
-        NetworkModule.searchApi.getSearchList(keyword)
+        searchApi.getSearchList(keyword)
             .enqueue(object : Callback<SearchItem> {
                 override fun onFailure(call: Call<SearchItem>, t: Throwable) {
                     Log.e("MainPresenter", t.message ?: "error")
