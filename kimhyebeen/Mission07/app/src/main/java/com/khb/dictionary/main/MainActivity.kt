@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity
     : BaseActivity(R.layout.activity_main), MainContract.View {
     private lateinit var presenter: MainPresenter
+    private val mainAdapter = MainAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,34 +25,34 @@ class MainActivity
         setButton()
     }
 
-    override fun initPresenter() {
+    override fun initPresenter() { // BaseActivity
         presenter = MainPresenter()
         presenter.takeView(this)
     }
 
+    override fun showError(error: String) { // BaseView
+        Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+    }
+
     @SuppressLint("ClickableViewAccessibility")
-    override fun setAdapter() {
+    override fun setAdapter() { // MainContract.View
         main_recycler_view.apply {
-            // todo - adapter 설정
+            adapter = mainAdapter
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             setOnTouchListener { _, _ -> onHideKeypad() }
         }
     }
 
-    override fun setButton() {
+    override fun setButton() { // MainContract.View
         main_search_button.setOnClickListener {
             val keyword = main_search_edit_text.text.toString()
             presenter.getDictionaryData(keyword)
         }
     }
 
-    override fun showDictionaryList(list: List<DictionaryItem>) {
-        // todo - adapter.setItems(list)
-    }
-
-    override fun showError(error: String) {
-        Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+    override fun showDictionaryList(list: List<DictionaryItem>) { // MainContract.View
+        mainAdapter.setItems(list)
     }
 
     private fun onHideKeypad(): Boolean {
